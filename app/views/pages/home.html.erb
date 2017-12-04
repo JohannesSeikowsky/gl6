@@ -1,5 +1,9 @@
-<h1> hi </h1>
+<p> <%= notice %> </p> <br> <br>
 
-<p> <%= notice %> </p>
-
-<p><%= link_to 'Login with LinkedIn', '/auth/linkedin' %></p>
+<% if current_user %>
+  <p> youre logged in. </p>
+  <%= link_to 'Log Out', "#", method: :delete %>
+<% else %>
+   <p> youre logged out. </p>
+   <p> <%= link_to 'Login with LinkedIn', '/auth/linkedin' %> </p>
+<% end %>
