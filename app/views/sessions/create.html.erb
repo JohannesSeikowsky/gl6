@@ -1,3 +1,9 @@
 <p>hi</p>
-<%= @request %> 
+<%= @request.provider %>
+<%= @request.uid %>
+<%= @request.info.name %>
+<%= @request.info.email %>
+
+<br> <br>
+<%= @request.to_yaml %> 
 
