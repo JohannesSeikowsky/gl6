@@ -25,5 +25,10 @@ class SessionsController < ApplicationController
   	end
   end
 
+  def delete
+	if current_user
+	  session.delete(:user_id)
+	end
+	redirect_to root_path, notice: "youre logged out."  	
+  end
 end
-
