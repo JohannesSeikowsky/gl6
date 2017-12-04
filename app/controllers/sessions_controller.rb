@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
   def create
-  	@request = request.env['omniauth.auth'].to_yaml
+  		@request = request.env['omniauth.auth']
   end
 end
