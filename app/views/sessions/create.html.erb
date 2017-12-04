@@ -3,7 +3,14 @@
 <%= @request.uid %>
 <%= @request.info.name %>
 <%= @request.info.email %>
+<%= @request.info.first_name %>
+<%= @request.info.last_name %>
+<%= @request.info.description %>
+<%= @request.info.image %>
+
 
 <br> <br>
-<%= @request.to_yaml %> 
+
+<pre><%= @request.to_yaml %></pre>
+
 
