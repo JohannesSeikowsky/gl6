@@ -25,10 +25,11 @@ class SessionsController < ApplicationController
   	end
   end
 
-  def delete
-	if current_user
-	  session.delete(:user_id)
+	def destroy
+	  if current_user
+	    session.delete(:user_id)
+	    flash[:success] = 'See you!'
+	  end
+	  redirect_to root_path
 	end
-	redirect_to root_path, notice: "youre logged out."  	
-  end
 end
