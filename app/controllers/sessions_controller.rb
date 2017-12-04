@@ -13,6 +13,14 @@ class SessionsController < ApplicationController
 	@user.country_code = api_values['info']['location']['country']['code']
 	@user.description = api_values['info']['description']
 	@user.image_url = api_values['info']['image']
-	@user.profile_url = api_values['info']['urls']['public_profile']	
+	@user.profile_url = api_values['info']['urls']['public_profile']
+
+	if @user.save
+		redirect_to root_path, notice: "worked."	
+  	else
+  		redirect_to root_path, notice: "didnt work."
+  	end
   end
+
 end
+

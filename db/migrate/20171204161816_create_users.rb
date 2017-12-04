@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
-      t.id :uid
+      t.string :uid
       t.string :provider
       t.string :name
       t.string :first_name
@@ -12,10 +12,8 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :image_url
       t.string :profile_url
-      t.timestamps
 
-      # add index
-      add_index :users, :uid
+      t.timestamps
     end
   end
 end
