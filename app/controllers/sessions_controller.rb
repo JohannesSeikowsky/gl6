@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   	begin
 	  	api_values = request.env['omniauth.auth']
 		# find or create
-		@user = find_or_create_by(uid: api_values['uid'])
+		@user = User.find_or_create_by(uid: api_values['uid'])
 		# set attributes
 		@user.provider = api_values['provider']
 		@user.name = api_values['info']['name']
