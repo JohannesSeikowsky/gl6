@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
   def create
-  	redirect_to root_path
+  	 render text: request.env['omniauth.auth'].to_yaml
   end
 end

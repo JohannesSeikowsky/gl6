@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'
   
-  get '/auth/failure', to: 'pages#home', as: 'home'
+  # get '/auth/failure', to: 'oauth#failure', as: 'oauth_failure'  -- maybe later..
 end
