@@ -1,19 +1,16 @@
-<p> This is myn. </p> <br>
-
 <p> <%= notice %> </p> <br>
 
 <% if current_user %>
   <p> Hi <%= current_user.name %>, youre logged in. </p>
 
   <p> <%= link_to 'Login with LinkedIn', '/auth/linkedin' %> </p>
-   <%= link_to 'Log Out', logout_path , method: :delete %>
+   <%= link_to 'Log Out', logout_path , method: :delete %> <br>
 
-   <br> <br>
-	<%= link_to 'to user account', user_account_path(current_user) %>
+   <%= link_to 'to user account', user_account_path(current_user) %>
+   
 <% else %>
    <p> youre logged out. </p>
 
    <p> <%= link_to 'Login with LinkedIn', '/auth/linkedin' %> </p>
    <%= link_to 'Log Out', logout_path , method: :delete %>
 <% end %>
-
