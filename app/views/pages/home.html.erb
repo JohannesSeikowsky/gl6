@@ -7,6 +7,9 @@
 
   <p> <%= link_to 'Login with LinkedIn', '/auth/linkedin' %> </p>
    <%= link_to 'Log Out', logout_path , method: :delete %>
+
+   <br> <br>
+	<%= link_to 'to user account', user_account_path(current_user) %>
 <% else %>
    <p> youre logged out. </p>
 
@@ -14,5 +17,3 @@
    <%= link_to 'Log Out', logout_path , method: :delete %>
 <% end %>
 
-<br> <br>
-<%= link_to 'to user account', user_account_path(current_user) %>
