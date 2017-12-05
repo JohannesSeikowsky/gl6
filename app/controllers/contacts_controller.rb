@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   def new
   	@user = User.find(params[:contact][:user_id])
-  	@user.contact.build(contacts_params)
+  	@user.contacts.build(contacts_params)
   	redirect_to user_account_path(@user)
   end
 
