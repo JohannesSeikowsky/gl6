@@ -1,9 +1,14 @@
 <h1> Who are your Important Contacts to Keep in Touch with? </h1>
 
-<p> Your Account: <%= @user.name %> </p>
+<p> Account: <%= @user.name %> </p>
 
 <%= form_for :contact, url: create_contact_url do |f| %>
   <%= f.hidden_field :user_id, :value => @user.id %>
-  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :name, placeholder: "Add Contact" %>
   <%= f.submit "done" %>
+<% end %> <br>
+
+
+<%= @contacts.each do |contact| %>
+  <%= contact.name %> <br>
 <% end %>
