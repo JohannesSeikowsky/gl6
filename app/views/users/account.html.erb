@@ -4,7 +4,7 @@
 
 <%= @user.name %>
 
-<%= form_for :contact, path: create_contact_path, html: { multipart: true } do |f| %>
+<%= form_for :contact, create_contact_url, html: { multipart: true } do |f| %>
   <%= f.hidden_field :user_id, :value => @user.id %>
   <%= f.text_field :name, placeholder: "Name" %>
   <%= f.submit "done" %>
