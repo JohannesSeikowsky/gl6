@@ -18,10 +18,10 @@ class SessionsController < ApplicationController
 		@user.save!
 		# on success - login and redirect
 		session[:user_id] = @user.id	
-		redirect_to root_path, notice: "worked."	
+		redirect_to user_account_path(@user), notice: "worked."	
   	rescue
   		# on failure - redirect
-  		redirect_to root_path, notice: "didnt work."
+  		redirect_to root_path, notice: "didnt work. try again."
   	end
   end
 
