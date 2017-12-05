@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get 'user_account/:id', to: 'users#account', as: 'user_account'
 
+  post 'create_contact', to: 'contacts#new', 'create_contact'
+
 end
