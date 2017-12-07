@@ -9,7 +9,7 @@ class RemindersController < ApplicationController
 
   def create
    	if @user = current_user
-  		@reminder = @user.reminders.build(content: reminder_params[:content], date: reminder_params[:date])
+  		@reminder = @user.reminders.build(date: reminder_params[:date])
   		if @reminder.save
   			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "Reminder set. Another one?"
   		else
