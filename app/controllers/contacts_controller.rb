@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
   def create_many
     if @user = current_user
       begin
-        names = params[:contact][:names]
+        names = contacts_params[:names]
         names_array = names.split(',')
         names_array.each do |name|
             @user.contacts.create(name: name)    
