@@ -11,7 +11,7 @@ class RemindersController < ApplicationController
    	if @user = current_user
   		@reminder = @user.reminders.build(reminder_params)
   		if @reminder.save
-  			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "Reminder set - Back to Dashboard or another one?"
+  			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "Reminder has been set. Back to Dashboard or another one?"
   		else
   			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "didnt work, try again."
   		end
