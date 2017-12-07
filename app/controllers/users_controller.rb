@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def account
-	@user = User.find(params[:id])
-	@contacts = @user.contacts
+  	unless current_user
+  		redirect_to root_path, notice: "please log in."
+  	else
+		@user = current_user
+		@contacts = @user.contacts
+	end
   end
 end
