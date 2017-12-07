@@ -2,8 +2,8 @@
 <h1> Reminders </h1>
 <% @all_reminders.each do |reminder| %>
 	<p>
-		Remind <%= reminder.user.name %> -
-		to be in touch with <%= reminder.content %> -
-		on <%= reminder.date %>
+		Remind - <%= reminder.user.name %> -
+		to be in touch with - <%= reminder.content %> -
+		on - <%= reminder.date %>
 	</p>
 <% end %>
