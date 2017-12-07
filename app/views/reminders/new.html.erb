@@ -1,12 +1,13 @@
 <% if notice %>
-	<p> <%= notice %> </p> 
+	<p> <%= notice %> </p> <br>
+	<%= link_to 'Back to Dashboard', user_accout_path(current_user) %>
 <% end %> 
 
 <h1> Set Reminder </h1>
 <!-- adding several contacts -->
 <%= form_for :reminder, url: create_reminder_url do |f| %>
   <%= f.hidden_field :content, value: @content %>  
-  <%= f.datetime_select :date, :ampm => true,:order => [:day, :month, :year, :hour, :minute], :minute_step => 15 %>
+  <%= f.datetime_select :date, :ampm => true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15 %>
   <br> <br>
   <%= f.submit "set reminder" %>
 <% end %> <br>
