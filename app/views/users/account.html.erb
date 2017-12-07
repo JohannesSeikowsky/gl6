@@ -11,8 +11,8 @@
 <% end %> <br>
 
 <!-- adding several contacts -->
-<%= form_for :contacts, url: create_contact_url do |f| %>
-  <%= f.text_field :names, placeholder: "Add Contact" %>
+<%= form_for :contact, url: create_many_contacts_url do |f| %>
+  <%= f.text_field :names, placeholder: "Add Contacts" %>
   <%= f.submit "done" %>
 <% end %> <br>
 

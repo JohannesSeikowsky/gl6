@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   # create a contact
   post 'create_contact', to: 'contacts#create', as: 'create_contact'
 
+  # create many contacts
+  post 'create_many_contacts', to: 'contacts#create_many', as: 'create_many_contacts'
 
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'
