@@ -4,10 +4,15 @@
 
 <p> Account: <%= @user.name %> </p>
 
-<!-- adding new contact -->
+<!-- adding a contact -->
 <%= form_for :contact, url: create_contact_url do |f| %>
-  <%= f.hidden_field :user_id, :value => @user.id %>
   <%= f.text_field :name, placeholder: "Add Contact" %>
+  <%= f.submit "done" %>
+<% end %> <br>
+
+<!-- adding several contacts -->
+<%= form_for :contacts, url: create_contact_url do |f| %>
+  <%= f.text_field :names, placeholder: "Add Contact" %>
   <%= f.submit "done" %>
 <% end %> <br>
 
