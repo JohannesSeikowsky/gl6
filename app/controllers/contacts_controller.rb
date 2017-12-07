@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
         names_array = names.split(',')
         names_array.each do |name|
             @user.contacts.create(name: name)    
-          end
+        end
         redirect_to user_account_path(current_user), notice: 'contacts created.'
       rescue
         redirect_to user_account_path(current_user), notice: 'some error occured, try again.'

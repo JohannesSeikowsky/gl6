@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   # create many contacts
   post 'create_many_contacts', to: 'contacts#create_many', as: 'create_many_contacts'
 
+  # new reminder
+  get 'new_reminder/:content', to: 'reminders#new', as: 'new_reminder'
+
+  # create reminder
+  post 'create_reminder', to: 'reminders#create', as: 'create_reminder'
+
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'
 
