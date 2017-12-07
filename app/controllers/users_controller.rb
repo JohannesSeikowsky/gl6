@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def account
-  	unless current_user
-  		redirect_to root_path, notice: "please log in."
-  	else
-		@user = current_user
+  	if current_user
+  		@user = current_user
 		@contacts = @user.contacts
+  	else
+  		redirect_to root_path, notice: "please log in."
 	end
   end
 end
