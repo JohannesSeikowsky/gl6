@@ -16,5 +16,7 @@
 
 <!-- all contacts of user -->
 <% @contacts.each do |contact| %>
-  <%= contact.name %> <br>
+  <%= contact.name %>
+  <%= contact.this_month %>
+  <%= contact.interval %> <br> <br>
 <% end %>
