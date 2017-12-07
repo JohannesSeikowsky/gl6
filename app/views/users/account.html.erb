@@ -1,6 +1,12 @@
-<h1> Account: <%= @user.name %> </h1>
+<h1> MindYourNetwork: <%= @user.name %> </h1>
 
 <%= link_to 'Log Out', logout_path, method: :delete %> <br> <br>
+
+<p>
+	<strong> One recurring reminder </strong> will be sent each Sunday to suggest contacts with whom you should follow up this month.
+	<br> <br>
+	<strong> Specific reminders </strong> are email reminders that you yourself can easily set to  follow through.
+</p>
 
 <!-- adding a contact -->
 <%= form_for :contact, url: create_contact_url do |f| %>
