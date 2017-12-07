@@ -9,10 +9,19 @@ class RemindersController < ApplicationController
 
   def create
    	if @user = current_user
-  		@user.reminders.create(content: params[:reminder][:content], date: params[:reminder][:date])
-  		redirect_to new_reminder_path(content: params[:reminder][:content]), notice: "Set another reminder?"
+  		@reminder = @user.reminders.build(content: reminder_params[:content], date: reminder_params[:date])
+  		if @reminder.save
+  			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "Reminder set. Another one?"
+  		else
+  			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "didnt work, try again."
+  		end
   	else
   		redirect_to root_path, notice: "please login."
   	end
+  end
+
+  # reminder params
+  def reminder_params
+  	params.require(:reminder).permit(:content, :date)
   end
 end
