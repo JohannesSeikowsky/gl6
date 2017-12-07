@@ -15,12 +15,16 @@
  */
 
 
+body{
+	padding: 60px 0px 80px 225px;
+}
+
+
 a.button-linkedin {
 	border-radius: 3px;
 	box-shadow: 0 1px 1px #999;
 	color: #fff;
 	display: inline-block;
-	font-size: 16px;
 	margin: 0 20px 20px 0;
 	margin: 0 2rem 2rem 0;
 	padding: 7px 15px;
