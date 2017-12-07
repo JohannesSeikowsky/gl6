@@ -1,6 +1,6 @@
 <%= link_to 'Log Out', logout_path, method: :delete %> <br>
 
-<h1> MYN: <%= @user.name %> </h1>
+<h1> Account: <%= @user.name %> </h1>
 
 <!-- adding a contact -->
 <%= form_for :contact, url: create_contact_url do |f| %>
