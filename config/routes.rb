@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   # create reminder
   post 'create_reminder', to: 'reminders#create', as: 'create_reminder'
 
+  # all reminders
+  get 'all', to: 'reminders#all', as: 'all_reminders'
+
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'
 
