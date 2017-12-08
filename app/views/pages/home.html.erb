@@ -18,15 +18,19 @@
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<h1 id="text02"><strong> Don&#39;t let your important contacts fall through the cracks! </strong></h1>
+
+					<% if notice %>
+						<h1> <%= notice %> </h1>
+					<% else %>				 
+						<h1 id="text02"><strong> Don&#39;t let your important contacts fall through the cracks! </strong></h1>
+					<% end %>
+									
 					<p id="text03">Trying to stay on top of a large network of important contacts? <strong>MindYourNetwork</strong> makes sure you follow up by sending regular reminders and providing you with a detailed, easy-to-manage contacts list.</p>
 
-<% if notice %>
-	<p> <%= notice %> </p> 
-<% end %>
 
 
 <%= link_to 'Login with LinkedIn', '/auth/linkedin', class: "button-linkedin" %>
+
 
   
 
