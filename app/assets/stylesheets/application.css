@@ -20,6 +20,7 @@ body{
 }
 
 .contact_name{
+	display: inline;
 	width: 190px;
 }
 
