@@ -30,9 +30,9 @@
 
   <!-- form to update action -->
   <%= form_for :contact, url: update_contact_url(id: contact.id), method: (:patch) do |f| %> 
-    <%= contact.name %> - 
-    This_Month: <%= f.check_box :this_month, checked: contact.this_month %> -
-    Every <%= f.number_field :interval, value: contact.interval %> Months
+    <%= contact.name %> <br>
+    this month? <%= f.check_box :this_month, checked: contact.this_month %> <br>
+    every <%= f.number_field :interval, value: contact.interval %> months <br>
     <%= f.submit "submit" %> <br>
 
     <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %> <br> <br>
