@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # create many contacts
   post 'create_many_contacts', to: 'contacts#create_many', as: 'create_many_contacts'
 
+  # update a contact (this_month or interval)
+  patch 'update_contact/:id', to: 'contacts#update', as: 'update_contact'
+
   # new reminder
   get 'new_reminder/:content', to: 'reminders#new', as: 'new_reminder'
 
