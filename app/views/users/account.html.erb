@@ -23,13 +23,10 @@
 
 <!-- all contacts of user -->
 <% @contacts.each do |contact| %>
-
-
   <%= contact.name %>
   <%= contact.this_month %>
   <%= contact.interval %> 
   <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %> <br> <br>
-
-
 <% end %>
+
 
