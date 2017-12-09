@@ -32,7 +32,7 @@
   <%= form_for :contact, url: update_contact_url(id: contact.id), 
           method: (:patch), remote: true do |f| %> 
     
-    <div class="contact_name">
+    <div class="row_element">
       <%= contact.name %>
     </div>
 
@@ -59,7 +59,7 @@
         <%= f.submit "submit" %>
     </div>
 
-  <% end %>
+  <% end %> <br>
 <% end %>
 
 
