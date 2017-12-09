@@ -45,24 +45,6 @@
 
 
 
-          <!-- This Month -->
-        <div style="display: inline-block; width: 168px; max-widths: 168px;">
-          <%= f.check_box :this_month, checked: contact.this_month, style: "margin-left: 33px;",
-              onchange: "click_submit(this); return false;" %>
-          <%= f.submit "this month.", style: "display: none;" %>
-        </div>
-
-          <!-- Be in touch every -->
-          <div style="display: inline-block; width: 215px; max-width: 215px;"> 
-          Every
-          <%= f.number_field :interval, value: contact.interval, style: "width: 25px;",
-              onchange: "click_submit(this); return false;" %> 
-          months
-            <%= f.submit "set", style: "margin-left: 8px; display: none;" %>
-        </div>
-
-
-
 <script type="text/javascript">
 
   function click_submit_btn(this_element){
