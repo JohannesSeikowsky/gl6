@@ -1,18 +1,16 @@
+<p> <%= link_to 'Log Out', logout_path, method: :delete %> </p>
+
 <h1> MindYourNetwork: <%= @user.name %> </h1>
 
 <% if notice %>
   <p> <%= notice %> </p>
 <% end %>
 
-<%= link_to 'Log Out', logout_path, method: :delete %> <br> <br>
+<p> <strong> A recurring reminder </strong> will be sent each Sunday to suggest contacts with whom you should follow up this month. </p>
 
-<p>
-	<strong> A recurring reminder </strong> will be sent each Sunday to suggest contacts with whom you should follow up this month.
-	<br> <br>
-	<strong> Specific reminders </strong> are email reminders that you yourself can easily set here to help yourself follow through.
-</p> <br>
+<p> <strong> Specific reminders </strong> are email reminders that you yourself can easily set here to help yourself follow through. </p>
 
-<!-- add a contact 
+<!--
 <%= form_for :contact, url: create_contact_url do |f| %>
   <%= f.text_field :name, placeholder: "Add one Contact" %>
   <%= f.submit "done" %>
@@ -20,8 +18,8 @@
 -->
 
 <!-- add several contacts -->
-<%= form_for :contact, url: create_many_contacts_url do |f| %>
-  <%= f.text_field :names, placeholder: "Add many Contacts" %>
+<%= form_for :contact, url: create_many_contacts_url, id: "add_contacts_form" do |f| %>
+  <%= f.text_field :names, placeholder: "Add many Contacts" %> <br>
   <%= f.submit "done" %>
 <% end %> <br> <br>
 
@@ -55,8 +53,8 @@
 <script type="text/javascript">
 
   function click_submit_btn(this_element){
-    submit_btn = this_element.parentNode.lastElementChild;
-    submit_btn.click();
+    field = this_element;
+    field.form.submit();
   }
 
 </script>
