@@ -29,7 +29,8 @@
 <% @contacts.each do |contact| %>
 
   <!-- form to update action -->
-  <%= form_for :contact, url: update_contact_url(id: contact.id), method: (:patch) do |f| %> 
+  <%= form_for :contact, url: update_contact_url(id: contact.id), 
+          method: (:patch), remote: true do |f| %> 
     <%= contact.name %> <br>
     <%= f.check_box :this_month, checked: contact.this_month %> this month <br>
     <%= f.number_field :interval, value: contact.interval, style: "width: 25px;" %> month intervals <br>
