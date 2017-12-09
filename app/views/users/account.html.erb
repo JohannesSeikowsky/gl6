@@ -34,7 +34,7 @@
     
       <%= contact.name %>
 
-      <%= f.check_box :this_month, checked: contact.this_month, onchange: "this.form.submit()" %>
+      <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
       this month
 
       <%= f.number_field :interval, value: contact.interval, 
