@@ -19,7 +19,7 @@
 
 <!-- add several contacts -->
 <%= form_for :contact, url: create_many_contacts_url do |f| %>
-  <%= f.text_field :names, placeholder: "Add many Contacts", id: "add_contacts_field" %> <br>
+  <%= f.text_area :names, placeholder: "Add many Contacts", id: "add_contacts_field" %> <br>
   <%= f.submit "done" %>
 <% end %> <br> <br>
 

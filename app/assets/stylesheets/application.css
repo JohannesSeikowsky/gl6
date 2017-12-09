@@ -21,7 +21,8 @@ body{
 
 #add_contacts_field{
 	height: 120px;
-	width: 260px;	
+	width: 260px;
+	margin-bottom: 8px;
 }
 
 .contact_name{
