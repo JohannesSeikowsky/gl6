@@ -19,9 +19,14 @@ body{
 	padding: 60px 0px 80px 225px;
 }
 
+
+.contact_name{
+	width: 190px;
+}
+
 .row_elem{
 	display: inline;
-	margin-right: 26px;
+	margin-right: 28px;
 }
 
 
