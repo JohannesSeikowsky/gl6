@@ -31,16 +31,32 @@
   <!-- form for each contact -->
   <%= form_for :contact, url: update_contact_url(id: contact.id), 
           method: (:patch), remote: true do |f| %> 
-    <%= contact.name %> <br>
-    <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %> 
-    this month <br>
-    <%= f.number_field :interval, value: contact.interval, 
-            style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
-    month intervals <br>
-    <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %> <br>
-    <%= link_to 'comment', "#" %> <br>
-    <%= f.submit "submit" %> <br>
-  <% end %> <br> <br>
+    
+    <div class="row_elem">
+      <%= contact.name %>
+    </div>
+
+    <div class="row_elem">    
+      <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
+      this month
+    </div>
+
+    <div class="row_elem">
+      <%= f.number_field :interval, value: contact.interval, 
+              style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
+      month intervals
+    </div>
+
+    <div class="row_elem">
+      <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %>
+    </div>
+    
+    <div class="row_elem">
+      <%= link_to 'comment', "#" %>
+    </div>
+    
+    <%= f.submit "submit" %>
+  <% end %> <br>
 <% end %>
 
 

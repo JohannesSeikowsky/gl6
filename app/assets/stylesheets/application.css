@@ -19,6 +19,11 @@ body{
 	padding: 60px 0px 80px 225px;
 }
 
+.row_elem{
+	display: inline;
+	margin-right: 26px;
+}
+
 
 a.button-linkedin {
 	border-radius: 3px;
