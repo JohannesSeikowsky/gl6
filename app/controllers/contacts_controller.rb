@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
       @contact = Contact.find(params[:id])
       begin
         @contact.update(contacts_params)
-        redirect_to user_account_path(current_user), notice: 'updated.'
+        redirect_to user_account_path(current_user), notice: 'contact updated.'
       rescue
         redirect_to user_account_path(current_user), notice: 'some error occured, try again.'
       end
