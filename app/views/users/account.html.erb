@@ -32,10 +32,10 @@
   <%= form_for :contact, url: update_contact_url(id: contact.id), 
           method: (:patch), remote: true do |f| %> 
     <%= contact.name %> <br>
-    <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit(this); return false;" %> 
+    <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %> 
     this month <br>
     <%= f.number_field :interval, value: contact.interval, 
-            style: "width: 25px;", onchange: "click_submit(this); return false;" %> 
+            style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
     month intervals <br>
     <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %> <br>
     <%= link_to 'comment', "#" %> <br>
