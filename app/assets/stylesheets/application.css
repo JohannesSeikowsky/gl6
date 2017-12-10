@@ -19,19 +19,19 @@ body{
 	padding: 60px 0px 80px 225px;
 }
 
-.container{
-	display: inline;
-}
-
 #add_contacts_field{
 	height: 120px;
 	width: 260px;
 	margin-bottom: 4px;
 }
 
+.container{
+	display: inline;
+}
+
 .contact_name{
 	display: inline-block;
-	width: 190px;
+	width: 120px;
 }
 
 .row_element{
@@ -40,5 +40,5 @@ body{
 }
 
 .interval_field{
-	width: 25px;
+	width: 28px;
 }
