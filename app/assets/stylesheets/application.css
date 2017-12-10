@@ -19,6 +19,10 @@ body{
 	padding: 60px 0px 80px 225px;
 }
 
+#container{
+	display: inline;
+}
+
 #add_contacts_field{
 	height: 120px;
 	width: 260px;

@@ -38,7 +38,7 @@
         to find and click the invisible submit button
         each time user makes a change one of the two fiels.
       -->
-      <div>
+      <div id="container">
         <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
         this month
 
@@ -53,7 +53,7 @@
     
       <%= link_to 'comment', "#" %>
 
-  <% end %> <br>
+  <% end %>
 <% end %>
 
 
