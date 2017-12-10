@@ -47,7 +47,7 @@ body{
 	display: none;
 }
 
-.side_sectiom{
-	display: inline;
-	margin-left: 105px; 
+.side_section{
+	display: inline-block;
+	margin-left: 125px; 
 }
