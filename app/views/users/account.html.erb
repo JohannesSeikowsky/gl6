@@ -47,7 +47,10 @@
 
       <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %>
     
-      <%= link_to 'comment', "#" %>
+      <div class="side_section">
+        <%= link_to 'comment', "#" %> |
+        <%= link_to 'x', "#" %>
+      </div>
 
   <% end %>
 <% end %>
