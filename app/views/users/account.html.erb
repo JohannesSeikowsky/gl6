@@ -28,7 +28,7 @@
 <% @contacts.each do |contact| %>
   <!-- form for each contact -->
   <%= form_for :contact, url: update_contact_url(id: contact.id), 
-          method: (:patch), remote: true do |f| %> 
+          method: (:patch), remote: true, :authenticity_token => true  do |f| %> 
     
       <%= contact.name %>
 
