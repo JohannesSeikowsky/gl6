@@ -19,7 +19,7 @@ body{
 	padding: 60px 0px 80px 225px;
 }
 
-#container{
+.container{
 	display: inline;
 }
 
@@ -37,4 +37,8 @@ body{
 .row_element{
 	display: inline;
 	margin-right: 28px;
+}
+
+.interval_field{
+	width: 25px;
 }

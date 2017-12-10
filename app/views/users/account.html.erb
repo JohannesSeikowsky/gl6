@@ -30,20 +30,22 @@
   <%= form_for :contact, url: update_contact_url(id: contact.id), 
           method: (:patch), remote: true, :authenticity_token => true  do |f| %> 
     
-      <%= contact.name %>
-
+      <div class="contact_name">
+        <%= contact.name %>
+      </div>
+      
       <!-- 
         @marci - please dont delete
         the containing div. The Javascript uses it
         to find and click the invisible submit button
         each time user makes a change one of the two fiels.
       -->
-      <div id="container">
+      <div class="container">
         <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
         this month
 
         <%= f.number_field :interval, value: contact.interval, 
-                style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
+                class: "interval_field", onchange: "click_submit_btn(this); return false;" %> 
         month intervals
 
         <%= f.submit "submit" %>
