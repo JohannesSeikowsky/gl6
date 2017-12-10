@@ -32,18 +32,26 @@
     
       <%= contact.name %>
 
-      <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
-      this month
+      <!-- 
+        @marci - please dont delete
+        the containing div. The Javascript uses it
+        to find and click the invisible submit button
+        each time user makes a change one of the two fiels.
+      -->
+      <div>
+        <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
+        this month
 
-      <%= f.number_field :interval, value: contact.interval, 
-              style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
-      month intervals
+        <%= f.number_field :interval, value: contact.interval, 
+                style: "width: 25px;", onchange: "click_submit_btn(this); return false;" %> 
+        month intervals
+
+        <%= f.submit "submit" %>
+      </div>
 
       <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %>
     
       <%= link_to 'comment', "#" %>
-
-      <%= f.submit "submit" %>
 
   <% end %> <br>
 <% end %>
@@ -53,8 +61,7 @@
 <script type="text/javascript">
 
   function click_submit_btn(this_element){
-    field = this_element;
-    field.form.input[type=submit].click();
+    this_element.parentNode.lastElementChild.click();
   }
 
 </script>
