@@ -40,5 +40,9 @@ body{
 }
 
 .interval_field{
-	width: 28px;
+	width: 30px;
+}
+
+.submit_btn{
+	display: none;
 }
