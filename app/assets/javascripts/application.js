@@ -13,3 +13,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+// submitting form when user changes this_month or interval in account Interface
+function click_submit_btn(this_element){
+    this_element.parentNode.lastElementChild.click();
+}

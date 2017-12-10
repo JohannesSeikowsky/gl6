@@ -33,6 +33,7 @@
         to find and click the invisible submit button
         each time user makes a change one of the two fiels.
       -->
+
       <div class="container">
         <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
         this month
@@ -51,12 +52,3 @@
   <% end %>
 <% end %>
 
-
-
-<script type="text/javascript">
-
-  function click_submit_btn(this_element){
-    this_element.parentNode.lastElementChild.click();
-  }
-
-</script>
