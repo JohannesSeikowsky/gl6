@@ -9,6 +9,10 @@ body {
   padding-bottom: 20px;
 }
 
+*:focus {
+    outline: none;
+}
+
 article,
 aside,
 details,
@@ -3428,4 +3432,25 @@ a {
   right: 0;
   z-index: 1000;
   text-align: center;
+}
+
+.intervals {
+  margin: 0 2px 0 2px;
+  color: #c9399a;
+}
+
+.this-month {
+  margin: 0 25px 0 2px;
+}
+
+.button-hide {
+  display: none;
+}
+
+.interval_field {
+  width: 40px;
+  text-align: center;
+  background-color: transparent;
+  border-width: 0;
+  color: #c9399a;
 }
