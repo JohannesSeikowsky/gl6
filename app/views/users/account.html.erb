@@ -1,56 +1,68 @@
-<p> <%= link_to 'Log Out', logout_path, method: :delete %> </p>
 
-<h1> MindYourNetwork: <%= @user.name %> </h1>
+<div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
+  <a href="#" class="brand w-nav-brand">
+    <div class="logo-design">mind your network</div>
+  </a>
+  <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link w-nav-link">Contacts</a><a href="#" class="nav-link w-nav-link">User: <%= @user.name %></a><a href="#" class="nav-link w-nav-link"><%= link_to 'Log Out', logout_path, method: :delete %></a></nav>
+  <div class="w-nav-button">
+    <div class="w-icon-nav-menu"></div>
+  </div>
+</div>
+
+<div class="w-form">
+  <%= form_for :contact, url: create_many_contacts_url do |f| %>
+    <%= f.text_area :names, placeholder: "Add your Contacts", id: "name", class: "text-field w-input" %>
+    <%= f.submit "Add Contacs", class: "submit-button w-button" %>
+  <% end %>
+</div>
+
+  <!--  <form id="email-form" name="email-form" data-name="Email Form" class="form">
+      <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter name of new contact" id="name" />
+      <input type="submit" value="Add Contact" data-wait="Please wait..." class="submit-button w-button" />
+    </form> -->
 
 <% if notice %>
-  <p> <%= notice %> </p>
+  <div class="notice"> <%= notice %> </div>
 <% end %>
 
-<p> <strong> A recurring reminder </strong> will be sent each Sunday to suggest contacts with whom you should follow up this month. </p>
-
-<p> <strong> Specific reminders </strong> are email reminders that you yourself can easily set here to help yourself follow through. </p>
-
-<!-- add several contacts -->
-<%= form_for :contact, url: create_many_contacts_url do |f| %>
-  <%= f.text_area :names, placeholder: "Add many Contacts", id: "add_contacts_field" %> <br>
-  <%= f.submit "done" %>
-<% end %> <br> <br>
-
-
-<!-- all contacts of user -->
 <% @contacts.each do |contact| %>
-  <!-- form for each contact -->
-  <%= form_for :contact, url: update_contact_url(id: contact.id), 
-          method: (:patch), remote: true, :authenticity_token => true  do |f| %> 
-    
-      <div class="contact_name">
-        <%= contact.name %>
-      </div>
-      
-      <!-- 
-        @marci - please dont delete
-        the containing div or the invisible submit button. 
-        The Javascript uses the div to find the button
-        each time user makes a change one of the two fiels to submit stuff.
-      -->
+  <%= form_for :contact, url: update_contact_url(id: contact.id),
+          method: (:patch), remote: true, :authenticity_token => true  do |f| %>
 
-      <div class="container">
-        <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
-        this month
+          <div class="wrapper-contact">
+            <div class="top-wrapper">
+              <div class="wrapper-contact-info">
+                <div class="title-wrapper">
+                  <div class="name-contact"><%= contact.name %></div>
+                </div>
+              </div>
+              <div class="wrapper-time">
+                <div class="text-block-2">
+                  <%= f.check_box :this_month, checked: contact.this_month, onchange: "click_submit_btn(this); return false;" %>
+                  this month
 
-        <%= f.number_field :interval, value: contact.interval, 
-                class: "interval_field", onchange: "click_submit_btn(this); return false;" %> 
-        month intervals
+                  <%= f.number_field :interval, value: contact.interval,
+                          class: "interval_field", onchange: "click_submit_btn(this); return false;" %>
+                  month intervals
 
-        <%= f.submit "submit", class: "submit_btn" %>
-      </div>
-
-      <%= link_to 'set a reminder', new_reminder_path(content: contact.name) %>
-    
-      <div class="side_section">
-        <%= link_to 'comment', "#" %> |
-        <%= link_to 'x', "#" %>
-      </div>
+                  <%= f.submit "submit", class: "submit_btn" %>
+                </div>
+              </div>
+              <div class="div-block-5">
+                <div class="bellow-function-wrapper">
+                  <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
+                  <div class="text-below"><%= link_to 'Notes', "#" %></div>
+                </div>
+                <div class="bellow-function-wrapper">
+                  <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04656e9ea3b90001b7d926_calendar.svg" class="organize-icon" />
+                  <div class="text-below"><%= link_to 'Schedule Reminder', new_reminder_path(content: contact.name) %></div>
+                </div>
+                <div class="bellow-function-wrapper">
+                  <div class="text-below"><%= link_to 'x', "#" %></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
   <% end %>
 <% end %>
