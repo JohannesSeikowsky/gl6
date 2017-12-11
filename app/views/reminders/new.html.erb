@@ -1,10 +1,10 @@
 
 <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
-  <a href="#" class="brand w-nav-brand">
+  <a href="/" class="brand w-nav-brand">
     <div class="logo-design">mind your network</div>
   </a>
   <nav role="navigation" class="nav-menu w-nav-menu">
-		<a href="#" class="nav-link w-nav-link">Contacts</a>
+		<a href="#" class="nav-link w-nav-link"><%= link_to 'Back to Contacts', user_account_path(current_user) %></a>
 		<a href="#" class="nav-link w-nav-link"><%= link_to 'Log Out', logout_path, method: :delete %></a>
 	</nav>
   <div class="w-nav-button">
@@ -12,16 +12,14 @@
   </div>
 </div>
 
-<% if notice %>
-	<p> <%= notice %> </p>
-	<%= link_to 'Back to your Dashboard', user_account_path(current_user) %> <br>
-<% end %>
-
-<h1> Set Reminder </h1>
-<!-- adding several contacts -->
+<div style="text-align:center">
 <%= form_for :reminder, url: create_reminder_url do |f| %>
   <%= f.hidden_field :content, value: @content %>
   <%= f.datetime_select :date, :ampm => true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15 %>
   <br> <br>
-  <%= f.submit "set reminder" %>
+  <%= f.submit "set reminder", class: "submit-button-2 w-button" %>
+	<% if notice %>
+		<div class="notice"><%= notice %></div>
+	<% end %>
+</div>
 <% end %> <br>
