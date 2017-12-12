@@ -58,7 +58,9 @@
               <div class="div-block-5">
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
-                  <div class="text-below"><%= link_to 'Notes', "#" %></div>
+                  <div class="text-below">
+                    <%= link_to 'Notes', "#", onclick: "display_form('note_taking_container'); return false" %>
+                  </div>
                 </div>
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04656e9ea3b90001b7d926_calendar.svg" class="organize-icon" />
@@ -74,4 +76,14 @@
             </div>
           </div>
   <% end %>
+
+  <!-- hidden note taking -->   
+  <div id="note_taking_container">
+    <h3> Note-taking </h3>
+      <%= form_for :contact, {:url => update_contact_url(id: contact.id), method: :patch} do |form| %>
+        <%= form.text_area :comment, placeholder: "..." %>
+        <%= form.submit "set comment" %>
+      <% end %>
+  </div>
+
 <% end %>

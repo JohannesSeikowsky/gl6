@@ -19,3 +19,13 @@
 function click_submit_btn(this_element){
     this_element.parentNode.lastElementChild.click();
 }
+
+function display_form(id){
+	element = document.getElementById(id);
+	element.style.display = "block";
+}
+
+function hide_form(id){
+	element = document.getElementById(id);
+	element.style.display = "none"; 
+}
