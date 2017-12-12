@@ -65,18 +65,20 @@
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
                   <div class="text-below">
                     
+                    <!-- 
+                      @marci - bitte die container struktur hier so lassen,
+                      das javascript nutzt sie um die comment section zu zeigen und zu verstecken....
+                    -->
                     <div class="notes_container">
-                      <%= link_to 'Notes', "#", 
-                        onclick: "display_comment_section(this); return false" %>
-                      <!-- note taking - hidden by default -->   
+                      <%= link_to 'Notes', "#", onclick: "display_comment_section(this); return false" %>
                       <div id="note_taking_container">
                         <h3> Set comment </h3>
-                          <%= form_for :profile, 
-                                :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
-                            <%= form.text_area :comment, placeholder: "placeholder" %> <br>
-                            <%= form.submit "set comment" %> <br> <br>
-                            <%= link_to 'Back', "#", onclick: "hide_comment_section(this); return false" %>
-                          <% end %>
+                        <%= form_for :profile, 
+                              :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
+                          <%= form.text_area :comment, placeholder: "placeholder" %> <br>
+                          <%= form.submit "set comment" %> <br> <br>
+                          <%= link_to 'Back', "#", onclick: "hide_comment_section(this); return false" %>
+                        <% end %>
                       </div>
                     </div>
 
