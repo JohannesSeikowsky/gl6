@@ -66,7 +66,8 @@
                 </div>
                 <div class="bellow-function-wrapper">
                   <div class="text-below">
-                    <%= link_to 'x', delete_contact_path(id: contact.id), data: { confirm: 'Are you sure?' } %>    
+                    <%= link_to 'x', delete_contact_path(id: contact.id), 
+                              method: :delete, data: { confirm: 'Are you sure?' } %>    
                   </div>
                 </div>
               </div>

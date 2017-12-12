@@ -54,7 +54,7 @@ class ContactsController < ApplicationController
     if @user = current_user
       @contact = Contact.find(params[:id])
       @contact.destroy
-      redirect_to user_account_path(id: @user.id), notice: 'contact deleted.'
+      redirect_to user_account_path(current_user), notice: 'contact deleted.'
     else
       redirect_to root_path, notice: 'please log in.'
     end
