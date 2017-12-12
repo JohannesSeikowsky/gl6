@@ -32,6 +32,11 @@
 <% end %>
 </div>
 
+<div id="settings_updated">
+  <p> settings updated. </p>
+</div>
+
+
 <% @contacts.each do |contact| %>
   <%= form_for :contact, url: update_contact_url(id: contact.id),
           method: (:patch), remote: true, :authenticity_token => true  do |f| %>
@@ -59,7 +64,7 @@
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
                   <div class="text-below">
-                    <%= link_to 'Notes', "#", onclick: "display_form('note_taking_container'); return false" %>
+                    <%= link_to 'Notes', "#", onclick: "display_element('note_taking_container'); return false" %>
                   </div>
                 </div>
                 <div class="bellow-function-wrapper">
@@ -77,13 +82,13 @@
           </div>
   <% end %>
 
-  <!-- hidden note taking -->   
+  <!-- note taking - hidden by default -->   
   <div id="note_taking_container">
     <h3> Note-taking </h3>
       <%= form_for :contact, {:url => update_contact_url(id: contact.id), method: :patch} do |form| %>
         <%= form.text_area :comment, placeholder: "placeholder" %> <br>
         <%= form.submit "set comment" %> <br> <br>
-        <%= link_to 'Back', "#", onclick: "hide_form('note_taking_container'); return false" %>
+        <%= link_to 'Back', "#", onclick: "hide_element('note_taking_container'); return false" %>
       <% end %>
   </div>
 

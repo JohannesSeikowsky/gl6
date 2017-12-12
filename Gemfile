@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'omniauth-linkedin-oauth2', git: 'https://github.com/Devato/omniauth-linkedin-oauth2.git'
 # environment variables
 gem 'figaro'
+# jquery
+gem 'jquery-rails'
 
 
 group :development, :test do

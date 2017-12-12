@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
 
 
 // submitting form when user changes this_month or interval in account Interface
@@ -20,12 +21,12 @@ function click_submit_btn(this_element){
     this_element.parentNode.lastElementChild.click();
 }
 
-function display_form(id){
+function display_element(id){
 	element = document.getElementById(id);
 	element.style.display = "block";
 }
 
-function hide_form(id){
+function hide_element(id){
 	element = document.getElementById(id);
 	element.style.display = "none"; 
 }
