@@ -81,8 +81,9 @@
   <div id="note_taking_container">
     <h3> Note-taking </h3>
       <%= form_for :contact, {:url => update_contact_url(id: contact.id), method: :patch} do |form| %>
-        <%= form.text_area :comment, placeholder: "..." %>
-        <%= form.submit "set comment" %>
+        <%= form.text_area :comment, placeholder: "placeholder" %> <br>
+        <%= form.submit "set comment" %> <br> <br>
+        <%= link_to 'Back', "#", onclick: "hide_form('note_taking_container'); return false" %>
       <% end %>
   </div>
 
