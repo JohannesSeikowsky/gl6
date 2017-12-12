@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
         end
         redirect_to user_account_path(current_user), notice: 'contacts created.'
       rescue
-        redirect_to user_account_path(current_user), notice: 'some error occured, try again.'
+        redirect_to user_account_path(current_user), notice: 'an error occured, try again.'
       end
     else
       redirect_to root_path, notice: 'please log in.'

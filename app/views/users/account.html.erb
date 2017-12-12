@@ -64,7 +64,22 @@
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
                   <div class="text-below">
-                    <%= link_to 'Notes', "#", onclick: "display_element('note_taking_container'); return false" %>
+                    
+                    <div class="notes_container">
+                      <%= link_to 'Notes', "#", 
+                        onclick: "display_comment_section(this); return false" %>
+                      <!-- note taking - hidden by default -->   
+                      <div id="note_taking_container">
+                        <h3> Set comment </h3>
+                          <%= form_for :profile, 
+                                :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
+                            <%= form.text_area :comment, placeholder: "placeholder" %> <br>
+                            <%= form.submit "set comment" %> <br> <br>
+                            <%= link_to 'Back', "#", onclick: "hide_comment_section(this); return false" %>
+                          <% end %>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
                 <div class="bellow-function-wrapper">
@@ -74,22 +89,13 @@
                 <div class="bellow-function-wrapper">
                   <div class="text-below">
                     <%= link_to 'x', delete_contact_path(id: contact.id), 
-                              method: :delete, data: { confirm: 'Are you sure?' } %>    
+                              method: :delete, data: { confirm: 'Do you want to delete this contact?' } %>    
                   </div>
                 </div>
               </div>
             </div>
           </div>
   <% end %>
-
-  <!-- note taking - hidden by default -->   
-  <div id="note_taking_container">
-    <h3> Note-taking </h3>
-      <%= form_for :contact, {:url => update_contact_url(id: contact.id), method: :patch} do |form| %>
-        <%= form.text_area :comment, placeholder: "placeholder" %> <br>
-        <%= form.submit "set comment" %> <br> <br>
-        <%= link_to 'Back', "#", onclick: "hide_element('note_taking_container'); return false" %>
-      <% end %>
-  </div>
-
 <% end %>
+
+

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profiles/create'
+
   # home
   root 'pages#home'
 
@@ -20,6 +22,9 @@ Rails.application.routes.draw do
 
   # delete a contact
   delete 'delete_contact/:id', to: 'contacts#delete', as: 'delete_contact'
+
+  # create or update profile
+  post 'create_or_update_profile/:contact_id', to: 'profiles#create_or_update_profile', as: 'create_or_update_profile'
 
   # new reminder
   get 'new_reminder/:content', to: 'reminders#new', as: 'new_reminder'

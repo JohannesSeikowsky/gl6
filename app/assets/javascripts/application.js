@@ -30,3 +30,11 @@ function hide_element(id){
 	element = document.getElementById(id);
 	element.style.display = "none"; 
 }
+
+function display_comment_section(this_element){
+    this_element.parentNode.lastElementChild.style.display = "block";
+}
+
+function hide_comment_section(this_element){
+    this_element.parentNode.style.display = "none";
+}
