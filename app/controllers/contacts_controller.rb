@@ -50,9 +50,15 @@ class ContactsController < ApplicationController
     end
   end
 
-
-
-
+  def delete
+    if @user = current_user
+      @contact = Contact.find(params[:id])
+      @contact.destroy
+      redirect_to(user_account_path(@user))
+    else
+      redirect_to root_path, notice: 'please log in.'
+    end
+  end
 
   # contact params
   def contacts_params

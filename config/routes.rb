@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   # update a contact (this_month or interval)
   patch 'update_contact/:id', to: 'contacts#update', as: 'update_contact'
 
+  # delete a contact
+  delete 'delete_contact/:id', to: 'contacts#delete', as: 'delete_contact'
+
   # new reminder
   get 'new_reminder/:content', to: 'reminders#new', as: 'new_reminder'
 

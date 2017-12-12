@@ -65,7 +65,9 @@
                   <div class="text-below"><%= link_to 'Schedule Reminder', new_reminder_path(content: contact.name) %></div>
                 </div>
                 <div class="bellow-function-wrapper">
-                  <div class="text-below"><%= link_to 'x', "#" %></div>
+                  <div class="text-below">
+                    <%= link_to 'x', delete_contact_path(id: contact.id), data: { confirm: 'Are you sure?' } %>    
+                  </div>
                 </div>
               </div>
             </div>
