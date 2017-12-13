@@ -31,10 +31,8 @@ function hide_element(id){
 	element.style.display = "none"; 
 }
 
-function display_comment_section(this_element){
-    this_element.parentNode.lastElementChild.style.display = "block";
-}
-
-function hide_comment_section(this_element){
-    this_element.parentNode.style.display = "none";
+function display_comment_section(id){
+	element_id = "comment_container_" + id
+	element = document.getElementById(element_id);
+	element.style.display = "block";
 }

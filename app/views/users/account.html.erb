@@ -24,7 +24,8 @@
   <form id="email-form" name="email-form" data-name="Email Form" class="form">
       <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter name of new contact" id="name" />
       <input type="submit" value="Add Contact" data-wait="Please wait..." class="submit-button w-button" />
-    </form> -->
+    </form> 
+  -->
 
 <div class="notice">
 <% if notice %>
@@ -64,24 +65,8 @@
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
                   <div class="text-below">
-                    
-                    <!-- 
-                      @marci - bitte die container struktur hier so lassen,
-                      das javascript nutzt sie um die comment section zu zeigen und zu verstecken....
-                    -->
-                    <div class="notes_container">
-                      <%= link_to 'Notes', "#", onclick: "display_comment_section(this); return false" %>
-                      
-                      <div id="note_taking_container">
-                        <h3> Set comment </h3>
-                        <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
-                          <%= form.text_area :comment, placeholder: "placeholder" %> <br>
-                          <%= form.submit "set comment" %> <br> <br>
-                          <%= link_to 'Back', "#", onclick: "hide_comment_section(this); return false" %>
-                        <% end %>
-                      </div>
-                    </div>
-
+                    <%= link_to 'Notes', "#", 
+                          onclick: "display_comment_section(#{contact.id}); return false" %>
                   </div>
                 </div>
                 <div class="bellow-function-wrapper">
@@ -98,6 +83,17 @@
             </div>
           </div>
   <% end %>
+
+  <!-- comment setting sections -->
+  <div id="<%= "comment_container_" + contact.id.to_s %>" class="note_taking_container">
+    <h3> Set comment </h3>
+    <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
+      <%= form.text_area :comment, placeholder: "placeholder" %> <br>
+      <%= form.submit "set comment" %> <br> <br>
+      <%= link_to 'Back', "#", onclick: "hide_this_section(this); return false" %>
+      <br> <br>
+      <p> <%= contact.profile.comment if contact.profile %> </p>
+    <% end %>
+  </div>
+
 <% end %>
-
-
