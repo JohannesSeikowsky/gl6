@@ -88,10 +88,15 @@
   <div id="<%= "comment_container_" + contact.id.to_s %>" class="note_taking_container">
     <h3> Set comment </h3>
     <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
-      <%= form.text_area :comment, placeholder: "placeholder" %> <br>
+      <% if contact.profile %>
+        <%= form.text_area :comment, value: contact.profile.comment %> 
+      <% else %>
+        <%= form.text_area :comment, placeholder: "placeholder" %> 
+      <% end %> <br>
       <%= form.submit "set comment" %> <br> <br>
       <%= link_to 'Back', "#", onclick: "hide_this_section(this); return false" %>
       <br> <br>
+      <h3> Your comment </h3>
       <p> <%= contact.profile.comment if contact.profile %> </p>
     <% end %>
   </div>
