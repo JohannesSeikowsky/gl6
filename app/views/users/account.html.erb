@@ -24,17 +24,11 @@
   <form id="email-form" name="email-form" data-name="Email Form" class="form">
       <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter name of new contact" id="name" />
       <input type="submit" value="Add Contact" data-wait="Please wait..." class="submit-button w-button" />
-    </form> 
+    </form>
   -->
 
-<div class="notice">
-<% if notice %>
-   <%= notice %>
-<% end %>
-</div>
-
-<div id="settings_updated">
-  <p> settings updated. </p>
+<div id="settings_updated" class="notice">
+changes saved succesfully
 </div>
 
 
@@ -65,7 +59,7 @@
                 <div class="bellow-function-wrapper">
                   <img src="https://daks2k3a4ib2z.cloudfront.net/59f72a5b04139300016ae066/5a04657e7e1de90001c9136a_notification.svg" class="organize-icon" />
                   <div class="text-below">
-                    <%= link_to 'Notes', "#", 
+                    <%= link_to 'Notes', "#",
                           onclick: "display_comment_section(#{contact.id}); return false" %>
                   </div>
                 </div>
@@ -75,8 +69,8 @@
                 </div>
                 <div class="bellow-function-wrapper">
                   <div class="text-below">
-                    <%= link_to 'x', delete_contact_path(id: contact.id), 
-                              method: :delete, data: { confirm: 'Do you want to delete this contact?' } %>    
+                    <%= link_to 'x', delete_contact_path(id: contact.id),
+                              method: :delete, data: { confirm: 'Do you want to delete this contact?' } %>
                   </div>
                 </div>
               </div>
@@ -86,18 +80,27 @@
 
   <!-- comment setting sections -->
   <div id="<%= "comment_container_" + contact.id.to_s %>" class="note_taking_container">
-    <h3> Set comment </h3>
+
+    <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
+      <a href="/" class="brand w-nav-brand">
+        <div class="logo-design">mind your network</div>
+      </a>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+    		<a href="#" class="nav-link w-nav-link"><%= link_to 'Back to Contacts', user_account_path(current_user) %></a>
+    		<a href="#" class="nav-link w-nav-link"><%= link_to 'Log Out', logout_path, method: :delete %></a>
+    	</nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+    <h3>Add notes</h3>
     <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
       <% if contact.profile %>
-        <%= form.text_area :comment, value: contact.profile.comment %> 
+        <%= form.text_area :comment, value: contact.profile.comment %>
       <% else %>
-        <%= form.text_area :comment, placeholder: "placeholder" %> 
+        <%= form.text_area :comment, placeholder: "placeholder" %>
       <% end %> <br>
-      <%= form.submit "set comment" %> <br> <br>
-      <%= link_to 'Back', "#", onclick: "hide_this_section(this); return false" %>
-      <br> <br>
-      <h3> Your comment </h3>
-      <p> <%= contact.profile.comment if contact.profile %> </p>
+      <%= form.submit "Save note", class: "submit-button-2 w-button" %>
     <% end %>
   </div>
 

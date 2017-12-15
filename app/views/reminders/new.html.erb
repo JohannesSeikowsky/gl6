@@ -13,13 +13,14 @@
 </div>
 
 <div style="text-align:center">
+  <h3>Set a specific reminder</h3>
 <%= form_for :reminder, url: create_reminder_url do |f| %>
   <%= f.hidden_field :content, value: @content %>
   <%= f.datetime_select :date, :ampm => true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15 %>
   <br> <br>
   <%= f.submit "set reminder", class: "submit-button-2 w-button" %>
 	<% if notice %>
-		<div class="notice"><%= notice %></div>
+		<div class="notice-reminder"><%= notice %></div>
 	<% end %>
 </div>
 <% end %> <br>
