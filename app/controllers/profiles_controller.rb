@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
         else
           contact.build_profile(profile_params)
   	    	if contact.save
-  	    		redirect_to user_account_path(current_user), notice: "Comment has been set."
+  	    		redirect_to user_account_path(current_user), notice: "Your comment has been set."
   	    	else
   	    		redirect_to user_account_path(current_user), notice: "an error occured, try again."
   	    	end
