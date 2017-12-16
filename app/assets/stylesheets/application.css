@@ -3487,11 +3487,6 @@ h3 {
 }
 
 
-
-
-
-
-
 .add_contacts_container{
   text-align: center;
 }
@@ -3519,4 +3514,31 @@ h3 {
   padding: 6px 16px;
   border: 2px solid #c9399a;
   margin-right: 8px;
+}
+
+.table_container{
+  width: 1040px;
+  margin: 78px auto 0px auto;
+}
+
+#set_reminder_btn{
+  background-color: #E0E8EE; 
+  padding: 5px 22px;
+  text-decoration: none;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+
+#manage_contact_btn{
+  background-color: #E0E8EE; 
+  padding: 5px 34px;
+  text-decoration: none;
+  color: black; 
+}
+
+
+.interval_field, .this_month_check_box{
+  cursor: pointer;
 }
