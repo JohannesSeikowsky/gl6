@@ -3542,3 +3542,8 @@ h3 {
 .interval_field, .this_month_check_box{
   cursor: pointer;
 }
+
+.add_note_field{
+  width: 240px; 
+  height: 208px;  
+}
