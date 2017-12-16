@@ -16,21 +16,21 @@
 
 <div class="add_contacts_container">
 
-  <% if notice %>
-    <p style="text-align: center; font-size: 20px; line-height: 1.28; margin-bottom; 40px; margin-top: 23px;"> 
-       <%= notice %>
-    </p>
-  <% else %>
-    <p style="text-align: center; font-size: 20px; line-height: 1.28; margin-bottom; 40px; margin-top: 23px;"> 
-      Who are your Important Contacts <br> to Keep in Touch with?
-    </p>
-  <% end %>
+  <p style="text-align: center; font-size: 20px; line-height: 1.28; margin-bottom; 40px; margin-top: 23px;"> 
+    Who are your Important Contacts <br> to Keep in Touch with?
+  </p>
 
+    <%= form_for :contact, url: create_many_contacts_url do |f| %>
+      <%= f.text_area :names, placeholder: "Peter Peterson, John Johnson, Tom Thomson - please separate names by comma", id: "add_contacts_field" %> <br>
+      <%= f.submit "Add Your Contacts", class: "submit-button w-button" %>
+    <% end %>
 
-  <%= form_for :contact, url: create_many_contacts_url do |f| %>
-    <%= f.text_area :names, placeholder: "Peter Peterson, John Johnson, Tom Thomson - please separate names by comma", id: "add_contacts_field" %> <br>
-    <%= f.submit "Add Your Contacts", class: "submit-button w-button" %>
-  <% end %>
+    <% if notice %>
+      <br> <br>
+      <p style="text-align: center; font-size: 20px; line-height: 1.28;"> 
+         <%= notice %>
+      </p>
+   <% end %>
 </div>
 
 
