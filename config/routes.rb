@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
-  get 'profiles/create'
-
   # home
   root 'pages#home'
 
   # signup/login
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'
 
-  # user account page
-  get 'user_account/:id', to: 'users#account', as: 'user_account'
+  # user account page (for now)
+  get 'user_account/:id', to: 'users#user_account', as: 'user_account'
+
+  # user account page (marcis version - work in progress)
+  get 'account/:id', to: 'users#account', as: 'account'
 
   # create a contact
   post 'create_contact', to: 'contacts#create', as: 'create_contact'

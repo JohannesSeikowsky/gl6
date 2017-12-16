@@ -2003,7 +2003,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 30px;
+  padding: 22px 30px 28px 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -3464,7 +3464,6 @@ a {
   color: #c9399a;
 }
 
-
 .note_taking_container{
   position: fixed;
   left: 0px;
@@ -3485,4 +3484,39 @@ a {
 h3 {
   font-size: 18px;
 
+}
+
+
+
+
+
+
+
+.add_contacts_container{
+  text-align: center;
+}
+
+#add_contacts_field{
+  width: 280px; 
+  height: 102px;
+  margin: 8px auto 4px auto; 
+}
+
+.nav_link{
+  color: red;
+}
+
+#logout_btn{
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 2px solid #c9399a; 
+}
+
+#watch_explainer_btn{
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 2px solid #c9399a;
+  margin-right: 8px;
 }
