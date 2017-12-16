@@ -3547,3 +3547,7 @@ h3 {
   width: 240px; 
   height: 208px;  
 }
+
+.rails_notice{
+  text-align: center;
+}
