@@ -3516,3 +3516,14 @@ h3 {
   text-align: center;
 }
 
+.explainer_vid{
+  display: inline;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+
+#empty_contacts_msg{
+  text-align: center;
+  margin-top: 82px;
+}
