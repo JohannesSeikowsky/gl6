@@ -1,9 +1,11 @@
 <br> <br>
 
-<h1> Users </h1>
+<h1> Users - <%= @users_count %> </h1>
 <% @users.each do |user| %>
 	<p>
-		<%= user.name %>
+      <%= link_to "https://www.google.com/search?q=#{user.first_name}+#{user.last_name}", target: "_blank" do %> 
+      	<%= user.first_name %> <%= user.last_name %> - <%= user.description %>
+	  <% end %> 
 	</p>
 <% end %> <br> <br>
 

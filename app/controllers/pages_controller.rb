@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   def backend
   	@users = User.all 
-  	user_count = @users.count
+  	@users_count = @users.count
   	@reminders = Reminder.all
   end
 end
