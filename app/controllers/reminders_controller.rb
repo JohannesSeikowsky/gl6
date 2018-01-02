@@ -20,10 +20,6 @@ class RemindersController < ApplicationController
   	end
   end
 
-  def all
-  	@all_reminders = Reminder.all
-  end
-
   # reminder params
   def reminder_params
   	params.require(:reminder).permit(:content, :date)

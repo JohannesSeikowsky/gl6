@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   post 'create_reminder', to: 'reminders#create', as: 'create_reminder'
 
   # all reminders
-  get 'all', to: 'reminders#all', as: 'all_reminders'
+  get 'backend', to: 'pages#backend', as: 'backend'
 
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'

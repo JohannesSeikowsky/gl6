@@ -6,4 +6,10 @@ class PagesController < ApplicationController
 	    render layout: false
   	end
   end
+
+  def backend
+  	@users = User.all 
+  	user_count = @users.count
+  	@reminders = Reminder.all
+  end
 end
