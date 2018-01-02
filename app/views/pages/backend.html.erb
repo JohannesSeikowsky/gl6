@@ -10,7 +10,7 @@
 <% end %> <br> <br>
 
 
-<h1> Reminders </h1>
+<h1> Scheduled Reminders: </h1>
 <% @reminders.each do |reminder| %>
 	<% if reminder.user %>
 	<p>
@@ -19,6 +19,18 @@
 		on - <%= reminder.date %>
 	</p>
 	<% end %>
-<% end %>
+<% end %> <br> <br>
+
+
+<h1> Users followed by their contacts: </h1>
+<% @users.each do |user| %>
+	<p>
+      	<%= user.first_name %> <%= user.last_name %> <br>
+		<% user.contacts.each do |contact| %>
+			<%= contact.name %>,
+		<% end %>
+	</p>
+<% end %> <br> <br>
+
 
 
