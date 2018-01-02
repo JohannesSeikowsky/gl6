@@ -12,11 +12,13 @@
 
 <h1> Reminders </h1>
 <% @reminders.each do |reminder| %>
+	<% if reminder.user %>
 	<p>
 		Remind - <%= reminder.user.name %> -
 		to be in touch with - <%= reminder.content %> -
 		on - <%= reminder.date %>
 	</p>
+	<% end %>
 <% end %>
 
 
