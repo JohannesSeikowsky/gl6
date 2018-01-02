@@ -1,6 +1,6 @@
 <br> <br>
 
-<h1> Users - <%= @users_count %> </h1>
+<h1> All Users - <%= @users_count %> </h1>
 <% @users.each do |user| %>
 	<p>
       <%= link_to "https://www.google.com/search?q=#{user.first_name}+#{user.last_name}", target: "_blank" do %> 
@@ -22,14 +22,14 @@
 <% end %> <br> <br>
 
 
-<h1> Users followed by their contacts: </h1>
+<h1> Users and their contacts: </h1>
 <% @users.each do |user| %>
 	<p>
       	<%= user.first_name %> <%= user.last_name %> <br>
 		<% user.contacts.each do |contact| %>
 			<%= contact.name %>,
 		<% end %>
-	</p>
+	</p> <br>
 <% end %> <br> <br>
 
 
