@@ -1,15 +1,24 @@
 class PagesController < ApplicationController
-  def home
-  	if current_user
-  		redirect_to user_account_path(current_user)
-  	else
-	    render layout: false
-  	end
+  
+  # authentication for backend page
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['admin_user'] && password == ENV['admin_pw']
+    end 
   end
+  before_action :authenticate, only: [:backend]
 
   def backend
   	@users = User.all 
   	@users_count = @users.count
   	@reminders = Reminder.all
+  end
+
+  def home
+    if current_user
+      redirect_to user_account_path(current_user)
+    else
+      render layout: false
+    end
   end
 end

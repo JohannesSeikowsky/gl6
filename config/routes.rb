@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  # home
   root 'pages#home'
 
   # signup/login
