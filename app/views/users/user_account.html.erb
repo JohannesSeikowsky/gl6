@@ -111,7 +111,8 @@
         </div>
 
         <div style="display: inline-block; width: 145px; max-width: 145px;">
-          <%= f.text_field :interval, style: "width: 155px;", placeholder: "contact's email" %> 
+          <%= f.text_field :email, value: contact.email, style: "width: 155px;",
+              onkeyup: "click_submit_btn(this); return false;", placeholder: "contact's email" %> 
           <%= f.submit "set", style: "display: none;" %>
         </div>
 
