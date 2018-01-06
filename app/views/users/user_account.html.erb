@@ -45,44 +45,53 @@
 
 <div class="table_container">
   <div>
-    <div style="display: inline-block; width: 192px; max-width: 192px; font-weight: bold; text-decoration: underline; padding-left: 60px;">
+    <div style="display: inline-block; width: 240px; max-width: 240px; font-weight: bold; text-decoration: underline; padding-left: 60px;">
       Name
     </div>
 
+    <!--
     <div style="display: inline-block; width: 162px; max-width: 162px; font-weight: bold; text-decoration: underline;">
       This Month
     </div> 
+    -->
 
-    <div style="display: inline-block; width: 215px; max-width: 215px; font-weight: bold; text-decoration: underline;">
-      Recurring Reminders
+    <div style="display: inline-block; width: 191px; max-width: 191px; font-weight: bold; text-decoration: underline;">
+      Contact Interval
     </div> 
 
-      <div style="display: inline-block; width: 243px; max-width: 243px; font-weight: bold; text-decoration: underline;"> 
-      Specific Reminders
+    <div style="display: inline-block; width: 252px; max-width: 252px; font-weight: bold; text-decoration: underline;"> 
+      Dynamic Reminders
     </div>
     
-     <div style="display: inline-block; width: 150px; max-width: 150px; font-weight: bold; text-decoration: underline;"> 
-      Contact Profiles
+    <div style="display: inline-block; width: 150px; max-width: 150px; font-weight: bold; text-decoration: underline;"> 
+      Notes
     </div>
+  
+    <div style="display: inline-block; width: 162px; max-width: 162px; font-weight: bold; text-decoration: underline;">
+      Enable Monitoring
+    </div> 
   </div>
 
   <% if !@contacts.empty? %>
+  
   <% @contacts.each do |contact| %>
     <p style="margin-bottom: 42px;"> 
       <%= form_for :contact, url: update_contact_url(id: contact.id),
           method: (:patch), remote: true, authenticity_token: true do |f| %>
 
-        <div style="display: inline-block; width: 190px; max-width: 190px; font-size: 15px; padding-left: 60px;"> 
+        <div style="display: inline-block; width: 240px; max-width: 240px; font-size: 15px; padding-left: 60px;"> 
           <strong> <%= contact.name %> </strong> 
         </div>
 
+        <!--
         <div style="display: inline-block; width: 168px; max-widths: 168px;">
           <%= f.check_box :this_month, checked: contact.this_month, style: "margin-left: 33px;",
               onchange: "click_submit_btn(this); return false;", class: "this_month_check_box" %>
           <%= f.submit "this month.", style: "display: none;" %>
         </div>
+        -->
 
-        <div style="display: inline-block; width: 215px; max-width: 215px;"> 
+        <div style="display: inline-block; width: 191px; max-width: 191px;"> 
           Every
           <%= f.number_field :interval, value: contact.interval, style: "width: 30px;",
               onchange: "click_submit_btn(this); return false;", class: "interval_field" %> 
@@ -90,15 +99,22 @@
           <%= f.submit "set", style: "display: none;" %>
         </div>
 
-        <div style="display: inline-block; width: 238px; max-width: 238px;">
-          <%= link_to 'Set Email Reminder', new_reminder_path(content: contact.name),
+        <div style="display: inline-block; width: 252px; max-width: 252px;">
+          <%= link_to 'set dynamic reminders', new_reminder_path(content: contact.name),
               id: "set_reminder_btn" %>
         </div>
   
-        <div style="display: inline-block; width: 195px; max-width: 195px;">
-            <%= link_to 'Contact Profile', "#", id: "manage_contact_btn",
-                onclick: "display_comment_section(#{contact.id}); return false" %>
+        <div style="display: inline-block; width: 150px; max-width: 150px;">
+          <%= link_to 'your notes', "#", id: "manage_contact_btn",
+              onclick: "display_comment_section(#{contact.id}); return false",
+                style: "padding: 5px 16px;" %>
         </div>
+
+        <div style="display: inline-block; width: 145px; max-width: 145px;">
+          <%= f.text_field :interval, style: "width: 155px;", placeholder: "contact's email" %> 
+          <%= f.submit "set", style: "display: none;" %>
+        </div>
+
       <% end %>
     </p>
 
@@ -129,9 +145,8 @@
       
       <br>
       <%= link_to 'Go Back', user_account_path(current_user), style: "text-decoration: underline;" %>
-      <br> <br>
+      <br> <br> <br>
 
-      <h3 style="text-decoration: underline;"> Delete </h3>
       <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), 
             method: :delete, data: { confirm: 'Do you want to delete this contact?' },
                 id: "logout_btn" %> <br> <br>
