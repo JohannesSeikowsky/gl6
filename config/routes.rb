@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
-  get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'security_and_privacy'
+  get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
   get 'product_tour', to: 'pages#product_tour', as: 'product_tour'
 
   # signup/login
