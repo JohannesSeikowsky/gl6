@@ -3,15 +3,12 @@
   <a href="/" class="brand w-nav-brand">
       <div class="logo-design" style="font-size: 17px;"> MYN - <%= @user.name if @user %> </div>
   </a>
-  <nav role="navigation" class="nav-menu w-nav-menu">
-    <!--
+  <nav role="navigation" class="nav-menu w-nav-menu">  
     <%= link_to 'About Us', about_path, class: "header_btn" %>
     <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
     <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
     <%= link_to 'Product Tour', product_tour_path, class: "header_btn" %>
-    -->
     <%= link_to 'Log Out', logout_path, method: :delete, class: "header_btn_outer" %>
-
   <div class="w-nav-button">
     <div class="w-icon-nav-menu"></div>
   </div>
