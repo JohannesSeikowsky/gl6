@@ -8,17 +8,26 @@ class PagesController < ApplicationController
   end
   before_action :authenticate, only: [:backend]
 
-  def backend
-  	@users = User.all 
-  	@users_count = @users.count
-  	@reminders = Reminder.all
-  end
-
   def home
     if current_user
       redirect_to user_account_path(current_user)
     else
       render layout: false
     end
+  end
+
+  def backend
+  	@users = User.all 
+  	@users_count = @users.count
+  	@reminders = Reminder.all
+  end
+
+  def about
+  end
+
+  def security_and_privacy
+  end
+
+  def product_tour
   end
 end

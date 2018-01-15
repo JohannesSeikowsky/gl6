@@ -1,14 +1,15 @@
 <div data-collapse="medium" data-animation="default" data-duration="400"
     class="navbar w-nav" style="position: relative;">
   <a href="/" class="brand w-nav-brand">
-      <div class="logo-design" style="font-size: 17px;"> MYN - <%= @user.name %> </div>
+      <div class="logo-design" style="font-size: 17px;"> MYN - <%= @user.name if @user %> </div>
   </a>
   <nav role="navigation" class="nav-menu w-nav-menu">
-    <!-- <a href="#" class="nav_link"><%= @user.name %></a> -->
-    <%= link_to 'TWO MINUTE EXPLAINER', "https://www.youtube.com/watch?v=MYNEd_Hnzwk&feature=youtu.be",
-            target: "_blank", id: "watch_explainer_btn" %>
+    <%= link_to 'About Us', about_path, class: "header_btn" %>
+    <%= link_to 'Pricing', about_path, class: "header_btn" %>
+    <%= link_to 'Security & Privacy Policy', security_and_privacy_path, class: "header_btn" %>
+    <%= link_to 'Product Tour', product_tour_path, class: "header_btn" %>
+    <%= link_to 'Log Out', logout_path, method: :delete, class: "header_btn_outer" %>
 
-    <%= link_to 'Log Out', logout_path, method: :delete, id: "logout_btn" %>
   <div class="w-nav-button">
     <div class="w-icon-nav-menu"></div>
   </div>
@@ -21,13 +22,13 @@
 -->
 
 <div class="add_contacts_container">
-  <p style="text-align: center; font-size: 20px; line-height: 1.28; margin-bottom; 40px; margin-top: 23px;"> 
-    Who are your Important Contacts <br> to Keep in Touch with?
+  <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 43px;"> 
+    Add are your Important <br> Contacts below
   </p>
 
     <%= form_for :contact, url: create_many_contacts_url do |f| %>
-      <%= f.text_area :names, placeholder: "Peter Peterson, John Johnson, Tom Thomson - please separate names by comma", id: "add_contacts_field" %> <br>
-      <%= f.submit "Add Your Contacts", class: "submit-button w-button" %>
+      <%= f.text_area :names, placeholder: "Elon Musk, Boris Johnson, Ayn Rand, Noam Chomsky ... etc.", id: "add_contacts_field" %> <br>
+      <%= f.submit "Add", class: "add-button w-button" %>
     <% end %>
 
     <% if notice %>

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
+  # statics
   root 'pages#home'
+  get 'about_us', to: 'pages#about', as: 'about'
+  get 'pricing', to: 'pages#pricing', as: 'pricing'
+  get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'security_and_privacy'
+  get 'product_tour', to: 'pages#product_tour', as: 'product_tour'
 
   # signup/login
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'
@@ -27,12 +32,12 @@ Rails.application.routes.draw do
   post 'create_or_update_profile/:contact_id', to: 'profiles#create_or_update_profile', as: 'create_or_update_profile'
 
   # new reminder
-  get 'new_reminder/:content', to: 'reminders#new', as: 'new_reminder'
+  get 'set_reminder/:content', to: 'reminders#new', as: 'new_reminder'
 
   # create reminder
   post 'create_reminder', to: 'reminders#create', as: 'create_reminder'
 
-  # all reminders
+  # backend
   get 'backend', to: 'pages#backend', as: 'backend'
 
   # logout
