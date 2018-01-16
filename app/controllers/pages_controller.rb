@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    GeneralMailer.signup_mail().deliver
+    # GeneralMailer.signup_mail().deliver
   end
 
   def security_and_privacy
