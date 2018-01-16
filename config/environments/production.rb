@@ -9,7 +9,7 @@ Rails.application.configure do
    :domain               => "mindyournetwork.com",
    :user_name            => ENV['gmail_username'],
    :password             => ENV['gmail_password'],
-   :authentication       => "plain",
+   :authentication       => "login",
   :enable_starttls_auto => true
   }
 
