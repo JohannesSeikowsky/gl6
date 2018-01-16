@@ -30,4 +30,8 @@ class PagesController < ApplicationController
 
   def product_tour
   end
+
+  def do_now
+  end
+
 end

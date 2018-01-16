@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'pricing', to: 'pages#pricing', as: 'pricing'
   get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
   get 'product_tour', to: 'pages#product_tour', as: 'product_tour'
+  get 'do_now', to: 'pages#do_now', as: 'do_now'
 
   # signup/login
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'
