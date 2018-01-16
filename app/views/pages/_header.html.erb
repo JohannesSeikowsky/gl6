@@ -1,22 +1,23 @@
-<div style="width: 1040px;">
-<div data-collapse="medium" data-animation="default" data-duration="400"
-    class="navbar w-nav" style="position: relative;">
-  <a href="/" class="brand w-nav-brand">
-      <div class="logo-design" style="font-size: 17px;"> MindYourNetwork </div>
-  </a>
-  <nav role="navigation" class="nav-menu w-nav-menu">
-    <%= link_to 'About Us', about_path, class: "header_btn" %>
-    <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
-    <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
-    <%= link_to 'Product Tour', product_tour_path, class: "header_btn" %>
-    <% if current_user %>
-      <%= link_to 'Your Dashboard', root_path, class: "header_btn" %>
-    <% else %>
-      <%= link_to 'TRY IT OUT', root_path, class: "header_btn" %>
-    <% end %>
-
-  <div class="w-nav-button">
-    <div class="w-icon-nav-menu"></div>
+<div style="min-width: 1040px;">
+  <div data-collapse="medium" data-animation="default" data-duration="400"
+      class="navbar w-nav" style="position: relative;">
+    <a href="/" class="brand w-nav-brand">
+        <div class="logo-design" style="font-size: 17px;"> MindYourNetwork </div>
+    </a>
+    <nav role="navigation" class="nav-menu w-nav-menu">
+      <div style="float: right;">
+      <%= link_to 'About Us', about_path, class: "header_btn" %>
+      <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
+      <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
+      <%= link_to 'Product Tour', product_tour_path, class: "header_btn" %>
+      <% if current_user %>
+        <%= link_to 'Your Dashboard', root_path, class: "header_btn" %>
+      <% else %>
+        <%= link_to 'TRY IT OUT', root_path, class: "header_btn" %>
+      <% end %>
+      </div>
+    <div class="w-nav-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
   </div>
-</div>
 </div>
