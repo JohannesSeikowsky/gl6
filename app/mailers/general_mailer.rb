@@ -1,8 +1,8 @@
 class GeneralMailer < ApplicationMailer
-  default from: "mindyournetwork@googlemail.com"
+  default from: "mindyournetwork@gmail.com"
 
   def signup_mail()
     #@user = user
-    mail(to: "joseikowsky@googlemail.com", subject: 'Test')
+    mail(to: "joseikowsky@gmail.com", subject: 'Test')
   end
 end
