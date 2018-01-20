@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
   def create
   	begin
 	  	api_values = request.env['omniauth.auth']
+
+
 		# find or create
 		@user = User.find_or_create_by(uid: api_values['uid'])
 		# set attributes
@@ -15,6 +17,8 @@ class SessionsController < ApplicationController
 		@user.description = api_values['info']['description']
 		@user.image_url = api_values['info']['image']
 		@user.profile_url = api_values['info']['urls']['public_profile']
+		
+	    GeneralMailer.signup_mail().deliver
 		@user.save!
 		# on success - login and redirect
 		session[:user_id] = @user.id	
