@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  # statics
+  # root
   root 'pages#home'
+
+  # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
   get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
