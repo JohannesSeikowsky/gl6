@@ -2,28 +2,33 @@ class SessionsController < ApplicationController
   def create
   	begin
 	  	api_values = request.env['omniauth.auth']
-
-
 		# find or create
-		@user = User.find_or_create_by(uid: api_values['uid'])
-		# set attributes
-		@user.provider = api_values['provider']
-		@user.name = api_values['info']['name']
-		@user.first_name = api_values['info']['first_name']
-		@user.last_name = api_values['info']['last_name']
-		@user.email = api_values['info']['email']
-		@user.location = api_values['info']['location']['name']
-		@user.country_code = api_values['info']['location']['country']['code']
-		@user.description = api_values['info']['description']
-		@user.image_url = api_values['info']['image']
-		@user.profile_url = api_values['info']['urls']['public_profile']
-		
-	    GeneralMailer.signup_mail().deliver
-		@user.save!
-		# on success - login and redirect
+		# @user = User.find_or_create_by(uid: api_values['uid'])
+		if @user = User.find_by(uid: api_values['uid'])
+			# pass
+		else
+			# set attributes
+			@user = User.new
+			@user.uid = api_values['uid']
+			@user.provider = api_values['provider']
+			@user.name = api_values['info']['name']
+			@user.first_name = api_values['info']['first_name']
+			@user.last_name = api_values['info']['last_name']
+			@user.email = api_values['info']['email']
+			@user.location = api_values['info']['location']['name']
+			@user.country_code = api_values['info']['location']['country']['code']
+			@user.description = api_values['info']['description']
+			@user.image_url = api_values['info']['image']
+			@user.profile_url = api_values['info']['urls']['public_profile']
+			@user.save!
+
+			#GeneralMailer.signup_mail().deliver
+		end
+
+		# user is found or created
 		session[:user_id] = @user.id	
 		if current_user
-			redirect_to user_account_path(id: current_user.id), notice: "youre logged in."	
+			redirect_to user_account_path(id: current_user.id), notice: "youre logged in.")
 		else
 			redirect_to root_path, notice: "didnt work, try again."
 		end
@@ -41,3 +46,5 @@ class SessionsController < ApplicationController
     redirect_to root_path, notice: "Logged out."
   end
 end
+
+
