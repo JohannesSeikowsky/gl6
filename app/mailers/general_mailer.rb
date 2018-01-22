@@ -3,6 +3,6 @@ class GeneralMailer < ApplicationMailer
 
   def signup_mail(user)
     @user = user
-    mail(to: @user.email, subject: 'Test')
+    mail(to: "joseikowsky@gmail.com", subject: 'Test')
   end
 end
