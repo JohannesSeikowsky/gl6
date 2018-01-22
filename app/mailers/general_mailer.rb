@@ -4,6 +4,6 @@ class GeneralMailer < ApplicationMailer
   def welcome_email(users_first_name, users_email)
     @first_name = users_first_name
     @email = users_email
-    mail(to: @email, subject: 'Thank you!')
+    mail(to: @email, subject: 'Thank you for signing up!')
   end
 end
