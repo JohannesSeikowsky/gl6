@@ -2,12 +2,11 @@ class SessionsController < ApplicationController
   def create
   	begin
 	  	api_values = request.env['omniauth.auth']
-		# find or create
 		# @user = User.find_or_create_by(uid: api_values['uid'])
-		if @user = User.find_by(uid: api_values['uid'])
-			# pass
+		if @user = User.find_by_uid(api_values['uid'])
+			# found a user.
 		else
-			# set attributes
+			# create a user.
 			@user = User.new
 			@user.uid = api_values['uid']
 			@user.provider = api_values['provider']
@@ -21,8 +20,7 @@ class SessionsController < ApplicationController
 			@user.image_url = api_values['info']['image']
 			@user.profile_url = api_values['info']['urls']['public_profile']
 			@user.save!
-
-			#GeneralMailer.signup_mail().deliver
+			# GeneralMailer.signup_mail().deliver
 		end
 
 		# user is found or created
