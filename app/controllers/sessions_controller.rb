@@ -23,13 +23,9 @@ class SessionsController < ApplicationController
 			# GeneralMailer.signup_mail().deliver
 		end
 
-		# user is found or created
 		session[:user_id] = @user.id	
-		if current_user
-			redirect_to user_account_path(id: current_user.id), notice: "youre logged in.")
-		else
-			redirect_to root_path, notice: "didnt work, try again."
-		end
+		redirect_to user_account_path(id: current_user.id), notice: "youre logged in.")
+		
   	rescue
   		# on failure - redirect
   		redirect_to root_path, notice: "didnt work. try again."
