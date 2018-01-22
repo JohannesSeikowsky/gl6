@@ -3,7 +3,10 @@ class SessionsController < ApplicationController
   	begin
   		# find or create
 	  	api_values = request.env['omniauth.auth']
-		@user = User.find_or_create_by(uid: api_values['uid'])
+		@user = User.find_or_create_by(uid: api_values['uid']) do |user|
+  			# welcome email on_create
+  			GeneralMailer.signup_mail.deliver
+		end
 
 		@user.provider = api_values['provider']
 		@user.name = api_values['info']['name']
