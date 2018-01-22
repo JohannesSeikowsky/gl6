@@ -34,5 +34,4 @@ class PagesController < ApplicationController
 
   def do_now
   end
-
 end
