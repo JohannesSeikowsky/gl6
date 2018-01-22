@@ -152,14 +152,14 @@
       <%= link_to 'Go Back', user_account_path(current_user), style: "text-decoration: underline;" %>
       <br> <br> <br>
 
-      <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Do you want to delete this contact?' }, id: "logout_btn" %> <br> <br>
+      <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, id: "logout_btn" %> <br> <br>
 
     </div>
   <% end %>
   <% else %>
     <!-- when there are no contacts yet -->
     <h3 id="empty_contacts_msg">
-      <%= link_to 'Product Tour', "https://www.youtube.com/watch?v=Z9-01xCqYaI&feature=youtu.be",
+      <%= link_to '2 Minute Product Tour', "https://www.youtube.com/watch?v=Z9-01xCqYaI&feature=youtu.be",
             target: "_blank", id: "watch_explainer_btn", style: "padding: 15px 34px" %> 
     </h3>
   <% end %>

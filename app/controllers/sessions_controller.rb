@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 	  	api_values = request.env['omniauth.auth']
 		@user = User.find_or_create_by(uid: api_values['uid']) do |user|
   			# welcome email on_create
-  			GeneralMailer.signup_mail.deliver
+  			GeneralMailer.signup_mail(@user).deliver
 		end
 
 		@user.provider = api_values['provider']
@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 		end
   	rescue
   		# on failure - redirect
-  		redirect_to root_path, notice: "didnt work. try again."
+  		redirect_to root_path, notice: "didn't work. try again."
   	end
   end
 
