@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 		@user = User.find_or_create_by(uid: api_values['uid']) do |user|
   			# welcome email when user gets created
   			begin
-  				GeneralMailer.signup_mail(api_values['info']['first_name'], 
+  				GeneralMailer.welcome_email(api_values['info']['first_name'], 
   					api_values['info']['email']).deliver
   			rescue
   				#pass
