@@ -23,7 +23,6 @@ class PagesController < ApplicationController
   end
 
   def about
-     redirect_to onboarding_path(id: current_user.id)
   end
 
   def security_and_privacy

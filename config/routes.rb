@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # user account page (for now)
   get 'user_account/:id', to: 'users#user_account', as: 'user_account'
-  get 'quick_intro/:id', to: 'users#onboarding', as: 'onboarding'
+  get 'quick_start/:id', to: 'users#onboarding', as: 'onboarding'
 
   # user account page (marcis version - work in progress)
   get 'account/:id', to: 'users#account', as: 'account'

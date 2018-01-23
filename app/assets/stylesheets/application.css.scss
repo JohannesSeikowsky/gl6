@@ -3450,7 +3450,6 @@ h3 {
 
 }
 
-
 .add_contacts_container{
   text-align: center;
 }
@@ -3458,6 +3457,12 @@ h3 {
 #add_contacts_field{
   width: 282px; 
   height: 132px;
+  margin: 8px auto 4px auto; 
+}
+
+#onboarding_contacts_field{
+  width: 292px; 
+  height: 162px;
   margin: 8px auto 4px auto; 
 }
 
