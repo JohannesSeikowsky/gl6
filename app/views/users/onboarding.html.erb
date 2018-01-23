@@ -20,8 +20,8 @@
   <h3> Welcome <%= @user.first_name if @user %>! </h3>
   <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 0px;"> 
   
-    Who are 2-3 people 
-    that you <br>  would like to stay in contact with?
+    Who are 2-3 people (business or personal) <br>
+    you would like to stay in touch with? <br> 
   </p>
 
     <%= form_for :contact, url: create_many_contacts_url do |f| %>
