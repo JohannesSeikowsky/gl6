@@ -4,12 +4,10 @@ class SessionsController < ApplicationController
   		# find or create
 	  	api_values = request.env['omniauth.auth']
 		@user = User.find_or_create_by(uid: api_values['uid']) do |user|
-			# block that gets passed to created
+			# gets passed to created
   			begin
   				GeneralMailer.welcome_email(api_values['info']['first_name'], 
   					api_values['info']['email']).deliver
-  				session[:user_id] = user.id	
-  				redirect_to onboarding_path(id: current_user.id)
   			rescue
   				#pass
   			end
@@ -29,7 +27,12 @@ class SessionsController < ApplicationController
 		
 		session[:user_id] = @user.id	
 		if current_user
-			redirect_to user_account_path(id: current_user.id), notice: "youre logged in."	
+			if created_at == updated_at
+  				# it's a newly created record || redirect to onboarding
+				redirect_to onboarding_path(id: current_user.id)
+			else
+				redirect_to user_account_path(id: current_user.id)
+			end
 		else
 			redirect_to root_path, notice: "didnt work, try again."
 		end
