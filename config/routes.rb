@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   # create many contacts
   post 'create_many_contacts', to: 'contacts#create_many', as: 'create_many_contacts'
+  post 'create_contacts_onboarding', to: 'contacts#create_many_onboarding', as: 'create_contacts_onboarding'
 
   # update a contact (this_month or interval)
   patch 'update_contact/:id', to: 'contacts#update', as: 'update_contact'

@@ -30,6 +30,23 @@ class ContactsController < ApplicationController
     end
   end
 
+  def create_many_onboarding
+    if @user = current_user
+      begin
+        names = contacts_params[:names]
+        names_array = names.split(',')
+        names_array.each do |name|
+            @user.contacts.create(name: name)    
+        end
+        redirect_to quick_intro_path
+      rescue
+        redirect_to quick_intro_path
+      end
+    else
+      redirect_to root_path, notice: 'please log in.'
+    end
+  end
+
   def update
     if @user = current_user
       @contact = Contact.find(params[:id])
