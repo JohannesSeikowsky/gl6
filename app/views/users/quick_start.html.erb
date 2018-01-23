@@ -21,12 +21,14 @@
   <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 0px;"> 
   
     Who are 2-3 people (business or personal) <br>
-    you would like to stay in touch with? <br> 
+    you would like to stay in contact with? <br> 
   </p>
 
     <%= form_for :contact, url: create_many_contacts_url do |f| %>
       <%= f.text_area :names, placeholder: "Elon Musk, Ayn Rand, Noam Chomsky ... (please separate by comma)", id: "onboarding_contacts_field" %> <br>
-      <%= f.submit "Done", class: "add-button w-button" %>
+      <%= f.submit "Done", class: "add-button w-button" %> <br> <br>
+      <%= link_to 'skip for now', quick_intro_path, 
+              style: "text-decoration: underline; color: grey;" %>
     <% end %>
 
     <% if notice %>
@@ -35,8 +37,4 @@
          <%= notice %>
       </p>
    <% end %>
-</div>
-
-<div id="settings_updated" class="notice">
-  changes saved succesfully.
 </div>

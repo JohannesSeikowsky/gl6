@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 		session[:user_id] = @user.id	
 		if current_user
 			if @user.created_at > 10.minutes.ago 
-				redirect_to onboarding_path(id: current_user.id)
+				redirect_to quick_start_path(id: current_user.id)
 			else
 				redirect_to user_account_path(id: current_user.id)
 			end
