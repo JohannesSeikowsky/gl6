@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 		
 		session[:user_id] = @user.id	
 		if current_user
-			if created_at == updated_at
+			if current_user.created_at == current_user.updated_at
   				# it's a newly created record || redirect to onboarding
 				redirect_to onboarding_path(id: current_user.id)
 			else
