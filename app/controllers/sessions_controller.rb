@@ -4,10 +4,12 @@ class SessionsController < ApplicationController
   		# find or create
 	  	api_values = request.env['omniauth.auth']
 		@user = User.find_or_create_by(uid: api_values['uid']) do |user|
-  			# welcome email when user gets created
+			# block that gets passed to created
   			begin
   				GeneralMailer.welcome_email(api_values['info']['first_name'], 
   					api_values['info']['email']).deliver
+  				session[:user_id] = user.id	
+  				redirect_to onboarding_path(id: current_user.id)
   			rescue
   				#pass
   			end
