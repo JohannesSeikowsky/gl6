@@ -11,9 +11,9 @@
       <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
       <%= link_to 'Product Tour', product_tour_path, class: "header_btn" %>
       <% if current_user %>
-        <%= link_to 'Your Dashboard', root_path, class: "header_btn" %>
+        <%= link_to 'Your Dashboard', root_path, class: "header_btn_outer" %>
       <% else %>
-        <%= link_to 'TRY IT OUT', root_path, class: "header_btn" %>
+        <%= link_to 'TRY IT OUT', root_path, class: "header_btn_outer" %>
       <% end %>
       </div>
     <div class="w-nav-button">
