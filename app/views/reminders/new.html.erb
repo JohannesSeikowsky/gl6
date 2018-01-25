@@ -4,8 +4,7 @@
     <div class="logo-design" style="font-size: 17px;"> MYN - <%= current_user.name %> </div>
   </a>
   <nav role="navigation" class="nav-menu w-nav-menu">
-    <%= link_to 'Back', user_account_path(current_user), id: "watch_explainer_btn" %>
-    <%= link_to 'Log Out', logout_path, method: :delete, id: "logout_btn" %>
+    <%= link_to 'Go Back to Dashboard', user_account_path(current_user), id: "watch_explainer_btn" %>
 	</nav>
   <div class="w-nav-button">
     <div class="w-icon-nav-menu"></div>

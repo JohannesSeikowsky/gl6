@@ -114,39 +114,64 @@
       <% end %>
     </p>
 
-    <!-- notes sections -->
+    <!-- LITTLE BLACK BOOK -->
     <div id="<%= "comment_container_" + contact.id.to_s %>" class="note_taking_container">
-
-      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
+    
+      <div data-collapse="medium" data-animation="default" data-duration="400"
+          class="navbar w-nav" style="position: relative;">
         <a href="/" class="brand w-nav-brand">
-          <div class="logo-design" style="font-size: 17px;"> MYN - <%= @user.name %> </div>
+            <div class="logo-design" style="font-size: 17px;"> MYN - <%= @user.name if @user %> </div>
         </a>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <%= link_to 'Go Back', user_account_path(current_user), id: "watch_explainer_btn" %>
-          <%= link_to 'Log Out', logout_path, method: :delete, id: "logout_btn" %>
-        </nav>
+        <nav role="navigation" class="nav-menu w-nav-menu">  
+          <div style="float: right;">
+          <%= link_to 'About Us', about_path, class: "header_btn" %>
+          <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
+          <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
+          <%= link_to 'Go Back to Dashboard', root_path, class: "header_btn_outer" %>
+          </div>
         <div class="w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
       </div>
-      <h3> Note about <%= contact.name %> </h3>
+ 
+      <br>
+      <h2 style="font-size: 26px; margin-bottom: 30px;"> <%= contact.name %> </h2>
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
+        <p> <strong> Work / Company / Job </strong> </p>
+        <% if contact.profile %>
+          <%= form.text_field :comment, value: contact.profile.comment, 
+              class: "add_note_field", style: "height: 30px;" %>
+        <% else %>
+          <%= form.text_field :comment, placeholder: "CTO at Tesla", 
+              class: "add_note_field", style: "height: 30px;" %>
+        <% end %> <br> <br>
+
+        <p> <strong> Context </strong> <br>  Where to do know each other from? </p>
         <% if contact.profile %>
           <%= form.text_area :comment, value: contact.profile.comment, class: "add_note_field" %>
         <% else %>
-          <%= form.text_area :comment, placeholder: "your note...", class: "add_note_field" %>
+          <%= form.text_area :comment, placeholder: "...", class: "add_note_field" %>
+        <% end %> <br> <br>
+
+        <p> <strong> A Personal Note </strong> <br> Anything interesting to remember? <br> Interests? Hobbies? Anything? </p>
+        <% if contact.profile %>
+          <%= form.text_area :comment, value: contact.profile.comment, class: "add_note_field" %>
+        <% else %>
+          <%= form.text_area :comment, placeholder: "...", class: "add_note_field" %>
         <% end %> <br>
-        <%= form.submit "Save Note", class: "submit-button-2 w-button" %>
+
+        <%= form.submit "save notes", class: "submit-button-2 w-button", 
+              style: "padding: 2px 26px; margin-top: 24px;" %>
       <% end %>
       
       <br>
-      <%= link_to 'Go Back', user_account_path(current_user), style: "text-decoration: underline;" %>
-      <br> <br> <br>
-
-      <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, id: "logout_btn" %> <br> <br>
-
+  
+      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
+      <%= link_to 'Delete This Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
     </div>
   <% end %>
+
+
   <% else %>
     <!-- when there are no contacts yet -->
     <h3 id="empty_contacts_msg">
