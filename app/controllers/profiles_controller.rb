@@ -4,11 +4,11 @@ class ProfilesController < ApplicationController
     	  contact = Contact.find(params[:contact_id])
 	    	if contact.profile
           contact.profile.update(profile_params)
-          redirect_to user_account_path(current_user), notice: "Comment has been updated."
+          redirect_to user_account_path(current_user), notice: "Your Notes have been updated."
         else
           contact.build_profile(profile_params)
   	    	if contact.save
-  	    		redirect_to user_account_path(current_user), notice: "Your comment has been set."
+  	    		redirect_to user_account_path(current_user), notice: "Your Notes have been updated."
   	    	else
   	    		redirect_to user_account_path(current_user), notice: "an error occured, try again."
   	    	end

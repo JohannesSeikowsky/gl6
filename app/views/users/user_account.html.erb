@@ -176,9 +176,8 @@
               style: "padding: 2px 26px; margin-top: 18px;" %> <br> <br>
       <% end %>
   
-      <!--
-        <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
-      -->
+      
+      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
       <%= link_to 'Click to delete Contact.', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
       <br> <br>
 
