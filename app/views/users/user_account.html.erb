@@ -128,7 +128,7 @@
           <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
           <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
           -->
-          <%= link_to 'Go Back to Dashboard', root_path, class: "header_btn_outer" %>
+          <%= link_to 'Back to Dashboard', root_path, class: "header_btn_outer" %>
           <%= link_to 'Delete This Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, class: "header_btn_outer" %>
           </div>
         <div class="w-nav-button">
@@ -136,7 +136,7 @@
         </div>
       </div>
  
-      <h2 style="font-size: 26px; margin-bottom: 26px; margin-top: 0;"> <%= contact.name %> </h2>
+      <h2 style="font-size: 26px; margin-bottom: 26px; margin-top: -12px;"> <%= contact.name %> </h2>
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
         <p> <strong> Work / Company / Job </strong> </p>
         <% if contact.profile %>
@@ -179,7 +179,7 @@
       <!--
         <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
       -->
-      <%= link_to 'Delete This Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
+      <%= link_to 'Click to delete Contact.', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
       <br> <br>
 
       <br> <br>
