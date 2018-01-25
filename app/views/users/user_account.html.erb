@@ -104,7 +104,6 @@
               id: "set_reminder_btn" %>
         </div>
   
-
         <div style="display: inline-block; width: 145px; max-width: 145px;">
           <%= f.text_field :email, value: contact.email, style: "width: 155px;",
               onkeyup: "click_submit_btn(this); return false;", placeholder: "contact's email" %> 
@@ -124,18 +123,20 @@
         </a>
         <nav role="navigation" class="nav-menu w-nav-menu">  
           <div style="float: right;">
+          <!--
           <%= link_to 'About Us', about_path, class: "header_btn" %>
           <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
           <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
+          -->
           <%= link_to 'Go Back to Dashboard', root_path, class: "header_btn_outer" %>
+          <%= link_to 'Delete This Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, class: "header_btn_outer" %>
           </div>
         <div class="w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
       </div>
  
-      <br>
-      <h2 style="font-size: 26px; margin-bottom: 30px;"> <%= contact.name %> </h2>
+      <h2 style="font-size: 26px; margin-bottom: 26px; margin-top: 0;"> <%= contact.name %> </h2>
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
         <p> <strong> Work / Company / Job </strong> </p>
         <% if contact.profile %>
@@ -145,6 +146,17 @@
           <%= form.text_field :comment, placeholder: "CTO at Tesla", 
               class: "add_note_field", style: "height: 30px;" %>
         <% end %> <br> <br>
+
+
+        <p> <strong> Tags </strong> </p>
+        <% if contact.profile %>
+          <%= form.text_field :comment, value: contact.profile.comment, 
+              class: "add_note_field", style: "height: 30px;" %>
+        <% else %>
+          <%= form.text_field :comment, placeholder: "your tags", 
+              class: "add_note_field", style: "height: 30px;" %>
+        <% end %> <br> <br>
+
 
         <p> <strong> Context </strong> <br>  Where to do know each other from? </p>
         <% if contact.profile %>
@@ -161,13 +173,17 @@
         <% end %> <br>
 
         <%= form.submit "save notes", class: "submit-button-2 w-button", 
-              style: "padding: 2px 26px; margin-top: 24px;" %>
+              style: "padding: 2px 26px; margin-top: 18px;" %> <br> <br>
       <% end %>
-      
-      <br>
   
-      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
+      <!--
+        <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
+      -->
       <%= link_to 'Delete This Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
+      <br> <br>
+
+      <br> <br>
+
     </div>
   <% end %>
 
