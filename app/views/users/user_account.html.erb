@@ -51,16 +51,16 @@
       This Month
     </div> 
   
-    <div style="display: inline-block; width: 182px; max-width: 182px; font-weight: bold; text-decoration: underline;">
+    <div style="display: inline-block; width: 174px; max-width: 174px; font-weight: bold; text-decoration: underline;">
       Contact Intervals
     </div> 
 
-    <div style="display: inline-block; width: 234px; max-width: 234px; font-weight: bold; text-decoration: underline;"> 
+    <div style="display: inline-block; width: 186px; max-width: 186px; font-weight: bold; text-decoration: underline;"> 
       E-Mail Reminders
     </div>
     
-    <div style="display: inline-block; width: 171px; max-width: 171px; font-weight: bold; text-decoration: underline;"> 
-      Your Black Book
+    <div style="display: inline-block; width: 166px; max-width: 166px; font-weight: bold; text-decoration: underline;"> 
+      Tags & Notes
     </div>
     
     <!--
@@ -87,7 +87,7 @@
           <%= f.submit "this month.", style: "display: none;" %>
         </div>
       
-        <div style="display: inline-block; width: 178px; max-width: 178px;"> 
+        <div style="display: inline-block; width: 170px; max-width: 170px;"> 
           Every
           <%= f.number_field :interval, value: contact.interval, style: "width: 30px;",
               onchange: "click_submit_btn(this); return false;", class: "interval_field" %> 
@@ -95,15 +95,20 @@
           <%= f.submit "set", style: "display: none;" %>
         </div>
 
-        <div style="display: inline-block; width: 235px; max-width: 235px;">
-          <%= link_to 'set reminder', new_reminder_path(content: contact.name),
+        <div style="display: inline-block; width: 186px; max-width: 186px;">
+          <%= link_to 'set a reminder', new_reminder_path(content: contact.name),
               id: "set_reminder_btn" %>
         </div>
 
-        <div style="display: inline-block; width: 171px; max-width: 171px;">
-          <%= link_to 'Notes & Info', "#", id: "manage_contact_btn",
+        <div style="display: inline-block; width: 166px; max-width: 166px;">
+          <%= link_to 'Tags & Notes', "#", id: "manage_contact_btn",
               onclick: "display_comment_section(#{contact.id}); return false",
               style: "padding: 5px 22px;" %>
+        </div>
+  
+
+        <div style="display: inline-block; width: 70px; max-width: 70px;">
+          <%= link_to 'Done', "#", id: "manage_contact_btn", style: "padding: 5px 40px;" %>
         </div>
   
         <!--
