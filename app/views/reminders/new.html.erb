@@ -12,14 +12,17 @@
 </div>
 
 <div style="text-align:center">
-  <h3 style="margin-bottom: 26px"> Reminder to be in touch with <%= @content %> </h3> 
+  <h3 style="margin-bottom: 26px"> Be in touch with <%= @content %> </h3> 
   <%= form_for :reminder, url: create_reminder_url do |f| %>
     <%= f.hidden_field :content, value: @content %>
     <%= f.datetime_select :date, :ampm => true, :order => [:minute, :hour, :day, :month, :year], 
       :minute_step => 15 %> <br>
     <%= f.submit "set reminder", class: "add-button w-button", style: "margin-top: 33px;" %>
 
-    <br>
+    <br> <br> <br>
+
+    <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
+    <%= link_to 'Give Product Feedback', "mailto:joseikowsky@gmail.com?Subject=Product%20Feedback", style: "text-decoration: underline;" %>
 
   	<% if notice %>
   		<div class="notice-reminder"><%= notice %></div>

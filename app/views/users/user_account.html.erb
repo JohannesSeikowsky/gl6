@@ -8,8 +8,8 @@
     <div style="float: right;">
     <%= link_to 'About Us', about_path, class: "header_btn" %>
     <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
-    <%= link_to 'Security & Privacy Policy', privacy_path, class: "header_btn" %>
-    <%= link_to 'Product Tour', product_tour_path, class: "header_btn_outer" %>
+    <%= link_to 'Security', privacy_path, class: "header_btn" %>
+    <%= link_to '2 Min. Product Tour', product_tour_path, class: "header_btn_outer" %>
     <%= link_to 'Log Out', logout_path, method: :delete, class: "header_btn_outer" %>
     </div>
   <div class="w-nav-button">
@@ -21,7 +21,7 @@
 
 <div class="add_contacts_container">
   <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 43px;"> 
-    Add more Contacts
+    Add Your Contacts
   </p>
 
     <%= form_for :contact, url: create_many_contacts_url do |f| %>
@@ -51,21 +51,23 @@
       This Month
     </div> 
   
-    <div style="display: inline-block; width: 173px; max-width: 173px; font-weight: bold; text-decoration: underline;">
-      Contact Interval
+    <div style="display: inline-block; width: 182px; max-width: 182px; font-weight: bold; text-decoration: underline;">
+      Contact Intervals
     </div> 
 
-    <div style="display: inline-block; width: 190px; max-width: 190px; font-weight: bold; text-decoration: underline;"> 
-      Contact Notes
+    <div style="display: inline-block; width: 234px; max-width: 234px; font-weight: bold; text-decoration: underline;"> 
+      E-Mail Reminders
     </div>
     
     <div style="display: inline-block; width: 171px; max-width: 171px; font-weight: bold; text-decoration: underline;"> 
-      Reminders
+      Your Black Book
     </div>
-  
-    <div style="display: inline-block; width: 162px; max-width: 162px; font-weight: bold; text-decoration: underline;">
+    
+    <!--
+    <div style="display: inline-block; width: 112px; max-width: 112px; font-weight: bold; text-decoration: underline;">
       Online Scan
-    </div> 
+    </div>
+    --> 
   </div>
 
   <% if !@contacts.empty? %>
@@ -85,7 +87,7 @@
           <%= f.submit "this month.", style: "display: none;" %>
         </div>
       
-        <div style="display: inline-block; width: 173px; max-width: 173px;"> 
+        <div style="display: inline-block; width: 178px; max-width: 178px;"> 
           Every
           <%= f.number_field :interval, value: contact.interval, style: "width: 30px;",
               onchange: "click_submit_btn(this); return false;", class: "interval_field" %> 
@@ -93,22 +95,24 @@
           <%= f.submit "set", style: "display: none;" %>
         </div>
 
-        <div style="display: inline-block; width: 185px; max-width: 185px;">
-          <%= link_to 'contact notes', "#", id: "manage_contact_btn",
-              onclick: "display_comment_section(#{contact.id}); return false",
-                style: "padding: 5px 22px;" %>
-        </div>
-
-        <div style="display: inline-block; width: 171px; max-width: 171px;">
+        <div style="display: inline-block; width: 235px; max-width: 235px;">
           <%= link_to 'set reminder', new_reminder_path(content: contact.name),
               id: "set_reminder_btn" %>
         </div>
+
+        <div style="display: inline-block; width: 171px; max-width: 171px;">
+          <%= link_to 'Notes & Info', "#", id: "manage_contact_btn",
+              onclick: "display_comment_section(#{contact.id}); return false",
+              style: "padding: 5px 22px;" %>
+        </div>
   
+        <!--
         <div style="display: inline-block; width: 145px; max-width: 145px;">
           <%= f.text_field :email, value: contact.email, style: "width: 155px;",
               onkeyup: "click_submit_btn(this); return false;", placeholder: "contact's email" %> 
           <%= f.submit "set", style: "display: none;" %>
         </div>
+        -->
 
       <% end %>
     </p>
@@ -178,7 +182,7 @@
   
       
       <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
-      <%= link_to 'Click to delete Contact.', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
+      <%= link_to 'Click to delete Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
       <br> <br>
 
       <br> <br>
