@@ -132,7 +132,6 @@
         </a>
         <nav role="navigation" class="nav-menu w-nav-menu">  
           <div style="float: right;">
-          
           <%= link_to 'About Us', about_path, class: "header_btn" %>
           <%= link_to 'Pricing', pricing_path, class: "header_btn" %>
           <%= link_to 'Security', privacy_path, class: "header_btn" %>
@@ -146,8 +145,10 @@
         </div>
       </div>
  
-      <br>
-      <h2 style="margin-bottom: 26px; font-size: 24px;"> Your contact - <%= contact.name %> </h2> 
+      <br> <br>
+      <!--
+      <h2 style="margin-bottom: 26px; font-size: 18px;"> Tags & Notes - <%= contact.name %> </h2> 
+      -->
 
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
        <!-- 
@@ -161,16 +162,19 @@
         <% end %> <br> <br>
       -->
 
-        <p> <strong> Set Tags for this Contact </strong> </p>
-        <% if contact.profile %>
-          <%= form.text_field :comment, value: contact.profile.comment, 
-              class: "add_note_field", style: "height: 30px;" %>
-        <% else %>
-          <%= form.text_field :comment, placeholder: "your tags", 
-              class: "add_note_field", style: "height: 30px;" %>
-        <% end %> <br> <br> <br>
+        <div style="">
+          <p> <strong> Tags - <%= contact.name %> </strong> </p>
+          <% if contact.profile %>
+            <%= form.text_field :comment, value: contact.profile.comment, 
+                class: "add_note_field", style: "height: 30px;" %>
+          <% else %>
+            <%= form.text_field :comment, placeholder: "your tags", 
+                class: "add_note_field", style: "height: 30px;" %>
+          <% end %> <br> <br> <br>
+        </div>
 
-        <p> <strong> Personal Note </strong> <br> Any relevant Info - Where do you know each <br> other from? Interests? Hobbies? Work? etc. </p>
+        <p> <strong> Note - <%= contact.name %> </strong> <br> Any relevant Info? <br>
+        Work? Interests? Hobbies? etc. </p>
         <% if contact.profile %>
           <%= form.text_area :comment, value: contact.profile.comment, class: "add_note_field" %>
         <% else %>
@@ -191,8 +195,9 @@
       <% end %>
   
       
-      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
-      <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
+      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %>
+      <br> <br>
+      <%= link_to 'Delete Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
       <br> <br>
 
       <br> <br>
