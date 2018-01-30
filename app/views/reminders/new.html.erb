@@ -12,6 +12,7 @@
 </div>
 
 <div style="text-align:center">
+  <br>
   <h3 style="margin-bottom: 26px"> Be in touch with <%= @content %> </h3> 
   <%= form_for :reminder, url: create_reminder_url do |f| %>
     <%= f.hidden_field :content, value: @content %>
