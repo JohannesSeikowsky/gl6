@@ -1,6 +1,6 @@
 <br> <br>
 
-<h1> All Users - <%= @users_count %> </h1>
+<h1> Users: </h1>
 <% @users.each do |user| %>
 	<p>
       <%= link_to "https://www.google.com/search?q=#{user.first_name}+#{user.last_name}", target: "_blank" do %> 
@@ -10,7 +10,7 @@
 <% end %> <br> <br>
 
 
-<h1> Scheduled Reminders: </h1>
+<h1> Reminders: </h1>
 <% @reminders.each do |reminder| %>
 	<% if reminder.user %>
 	<p>
@@ -22,7 +22,7 @@
 <% end %> <br> <br>
 
 
-<h1> Users and their contacts: </h1>
+<h1> Users + Contacts: </h1>
 <% @users.each do |user| %>
 	<p>
       	<%= user.first_name %> <%= user.last_name %> <br>

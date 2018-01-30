@@ -146,32 +146,17 @@
       </div>
  
       <br> <br>
-      <!--
-      <h2 style="margin-bottom: 26px; font-size: 18px;"> Tags & Notes - <%= contact.name %> </h2> 
-      -->
 
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
-       <!-- 
-        <p> <strong> Work / Company / Job </strong> </p>
+
+        <p> <strong> Tags - <%= contact.name %> </strong> </p>
         <% if contact.profile %>
           <%= form.text_field :comment, value: contact.profile.comment, 
               class: "add_note_field", style: "height: 30px;" %>
         <% else %>
-          <%= form.text_field :comment, placeholder: "CTO at Tesla", 
+          <%= form.text_field :comment, placeholder: "your tags", 
               class: "add_note_field", style: "height: 30px;" %>
-        <% end %> <br> <br>
-      -->
-
-        <div style="">
-          <p> <strong> Tags - <%= contact.name %> </strong> </p>
-          <% if contact.profile %>
-            <%= form.text_field :comment, value: contact.profile.comment, 
-                class: "add_note_field", style: "height: 30px;" %>
-          <% else %>
-            <%= form.text_field :comment, placeholder: "your tags", 
-                class: "add_note_field", style: "height: 30px;" %>
-          <% end %> <br> <br> <br>
-        </div>
+        <% end %> <br> <br> <br>
 
         <p> <strong> Note - <%= contact.name %> </strong> <br> Any relevant Info? <br>
         Work? Interests? Hobbies? etc. </p>
@@ -181,27 +166,14 @@
           <%= form.text_area :comment, placeholder: "...", class: "add_note_field" %>
         <% end %> <br>
 
-        <!--
-        <p> <strong> A Personal Note </strong> <br> Anything interesting to remember? <br> Interests? Hobbies? Anything? </p>
-        <% if contact.profile %>
-          <%= form.text_area :comment, value: contact.profile.comment, class: "add_note_field" %>
-        <% else %>
-          <%= form.text_area :comment, placeholder: "...", class: "add_note_field" %>
-        <% end %> <br>
-        -->
-
         <%= form.submit "save", class: "submit-button-2 w-button", 
               style: "padding: 2px 26px; margin-top: 18px;" %> <br> <br>
+
       <% end %>
-  
       
       <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %>
       <br> <br>
       <%= link_to 'Delete Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
-      <br> <br>
-
-      <br> <br>
-
     </div>
   <% end %>
 
