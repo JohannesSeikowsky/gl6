@@ -8,6 +8,6 @@ class GeneralMailer < ApplicationMailer
   end
 
   def notify_admin
-    mail(to: "joseikowsky@gmail.com", subject: 'New Reminder set at MYN...')
+    mail(to: "joseikowsky@gmail.com", subject: 'New Reminder at MYN...')
   end
 end
