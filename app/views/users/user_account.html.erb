@@ -91,12 +91,12 @@
           Every
           <%= f.number_field :interval, value: contact.interval, style: "width: 30px;",
               onchange: "click_submit_btn(this); return false;", class: "interval_field" %> 
-          months
+          Months
           <%= f.submit "set", style: "display: none;" %>
         </div>
 
         <div style="display: inline-block; width: 186px; max-width: 186px;">
-          <%= link_to 'set a reminder', new_reminder_path(content: contact.name),
+          <%= link_to 'Set Reminder', new_reminder_path(content: contact.name),
               id: "set_reminder_btn" %>
         </div>
 
@@ -107,8 +107,8 @@
         </div>
   
 
-        <div style="display: inline-block; width: 70px; max-width: 70px;">
-          <%= link_to 'Done', "#", id: "manage_contact_btn", style: "padding: 5px 40px;" %>
+        <div style="display: inline-block; width: 140px; max-width: 140px;">
+          <%= link_to 'Follow-up done', "#", id: "manage_contact_btn", style: "padding: 5px 12px;" %>
         </div>
   
         <!--
