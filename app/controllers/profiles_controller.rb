@@ -4,13 +4,13 @@ class ProfilesController < ApplicationController
     	  contact = Contact.find(params[:contact_id])
 	    	if contact.profile
           contact.profile.update(profile_params)
-          redirect_to user_account_path(current_user), notice: "Your Notes have been updated."
+          redirect_to user_account_path(current_user), notice: "Everything updated."
         else
           contact.build_profile(profile_params)
   	    	if contact.save
-  	    		redirect_to user_account_path(current_user), notice: "Your Notes have been updated."
+  	    		redirect_to user_account_path(current_user), notice: "Everything updated."
   	    	else
-  	    		redirect_to user_account_path(current_user), notice: "an error occured, try again."
+  	    		redirect_to user_account_path(current_user), notice: "An error occured, try again."
   	    	end
         end
     else
@@ -19,6 +19,6 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-  	params.require(:profile).permit(:comment. :tags)
+  	params.require(:profile).permit(:comment, :tags)
   end
 end

@@ -147,25 +147,20 @@
       </div> <br> <br> <br>
 
 
-      <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
+      <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |f| %>
         <p> <strong> Tags - <%= contact.name %> </strong> </p>
-        <% if contact.profile %>
-          <%= form.text_field :comment, value: contact.profile.comment, 
-              class: "add_note_field", style: "height: 30px;" %>
-        <% else %>
-          <%= form.text_field :comment, placeholder: "your tags", 
-              class: "add_note_field", style: "height: 30px;" %>
-        <% end %> <br> <br> <br>
+   
+        <%= f.text_field :tags, placeholder: "your tags",
+          value: (contact.profile.tags if contact.profile && contact.profile.tags), class: "add_note_field", style: "height: 30px;" %> <br> <br> <br>
 
         <p> <strong> Note - <%= contact.name %> </strong> <br> Relevant Info? <br>
         Work? Interests? Hobbies? etc. </p>
-        <% if contact.profile %>
-          <%= form.text_area :comment, value: contact.profile.comment, class: "add_note_field" %>
-        <% else %>
-          <%= form.text_area :comment, placeholder: "...", class: "add_note_field" %>
-        <% end %> <br>
 
-        <%= form.submit "save", class: "submit-button-2 w-button", 
+        <%= f.text_area :comment, placeholder: "...", 
+            value: (contact.profile.comment if contact.profile && contact.profile.comment),
+                class: "add_note_field" %> <br>
+
+        <%= f.submit "save", class: "submit-button-2 w-button", 
               style: "padding: 2px 26px; margin-top: 18px;" %> <br> <br>
       <% end %>
       
