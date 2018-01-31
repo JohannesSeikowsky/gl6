@@ -78,7 +78,10 @@
           method: (:patch), remote: true, authenticity_token: true do |f| %>
 
         <div style="display: inline-block; width: 234px; max-width: 234px; font-size: 15px; padding-left: 60px;"> 
-          <strong> <%= contact.name %> </strong> 
+          <strong> <%= contact.name %> </strong> <br>
+          <span style="font-size: 12px;">
+            <%= contact.profile.tags if contact.profile && contact.profile.tags %>
+          </span>
         </div>
 
         <div style="display: inline-block; width: 132px; max-widths: 132px;">
@@ -109,7 +112,12 @@
         <div style="display: inline-block; width: 140px; max-width: 140px;">
           <%= link_to 'Follow-up done', update_last_contacted_url(contact_id: contact.id),
               method: :post, id: "manage_contact_btn", style: "padding: 5px 12px;" %>
-          <%= contact.last_contacted if contact.last_contacted %>
+          <span style="font-size: 12px;">
+            <% if contact.last_contacted %>
+              Last -
+              <%= contact.last_contacted.strftime("%d %B") %>
+            <% end %>
+          </span>
         </div>
   
         <!--
@@ -119,7 +127,6 @@
           <%= f.submit "set", style: "display: none;" %>
         </div>
         -->
-
       <% end %>
     </p>
 

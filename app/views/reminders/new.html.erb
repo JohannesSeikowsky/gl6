@@ -20,10 +20,16 @@
       :minute_step => 15 %> <br>
     <%= f.submit "set reminder", class: "add-button w-button", style: "margin-top: 33px;" %>
 
-    <br> <br> <br>
+    <br> <br> <br> <br>
+
+    <p>
+    All reminders are delivered by Email. <br> If you click the
+     "defer" link within a reminder email <br> the same reminder will be sent 24h later.
+    </p> <br>
 
     <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
-    <%= link_to 'Give Product Feedback', "mailto:joseikowsky@gmail.com?Subject=Product%20Feedback", style: "text-decoration: underline;" %>
+    <%= link_to 'Give Product Feedback', "mailto:joseikowsky@gmail.com?Subject=Product%20Feedback", style: "text-decoration: underline;" %> <br> <br> <br>
+
 
   	<% if notice %>
   		<div class="notice-reminder"><%= notice %></div>
