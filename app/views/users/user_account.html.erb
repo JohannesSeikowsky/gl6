@@ -106,9 +106,10 @@
               style: "padding: 5px 22px;" %>
         </div>
   
-
         <div style="display: inline-block; width: 140px; max-width: 140px;">
-          <%= link_to 'Follow-up done.', "#", id: "manage_contact_btn", style: "padding: 5px 12px;" %>
+          <%= link_to 'Follow-up done', update_last_contacted_url(contact_id: contact.id),
+              method: :post, id: "manage_contact_btn", style: "padding: 5px 12px;" %>
+          <%= contact.last_contacted if contact.last_contacted %>
         </div>
   
         <!--

@@ -31,6 +31,9 @@ Rails.application.routes.draw do
   # update a contact (this_month or interval)
   patch 'update_contact/:id', to: 'contacts#update', as: 'update_contact'
 
+  # updating last contacted
+  post 'update_last_contacted/:contact_id', to: 'contacts#update_last_contacted', as: 'update_last_contacted'
+
   # delete a contact
   delete 'delete_contact/:id', to: 'contacts#delete', as: 'delete_contact'
 

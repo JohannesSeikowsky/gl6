@@ -67,6 +67,23 @@ class ContactsController < ApplicationController
     end
   end
 
+  def update_last_contacted
+    if @user = current_user
+      begin
+        @contact = Contact.find(params[:contact_id])
+        @contact.last_contacted = Time.now
+        @contact.save
+        redirect_to user_account_path(current_user), notice: "Well done! Record is updated."
+      rescue
+        redirect_to user_account_path(current_user), notice: "sorry, please try again."
+      end
+    else
+      redirect_to root_path, notice: 'please log in.'
+    end   
+  end
+
+
+
   def delete
     if @user = current_user
       @contact = Contact.find(params[:id])
@@ -79,7 +96,7 @@ class ContactsController < ApplicationController
 
   # contact params
   def contacts_params
-  	params.require(:contact).permit(:user_id, :name, :this_month, :interval, :email, :names)
+  	params.require(:contact).permit(:user_id, :name, :this_month, :interval, :email, :names, :last_contacted)
   end
 
 end
