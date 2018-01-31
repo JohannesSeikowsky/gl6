@@ -12,7 +12,7 @@ class RemindersController < ApplicationController
   		@reminder = @user.reminders.build(reminder_params)
   		if @reminder.save
         GeneralMailer.new_reminder_notifier().deliver
-        redirect_to user_account_path(id: current_user.id), notice: "Reminder set. Set another one?"
+        redirect_to user_account_path(id: current_user.id), notice: "Your Reminder is set. Set another one?"
   		else
   			redirect_to new_reminder_path(content: reminder_params[:content]), notice: "didnt work, try again."
   		end

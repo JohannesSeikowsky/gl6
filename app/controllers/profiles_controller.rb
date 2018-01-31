@@ -19,6 +19,6 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-  	params.require(:profile).permit(:comment)
+  	params.require(:profile).permit(:comment. :tags)
   end
 end

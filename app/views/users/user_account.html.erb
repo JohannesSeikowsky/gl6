@@ -122,7 +122,8 @@
       <% end %>
     </p>
 
-    <!-- LITTLE BLACK BOOK -->
+
+    <!-- Tags & Notes -->
     <div id="<%= "comment_container_" + contact.id.to_s %>" class="note_taking_container">
     
       <div data-collapse="medium" data-animation="default" data-duration="400"
@@ -143,12 +144,10 @@
         <div class="w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
-      </div>
- 
-      <br> <br> <br>
+      </div> <br> <br> <br>
+
 
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |form| %>
-
         <p> <strong> Tags - <%= contact.name %> </strong> </p>
         <% if contact.profile %>
           <%= form.text_field :comment, value: contact.profile.comment, 
@@ -168,11 +167,10 @@
 
         <%= form.submit "save", class: "submit-button-2 w-button", 
               style: "padding: 2px 26px; margin-top: 18px;" %> <br> <br>
-
       <% end %>
       
-      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %>
-      |
+
+      <%= link_to 'Back To Dashboard', user_account_path(current_user), style: "text-decoration: underline;" %> |
       <%= link_to 'Delete this Contact', delete_contact_path(id: contact.id), method: :delete, data: { confirm: 'Sure?' }, style: "text-decoration: underline;" %>
     </div>
   <% end %>
