@@ -7,7 +7,11 @@ class GeneralMailer < ApplicationMailer
     mail(to: @email, subject: 'Thanks for signing up!')
   end
 
-  def notify_admin
-    mail(to: "joseikowsky@gmail.com", subject: 'New Reminder at MYN...')
+  def new_reminder_notifier
+    mail(to: "joseikowsky@gmail.com", subject: 'New Reminder at MYN')
+  end
+
+  def new_user_notifier
+    mail(to: "joseikowsky@gmail.com", subject: 'New User at MYN')  	
   end
 end
