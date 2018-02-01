@@ -73,7 +73,7 @@ class ContactsController < ApplicationController
         @contact = Contact.find(params[:contact_id])
         @contact.last_contacted = Time.now
         @contact.save
-        redirect_to user_account_path(current_user), notice: "Well done! Record is updated."
+        redirect_to user_account_path(current_user), notice: "Well done! Record updated."
       rescue
         redirect_to user_account_path(current_user), notice: "sorry, please try again."
       end

@@ -30,7 +30,7 @@
 
     <% if notice %>
       <br> <br>
-      <p style="text-align: center; font-size: 20px; line-height: 1.28;"> 
+      <p style="text-align: center; font-size: 20px; line-height: 1.28; margin-bottom: -35px;"> 
          <%= notice %>
       </p>
    <% end %>
@@ -155,9 +155,12 @@
 
 
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |f| %>
-        <p> <strong> Tags - <%= contact.name %> </strong> </p>
-   
-        <%= f.text_field :tags, placeholder: "your tags",
+        <p> <strong> Tags - <%= contact.name %> </strong> <br>
+          please separate with commas <br>
+          tag1, tag2, tag3
+        </p>
+
+        <%= f.text_field :tags, placeholder: "...",
           value: (contact.profile.tags if contact.profile && contact.profile.tags), class: "add_note_field", style: "height: 30px;" %> <br> <br> <br>
 
         <p> <strong> Note - <%= contact.name %> </strong> <br> Relevant Info? <br>
