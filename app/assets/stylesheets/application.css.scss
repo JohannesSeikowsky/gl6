@@ -177,7 +177,8 @@ input[type="radio"] {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  height: auto
+  height: auto;
+  opacity: 1;
 }
 
 input[type="search"] {
@@ -3486,7 +3487,7 @@ h3 {
 }
 
 .table_container{
-  width: 1060px;
+  width: 1050px;
   margin: 78px auto 0px auto;
 }
 

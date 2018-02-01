@@ -50,7 +50,7 @@
       This Month
     </div> 
   
-    <div style="display: inline-block; width: 174px; max-width: 174px; font-weight: bold; text-decoration: underline;">
+    <div style="display: inline-block; width: 176px; max-width: 176px; font-weight: bold; text-decoration: underline;">
       Contact Intervals
     </div> 
 
@@ -90,9 +90,9 @@
           <%= f.submit "this month.", style: "display: none;" %>
         </div>
       
-        <div style="display: inline-block; width: 170px; max-width: 170px;"> 
+        <div style="display: inline-block; width: 172px; max-width: 172px;"> 
           Every
-          <%= f.number_field :interval, value: contact.interval, style: "width: 30px;",
+          <%= f.number_field :interval, value: contact.interval, style: "width: 34px;",
               onchange: "click_submit_btn(this); return false;", class: "interval_field" %> 
           Months
           <%= f.submit "set", style: "display: none;" %>
@@ -103,7 +103,7 @@
               id: "set_reminder_btn" %>
         </div>
 
-        <div style="display: inline-block; width: 172px; max-width: 172px;">
+        <div style="display: inline-block; width: 165px; max-width: 165px;">
           <%= link_to 'Tags & Notes', "#", id: "manage_contact_btn",
               onclick: "display_comment_section(#{contact.id}); return false",
               style: "padding: 5px 22px;" %>
@@ -112,7 +112,7 @@
         <div style="position: relative; display: inline-block; width: 140px; max-width: 140px;">
           <%= link_to 'mark as done', update_last_contacted_url(contact_id: contact.id),
               method: :post, id: "manage_contact_btn", style: "padding: 5px 12px;" %>
-          <div style="position: absolute; top: 23px; font-size: 12px;">
+          <div style="position: absolute; top: 24px; font-size: 12px; padding-left: 22px;">
             <% if contact.last_contacted %>
               <%= contact.last_contacted.strftime("%d %B") %>
             <% end %>
@@ -157,7 +157,7 @@
       <%= form_for :profile, :url => create_or_update_profile_url(contact_id: contact.id) do |f| %>
         <p> <strong> Tags - <%= contact.name %> </strong> <br>
           please separate with commas <br>
-          tag1, tag2, tag3
+          tag, tag, tag
         </p>
 
         <%= f.text_field :tags, placeholder: "...",
