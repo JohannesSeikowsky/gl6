@@ -23,7 +23,6 @@
   <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 43px;"> 
     Add Your Contacts
   </p>
-
     <%= form_for :contact, url: create_many_contacts_url do |f| %>
       <%= f.text_area :names, placeholder: "Elon Musk, Boris Johnson, Ayn Rand, Noam Chomsky ... etc.", id: "add_contacts_field" %> <br>
       <%= f.submit "Add", class: "add-button w-button" %>
@@ -42,7 +41,7 @@
 </div>
 
 <div class="table_container">
-  <div>
+  <div style="margin-bottom: -20px;">
     <div style="display: inline-block; width: 230px; max-width: 230px; font-weight: bold; text-decoration: underline; padding-left: 60px;">
       Name
     </div>
@@ -73,15 +72,16 @@
   <% if !@contacts.empty? %>
   
   <% @contacts.each do |contact| %>
-    <p style="margin-bottom: 42px;"> 
+    <p style="margin-bottom: 55px;"> 
       <%= form_for :contact, url: update_contact_url(id: contact.id),
           method: (:patch), remote: true, authenticity_token: true do |f| %>
 
-        <div style="display: inline-block; width: 234px; max-width: 234px; font-size: 15px; padding-left: 60px;"> 
-          <strong> <%= contact.name %> </strong> <br>
-          <span style="font-size: 12px;">
+        
+        <div style="position: relative; display: inline-block; width: 234px; max-width: 234px; font-size: 15px; padding-left: 60px;"> 
+          <strong> <%= contact.name %> </strong>
+          <div style="font-size: 12px; position: absolute; top: 20px; cursor: pointer;">
             <%= contact.profile.tags if contact.profile && contact.profile.tags %>
-          </span>
+          </div>
         </div>
 
         <div style="display: inline-block; width: 132px; max-widths: 132px;">
@@ -103,21 +103,20 @@
               id: "set_reminder_btn" %>
         </div>
 
-        <div style="display: inline-block; width: 166px; max-width: 166px;">
+        <div style="display: inline-block; width: 172px; max-width: 172px;">
           <%= link_to 'Tags & Notes', "#", id: "manage_contact_btn",
               onclick: "display_comment_section(#{contact.id}); return false",
               style: "padding: 5px 22px;" %>
         </div>
   
-        <div style="display: inline-block; width: 140px; max-width: 140px;">
-          <%= link_to 'Follow-up done', update_last_contacted_url(contact_id: contact.id),
+        <div style="position: relative; display: inline-block; width: 140px; max-width: 140px;">
+          <%= link_to 'mark as done', update_last_contacted_url(contact_id: contact.id),
               method: :post, id: "manage_contact_btn", style: "padding: 5px 12px;" %>
-          <span style="font-size: 12px;">
+          <div style="position: absolute; top: 23px; font-size: 12px;">
             <% if contact.last_contacted %>
-              Last -
               <%= contact.last_contacted.strftime("%d %B") %>
             <% end %>
-          </span>
+          </div>
         </div>
   
         <!--
