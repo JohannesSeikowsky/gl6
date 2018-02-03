@@ -16,14 +16,15 @@
 
 
 <div class="add_contacts_container">
-  <h3> Quick Intro </h3>
+  <!-- <h3> Quick Intro </h3> -->
+  <br>
   <p style="text-align: center; font-size: 24px; line-height: 1.38; margin-bottom; 40px; margin-top: 0px;">
     2 Minute Intro - What you can do with MYN 
   </p> <br>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9-01xCqYaI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="border: 1px solid lightgrey;"></iframe> <br> <br>
 
-    <%= link_to 'Continue', user_account_path(current_user), class: "add-button w-button" %>
+    <%= link_to 'Continue to Dashboard', user_account_path(current_user), class: "add-button w-button" %>
 
     <% if notice %>
       <br> <br>
