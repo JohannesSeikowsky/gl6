@@ -1,0 +1,274 @@
+<div class="container_of_page">
+	<div class="img_ctn">
+		<%= image_tag "johannes.jpg" %> <br> <br>
+		<%= button_to "Get a page like this", root_path, class: "get_page_btn" %>
+		<span class="mini_slogan"> no hassle, directly online. </span>
+	</div>
+
+	<div id="default_page_body">
+		<h1> Johannes Seikowsky </h2>
+		<p>
+			Product guy and computer programmer by day. <br>
+		 	Writer and poet by night. <br> <br>
+		 	City - London, UK <br>
+		 	Write me - <a href="mailto:joseikowsky@gmail.com?Subject=Hi" target="_top"> joseikowsky@gmail.com </a>
+		</p> <br>
+
+		<div class="email_ctn">
+			<h3> Get Email-notified when new work comes out. </h3>
+			<%= form_for :email_subscriber do |f| %>
+				<%= f.text_field :name, placeholder: "email@example.com" %>
+				<%= f.submit "submit", style: "cursor: pointer;" %>
+			<% end %>
+		</div> <br> <br>
+		
+		<h3> Read </h3>
+		<p class="title_of_work" onclick='show_piece("piece_one");'> A Primer on the Day </p>
+		<p class="title_of_work" onclick='show_piece("piece_two");'> In Canary Wharf </p>
+		<p class="title_of_work" onclick='show_piece("piece_three");'> Old Man on a Bench  </p>
+		<p class="title_of_work" onclick='show_piece("piece_four");'> Captain of the ship of you </p>
+		<p class="title_of_work" onclick='show_piece("piece_five");'> Feet, to Feet </p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_one">
+		<h1 onclick='show_default("piece_one")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1> <br>
+		<h3> A Primer on the Day </h3>		
+		<p>
+			In Washington, a clown makes people frown. <br>
+			In Beijing, men in suits do as it suits — probably them. <br>
+			In Sydney — well, nobody cares. <br>
+			In Berlin, Mutti Merkel just won’t go. <br>
+			In Moscow, Pater Putin just won’t go.<br>
+			In Paris however, a youngster is not laying low. <br>
+			In London, they want to exit — why? <br>
+			In Rome, well nothing happens in the Rome of the day — <br>
+			Eternal city mostly looking pretty. <br>
+			And so it goes, <br>
+			a quick poetic account of the day, <br>
+			a primer on what in conversation one may say.
+		</p>
+		<br>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_two">
+		<h1 onclick='show_default("piece_two")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1> <br>
+		<h3> In Canary Wharf </h3>		
+		<p>
+			In Canary Wharf they have all - <br>
+			big buildings and bright lights - <br>
+			pounds, prestige — all for which man fights. <br>
+			What they lack, one can not think, <br>
+			but only feel, <br>
+			only feel when there. <br> <br>
+			It’s prison without the gates, <br>
+			Betting without stakes, <br>
+			Bookshelves for decoration, <br>
+			Fake-tan and Indoor-swimming, <br>
+			Learning for the exam, <br>
+			Too-small-portions in too-fancy-places, <br>
+			Extra charges for the Ketchup, <br>
+			Gifts as bribes, <br>
+			Music without dance, <br>
+			Anxiety in a suit — dressed up nicely. <br>
+			And then some. <br> <br>
+			Go have a trip — To Canary Wharf. <br>
+			You’ll be very glad. Once you’re back.
+		</p>
+		<br>
+	</div>
+
+	<div class="piece_of_work" id="piece_three">
+		<h1 onclick='show_default("piece_three")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1> <br>
+		<h3> Old Man on a Bench </h3>		
+		<p>
+			Walking in the park, <br>
+			I saw an old man on a bench, <br>
+			crying, <br>
+			wearing his heart on the outside. <br>
+			I sat next to him, <br>
+			wanted to flee, but stayed, <br>
+			stayed throughout. <br>
+			Then left. <br>
+			No words spoken, <br>
+			no deeds performed, <br>
+			All difference made.
+		</p>
+		<br>
+	</div>
+
+	<div class="piece_of_work" id="piece_four">
+		<h1 onclick='show_default("piece_four")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1> <br>
+		<h3> Captain of the ship of you </h3>		
+		<p>
+			It’s in your heart, it’s in your spine, <br>
+			the energy that you can call mine. <br>
+			You feel it there and feel it’s will, <br>
+			a will it seems, you’re here to fulfill. <br>
+			So what do you do? What can you do? <br> What should you do? <br>
+			The answer is one of two. <br>
+			To steer or to flow, <br>
+			To try or to let go, <br>
+			To push or to lay low. <br>
+			And that, dear friend, that is on you. <br>
+			You — Captain of the ship of you. <br>
+			Now let me ask: what will you do?
+		</p>
+		<br>
+	</div>
+
+	<div class="piece_of_work" id="piece_five">
+		<h1 onclick='show_default("piece_five")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1> <br>
+		<h3> Feet, to Feet </h3>		
+		<p>
+			Most ignore you, some abhor you, some adore you. <br>
+			You come in teams — ever-aligned. <br>
+			You work hard. Do you complain? Rarely. <br>
+			You’re fragile and not — soft and hard. Always. <br>
+			We rely on you, stand on you. Yet, do we see you? Rarely. <br>
+			You connect and disconnect. Always. <br>
+			You are there, around and needed.  <br>
+			We rely bon you, yet celebrate you? Rarely. <br>
+			This is to you my feet, <br>
+			I adore you, never abhor you, trying not to ignore you. <br>
+		</p>
+		<br>
+	</div>
+
+
+	<div class="my_page_footer">
+		<%= link_to "Find me on Twitter", "https://twitter.com/Seikowsky", style: "color: black; font-weight: bold;" %> |
+		<%= link_to "Find me on Medium", "https://medium.com/@jseikowsky", style: "color: black; font-weight: bold;" %>
+	</div>
+</div>
+
+<style type="text/css">
+	body{
+	  background-color: #F7EEE5;
+	}
+
+	.container_of_page{
+	  width: 500px;
+	  margin: 0px auto;
+	  position: relative;
+	  background-color: white;
+	  padding: 0px 12px 8px 12px;
+	}
+
+	h1{
+		font-size: 26px;
+		font-weight: bold;
+		padding-bottom: 9px;
+		margin-top: 75px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #eee;}
+
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 16px;}
+
+	.img_ctn{
+		position: absolute;
+    	right: -218px;
+    	top: 0px;		
+	}
+
+	.get_page_btn{
+		width: 85%;
+		margin-left: 12px;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+
+	.mini_slogan{
+		margin-left: 11px;
+		font-size: 13px;
+	}
+
+	img{
+		width: 80%;
+		height: auto;
+		margin: 15px 10% 15px 10%;
+		border: 1px solid #9F9F9F;
+		margin-bottom: 26px;
+		width: 180px;
+		height: auto;
+		margin: 0;}
+
+	h3{
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+
+	.email_ctn{
+		padding: 25px 25px 32px 25px;
+		background-color: #F1F1F1;
+	}
+
+	.title_of_work{
+		cursor: pointer;
+	}
+
+	.piece_of_work{
+		display: none;
+	}
+
+	.go_back_btn{
+		cursor: pointer; 
+		font-size: 19px;
+	}
+
+
+	.my_page_footer{
+		width: 100%;
+		text-align: center;
+		height: 40px;
+		line-height: 2.8;
+		margin-top: 25px;
+		background: #F1F1F1;		
+	}
+</style>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		// display piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "block";	
+	}
+
+	function show_default(piece_id){
+		// hide current piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "none";
+
+		// show main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "block";
+	}
+</script>
+
+
+<!--
+	- back btn work
+	- border of img
+
+	back btn
+	- hides current element / div
+	- shows main one
+-->

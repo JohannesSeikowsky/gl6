@@ -33,4 +33,7 @@ class PagesController < ApplicationController
 
   def do_now
   end
+
+  def johannes
+  end
 end

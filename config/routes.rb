@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # root
   root 'pages#home'
 
+  # extra
+  get 'johannes', to: 'pages#johannes', as: 'johannes'
+
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
