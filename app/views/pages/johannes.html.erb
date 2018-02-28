@@ -10,7 +10,7 @@
 	<div id="default_page_body">
 		<h1> Johannes Seikowsky </h2>
 		<p>
-			Product guy by day. <br>
+			Product guy and computer programmer by day. <br>
 		 	Writer and poet by night. <br> <br>
 		 	City - London, UK <br>
 		 	Write me - <a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a>
@@ -24,7 +24,7 @@
 			<% end %>
 		</div> <br> <br>
 		
-		<h3> Read </h3>
+		<h3> Some Works: </h3>
 		<p class="title_of_work" onclick='show_piece("piece_one");'> A Primer on the Day </p>
 		<p class="title_of_work" onclick='show_piece("piece_two");'> In Canary Wharf </p>
 		<p class="title_of_work" onclick='show_piece("piece_three");'> Old Man on a Bench  </p>
@@ -134,16 +134,18 @@
 		</h1> <br>
 		<h3> Feet, to Feet </h3>		
 		<p>
-			Most ignore you, some abhor you, some adore you. <br>
-			You come in teams — ever-aligned. <br>
-			You work hard. Do you complain? Rarely. <br>
-			You’re fragile and not — soft and hard. Always. <br>
-			We rely on you, stand on you. Yet, do we see you? Rarely. <br>
-			You connect and disconnect. Always. <br>
-			You are there, around and needed.  <br>
-			We rely bon you, yet celebrate you? Rarely. <br>
-			This is to you my feet, <br>
-			I adore you, never abhor you, trying not to ignore you. <br>
+			Let me know the link to your medium profile and your
+			Email Address and I'll make a page like this one
+			for you. It's a simple way to represent yourself as a writer online
+			and a way to collect Email addresses from people who like what youre doing.
+
+			I charge 2.99 a month - mostly because it takes some effort on my behalf to manage
+			things and servers cost money 
+
+			If you want any particular things for your site
+			you can let me know and it will probably be doable.
+
+
 		</p>
 		<br>
 	</div>
@@ -152,11 +154,33 @@
 		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1> <br>
-		<h3> Get thiis shit.. </h3>		
+		<h3> Represent yourself online & collect Emails </h3>		
+
 		<p>
-			...
+			<%= form_for :email_subscriber do |f| %>
+				<p> Your Medium profile </p>
+				<%= f.text_field :name, placeholder: "medium.com/@example" %> <br> <br>
+				<p> Your Email </p>
+				<%= f.text_field :name, placeholder: "email@example.com" %> <br> <br>
+				<%= f.submit "generate your site", style: "cursor: pointer;" %>
+			<% end %>
+
+			<br> <br>
+			<h3> What and Why </h3>		
+			I made this site for myself as the simplest way
+			to represent my writing in an independent place online
+			and to collect Emails of people, so I can let them know
+			when I publish something new. I have deliberately set out to design
+			it in a plain and crisp way - without any distractions.
+			<br> <br>
+
+			If you like, you can enter your info above
+			and I'll set up the same site but with your posts, your name etc. so you can do the
+			same. Filling out the fields is all you have to do. 
+			It's 2.99£ a month - mostly because it takes effort on my behalf to set things up. <br> <br>
+			If you'd like some minor changes to your page, you can simply message me - 
+			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a>
 		</p>
-		<br>
 	</div>
 
 	<div class="my_page_footer">
@@ -235,7 +259,7 @@
 	}
 
 	.email_ctn{
-		padding: 25px 25px 32px 25px;
+		padding: 25px 25px 32px 12px;
 		background-color: #F1F1F1;
 	}
 
@@ -254,6 +278,7 @@
 	.go_back_btn{
 		cursor: pointer; 
 		font-size: 19px;
+		padding-top: 6px;
 	}
 
 	#get_page_like_this{
@@ -305,6 +330,6 @@
 <!--
 	- titles
 
-	- show when onclick
+	- get page like this page
 
 -->
