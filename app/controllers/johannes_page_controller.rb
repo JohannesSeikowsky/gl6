@@ -1,21 +1,21 @@
 class JohannesPageController < ApplicationController
 
 def email_subscriber
+	# create
 	Subscriber.create(email: params[:email_subscriber][:email])
-	redirect_to root_path, notice: "Thank you!"
+	# alert_mail
+	GeneralMailer.new_email_subscriber(params[:email_subscriber][:email])
+	redirect_to root_path, notice: "It worked. Thank you!"
 end
 
 def new_page_user
+	# create
 	PageUser.create(medium_link: params[:new_page_user][:medium_link],
 		email: params[:new_page_user][:email])
-	redirect_to root_path, notice: "Thank you!"
+	# alert_mail
+	GeneralMailer.new_page_user(params[:new_page_user][:medium_link],
+		 params[:new_page_user][:email)
+	redirect_to root_path, notice: "It worked. Thank you!"
 end
 
 end
-
-# email notification
-# flash notice on root
-# push to production, run rake...
-
-# Pageuser - email - medium_link
-# 

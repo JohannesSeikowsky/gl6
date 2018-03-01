@@ -14,4 +14,16 @@ class GeneralMailer < ApplicationMailer
   def new_user_notifier
     mail(to: "joseikowsky@gmail.com", subject: 'New User at MYN')  	
   end
+
+  def new_email_subscriber(subscribers_email)
+    @subscribers_email = subscribers_email
+    mail(to: "joseikowsky@gmail.com", subject: 'New Email Subscriber')   
+  end
+
+  def new_page_user(users_medium, users_email)
+    @users_medium = users_medium
+    @users_email = users_email
+    mail(to: "joseikowsky@gmail.com", subject: 'New Page User')   
+  end
+
 end
