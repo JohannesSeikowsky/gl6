@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
   # root
-  root 'pages#home'
-
-  # extra
-  get 'johannes', to: 'pages#johannes', as: 'johannes'
+  root 'pages#johannes'
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
@@ -55,4 +52,10 @@ Rails.application.routes.draw do
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'
 
+  #####
+  # Johannes page bit
+  get 'johannes', to: 'pages#johannes', as: 'johannes'
+
+  post 'email_sub', to: 'johannes_page#email_subscriber', as: 'email_subscriber'
+  post 'get_page', to: 'johannes_page#new_page_user', as: 'new_page_user'
 end

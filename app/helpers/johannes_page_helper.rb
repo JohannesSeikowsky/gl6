@@ -1,0 +1,2 @@
+module JohannesPageHelper
+end

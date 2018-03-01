@@ -1,0 +1,2 @@
+class PageUser < ApplicationRecord
+end

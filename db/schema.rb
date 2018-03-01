@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131151657) do
+ActiveRecord::Schema.define(version: 20180301153725) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20180131151657) do
     t.string "email"
     t.datetime "last_contacted"
     t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
+
+  create_table "page_users", force: :cascade do |t|
+    t.string "medium_link"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -40,6 +47,12 @@ ActiveRecord::Schema.define(version: 20180131151657) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reminders_on_user_id"
+  end
+
+  create_table "subscribers", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

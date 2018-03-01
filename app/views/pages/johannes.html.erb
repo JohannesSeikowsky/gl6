@@ -18,10 +18,11 @@
 
 		<div class="email_ctn">
 			<h3> Get Email-notified when new work comes out. </h3>
-			<%= form_for :email_subscriber do |f| %>
-				<%= f.text_field :name, placeholder: "email@example.com" %>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_field :email, placeholder: "email@example.com" %>
 				<%= f.submit "submit", style: "cursor: pointer;" %>
 			<% end %>
+
 		</div> <br> <br>
 		
 		<h3> Read: </h3>
@@ -156,11 +157,11 @@
 		& collect Emails from followers/fans. </h3>		
 
 		<p>
-			<%= form_for :email_subscriber do |f| %>
+			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
 				<p> Link to Medium </p>
-				<%= f.text_field :name, placeholder: "medium.com/@myName" %> <br> <br>
+				<%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br> <br>
 				<p> Email address </p>
-				<%= f.text_field :name, placeholder: "myemail@provider.com" %> <br> <br>
+				<%= f.text_field :email, placeholder: "myemail@provider.com" %> <br> <br>
 				<%= f.submit "generate my site", style: "cursor: pointer;" %>
 			<% end %>
 
@@ -326,10 +327,3 @@
 	}
 </script>
 
-
-<!--
-	- titles
-
-	- get page like this page
-
--->
