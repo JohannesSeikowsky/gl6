@@ -15,7 +15,7 @@ def new_page_user
 	# alert_mail
 	GeneralMailer.new_page_user(params[:new_page_user][:medium_link],
 		 params[:new_page_user][:email]).deliver
-	redirect_to root_path, notice: "It worked. Thank you!"
+	redirect_to root_path, notice: "It worked! I will be in touch!"
 end
 
 end
