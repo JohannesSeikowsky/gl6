@@ -2,9 +2,31 @@
 	<div class="img_ctn">
 		<%= image_tag "johannes.jpg" %> <br> <br>
 		<p class="get_page_btn" onclick="show_get_page();">
-			Get a page like this!	
+			Get a page <br> like this.	
 		</p>
+		<p class="get_page_btn">
+			Social Media <br>
+			<a href="https://medium.com/@jseikowsky">
+				<i class="fab fa-medium-m" style="font-size: 26px; margin-right: 6px; padding-top: 6px;"></i>
+			</a>
+			<a href="https://twitter.com/Seikowsky">
+				<i class="fab fa-twitter" style="font-size: 26px; padding-top: 6px"></i>
+			</a>
+		</p>
+
+		<p class="get_page_btn">
+			Give Feedback
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_area :email, placeholder: "your feedback ...",
+						style: "width: 160px; height: 100px; margin: 0px 13px;" %> <br>
+				<%= f.submit "submit", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+
+		<!--
 		<span class="mini_slogan"> no hassle, directly online. </span>
+		-->
 	</div>
 
 	<div id="default_page_body">
@@ -14,22 +36,23 @@
 
 		<h1> Johannes Seikowsky </h2>
 		<p>
-			Product guy and computer programmer by day. <br>
-		 	Writer and poet by night. <br> <br>
-		 	City - London, UK <br>
+			Product developer by day. <br>
+		 	Writer and poet by night. <br>
+		 	Interested in many, many things. <br> <br>
+		 	Currently living in London, UK <br>
 		 	Write me - <a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a>
-		</p> <br>
+		</p>
 
 		<div class="email_ctn">
-			<h3> Get Email-notified when new work comes out. </h3>
+			<h3> Get notified when work comes out. </h3>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 				<%= f.text_field :email, placeholder: "email@example.com" %>
 				<%= f.submit "submit", style: "cursor: pointer;" %>
 			<% end %>
 
-		</div> <br> <br>
+		</div>
 		
-		<h3> Read: </h3>
+		<h3> Favorites </h3>
 		<p class="title_of_work" onclick='show_piece("piece_one");'> A Primer on the Day </p>
 		<p class="title_of_work" onclick='show_piece("piece_two");'> In Canary Wharf </p>
 		<p class="title_of_work" onclick='show_piece("piece_three");'> Old Man on a Bench  </p>
@@ -195,9 +218,11 @@
 </div>
 
 <style type="text/css">
+	/*
 	body{
 	  background-color: #F7EEE5;
 	}
+	*/
 
 	.container_of_page{
 	  width: 500px;
@@ -235,11 +260,11 @@
 		margin-left: 12px;
 		margin-bottom: 5px;
 		cursor: pointer;
-		padding: 5px 5px;
-		font-size: 13px;
+		padding: 15px 15px;
+		font-size: 14px;
 		font-weight: bold;
 		text-align: center;
-		background-color: #E0E8EE;
+		background-color: white;
 		border: 1px solid lightGrey;
 	}
 
@@ -264,8 +289,9 @@
 	}
 
 	.email_ctn{
-		padding: 25px 25px 32px 12px;
+		padding: 26px 25px 38px 12px;
 		background-color: #F1F1F1;
+		margin: 30px 0px 32px 0px;
 	}
 
 	.title_of_work{
