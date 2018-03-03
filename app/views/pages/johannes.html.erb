@@ -19,7 +19,7 @@
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 				<%= f.text_area :email, placeholder: "your feedback ...",
 						style: "width: 160px; height: 100px; margin: 0px 13px;" %> <br>
-				<%= f.submit "done", style: "cursor: pointer; float: right;
+				<%= f.submit "submit", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
 		</p>
@@ -196,7 +196,7 @@
 				</p>
 				<p> Medium Link: <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
  					</p>
-				<%= f.submit "submit", style: "cursor: pointer;" %>
+				<%= f.submit "done", style: "cursor: pointer;" %>
 			<% end %>
 
 			<br> <br>
