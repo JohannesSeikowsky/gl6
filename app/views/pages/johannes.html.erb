@@ -44,7 +44,8 @@
 		</p>
 
 		<div class="email_ctn">
-			<h3 style="text-decoration: underline;"> Notify me of new work </h3>
+			<h3 style="text-decoration: underline; font-size: 16px;
+				margin-bottom: 2px;"> Know when new works comes out </h3>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 				<%= f.text_field :email, placeholder: "email@example.com" %>
 				<%= f.submit "submit", style: "cursor: pointer;" %>
@@ -198,7 +199,6 @@
  					</p>
 				<%= f.submit "done", style: "cursor: pointer;" %>
 			<% end %>
-
 			<br> <br>
 
 			<h3 style="text-decoration: underline;"> Details </h3>
@@ -207,9 +207,6 @@
 			I have made for myself. It's literally no effort.
 			<br> <br>
 
-			<!--
-			The design is hyper plain and crisp on purpose - avoiding all distractions. <br> <br>
-			-->
 
 			If you can afford it, I'd like to charge 2.99£ / month 
 			- mostly because maintenance requires work.
@@ -302,7 +299,7 @@
 	}
 
 	.email_ctn{
-		padding: 26px 25px 38px 12px;
+		padding: 8px 25px 14px 12px;
 		background-color: #F1F1F1;
 		margin: 30px 0px 32px 0px;
 	}
