@@ -1,33 +1,53 @@
 <div class="container_of_page">
-	<div class="img_ctn">
+	
+	<div class="the_get_page_btn">
+		<p onclick="show_get_page();">
+			Get a page like this.	
+		</p>
+	</div>
+
+	<div class="left_ctn">
 		<%= image_tag "johannes.jpg" %> <br> <br>
-		<p class="get_page_btn" style="background-color: #FFE9AF;" onclick="show_get_page();">
-			Get a page <br> like this!	
-		</p>
-		<p class="get_page_btn">
-			Social Media <br>
-			<a href="https://twitter.com/Seikowsky">
-				<i class="fab fa-twitter" style="font-size: 26px; margin-right: 6px; padding-top: 6px"></i>
-			</a>
-			<a href="https://medium.com/@jseikowsky">
-				<i class="fab fa-medium-m" style="font-size: 26px; padding-top: 6px;"></i>
-			</a>
-		</p>
+	</div>
+
+	<div class="right_ctn">
 
 		<p class="get_page_btn">
-			Give Feedback
+			<span style="font-size: 14px; text-decoration: underline;"> Mailing List </span>
+		</p>
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> For when new <br> posts come out. </span>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-				<%= f.text_area :email, placeholder: "your feedback ...",
-						style: "width: 160px; height: 100px; margin: 0px 13px;" %> <br>
-				<%= f.submit "submit", style: "cursor: pointer; float: right;
+				<%= f.text_field :email, placeholder: "me@myemail.com",
+						style: "width: 160px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
 		</p>
+		<br> <br> <br>
 
-		<!--
-		<span class="mini_slogan"> no hassle, directly online. </span>
-		-->
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> Social Media </span>
+			<br>
+			<a href="https://medium.com/@jseikowsky">
+				<i class="fab fa-medium-m" style="font-size: 28px; margin-right: 8px; padding-top: 10px;"></i>
+			</a>
+			<a href="https://twitter.com/Seikowsky">
+				<i class="fab fa-twitter" style="font-size: 28px; padding-top: 10px"></i>
+			</a>
+		</p>
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> Contact me </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_area :email, placeholder: "your message ...",
+						style: "width: 160px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
 	</div>
+
 
 	<div id="default_page_body">
 		<% if notice %>
@@ -35,14 +55,21 @@
 		<% end %>
 
 		<h1> Johannes Seikowsky </h2>
+		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
 		<p>
-			Product developer by day. <br>
-		 	Writer and poet by night. <br>
-		 	Interested in many, many things. <br> <br>
-		 	Currently living in London, UK. <br>
+		 	Interested in many things. <br>
+		 	Formal Education - Economics. <br>
+		 	Self-taught programmer. <br>
+		 	Writer by compulsion. <br>
+		 	Occasional Poet. <br>
+		 	Living in London and recommending it. <br>
+		 	Love reading too much.<br>
+		 	<!--
 		 	Write me - <a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a>
-		</p>
+		 	-->
+		</p> <br>
 
+		<!--
 		<div class="email_ctn">
 			<h3 style="text-decoration: underline; font-size: 16px;
 				margin-bottom: 3px;"> Know when new works comes out: </h3>
@@ -51,14 +78,57 @@
 				<%= f.submit "submit", style: "cursor: pointer;" %>
 			<% end %>
 		</div>
-		
-		<h3 style="text-decoration: underline;"> Favorite Posts </h3>
+		-->
+
+		<h3 style="text-decoration: underline;"> Some Posts of mine </h3>
+		<p class="title_of_work" onclick='show_piece("piece_zero");'> Collecting Quotes </p>
 		<p class="title_of_work" onclick='show_piece("piece_one");'> A Primer on the Day </p>
 		<p class="title_of_work" onclick='show_piece("piece_two");'> In Canary Wharf </p>
 		<p class="title_of_work" onclick='show_piece("piece_three");'> Old Man on a Bench  </p>
 		<p class="title_of_work" onclick='show_piece("piece_four");'> Captain of the ship of you </p>
 		<p class="title_of_work" onclick='show_piece("piece_five");'> Feet, to Feet </p>
 	</div>
+
+
+
+	<div class="piece_of_work" id="piece_zero">
+		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Collecting Quotes </h3>		
+		<p>
+			Some of my favorite Quotes - just for fun. <br> <br>
+
+		“I have always imagined that Paradise will be a kind of library.” <br>
+		- Jorge Borges <br> <br>
+		“Sometimes the old ways are the best ways.” <br> 
+		- Miss Moneypenny <br> <br>
+		“Good scientists go looking for trouble.” <br>
+		- Paul Graham, on the importance of breaking conventional wisdom in intellectual work <br> <br>
+		“You will eventually agree with me, because you are smart and I’m right.” <br>
+		- Charlie Munger <br> <br>
+		“For love of bustle is not industry.” <br>
+		- Seneca <br> <br>
+		“What they really fear is not that they won’t get their breakfast the next morning, but that they fail to outshine their neighbours.” <br>
+		- Bertrand Russell on the competitive mindset <br> <br>
+
+		“If someone wonders who are the Stoics, I’d say Buddhists with an attitude problem.” <br>
+		- Nassim Taleb <br> <br>
+		“So long as all you do is not all for you.” <br>
+		- Nassim Taleb <br> <br>
+		“7000 squaremetres built on my giving a fuck.” <br>
+		- Ari Gold of “Entourage” on his company <br> <br>
+		“Do I look like a guy with a plan?” <br>
+		- The Joker <br> <br>
+		“A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work.” <br>
+		- John Gall <br> <br>
+		“If I find too many people adopting a certain idea, I probably think it’s wrong. Don’t believe that something is good just because it’s trendy.” <br>
+		- Donald Knuth <br> <br>
+
+		</p>
+		<br>
+	</div>
+
 
 
 	<div class="piece_of_work" id="piece_one">
@@ -178,12 +248,12 @@
 
 	<div id="get_page_like_this">
 		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
-			Go Back 
+			Back 
 		</h1>
 
-		<h3 class="piece_header" style="font-size: 23px; margin-top: 20px;"> 
-			Generate your own site by filling out the fields below.
-			All you need to do:
+		<h3 class="piece_header" style="font-size: 23px; margin-top: 20px; text-decoration: underline;"> 
+			Generate your own site
+			<!-- All you need to do. -->
 		 </h3>		
 
 		<!--
@@ -192,22 +262,21 @@
 		-->
 		<p>
 			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
-				<p> Email address: <br>
+				<p> Email address <br>
 				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
 				</p>
-				<p> Medium Link: <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
+				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
  					</p>
 				<%= f.submit "done", style: "cursor: pointer;" %>
 			<% end %>
 			<br> <br>
 
-			<h3 style="text-decoration: underline;"> Details </h3>
+			<h3 style="text-decoration: underline;"> How things works </h3>
 			Submitting the form will use the info on your
 			 Medium profile to generate your own site in the same layout as the site that
-			I have made for myself. It's literally no effort.
+			I have made for myself. It's literally no effort. Submit and you're done.
 			<br> <br>
-
-
+			<!--
 			If you can afford it, I'd like to charge 2.99£ / month 
 			- mostly because maintenance requires work.
 			But if you can't afford it, no worries.
@@ -217,6 +286,7 @@
 			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a> <br> <br>
 			Best, <br> <br>
 			Johannes
+			-->
 		</p>
 	</div>
 
@@ -234,8 +304,8 @@
 	*/
 
 	.container_of_page{
-	  width: 520px;
-	  margin: 0px auto;
+	  width: 474px;
+	  margin: 96px auto;
 	  position: relative;
 	  background-color: white;
 	  padding: 0px 22px 8px 22px;
@@ -259,10 +329,32 @@
 		text-decoration: underline;
 	}
 
-	.img_ctn{
+	.right_ctn{
 		position: absolute;
-    	right: -218px;
+    	right: -196px;
     	top: 0px;		
+	}
+	
+	.left_ctn{
+		position: absolute;
+    	left: -200px;
+    	top: 0px;		
+	}
+
+
+	.the_get_page_btn{
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		width: 180px;
+		height: 44px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid lightGrey;
+		background-color: #FFE9AF;
+		padding: 8px;
 	}
 
 	.get_page_btn{
@@ -335,7 +427,7 @@
 		text-align: center;
 		height: 40px;
 		line-height: 2.8;
-		margin-top: 32px;
+		margin-top: 40px;
 		background: #F1F1F1;		
 	}
 </style>
@@ -364,6 +456,8 @@
 	function show_get_page(){
 		// hide main
 		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_zero");
 		default_page_body.style.display = "none";
 		default_page_body = document.getElementById("piece_one");
 		default_page_body.style.display = "none";
