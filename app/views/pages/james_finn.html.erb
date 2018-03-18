@@ -1,10 +1,12 @@
 <div class="container_of_page">
 	
+	<!--
 	<div class="the_get_page_btn">
 		<p onclick="show_get_page();">
-			Get a page like this.	
+			Get page like this	
 		</p>
 	</div>
+	-->
 
 	<div class="left_ctn">
 		<%= image_tag "james_finn.jpeg" %> <br> <br>
@@ -12,36 +14,39 @@
 
 	<div class="right_ctn">
 
+		<!--
 		<p class="get_page_btn">
 			<span style="font-size: 14px; text-decoration: underline;"> Mailing List </span>
-		</p>
+		</p> -->
 		<p class="get_page_btn">
-			<span style="font-size: 13px;"> For when new <br> posts come out. </span>
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Notifier </span> <br> Get notified by Email <br> when a new post comes out: </span>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 				<%= f.text_field :email, placeholder: "me@myemail.com",
-						style: "width: 160px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
-				<%= f.submit "send", style: "cursor: pointer; float: right;
+						style: "width: 170px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "done", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
 		</p>
-		<br> <br> <br>
+		<br> <br>
 
 		<p class="get_page_btn">
-			<span style="font-size: 14px; text-decoration: underline;"> Social Media </span>
+			<span style="font-size: 14px; text-decoration: underline;"> My Social </span>
 			<br>
 			<a href="https://medium.com/@jfinn6511">
-				<i class="fab fa-medium-m" style="font-size: 28px; margin-right: 8px; padding-top: 10px;"></i>
+				<i class="fab fa-medium-m" style="font-size: 39px; margin-right: 8px; padding-top: 14px;"></i>
 			</a>
 			<a href="https://twitter.com/jfinn6511">
-				<i class="fab fa-twitter" style="font-size: 28px; padding-top: 10px"></i>
+				<i class="fab fa-twitter" style="font-size: 39px; padding-top: 14px"></i>
 			</a>
 		</p>
+		<br>
 
 		<p class="get_page_btn">
-			<span style="font-size: 14px; text-decoration: underline;"> Contact me </span>
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Contact </span> <br>
+			Write me directly below: </span>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-				<%= f.text_area :email, placeholder: "your message ...",
-						style: "width: 160px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.text_area :email, placeholder: "my message",
+						style: "width: 170px; height: 85px; margin: 0px 13px;" %> <br>
 				<%= f.submit "send", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
@@ -55,13 +60,13 @@
 		<% end %>
 
 		<h1> James Finn </h2>
-		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
+		<h3 style="font-size: 19px; margin-bottom: 18px; text-decoration: underline; "> Me in 10 seconds </h3>
 		<p>
 
 			Writer. Runner. Marine. Airman. Former LGBTQ and HIV/AIDS activist and organizer. Former member of Act UP and Queer Nation. Middle-aged, uppity faggot.
 		</p> <br>
 
-		<h3 style="text-decoration: underline;"> Posts <h3>
+		<h3 style="font-size: 19px; margin-bottom: 20px; text-decoration: underline; "> Some Writing <h3>
 		<p class="title_of_work" onclick='show_piece("piece_zero");'> Queer — It’s Not Just Sexual Orientation or Gender Identity </p>
 		<p class="title_of_work" onclick='show_piece("piece_one");'> The Odd Couple — Mental Disability and Power Imbalance </p>
 		<p class="title_of_work" onclick='show_piece("piece_two");'> Queer in Iran </p>
@@ -700,17 +705,24 @@ P.S. My dad says hi. He still won’t admit he likes you, but I can tell he real
 </div>
 
 <style type="text/css">
-	/*
-	body{
-	  background-color: #F7EEE5;
-	}
-	*/
+
+body {
+  margin: 0;
+  padding-bottom: 20px;
+  background: url("https://pbs.twimg.com/profile_banners/958729147408310272/1517922790/1500x500") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 
 	.container_of_page{
 	  width: 474px;
-	  margin: 96px auto;
-	  position: relative;
+	  margin: 66px auto;
 	  background-color: white;
+	  position: relative;
 	  padding: 0px 22px 8px 22px;
 	}
 
@@ -734,16 +746,11 @@ P.S. My dad says hi. He still won’t admit he likes you, but I can tell he real
 
 	.right_ctn{
 		position: absolute;
-    	right: -196px;
-    	top: 0px;		
+    	right: -208px;
+    	top: 0px;
+    	width: 200px;
 	}
 	
-	.left_ctn{
-		position: absolute;
-    	left: -200px;
-    	top: 0px;		
-	}
-
 
 	.the_get_page_btn{
 		position: fixed;
@@ -778,13 +785,17 @@ P.S. My dad says hi. He still won’t admit he likes you, but I can tell he real
 		font-size: 13px;
 	}
 
+	.left_ctn{
+		position: absolute;
+    	left: -222px;
+    	top: 0px;		
+	}
+
 	img{
-		width: 80%;
-		height: auto;
 		margin: 15px 10% 15px 10%;
 		border: 1px solid #9F9F9F;
 		margin-bottom: 26px;
-		width: 180px;
+		width: 202px;
 		height: auto;
 		margin: 0;}
 
@@ -801,6 +812,7 @@ P.S. My dad says hi. He still won’t admit he likes you, but I can tell he real
 
 	.title_of_work{
 		cursor: pointer;
+		font-size: 14px;
 	}
 
 	.title_of_work:hover{
