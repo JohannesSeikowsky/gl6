@@ -1,0 +1,4169 @@
+/* line 1, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 8, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+*:focus {
+  outline: none;
+}
+
+/* line 12, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 28, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 36, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 41, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 46, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 50, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 55, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 59, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 64, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 68, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 73, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 78, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 82, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 90, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 94, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 98, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+img {
+  border: 0;
+}
+
+/* line 102, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 106, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 110, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 115, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 119, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 127, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 137, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button {
+  overflow: visible;
+}
+
+/* line 141, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 146, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button,
+html input[type="button"],
+input[type="reset"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 153, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 158, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 164, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input {
+  line-height: normal;
+}
+
+/* line 168, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 174, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  opacity: 1;
+}
+
+/* line 180, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/* line 184, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 189, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 195, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 200, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 204, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 208, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 213, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 218, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 224, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+html {
+  height: 100%;
+}
+
+/* line 228, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  color: #333;
+}
+
+/* line 238, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 244, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+html.w-mod-touch * {
+  background-attachment: scroll !important;
+}
+
+/* line 248, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-block {
+  display: block;
+}
+
+/* line 252, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* line 257, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-clearfix:before,
+.w-clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 263, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-clearfix:after {
+  clear: both;
+}
+
+/* line 267, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-hidden {
+  display: none;
+}
+
+/* line 271, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+/* line 283, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+input.w-button {
+  -webkit-appearance: button;
+}
+
+/* line 287, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+html[data-w-dynpage] [data-w-cloak] {
+  color: transparent !important;
+}
+
+/* line 291, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  margin-top: 20px;
+}
+
+/* line 297, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+}
+
+/* line 303, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+/* line 309, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+/* line 315, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+/* line 321, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+/* line 327, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* line 332, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+blockquote {
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  border-left: 5px solid #E2E2E2;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* line 340, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+figure {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* line 345, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+figcaption {
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* line 350, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+/* line 357, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 362, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-embed:before,
+.w-embed:after {
+  content: " ";
+  display: table;
+}
+
+/* line 368, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-embed:after {
+  clear: both;
+}
+
+/* line 372, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-video {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+/* line 378, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-video iframe,
+.w-video object,
+.w-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 388, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 394, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+button,
+html input[type="button"],
+input[type="reset"] {
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 402, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-form {
+  margin: 0 0 15px;
+}
+
+/* line 406, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-form-done {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+}
+
+/* line 413, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-form-fail {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
+}
+
+/* line 420, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* line 426, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input,
+.w-select {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+/* line 441, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input:-moz-placeholder,
+.w-select:-moz-placeholder {
+  color: #999;
+}
+
+/* line 446, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input::-moz-placeholder,
+.w-select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* line 452, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input:-ms-input-placeholder,
+.w-select:-ms-input-placeholder {
+  color: #999;
+}
+
+/* line 457, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input::-webkit-input-placeholder,
+.w-select::-webkit-input-placeholder {
+  color: #999;
+}
+
+/* line 462, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input:focus,
+.w-select:focus {
+  border-color: #3898EC;
+  outline: 0;
+}
+
+/* line 468, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-input[disabled],
+.w-select[disabled],
+.w-input[readonly],
+.w-select[readonly],
+fieldset[disabled] .w-input,
+fieldset[disabled] .w-select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+/* line 478, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+textarea.w-input,
+textarea.w-select {
+  height: auto;
+}
+
+/* line 483, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-select {
+  background-image: -webkit-linear-gradient(white 0, #f3f3f3 100%);
+  background-image: linear-gradient(white 0, #f3f3f3 100%);
+}
+
+/* line 488, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-select[multiple] {
+  height: auto;
+}
+
+/* line 492, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-form-label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* line 499, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-checkbox,
+.w-radio {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+/* line 506, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-checkbox:before,
+.w-radio:before,
+.w-checkbox:after,
+.w-radio:after {
+  content: " ";
+  display: table;
+}
+
+/* line 514, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-checkbox:after,
+.w-radio:after {
+  clear: both;
+}
+
+/* line 519, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-checkbox-input,
+.w-radio-input {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  float: left;
+  margin-left: -20px;
+}
+
+/* line 528, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-radio-input {
+  margin-top: 3px;
+}
+
+/* line 532, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+/* line 538, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-container:before,
+.w-container:after {
+  content: " ";
+  display: table;
+}
+
+/* line 544, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-container:after {
+  clear: both;
+}
+
+/* line 548, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-container .w-row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* line 553, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-row:before,
+.w-row:after {
+  content: " ";
+  display: table;
+}
+
+/* line 559, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-row:after {
+  clear: both;
+}
+
+/* line 563, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-row .w-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 568, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 577, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col .w-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 582, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-1 {
+  width: 8.33333333%;
+}
+
+/* line 586, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-2 {
+  width: 16.66666667%;
+}
+
+/* line 590, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-3 {
+  width: 25%;
+}
+
+/* line 594, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-4 {
+  width: 33.33333333%;
+}
+
+/* line 598, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-5 {
+  width: 41.66666667%;
+}
+
+/* line 602, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-6 {
+  width: 50%;
+}
+
+/* line 606, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-7 {
+  width: 58.33333333%;
+}
+
+/* line 610, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-8 {
+  width: 66.66666667%;
+}
+
+/* line 614, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-9 {
+  width: 75%;
+}
+
+/* line 618, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-10 {
+  width: 83.33333333%;
+}
+
+/* line 622, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-11 {
+  width: 91.66666667%;
+}
+
+/* line 626, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-col-12 {
+  width: 100%;
+}
+
+/* line 630, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-hidden-main {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  /* line 635, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-container {
+    max-width: 728px;
+  }
+
+  /* line 638, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-main {
+    display: inherit !important;
+  }
+
+  /* line 641, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-medium {
+    display: none !important;
+  }
+
+  /* line 644, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-1 {
+    width: 8.33333333%;
+  }
+
+  /* line 647, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 650, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-3 {
+    width: 25%;
+  }
+
+  /* line 653, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 656, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 659, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-6 {
+    width: 50%;
+  }
+
+  /* line 662, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 665, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 668, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-9 {
+    width: 75%;
+  }
+
+  /* line 671, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 674, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 677, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-medium-12 {
+    width: 100%;
+  }
+
+  /* line 680, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-stack {
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 688, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-main {
+    display: inherit !important;
+  }
+
+  /* line 691, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-medium {
+    display: inherit !important;
+  }
+
+  /* line 694, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-small {
+    display: none !important;
+  }
+
+  /* line 697, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-row,
+  .w-container .w-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 702, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col {
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+
+  /* line 707, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-1 {
+    width: 8.33333333%;
+  }
+
+  /* line 710, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 713, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-3 {
+    width: 25%;
+  }
+
+  /* line 716, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 719, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 722, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-6 {
+    width: 50%;
+  }
+
+  /* line 725, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 728, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 731, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-9 {
+    width: 75%;
+  }
+
+  /* line 734, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 737, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 740, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-small-12 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 479px) {
+  /* line 746, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-container {
+    max-width: none;
+  }
+
+  /* line 749, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-main {
+    display: inherit !important;
+  }
+
+  /* line 752, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-medium {
+    display: inherit !important;
+  }
+
+  /* line 755, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-small {
+    display: inherit !important;
+  }
+
+  /* line 758, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-hidden-tiny {
+    display: none !important;
+  }
+
+  /* line 761, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col {
+    width: 100%;
+  }
+
+  /* line 764, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-1 {
+    width: 8.33333333%;
+  }
+
+  /* line 767, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-2 {
+    width: 16.66666667%;
+  }
+
+  /* line 770, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-3 {
+    width: 25%;
+  }
+
+  /* line 773, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-4 {
+    width: 33.33333333%;
+  }
+
+  /* line 776, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-5 {
+    width: 41.66666667%;
+  }
+
+  /* line 779, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-6 {
+    width: 50%;
+  }
+
+  /* line 782, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-7 {
+    width: 58.33333333%;
+  }
+
+  /* line 785, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-8 {
+    width: 66.66666667%;
+  }
+
+  /* line 788, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-9 {
+    width: 75%;
+  }
+
+  /* line 791, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-10 {
+    width: 83.33333333%;
+  }
+
+  /* line 794, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-11 {
+    width: 91.66666667%;
+  }
+
+  /* line 797, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-col-tiny-12 {
+    width: 100%;
+  }
+}
+/* line 802, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget {
+  position: relative;
+}
+
+/* line 806, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-map {
+  width: 100%;
+  height: 400px;
+}
+
+/* line 811, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-map label {
+  width: auto;
+  display: inline;
+}
+
+/* line 816, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-map img {
+  max-width: inherit;
+}
+
+/* line 820, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-map .gm-style-iw {
+  width: 90% !important;
+  height: auto !important;
+  top: 7px !important;
+  left: 6% !important;
+  display: inline;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 830, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-map .gm-style-iw + div {
+  display: none;
+}
+
+/* line 834, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter {
+  overflow: hidden;
+}
+
+/* line 838, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 28px;
+  height: 20px;
+  text-align: center;
+  background: white;
+  border: #758696 solid 1px;
+  border-radius: 3px;
+}
+
+/* line 850, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim * {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 858, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim .w-widget-twitter-count-inner {
+  position: relative;
+  font-size: 15px;
+  line-height: 12px;
+  text-align: center;
+  color: #999;
+  font-family: serif;
+}
+
+/* line 867, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim .w-widget-twitter-count-clear {
+  position: relative;
+  display: block;
+}
+
+/* line 872, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--large {
+  width: 36px;
+  height: 28px;
+  margin-left: 7px;
+}
+
+/* line 878, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--large .w-widget-twitter-count-inner {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+/* line 883, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical) {
+  margin-left: 5px;
+  margin-right: 8px;
+}
+
+/* line 888, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical).w--large {
+  margin-left: 6px;
+}
+
+/* line 892, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical):before,
+.w-widget-twitter-count-shim:not(.w--vertical):after {
+  top: 50%;
+  left: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 904, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical):before {
+  border-color: rgba(117, 134, 150, 0);
+  border-right-color: #5d6c7b;
+  border-width: 4px;
+  margin-left: -9px;
+  margin-top: -4px;
+}
+
+/* line 912, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical).w--large:before {
+  border-width: 5px;
+  margin-left: -10px;
+  margin-top: -5px;
+}
+
+/* line 918, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical):after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: white;
+  border-width: 4px;
+  margin-left: -8px;
+  margin-top: -4px;
+}
+
+/* line 926, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim:not(.w--vertical).w--large:after {
+  border-width: 5px;
+  margin-left: -9px;
+  margin-top: -5px;
+}
+
+/* line 932, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical {
+  width: 61px;
+  height: 33px;
+  margin-bottom: 8px;
+}
+
+/* line 938, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical:before,
+.w-widget-twitter-count-shim.w--vertical:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 950, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical:before {
+  border-color: rgba(117, 134, 150, 0);
+  border-top-color: #5d6c7b;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+/* line 957, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 4px;
+  margin-left: -4px;
+}
+
+/* line 964, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical .w-widget-twitter-count-inner {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* line 969, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-twitter-count-shim.w--vertical.w--large {
+  width: 76px;
+}
+
+/* line 973, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-widget-gplus {
+  overflow: hidden;
+}
+
+/* line 977, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-background-video {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  color: white;
+}
+
+/* line 984, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-background-video > video {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+}
+
+/* line 998, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider {
+  position: relative;
+  height: 300px;
+  text-align: center;
+  background: #dddddd;
+  clear: both;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 1008, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-mask {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 100%;
+  white-space: nowrap;
+}
+
+/* line 1019, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slide {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+/* line 1029, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 1044, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav.w-round > div {
+  border-radius: 100%;
+}
+
+/* line 1048, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav.w-num > div {
+  width: auto;
+  height: auto;
+  padding: .2em .5em;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 1056, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav.w-shadow > div {
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
+}
+
+/* line 1060, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav-invert {
+  color: #fff;
+}
+
+/* line 1064, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav-invert > div {
+  background-color: rgba(34, 34, 34, 0.4);
+}
+
+/* line 1068, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-nav-invert > div.w-active {
+  background-color: #222;
+}
+
+/* line 1072, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-dot {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  margin: 0 3px .5em;
+  transition: background-color 100ms, color 100ms;
+}
+
+/* line 1083, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-dot.w-active {
+  background-color: #fff;
+}
+
+/* line 1087, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-arrow-left,
+.w-slider-arrow-right {
+  position: absolute;
+  width: 80px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+  font-size: 40px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 1108, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-arrow-left [class^="w-icon-"],
+.w-slider-arrow-right [class^="w-icon-"],
+.w-slider-arrow-left [class*=" w-icon-"],
+.w-slider-arrow-right [class*=" w-icon-"] {
+  position: absolute;
+}
+
+/* line 1115, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-arrow-left {
+  z-index: 3;
+  right: auto;
+}
+
+/* line 1120, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-slider-arrow-right {
+  z-index: 4;
+  left: auto;
+}
+
+/* line 1125, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-icon-slider-left,
+.w-icon-slider-right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+}
+
+/* line 1136, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 900;
+}
+
+/* line 1145, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  position: relative;
+  vertical-align: top;
+  text-decoration: none;
+  color: #222222;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+/* line 1159, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+/* line 1169, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-icon-dropdown-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 20px;
+  width: 1em;
+  height: 1em;
+}
+
+/* line 1180, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-list {
+  position: absolute;
+  background: #dddddd;
+  display: none;
+  min-width: 100%;
+}
+
+/* line 1187, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-list.w--open {
+  display: block;
+}
+
+/* line 1191, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-link {
+  padding: 10px 20px;
+  display: block;
+  color: #222222;
+}
+
+/* line 1197, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dropdown-link.w--current {
+  color: #0082f3;
+}
+
+/* line 1201, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-collapse="all"] .w-dropdown,
+.w-nav[data-collapse="all"] .w-dropdown-toggle {
+  display: block;
+}
+
+/* line 1206, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-collapse="all"] .w-dropdown-list {
+  position: static;
+}
+
+@media screen and (max-width: 991px) {
+  /* line 1211, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="medium"] .w-dropdown,
+  .w-nav[data-collapse="medium"] .w-dropdown-toggle {
+    display: block;
+  }
+
+  /* line 1215, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="medium"] .w-dropdown-list {
+    position: static;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1221, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="small"] .w-dropdown,
+  .w-nav[data-collapse="small"] .w-dropdown-toggle {
+    display: block;
+  }
+
+  /* line 1225, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="small"] .w-dropdown-list {
+    position: static;
+  }
+
+  /* line 1228, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav-brand {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  /* line 1234, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="tiny"] .w-dropdown,
+  .w-nav[data-collapse="tiny"] .w-dropdown-toggle {
+    display: block;
+  }
+
+  /* line 1238, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-nav[data-collapse="tiny"] .w-dropdown-list {
+    position: static;
+  }
+}
+/* line 1243, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-backdrop {
+  color: #000;
+  cursor: auto;
+  font-family: serif;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  list-style: disc;
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Ubuntu, "Segoe UI", Verdana, sans-serif;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  outline: 0;
+  opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: translate(0, 0);
+}
+
+/* line 1285, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-backdrop,
+.w-lightbox-container {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 1292, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-content {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* line 1298, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-view {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+/* line 1305, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-view:before {
+  content: "";
+  height: 100vh;
+}
+
+/* line 1310, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-group,
+.w-lightbox-group .w-lightbox-view,
+.w-lightbox-group .w-lightbox-view:before {
+  height: 86vh;
+}
+
+/* line 1316, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-frame,
+.w-lightbox-view:before {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 1322, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-figure {
+  position: relative;
+  margin: 0;
+}
+
+/* line 1327, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-group .w-lightbox-figure {
+  cursor: pointer;
+}
+
+/* line 1331, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-img {
+  width: auto;
+  height: auto;
+  max-width: none;
+}
+
+/* line 1337, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-image {
+  display: block;
+  float: none;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* line 1344, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-group .w-lightbox-image {
+  max-height: 86vh;
+}
+
+/* line 1348, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5em 1em;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 1361, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-embed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1371, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-control {
+  position: absolute;
+  top: 0;
+  width: 4em;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all 0.3s;
+}
+
+/* line 1383, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-left {
+  display: none;
+  bottom: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==");
+}
+
+/* line 1390, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-right {
+  display: none;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMjQgNDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMC0waDI4djI4aC01di0yM2gtMjN6IiBvcGFjaXR5PSIuNCIvPjxwYXRoIGQ9Im0xIDFoMjZ2MjZoLTN2LTIzaC0yM3oiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+");
+}
+
+/* line 1397, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-close {
+  right: 0;
+  height: 2.6em;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMTggMTciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMCAwaDd2LTdoNXY3aDd2NWgtN3Y3aC01di03aC03eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDd2LTdoM3Y3aDd2M2gtN3Y3aC0zdi03aC03eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=");
+  background-size: 18px;
+}
+
+/* line 1404, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-strip {
+  padding: 0 1vh;
+  line-height: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* line 1412, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-item {
+  display: inline-block;
+  width: 10vh;
+  padding: 2vh 1vh;
+  box-sizing: content-box;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 1421, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-active {
+  opacity: 0.3;
+}
+
+/* line 1425, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-thumbnail {
+  position: relative;
+  height: 10vh;
+  background: #222;
+  overflow: hidden;
+}
+
+/* line 1432, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-thumbnail-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 1438, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-thumbnail .w-lightbox-tall {
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* line 1446, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-thumbnail .w-lightbox-wide {
+  left: 50%;
+  height: 100%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* line 1454, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  border: 5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  -webkit-animation: spin .8s infinite linear;
+  animation: spin 0.8s infinite linear;
+}
+
+/* line 1469, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-spinner:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 3px solid transparent;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+}
+
+/* line 1481, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-hide {
+  display: none;
+}
+
+/* line 1485, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-noscroll {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  /* line 1490, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-content {
+    height: 96vh;
+    margin-top: 2vh;
+  }
+
+  /* line 1494, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-view,
+  .w-lightbox-view:before {
+    height: 96vh;
+  }
+
+  /* line 1498, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-group,
+  .w-lightbox-group .w-lightbox-view,
+  .w-lightbox-group .w-lightbox-view:before {
+    height: 84vh;
+  }
+
+  /* line 1503, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-image {
+    max-width: 96vw;
+    max-height: 96vh;
+  }
+
+  /* line 1507, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-group .w-lightbox-image {
+    max-width: 82.3vw;
+    max-height: 84vh;
+  }
+
+  /* line 1511, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-left,
+  .w-lightbox-right {
+    display: block;
+    opacity: 0.5;
+  }
+
+  /* line 1516, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-close {
+    opacity: 0.8;
+  }
+
+  /* line 1519, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-lightbox-control:hover {
+    opacity: 1;
+  }
+}
+/* line 1524, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-lightbox-inactive,
+.w-lightbox-inactive:hover {
+  opacity: 0;
+}
+
+/* line 1529, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext:before,
+.w-richtext:after {
+  content: " ";
+  display: table;
+}
+
+/* line 1535, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext:after {
+  clear: both;
+}
+
+/* line 1539, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext ol,
+.w-richtext ul {
+  overflow: hidden;
+}
+
+/* line 1544, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-video div:before,
+.w-richtext .w-richtext-figure-selected[data-rt-type="video"] div:before {
+  outline: 2px solid #2895f7;
+}
+
+/* line 1549, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-image div,
+.w-richtext .w-richtext-figure-selected[data-rt-type="image"] div {
+  outline: 2px solid #2895f7;
+}
+
+/* line 1554, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-video > div:before,
+.w-richtext figure[data-rt-type="video"] > div:before {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 1566, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure {
+  position: relative;
+  max-width: 60%;
+}
+
+/* line 1571, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure > div:before {
+  cursor: default !important;
+}
+
+/* line 1575, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure img {
+  width: 100%;
+}
+
+/* line 1579, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure figcaption.w-richtext-figcaption-placeholder {
+  opacity: 0.6;
+}
+
+/* line 1583, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure div {
+  font-size: 0;
+  color: transparent;
+}
+
+/* line 1588, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-image,
+.w-richtext figure[data-rt-type="image"] {
+  display: table;
+}
+
+/* line 1593, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-image > div,
+.w-richtext figure[data-rt-type="image"] > div {
+  display: inline-block;
+}
+
+/* line 1598, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-image > figcaption,
+.w-richtext figure[data-rt-type="image"] > figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+/* line 1604, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-video,
+.w-richtext figure[data-rt-type="video"] {
+  width: 60%;
+  height: 0;
+}
+
+/* line 1610, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-video iframe,
+.w-richtext figure[data-rt-type="video"] iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1619, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-figure-type-video > div,
+.w-richtext figure[data-rt-type="video"] > div {
+  width: 100%;
+}
+
+/* line 1624, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-center {
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+}
+
+/* line 1630, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image > div,
+.w-richtext figure.w-richtext-align-center[data-rt-type="image"] > div {
+  max-width: 100%;
+}
+
+/* line 1635, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-normal {
+  clear: both;
+}
+
+/* line 1639, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-fullwidth {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  clear: both;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 1649, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-fullwidth > div {
+  display: inline-block;
+  padding-bottom: inherit;
+}
+
+/* line 1654, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-fullwidth > figcaption {
+  display: block;
+}
+
+/* line 1658, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-floatleft {
+  float: left;
+  margin-right: 15px;
+  clear: none;
+}
+
+/* line 1664, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-richtext figure.w-richtext-align-floatright {
+  float: right;
+  margin-left: 15px;
+  clear: none;
+}
+
+/* line 1670, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav {
+  position: relative;
+  background: #dddddd;
+  z-index: 1000;
+}
+
+/* line 1676, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav:before,
+.w-nav:after {
+  content: " ";
+  display: table;
+}
+
+/* line 1682, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav:after {
+  clear: both;
+}
+
+/* line 1686, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-brand {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 1693, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #222222;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1705, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-link.w--current {
+  color: #0082f3;
+}
+
+/* line 1709, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-menu {
+  position: relative;
+  float: right;
+}
+
+/* line 1714, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w--nav-menu-open {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #C8C8C8;
+  text-align: center;
+  overflow: visible;
+  min-width: 200px;
+}
+
+/* line 1726, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w--nav-link-open {
+  display: block;
+  position: relative;
+}
+
+/* line 1731, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-overlay {
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* line 1741, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-overlay .w--nav-menu-open {
+  top: 0;
+}
+
+/* line 1745, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-animation="over-left"] .w-nav-overlay {
+  width: auto;
+}
+
+/* line 1749, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-animation="over-left"] .w-nav-overlay,
+.w-nav[data-animation="over-left"] .w--nav-menu-open {
+  right: auto;
+  z-index: 1;
+  top: 0;
+}
+
+/* line 1756, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-animation="over-right"] .w-nav-overlay {
+  width: auto;
+}
+
+/* line 1760, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav[data-animation="over-right"] .w-nav-overlay,
+.w-nav[data-animation="over-right"] .w--nav-menu-open {
+  left: auto;
+  z-index: 1;
+  top: 0;
+}
+
+/* line 1767, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-button {
+  position: relative;
+  float: right;
+  padding: 18px;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 1782, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-nav-button.w--open {
+  background-color: #C8C8C8;
+  color: white;
+}
+
+/* line 1789, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tabs {
+  position: relative;
+}
+
+/* line 1793, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tabs:before,
+.w-tabs:after {
+  content: " ";
+  display: table;
+}
+
+/* line 1799, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tabs:after {
+  clear: both;
+}
+
+/* line 1803, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tab-menu {
+  position: relative;
+}
+
+/* line 1807, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tab-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: 9px 30px;
+  text-align: left;
+  cursor: pointer;
+  color: #222222;
+  background-color: #dddddd;
+}
+
+/* line 1819, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tab-link.w--current {
+  background-color: #C8C8C8;
+}
+
+/* line 1823, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tab-content {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+/* line 1829, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-tab-pane {
+  position: relative;
+  display: none;
+}
+
+/* line 1834, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w--tab-active {
+  display: block;
+}
+
+@media screen and (max-width: 479px) {
+  /* line 1839, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .w-tab-link {
+    display: block;
+  }
+}
+/* line 1844, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-ix-emptyfix:after {
+  content: "";
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 1857, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dyn-empty {
+  padding: 10px;
+  background-color: #dddddd;
+}
+
+/* line 1862, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-dyn-bind-empty {
+  display: none !important;
+}
+
+/* line 1866, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.w-condition-invisible {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Start of custom Webflow CSS
+   ========================================================================== */
+/* line 1875, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+body {
+  font-family: Montserrat, sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+/* line 1883, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h1 {
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* line 1889, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 1894, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.image-wrapper {
+  width: 70px;
+}
+
+/* line 1898, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.name-contact {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* line 1903, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.wrapper-contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px;
+  padding: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: #f3f3f3;
+  box-shadow: 4px 4px 7px -1px #ddd;
+  -webkit-transition: background-color 600ms ease;
+  transition: background-color 600ms ease;
+}
+
+/* line 1929, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.wrapper-contact:hover {
+  background-color: #f6f4ff;
+}
+
+/* line 1933, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.wrapper-contact-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  width: 180px;
+}
+
+/* line 1954, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.title-contact {
+  font-weight: 300;
+}
+
+/* line 1958, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.body {
+  padding-bottom: 35px;
+}
+
+/* line 1962, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 22px 30px 28px 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* line 1984, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #c9399a;
+}
+
+/* line 2000, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.nav-link {
+  padding: 0px 0px 0px 20px;
+}
+
+/* line 2004, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.title-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+  padding-left: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 2022, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.submit-button {
+  height: 40px;
+  padding: 0px 20px;
+  background-color: #c9399a;
+}
+
+/* line 2028, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 2040, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-field {
+  height: 40px;
+  margin-bottom: 0px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 3px solid #c9399a;
+}
+
+/* line 2050, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-field:focus {
+  border: 3px solid #c9399a;
+}
+
+/* line 2054, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.highlight {
+  color: #c9399a;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 2061, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.highlight:hover {
+  text-decoration: none;
+}
+
+/* line 2065, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.social-icon-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* line 2072, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.div-block-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+/* line 2091, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.submit-button-2 {
+  border: 2px solid #c9399a;
+  background-color: #c9399a;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+/* line 2099, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.image {
+  border-radius: 100px;
+}
+
+/* line 2103, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  padding: 110px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #c9399a;
+  background-image: url("http://uploads.webflow.com/59f72a5b04139300016ae066/5a09cac3d65a2f0001bd45de_hero.jpg");
+  background-size: cover;
+  box-shadow: none;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* line 2137, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-item.shadow {
+  box-shadow: 5px 5px 15px -3px #000;
+}
+
+/* line 2141, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-item.righr {
+  width: 50%;
+  background-image: url("http://uploads.webflow.com/59f72a5b04139300016ae066/5a09cac3d65a2f0001bd45de_hero.jpg");
+  background-position: 100% 0px;
+  background-size: cover;
+  box-shadow: none;
+}
+
+/* line 2149, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.nav-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+/* line 2160, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.section-showcase {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  background-color: rgba(93, 218, 203, 0.07);
+}
+
+/* line 2186, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 2206, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-button {
+  border: 2px none #5ddacb;
+  background-color: #c9399a;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 2213, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.form-block {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 2218, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.bottom-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  padding-top: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid #fff;
+}
+
+/* line 2241, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.top-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 2248, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.wrapper-time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 7px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 400;
+}
+
+/* line 2274, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-block-2 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/* line 2279, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.social-icon {
+  width: 26px;
+  margin-right: 5px;
+}
+
+/* line 2284, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-below {
+  -webkit-transition: color 425ms ease;
+  transition: color 425ms ease;
+  color: #c9399a;
+  font-weight: 400;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* line 2293, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-below:hover {
+  color: #5ddacb;
+}
+
+/* line 2297, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.form-block-3 {
+  margin-bottom: 0px;
+}
+
+/* line 2301, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.bellow-function-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  padding: 7px 8px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  color: #c9399a;
+}
+
+/* line 2315, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.organize-icon {
+  width: 26px;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+/* line 2321, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.form-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 2333, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.urgent-button {
+  margin-top: 5px;
+  padding: 5px;
+  border: 2px solid #c9399a;
+  background-color: transparent;
+  color: #c9399a;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* line 2344, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-block-copy2-co {
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 2353, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.play-button {
+  width: 37px;
+  padding: 0px;
+  border: 5px solid #000;
+  border-radius: 100px;
+}
+
+/* line 2360, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.section-signup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  padding: 0px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #5ddacb;
+  background-image: url("http://uploads.webflow.com/59f72a5b04139300016ae066/5a09cb68d65a2f0001bd464d_footer.jpg");
+  background-size: cover;
+}
+
+/* line 2385, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-signup {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 300;
+}
+
+/* line 2392, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-text-field {
+  height: 45px;
+  margin-bottom: 0px;
+  border: 2px solid #c9399a;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 2402, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-text-field:focus {
+  border: 2px solid #c9399a;
+}
+
+/* line 2406, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-text-field::-webkit-input-placeholder {
+  color: #c9399a;
+}
+
+/* line 2410, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-text-field:-ms-input-placeholder {
+  color: #c9399a;
+}
+
+/* line 2414, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-text-field::placeholder {
+  color: #c9399a;
+}
+
+/* line 2418, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.app-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 2434, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-form-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+/* line 2445, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.link-action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 2465, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-wrapper-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  background-color: #c9399a;
+  box-shadow: 6px 6px 19px -5px #202020;
+  -webkit-transition: background-color 692ms ease;
+  transition: background-color 692ms ease;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 2492, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.signup-wrapper-wrapper:hover {
+  background-color: #f3f3f3;
+  color: #c9399a;
+}
+
+/* line 2497, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* line 2527, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-text.icon {
+  margin-bottom: 1px;
+  -webkit-transition: color 542ms ease;
+  transition: color 542ms ease;
+  font-family: Inconsolata, monospace;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+/* line 2536, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-text.icon:hover {
+  color: #c9399a;
+}
+
+/* line 2540, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.logo-design {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  font-family: Montserrat, sans-serif;
+  color: #5ddacb;
+  font-size: 21px;
+  line-height: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* line 2554, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.slogan {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 5px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+/* line 2567, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-icon-large {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* line 2595, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.social-icon-landing {
+  width: 60px;
+  margin: 10px 12px;
+}
+
+/* line 2600, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.sub-slogan {
+  max-width: 470px;
+  margin-bottom: 30px;
+  color: #c9399a;
+  font-size: 38px;
+  line-height: 1em;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+/* line 2610, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.section-features {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: rgba(93, 218, 203, 0.07);
+}
+
+/* line 2631, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.section-testimonials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 75px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(93, 218, 203, 0.07);
+}
+
+/* line 2653, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.image-testimonials {
+  width: 72px;
+  border-radius: 100px;
+}
+
+/* line 2658, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.quote {
+  max-width: 600px;
+  color: #fff;
+  font-size: 31px;
+  line-height: 1em;
+  font-style: italic;
+  text-align: center;
+}
+
+/* line 2667, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.quote-wrapper {
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 2677, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.contact-quote-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 11px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* line 2695, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.name-contact-quote {
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* line 2701, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.title-contact-quote {
+  padding-left: 5px;
+  font-weight: 300;
+}
+
+/* line 2706, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url("http://uploads.webflow.com/59f72a5b04139300016ae066/5a09cac3d65a2f0001bd45de_hero.jpg");
+  background-position: 50% 100%;
+  background-size: cover;
+  color: #fff;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* line 2728, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-signup-disclaimer {
+  margin-top: 7px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: 300;
+}
+
+/* line 2736, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.link-trial {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 2742, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.feature-item-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 2749, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-hero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 470px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  color: #000;
+  font-size: 21px;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+/* line 2778, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-hero.white {
+  color: #c9399a;
+}
+
+/* line 2782, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.submit-button-pseudo {
+  padding: 10px;
+  border: 2px solid #c9399a;
+  background-color: #c9399a;
+  -webkit-transition: background-color 408ms ease;
+  transition: background-color 408ms ease;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* line 2794, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.submit-button-pseudo:hover {
+  background-color: rgba(201, 57, 154, 0.84);
+}
+
+/* line 2798, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.link-text {
+  padding-bottom: 0px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* line 2805, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.link-text:hover {
+  color: #c9399a;
+  text-decoration: none;
+}
+
+/* line 2810, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.section-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 2831, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.icon-span {
+  color: #000;
+  font-size: 17px;
+}
+
+/* line 2836, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.icon-span:hover {
+  color: #c9399a;
+}
+
+/* line 2840, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.icon-span.larger {
+  font-size: 19px;
+}
+
+/* line 2844, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.icon-span.large {
+  font-size: 19px;
+}
+
+/* line 2848, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.icon-span.smaller {
+  font-size: 13px;
+}
+
+/* line 2852, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.quote-background {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #5ddacb;
+  box-shadow: 4px 4px 22px -10px #000;
+}
+
+/* line 2872, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 2891, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.header-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #c9399a;
+}
+
+/* line 2908, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.header-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #5ddacb;
+}
+
+/* line 2929, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.menu {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #5ddacb;
+  font-size: 20px;
+  line-height: 1em;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+/* line 2941, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.hero-backdrop {
+  margin-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* line 2949, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.logo-wrapper {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #c9399a;
+  font-size: 25px;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+/* line 2959, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 2966, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.hero-icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 600px;
+  margin-bottom: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  color: #000;
+  font-size: 30px;
+  line-height: 0.6em;
+  font-weight: 400;
+}
+
+/* line 2996, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.hero-icon.white {
+  color: #c9399a;
+}
+
+/* line 3000, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.hero-icon.lrg {
+  font-size: 46px;
+  line-height: 0.7em;
+}
+
+/* line 3005, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.slogan-icon {
+  max-width: 600px;
+  color: #c9399a;
+  font-size: 29px;
+  line-height: 1.3em;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+/* line 3015, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.logo-highlight {
+  color: #c9399a;
+}
+
+/* line 3019, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  margin-bottom: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: none;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* line 3046, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-wrapper.shadow {
+  box-shadow: 5px 5px 15px -3px #000;
+}
+
+/* line 3050, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-wrapper.righr {
+  width: 50%;
+  background-image: url("http://uploads.webflow.com/59f72a5b04139300016ae066/5a09cac3d65a2f0001bd45de_hero.jpg");
+  background-position: 100% 0px;
+  background-size: cover;
+  box-shadow: none;
+}
+
+/* line 3058, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-h1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  color: #000;
+  font-size: 30px;
+  line-height: 1.1em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 3089, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-h1.icon {
+  margin-bottom: 6px;
+  -webkit-transition: color 542ms ease;
+  transition: color 542ms ease;
+  font-size: 30px;
+}
+
+/* line 3096, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.how-h1.icon:hover {
+  color: #c9399a;
+}
+
+/* line 3100, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.form-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* line 3111, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-field-2 {
+  height: 45px;
+  margin-bottom: 0px;
+  padding: 10px;
+  border: 1px solid #c9399a;
+  border-radius: 0px;
+  color: #c9399a;
+}
+
+/* line 3120, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.text-field-2:focus {
+  border: 1px solid #c9399a;
+}
+
+/* line 3124, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.submit-button-3 {
+  height: 45px;
+  padding: 10px;
+  border-radius: 0px;
+  background-color: #c9399a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  /* line 3137, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* line 3141, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .bottom-wrapper {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 3147, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .title-wrapper {
+    padding-right: 5px;
+    padding-left: 0px;
+  }
+
+  /* line 3151, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .bottom-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  /* line 3158, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .wrapper-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  /* line 3173, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .text-block-2 {
+    margin-bottom: 3px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /* line 3178, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .social-icon {
+    width: 23px;
+    margin-right: 3px;
+  }
+
+  /* line 3182, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .text-below {
+    display: none;
+    line-height: 14px;
+    text-align: center;
+  }
+
+  /* line 3187, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .organize-icon {
+    width: 23px;
+    margin-right: 3px;
+  }
+
+  /* line 3191, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .feature-text {
+    font-size: 20px;
+  }
+
+  /* line 3194, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .social-icon-landing {
+    width: 23px;
+    margin-right: 3px;
+  }
+
+  /* line 3198, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .section-testimonials {
+    padding: 25px;
+  }
+
+  /* line 3201, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .image-testimonials {
+    display: none;
+  }
+
+  /* line 3204, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .quote {
+    font-size: 25px;
+  }
+
+  /* line 3207, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .contact-quote-wrapper {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    font-size: 13px;
+  }
+
+  /* line 3212, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .name-contact-quote {
+    padding-left: 0px;
+    font-size: 15px;
+  }
+
+  /* line 3216, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .hero-backdrop {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* line 3220, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .how-h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 479px) {
+  /* line 3226, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .wrapper-contact {
+    display: none;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  /* line 3231, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .wrapper-contact-info {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    text-align: center;
+  }
+
+  /* line 3242, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* line 3249, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .text-field {
+    text-align: center;
+  }
+
+  /* line 3252, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .social-icon-wrapper {
+    display: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  /* line 3257, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .div-block-5 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+  }
+
+  /* line 3267, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .feature-item {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  /* line 3272, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .feature-item.righr {
+    display: none;
+  }
+
+  /* line 3275, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .section-showcase {
+    padding: 0px 10px;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  /* line 3282, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .bottom-wrapper {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  /* line 3287, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .top-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  /* line 3298, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .wrapper-time {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    text-align: center;
+  }
+
+  /* line 3311, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .bellow-function-wrapper {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  /* line 3315, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .section-signup {
+    background-position: 50% 0px;
+  }
+
+  /* line 3318, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .app-wrapper {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  /* line 3324, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .signup-wrapper-wrapper {
+    margin-top: 0px;
+    font-size: 13px;
+    line-height: 1.2em;
+  }
+
+  /* line 3329, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .feature-text {
+    font-size: 18px;
+  }
+
+  /* line 3332, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .sub-slogan {
+    font-size: 25px;
+  }
+
+  /* line 3335, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .section-testimonials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* line 3339, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .quote {
+    font-size: 20px;
+  }
+
+  /* line 3342, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .text-hero {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  /* line 3346, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .hero-backdrop {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  /* line 3350, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .text-logo {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 0.9em;
+  }
+
+  /* line 3355, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .slogan-icon {
+    font-size: 25px;
+  }
+
+  /* line 3358, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .how-wrapper {
+    width: 100%;
+    margin-bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* line 3364, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .how-wrapper.righr {
+    display: none;
+  }
+
+  /* line 3367, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .how-h1 {
+    font-size: 18px;
+  }
+
+  /* line 3370, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+  .form-5 {
+    margin-bottom: 45px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+/* line 3384, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.wrapper-form {
+  padding: 0 30px;
+  text-align: right;
+}
+
+/* line 3389, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.notice {
+  padding: 5px;
+  position: fixed;
+  background-color: #c9399a;
+  color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+  display: none;
+}
+
+/* line 3402, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.notice-reminder {
+  color: #c9399a;
+  padding: 15px;
+}
+
+/* line 3407, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.intervals {
+  margin: 0 2px 0 2px;
+  color: #c9399a;
+}
+
+/* line 3412, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.this-month {
+  margin: 0 25px 0 2px;
+}
+
+/* line 3416, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.button-hide {
+  display: none;
+}
+
+/* line 3420, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.interval_field {
+  width: 40px;
+  text-align: center;
+  background-color: transparent;
+  border-width: 0;
+  color: #c9399a;
+}
+
+/* line 3428, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.note_taking_container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  text-align: center;
+  background: white;
+  display: none;
+}
+
+/* line 3440, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#settings_updated {
+  display: none;
+  text-align: center;
+}
+
+/* line 3445, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 3450, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.add_contacts_container {
+  text-align: center;
+}
+
+/* line 3454, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#add_contacts_field {
+  width: 282px;
+  height: 96px;
+  margin: 8px auto 4px auto;
+}
+
+/* line 3460, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#onboarding_contacts_field {
+  width: 292px;
+  height: 162px;
+  margin: 13px auto 8px auto;
+}
+
+/* line 3466, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.nav_link {
+  color: red;
+}
+
+/* line 3470, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#logout_btn {
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 2px solid #c9399a;
+}
+
+/* line 3477, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#watch_explainer_btn {
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 2px solid #c9399a;
+  margin-right: 8px;
+}
+
+/* line 3485, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.table_container {
+  width: 1050px;
+  margin: 78px auto 0px auto;
+}
+
+/* line 3490, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#set_reminder_btn {
+  background-color: #E0E8EE;
+  padding: 5px 26px;
+  text-decoration: none;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 3500, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#manage_contact_btn {
+  background-color: #E0E8EE;
+  padding: 5px 34px;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 3508, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.interval_field, .this_month_check_box {
+  cursor: pointer;
+}
+
+/* line 3512, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.add_note_field {
+  width: 240px;
+  height: 100px;
+}
+
+/* line 3517, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.rails_notice {
+  text-align: center;
+}
+
+/* line 3521, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.explainer_vid {
+  display: inline;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+
+/* line 3528, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#empty_contacts_msg {
+  text-align: center;
+  margin-top: 82px;
+}
+
+/* line 3534, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.header_btn {
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 1px solid #c9399a;
+  margin-left: 6px;
+}
+
+/* line 3542, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.header_btn_outer {
+  font-size: 15px;
+  color: grey;
+  padding: 6px 16px;
+  border: 2px solid #c9399a;
+  margin-left: 6px;
+}
+
+/* line 3550, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.add-button {
+  padding: 7px 42px;
+  background-color: #c9399a;
+}
+
+/* line 3557, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.simple_page_container {
+  width: 500px;
+  margin: 0px auto;
+}
+/* line 3560, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.simple_page_container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+/* line 3564, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.simple_page_container h2 {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 9px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eee;
+}
+/* line 3571, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.simple_page_container img {
+  width: 80%;
+  height: auto;
+  margin: 15px 10% 15px 10%;
+  border: 1px solid #9F9F9F;
+  margin-bottom: 26px;
+}
