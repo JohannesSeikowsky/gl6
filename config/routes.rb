@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   # root
   root 'pages#johannes'
 
+  # peoples
+  get 'johannes', to: 'pages#johannes', as: 'johannes'
+  get 'dave_garbutt', to: 'pages#dave_garbutt', as: 'dave_garbutt'
+
+
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
@@ -52,10 +57,8 @@ Rails.application.routes.draw do
   # logout
   delete '/logout', to: 'sessions#delete', as: 'logout'
 
-  #####
-  # Johannes page bit
-  get 'johannes', to: 'pages#johannes', as: 'johannes'
 
+  # pgae_builder_related
   post 'email_sub', to: 'johannes_page#email_subscriber', as: 'email_subscriber'
   post 'get_page', to: 'johannes_page#new_page_user', as: 'new_page_user'
 end

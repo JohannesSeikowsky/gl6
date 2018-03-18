@@ -36,4 +36,7 @@ class PagesController < ApplicationController
 
   def johannes
   end
+
+  def dave_garbutt
+  end
 end
