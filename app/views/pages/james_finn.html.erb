@@ -1,0 +1,539 @@
+<div class="container_of_page">
+	
+	<div class="the_get_page_btn">
+		<p onclick="show_get_page();">
+			Get a page like this.	
+		</p>
+	</div>
+
+	<div class="left_ctn">
+		<%= image_tag "james_finn.jpeg" %> <br> <br>
+	</div>
+
+	<div class="right_ctn">
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> Mailing List </span>
+		</p>
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> For when new <br> posts come out. </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_field :email, placeholder: "me@myemail.com",
+						style: "width: 160px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+		<br> <br> <br>
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> Social Media </span>
+			<br>
+			<a href="https://medium.com/@jfinn6511">
+				<i class="fab fa-medium-m" style="font-size: 28px; margin-right: 8px; padding-top: 10px;"></i>
+			</a>
+			<a href="https://twitter.com/jfinn6511">
+				<i class="fab fa-twitter" style="font-size: 28px; padding-top: 10px"></i>
+			</a>
+		</p>
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> Contact me </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_area :email, placeholder: "your message ...",
+						style: "width: 160px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+	</div>
+
+
+	<div id="default_page_body">
+		<% if notice %>
+			<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
+		<% end %>
+
+		<h1> James Finn </h2>
+		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
+		<p>
+
+			Writer. Runner. Marine. Airman. Former LGBTQ and HIV/AIDS activist and organizer. Former member of Act UP and Queer Nation. Middle-aged, uppity faggot.
+		</p> <br>
+
+		<h3 style="text-decoration: underline;"> Posts <h3>
+		<p class="title_of_work" onclick='show_piece("piece_zero");'> Lyric Festival </p>
+		<p class="title_of_work" onclick='show_piece("piece_one");'> For Marianne </p>
+		<p class="title_of_work" onclick='show_piece("piece_two");'> Biopsy </p>
+		<p class="title_of_work" onclick='show_piece("piece_three");'> Our First Ambulance Journey</p>
+		<p class="title_of_work" onclick='show_piece("piece_four");'> A Chipped Tea Pot </p>
+		<p class="title_of_work" onclick='show_piece("piece_five");'> Fiddle-head ferns </p>
+		<p class="title_of_work" onclick='show_piece("piece_six");'> No More Presents </p>
+		<p class="title_of_work" onclick='show_piece("piece_seven");'> Passed Over </p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_zero">
+		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<p>
+		<h3 class="piece_header"> Introduction </h3>		
+
+		This poem has been described as being about snowboarding, it is no more about snowboarding than ‘The Waste Land’ is about Reading. If you choose to declaim this poem — for thus must it be read — do not wear a black polo-neck, even ironically, unless you are also Steve Jobs. <br> <br>
+
+		If you prefer to attend a true Lyric festival instead check out their web site here. <br> <br>
+
+		<h3 class="piece_header"> LYRIK FESTIVAL </h3>		
+
+		Poets that have never seen the snow sit in the dark, in concentrated rows, wear black in spring, sniffle, cough, blow noses but listen intently to the mobile muse — she bids them notice ironies, life’s little hurts and smaller surprises. The poets make notes and struggle for strangeness, subtle devices. <br> <br>
+
+		For this she lends them her eyes? Dream on, poets that wear black and move words on stage slower than Death moves pawns when losing at chess, for you come here, in black, to the black room, to bury Life not to praise Her. Oh poets, that have never seen the snow, follow me! <br> <br>
+
+		Run out of the fire exit tonight: My ’84 535 is packed with spare t-shirts, second-hand jackets, balaclava hats and excessively large boots; and we’ll drive all night, sleep in a lay-by, and then we’ll go up, in a gondola, before the light, right to the top. We will bind our legs onto our boards, jump up, to turn around, and start over the lip, onto the piste, with groomed ice-ridges cracking under our edges, like a runaway train that’s left the track and suddenly, floating over powder, we’ll carve a sign down the mountain, a chain of commas, easily read, easily parsed. We’ll gasp at the speed, our mouths blown wide, our legs scared solid our pupils wide — our eyes shot glacier-blue and wild. At the bottom we’ll incongruously hop-jump together and hug and yell with one voice: Fuck depression! Let’s write about THAT!
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_one">
+		<h1 onclick='show_default("piece_one")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> for Marianne </h3>		
+		<p>
+			Your smile <br>
+			so tender-tive <br> <br>
+			eyelashes down <br> <br>
+			“I never expect <br>
+			I don’t hope — <br>
+			I’m never <br>
+			disappointed.” <br> <br>
+			Your voice <br>
+			gets quicker <br>
+			“I’m happy” <br>
+			walks away.<br> <br>
+			Listening —<br>
+			I become: <br>
+			road — rising,<br> <br>
+			fire glow for <br>
+			returning to,<br> <br>
+			the tickle <br>
+			that defuses <br>
+			disillusion,<br> <br>
+			every evening’s <br>
+			first shone star.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_two">
+		<h1 onclick='show_default("piece_two")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Biopsy </h3>		
+		<p>
+			Someone, elsewhere, colours you — <br>
+			applying haematoxylin <br>
+			and Milner’s violet. <br> <br>
+			Someone else, examines you — <br> 
+			bright-field, 120 power, <br>
+			cell by violet cell <br>
+			searching for <br>
+			unnameable. <br> <br>
+			Here the skewed <br>
+			nuclei <br>
+			Here the growth <br> 
+			unchecked  <br>
+			Here the lump  <br>
+			trisected  <br>
+			scrutinised. <br> <br>
+			Someone, perhaps  <br>
+			less than a mile away, <br> <br>
+			fixes: <br>
+			 -their piece of you  <br>
+			 -their morning tea <br> <br>
+			and is staining  <br>
+			- cells <br>
+			- the future —  <br>
+			which way its going to be.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_three">
+		<h1 onclick='show_default("piece_three")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Our First Ambulance Journey </h3>		
+		<p>
+			Siren slices time and air, <br>
+			insulated by enormity, we hardly hear.<br><br>
+			I hold the empty bottle ‘childproof’ and your hand. <br>
+			We speed, We sway, We overtake <br>
+			ordinary days,<br><br>
+			but all breath is here- <br>
+			beating or stopped?<br><br>
+			Afterwards, Julia said “You should have cried, <br>
+			to let her know”.<br><br>
+			I only felt the hand you held <br>
+			growing cold. Then was I numbed. It will not go
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_four">
+		<h1 onclick='show_default("piece_four")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> A Chipped Tea Pot </h3>		
+		<p>
+			There was a man, it seems like a long time ago, who lived by himself. He was quiet, but particular; he worked for a printer cutting letters and making type. He liked to make paper on his spare Saturdays. He made many kinds, many exotic and beautiful sheets, speckled with gold, marbled with raspberry and lime leaves… <br> <br>
+			He never wrote or drew on them. He filed them away in a mahogany chest that had once belonged to a ship’s doctor. He only wanted to make a perfect one. Why? So it would be his. His own. He wanted something beautiful. Something perfect.<br> <br>
+			The favourite of his things was his tea pot. It was cast iron, black, when he looked at it his heart would melt just following its lines with his eyes, to swallow its squat bulbous fruitful shape. He would have thought the spout like a nipple if he could have remembered his mother’s. But that image stayed where he could hardly feel it, like unboiled tea leaves sealed in a dark jar. After making paper one Saturday he was brewing the Lapsang Souchong with his tea pot as he always did. Watching a little steam wind up out of the spout, when he became afraid. What if someone took his tea pot, what if he dropped it on the hard stone floor? It was perfect — it was the only perfect and beautiful thing he had. If it went what could be left behind him?<br> <br>
+			He poured the tea as soon as it might be ready. He drank quickly, wiped the usual drips from the table. Wiped the next drip from the spout, with a gentle flourishing upward movement, got up and left without his coat.<br> <br>
+			Today though, it was not cold, the magnolias in the square were almost finished, the stones underneath marbled with white and red, and blackbirds were practising for the evening chorus. He walked directly and quickly to the market. he looked on all the stalls of china. He found an almost perfect marble and pocketed it for a small coin. But no tea pots.<br> <br>
+			That was the first of many visits, he widened his search to other towns, he started going on other days than Saturday, he changed his job so he could travel more.<br> <br>
+			As the beeches were losing their fire that year he came back with another matching tea pot. It was also perfect and beautiful, he couldn’t be sure it was identical, but it looked perfect, certainly the same style, almost the same size. They could be brothers — if not twins, and as he walked up his steps he wondered if his tea pot had been stolen and now he had found it again. But he still had one, No, he had used it for tea this morning it was definitely there.<br> <br>
+			It was. He put them together on the table in the light from the window. They were both perfect and beautiful.
+			<br> <br>
+			No. The new one, was different! The spout was chipped underneath, where it should be gently wiped. He felt he was being swept up like the old beech leaves outside, like warm tea leaves being scooped up by a hand. He had wasted all that money. Wasted all that time. He was no nearer to safety after all. After a long time gazing through the window, then sitting in the corner while the light drained from the sky, his thirst roused him. He would make tea. With the new tea pot. At least the other would be safe if he dropped it.<br> <br>
+			He poured the tea, not concentrating, silk handkerchief at the ready.<br> <br>
+			No drips.<br> <br>
+			No drips. He looked again. No puddle on the table, just a chipped tea pot and a cup and a satsuma in a black bowl.<br> <br>
+			He saw how precious this new tea pot was. He wondered who could have been so stupid as to sell it to a decrepit market trader more used to selling trashy dog-eared romantic novels and third-hand socks than perfect crockery.<br> <br>
+			It could have been himself, yesterday, a week ago, even last spring.<br> <br>
+			He went to the cupboard by the door, found the hammer. Took the old tea pot and smacked the spout a glancing blow. There was a ringing noise and he felt a chip graze his forehead. He put the two tea pots together on the table and watched as if a huge tea chest had been taken off his back and its contents shot into the sky.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_five">
+		<h1 onclick='show_default("piece_five")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Fiddle-head ferns </h3>		
+		<p>
+		Unfolding delib-<br> <br>
+		-erately the leafy camera<br> <br>
+		fixing light into fronds
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_six">
+		<h1 onclick='show_default("piece_six")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> NO MORE PRESENTS </h3>		
+		<p>
+		Many times I wanted<br> <br>
+		to bring you something — something, in-expres-<br> <br>
+		sible<br> <br>
+		at once encapsulating and grand<br> <br>
+		small as a hazel nut or large as a life in a house<br> <br>
+		what did I find?<br> <br>
+		Chocolates, pears and apricots, almond blossoms,<br> <br>
+		dafalgan, flower bottles.<br> <br>
+		But this was years ago<br> <br>
+		when I was querulous with fear and longing<br> <br>
+		stuck on the rounded cusp of becoming with you.<br> <br>
+		No more presents, I have our memories<br> <br>
+		to bring you — and the autonomous wonder of she —<br> <br>
+		so breathe in, and breathe out and begin to select<br> <br>
+		for if we list all our pasts<br> <br>
+		we’ll never get to the next
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_seven">
+		<h1 onclick='show_default("piece_seven")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Passed Over </h3>		
+		<h3 class="piece_header"> I Heptonstall Churchyard </h3>		
+		<p>
+		"Asa Benveniste ~ Foolish enough to have been a poet" <br> <br>
+		I booked my plot here before I knew about her. <br>
+		I’d heard she wrote, heard she moved down south to Devon, <br>
+		then to London. Poor thing. I never met her. But, today, <br>
+		as everyday, it isn’t me the visitors travel to see. <br> <br>
+		Those PhD pilgrims, the striking teens, <br>
+		stand by her and are lost in the wind, <br>
+		thinking, one day every year the moon  <br>
+		will rise over that Yew. <br> <br>
+		This leafless afternoon Starlings sing, all jumbled <br>
+		as usual, Now, they are imitating Curlews <br>
+		curdling, from behind the corner  <br>
+		of the roofless church. <br> <br>
+
+		<h3 class="piece_header"> II Pére Lachaise </h3>		
+		"Security guard at the grave: ‘N’est-ce pas une poubelle" <br> <br>
+
+		We buy an offering from the minibar <br>
+		a libation for peace  <br>
+		dropped off at The Last Whiskey Bar. <br> <br>
+		‘James James Morrison Morrison,  <br>
+		wanted to be a poet’  <br>
+		When is ever what we have good enough? <br> <br>
+		From the bare planes a Blackcap <br>
+		is singing, singing, singing a well of songs <br>
+		that would wash us all away <br>
+		even if no-one was listening. <br> <br>
+
+		<h3 class="piece_header"> West Cemetery, Amherst. </h3>		
+		"Called Back" <br> <br>
+		I had the ruby-throated <br>
+		humming like a wheel – <br>
+		my quill — distilled it in my drawer <br>
+		written with safe white ink. <br><br>
+		and wrapped in twine. <br>
+		It was the white on white <br>
+		that let it pale, <br><br>
+		–every letter — every space — every rail – <br>
+		the tracks will take you — Prisoner —  <br>
+		with no report of Bail.  <br>
+		The letters of black-inked rejection – <br><br>
+		Six letters — a thousand words – <br>
+		No secret garden is there, but had a Wall. <br>
+		White written on White — the right <br>
+		of de-selection. <br><br>
+		Firmament of maples lawns and birches <br>
+		Window sill — I am — small — as they are – <br>
+		and in my drawer bedecked — evanescent — bright.
+		</p>
+	</div>
+
+
+
+	<div id="get_page_like_this">
+		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
+			Back 
+		</h1>
+
+		<h3 class="piece_header" style="margin-top: 20px; text-decoration: underline;"> 
+			Generate your own site:
+			<!-- All you need to do. -->
+		 </h3>		
+
+		<!--
+		<h3> The literally-no-effort way to start representing yourself online 
+		& collect Emails from followers/fans. </h3>		
+		-->
+		<p>
+			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
+				<p> Email address <br>
+				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
+				</p>
+				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
+ 					</p>
+				<%= f.submit "done", style: "cursor: pointer;" %>
+			<% end %>
+			<br> <br>
+
+			<h3 style="text-decoration: underline;"> How it works </h3>
+			Submitting the form will use the info on your
+			 Medium profile to generate your own site in the same layout as the site that
+			I have made for myself. It's literally no effort. Submit and you're done.
+			<br> <br>
+			<!--
+			If you can afford it, I'd like to charge 2.99£ / month 
+			- mostly because maintenance requires work.
+			But if you can't afford it, no worries.
+ 			<br> <br>
+
+			Any questions or requests? Please get in touch! <br> 
+			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a> <br> <br>
+			Best, <br> <br>
+			Johannes
+			-->
+		</p>
+	</div>
+
+	<div class="my_page_footer">
+		<%= link_to "Find me on Twitter", "https://twitter.com/jfinn6511", style: "color: black; font-weight: bold;" %> |
+		<%= link_to "Find me on Medium", "https://medium.com/@jfinn6511", style: "color: black; font-weight: bold;" %>
+	</div>
+</div>
+
+<style type="text/css">
+	/*
+	body{
+	  background-color: #F7EEE5;
+	}
+	*/
+
+	.container_of_page{
+	  width: 474px;
+	  margin: 96px auto;
+	  position: relative;
+	  background-color: white;
+	  padding: 0px 22px 8px 22px;
+	}
+
+	h1{
+		font-size: 26px;
+		font-weight: bold;
+		padding-bottom: 9px;
+		padding-top: 10px;
+		margin-top: 75px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #eee;}
+
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 16px;}
+
+	#my_email:hover{
+		text-decoration: underline;
+	}
+
+	.right_ctn{
+		position: absolute;
+    	right: -196px;
+    	top: 0px;		
+	}
+	
+	.left_ctn{
+		position: absolute;
+    	left: -200px;
+    	top: 0px;		
+	}
+
+
+	.the_get_page_btn{
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		width: 180px;
+		height: 44px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid lightGrey;
+		background-color: #FFE9AF;
+		padding: 8px;
+	}
+
+	.get_page_btn{
+		width: 85%;
+		margin-left: 12px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		padding: 15px 15px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		background-color: white;
+		border: 1px solid lightGrey;
+	}
+
+	.mini_slogan{
+		margin-left: 11px;
+		font-size: 13px;
+	}
+
+	img{
+		width: 80%;
+		height: auto;
+		margin: 15px 10% 15px 10%;
+		border: 1px solid #9F9F9F;
+		margin-bottom: 26px;
+		width: 180px;
+		height: auto;
+		margin: 0;}
+
+	h3{
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+
+	.email_ctn{
+		padding: 8px 25px 14px 12px;
+		background-color: #F1F1F1;
+		margin: 30px 0px 32px 0px;
+	}
+
+	.title_of_work{
+		cursor: pointer;
+	}
+
+	.title_of_work:hover{
+		text-decoration: underline;
+	}
+
+	.piece_of_work{
+		display: none;
+	}
+
+	.piece_header{
+		padding-top: 8px;
+	}
+
+	.go_back_btn{
+		cursor: pointer; 
+		font-size: 20px;
+		padding-top: 10px;
+	}
+
+	#get_page_like_this{
+		display: none;
+	}
+
+	.my_page_footer{
+		width: 100%;
+		text-align: center;
+		height: 40px;
+		line-height: 2.8;
+		margin-top: 40px;
+		background: #F1F1F1;		
+	}
+</style>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		// display piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "block";	
+	}
+
+	function show_default(piece_id){
+		// hide current piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "none";
+
+		// show main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "block";
+	}
+
+	function show_get_page(){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_zero");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_one");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_two");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_three");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_four");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_five");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_six");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_seven");
+		default_page_body.style.display = "none";
+		piece_of_writing = document.getElementById("get_page_like_this");
+		piece_of_writing.style.display = "block";		
+	}
+</script>

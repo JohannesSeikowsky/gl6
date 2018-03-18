@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # peoples
   get 'johannes', to: 'pages#johannes', as: 'johannes'
   get 'dave_garbutt', to: 'pages#dave_garbutt', as: 'dave_garbutt'
-
+  get 'james_finn', to: 'pages#james_finn', as: 'james_finn'
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'

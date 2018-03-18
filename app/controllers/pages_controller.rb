@@ -39,4 +39,8 @@ class PagesController < ApplicationController
 
   def dave_garbutt
   end
+
+  def james_finn
+  end
+
 end
