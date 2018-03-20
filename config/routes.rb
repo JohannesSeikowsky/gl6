@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'johannes', to: 'pages#johannes', as: 'johannes'
   get 'dave_garbutt', to: 'pages#dave_garbutt', as: 'dave_garbutt'
   get 'james_finn', to: 'pages#james_finn', as: 'james_finn'
+  get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'

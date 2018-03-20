@@ -1,0 +1,405 @@
+<div class="container_of_page">
+	
+	<!--
+	<div class="the_get_page_btn">
+		<p onclick="show_get_page();">
+			Get a page like this.	
+		</p>
+	</div> -->
+
+	<div class="left_ctn">
+		<%= image_tag "dave_garbutt.png" %> <br> <br>
+	</div>
+
+
+	<div class="right_ctn">
+
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Notifier </span> <br> Notify me by Email <br> when a new post comes out: </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_field :email, placeholder: "me@myemail.com",
+						style: "width: 170px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "done", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+		<br> <br>
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> My Social </span>
+			<br>
+			<a href="https://medium.com/@">
+				<i class="fab fa-medium-m" style="font-size: 39px; margin-right: 8px; padding-top: 14px;"></i>
+			</a>
+			<a href="https://twitter.com/">
+				<i class="fab fa-twitter" style="font-size: 39px; padding-top: 14px"></i>
+			</a>
+		</p>
+		<br>
+
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Contact </span> <br>
+			Write me directly below: </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_area :email, placeholder: "my message",
+						style: "width: 170px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+	</div>
+
+
+	<div id="default_page_body">
+		<% if notice %>
+			<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
+		<% end %>
+
+		<h1> Dave Garbutt </h2>
+		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
+		<p>
+			Retired. <br>
+			Former Senior Consultant at NNIT A/S. <br>
+		 	Former SAS computing environment designer and consultant at Novartis AG. <br>
+		 	Former Postdoc at University of Reading. <br>
+		 	Living in Basel. <br>
+		 	From London. <br>
+		</p> <br>
+
+		<h3 style="text-decoration: underline;"> Posts <h3>
+		<p class="title_of_work" onclick='show_piece("piece_zero");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_one");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_two");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_three");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_four");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_five");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_six");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_seven");'> </p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_zero">
+		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_one">
+		<h1 onclick='show_default("piece_one")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_two">
+		<h1 onclick='show_default("piece_two")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_three">
+		<h1 onclick='show_default("piece_three")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_four">
+		<h1 onclick='show_default("piece_four")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_five">
+		<h1 onclick='show_default("piece_five")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_six">
+		<h1 onclick='show_default("piece_six")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_seven">
+		<h1 onclick='show_default("piece_seven")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> </h3>		
+		<p>
+
+		</p>
+	</div>
+
+
+
+	<div id="get_page_like_this">
+		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
+			Back 
+		</h1>
+
+		<h3 class="piece_header" style="margin-top: 20px; text-decoration: underline;"> 
+			Generate your own site:
+			<!-- All you need to do. -->
+		 </h3>		
+
+		<!--
+		<h3> The literally-no-effort way to start representing yourself online 
+		& collect Emails from followers/fans. </h3>		
+		-->
+		<p>
+			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
+				<p> Email address <br>
+				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
+				</p>
+				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
+ 					</p>
+				<%= f.submit "done", style: "cursor: pointer;" %>
+			<% end %>
+			<br> <br>
+
+			<h3 style="text-decoration: underline;"> How it works </h3>
+			Submitting the form will use the info on your
+			 Medium profile to generate your own site in the same layout as the site that
+			I have made for myself. It's literally no effort. Submit and you're done.
+			<br> <br>
+			<!--
+			If you can afford it, I'd like to charge 2.99£ / month 
+			- mostly because maintenance requires work.
+			But if you can't afford it, no worries.
+ 			<br> <br>
+
+			Any questions or requests? Please get in touch! <br> 
+			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a> <br> <br>
+			Best, <br> <br>
+			Johannes
+			-->
+		</p>
+	</div>
+
+	<div class="my_page_footer">
+		<%= link_to "Find me on Twitter", "https://twitter.com/", style: "color: black; font-weight: bold;" %> |
+		<%= link_to "Find me on Medium", "https://medium.com/@", style: "color: black; font-weight: bold;" %>
+	</div>
+</div>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://pbs.twimg.com/profile_banners/958729147408310272/1517922790/1500x500") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+
+	.container_of_page{
+	  width: 474px;
+	  margin: 66px auto;
+	  background-color: white;
+	  position: relative;
+	  padding: 0px 22px 8px 22px;
+	}
+
+	h1{
+		font-size: 26px;
+		font-weight: bold;
+		padding-bottom: 9px;
+		padding-top: 10px;
+		margin-top: 75px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #eee;}
+
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 16px;}
+
+	#my_email:hover{
+		text-decoration: underline;
+	}
+
+	.right_ctn{
+		position: absolute;
+    	right: -208px;
+    	top: 0px;
+    	width: 200px;
+	}
+	
+
+	.the_get_page_btn{
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		width: 180px;
+		height: 44px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid lightGrey;
+		background-color: #FFE9AF;
+		padding: 8px;
+	}
+
+	.get_page_btn{
+		width: 85%;
+		margin-left: 12px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		padding: 15px 15px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		background-color: white;
+		border: 1px solid lightGrey;
+	}
+
+	.mini_slogan{
+		margin-left: 11px;
+		font-size: 13px;
+	}
+
+	.left_ctn{
+		position: absolute;
+    	left: -222px;
+    	top: 0px;		
+	}
+
+	img{
+		margin: 15px 10% 15px 10%;
+		border: 1px solid #9F9F9F;
+		margin-bottom: 26px;
+		width: 202px;
+		height: auto;
+		margin: 0;}
+
+	h3{
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+
+	.email_ctn{
+		padding: 8px 25px 14px 12px;
+		background-color: #F1F1F1;
+		margin: 30px 0px 32px 0px;
+	}
+
+	.title_of_work{
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.title_of_work:hover{
+		text-decoration: underline;
+	}
+
+	.piece_of_work{
+		display: none;
+	}
+
+	.piece_header{
+		padding-top: 8px;
+	}
+
+	.go_back_btn{
+		cursor: pointer; 
+		font-size: 20px;
+		padding-top: 10px;
+	}
+
+	#get_page_like_this{
+		display: none;
+	}
+
+	.my_page_footer{
+		width: 100%;
+		text-align: center;
+		height: 40px;
+		line-height: 2.8;
+		margin-top: 40px;
+		background: #F1F1F1;		
+	}
+</style>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		// display piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "block";	
+	}
+
+	function show_default(piece_id){
+		// hide current piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "none";
+
+		// show main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "block";
+	}
+
+	function show_get_page(){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_zero");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_one");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_two");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_three");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_four");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_five");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_six");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_seven");
+		default_page_body.style.display = "none";
+		piece_of_writing = document.getElementById("get_page_like_this");
+		piece_of_writing.style.display = "block";		
+	}
+</script>

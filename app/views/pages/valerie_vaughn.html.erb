@@ -1,0 +1,569 @@
+<div class="container_of_page">
+	<!--
+	<div class="the_get_page_btn">
+		<p onclick="show_get_page();">
+			Get a page like this.	
+		</p>
+	</div> -->
+
+	<div class="left_ctn">
+		<%= image_tag "valerie_vaughn.jpg" %> <br> <br>
+	</div>
+
+
+	<div class="right_ctn">
+
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Notifier </span> <br> Notify me by Email <br> when a new post comes out: </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_field :email, placeholder: "me@myemail.com",
+						style: "width: 170px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "done", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+		<br> <br>
+
+		<p class="get_page_btn">
+			<span style="font-size: 14px; text-decoration: underline;"> My Social </span>
+			<br>
+			<a href="https://medium.com/@valerievaughn">
+				<i class="fab fa-medium-m" style="font-size: 39px; margin-right: 8px; padding-top: 14px;"></i>
+			</a>
+			<a href="https://twitter.com/ValerieRVaughn">
+				<i class="fab fa-twitter" style="font-size: 39px; padding-top: 14px"></i>
+			</a>
+		</p>
+		<br>
+
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Contact </span> <br>
+			Write me directly below: </span>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_area :email, placeholder: "my message",
+						style: "width: 170px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
+						margin-right: 17px" %>
+			<% end %>
+		</p>
+	</div>
+
+
+	<div id="default_page_body">
+		<% if notice %>
+			<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
+		<% end %>
+
+		<h1> Valerie Vaughn </h2>
+		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
+		<p>
+		“You must do the things you think you cannot do.” <br>
+		 ~Eleanor Roosevelt
+		</p> <br>
+
+		<h3 style="text-decoration: underline;"> Posts <h3>
+		<p class="title_of_work" onclick='show_piece("piece_zero");'> The Flight of Succubus </p>
+		<p class="title_of_work" onclick='show_piece("piece_one");'> Home </p>
+		<p class="title_of_work" onclick='show_piece("piece_two");'> The Quiet Survival of Loneliness </p>
+		<p class="title_of_work" onclick='show_piece("piece_three");'> Armchair Wallflower </p>
+		<p class="title_of_work" onclick='show_piece("piece_four");'> Love Burns </p>
+		<p class="title_of_work" onclick='show_piece("piece_five");'> The Death of Love </p> 
+		<p class="title_of_work" onclick='show_piece("piece_six");'> This Place </p>
+		<p class="title_of_work" onclick='show_piece("piece_seven");'> Birth </p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_zero">
+		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> The Flight of Succubus </h3>		
+		<p>
+Bound together,
+<br> <br>
+since torn apart.
+<br> <br>
+Once a proud smirk,
+<br> <br>
+now gone.
+<br> <br>
+Staged love,
+<br> <br>
+unnatural grin.
+<br> <br>
+Poison lips,
+<br> <br>
+drink memories down.
+<br> <br>
+Succubus flight,
+<br> <br>
+succumbs to night.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_one">
+		<h1 onclick='show_default("piece_one")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Home </h3>		
+		<p>
+A winding Virginia road.<br>
+An old country back road. <br>
+A road which leads me, <br>
+Home.
+<br> <br>
+Past everlasting trees. <br>
+Past pastures of manure, <br>
+Coloring each a deep green; <br>
+Weathered wooden fences, <br>
+Guide me, on my way, <br>
+Home.
+<br> <br>
+Mountains so high, <br>
+Surely I can reach their unbound skies. <br>
+Skies which surround the place <br>
+I call, <br>
+Home.
+<br> <br>
+Deep blue ponds. <br>
+Fishing hole fools. <br>
+Talking about the one that got away, <br>
+On our way, <br>
+Home.
+<br> <br>
+Back to a place, <br>
+My space. <br>
+A place where I am free, <br>
+Free to be me. <br>
+The place I call, <br>
+Home.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_two">
+		<h1 onclick='show_default("piece_two")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> The Quiet Survival of Lonelines </h3>		
+		<p>
+Our empty flat, in which I sit,
+<br> <br>
+feels like night even when it’s day.
+<br> <br>
+All my days seem like nights since we parted ways.
+<br> <br>
+The early morning winter winds blow negativity aside,
+<br> <br>
+there’s already five inches of snow on the ground
+<br> <br>
+with more headed in a direction which I must escape;
+<br> <br>
+I must make my way before I convince my mind to stay.
+<br> <br>
+I drive in the direction of a new life
+<br> <br>
+barely escaping my own holocaust life,
+<br> <br>
+my mental needle closely rests on empty,
+<br> <br>
+I try not run out of gas before I get out what’s inside my head,
+<br> <br>
+how quickly your love ran to another
+<br> <br>
+as the quiet survival of loneliness fuels me ahead.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_three">
+		<h1 onclick='show_default("piece_three")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Armchair Wallflower </h3>		
+		<p>
+I sit up, <br>
+against the chair back, <br>
+as the lies stack <br>
+against me, <br>
+I try not to fold <br>
+from the weight <br>
+of words, <br>
+be bold, <br>
+I am told <br>
+to find the courage <br>
+not to lose strength, <br>
+at times <br>
+to lost to walk <br>
+to broken to surrender, <br>
+finding no truth <br>
+in the falsehood of others.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_four">
+		<h1 onclick='show_default("piece_four")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Love Burns </h3>		
+		<p>
+Your blistery words
+<br> <br>
+spoke only to gain ground,
+<br> <br>
+your breath burns
+<br> <br>
+like embers of a wildfire,
+<br> <br>
+I try to extinguish you,
+<br> <br>
+the heat of dying flames
+<br> <br>
+burn me
+<br> <br>
+burn us.
+<br> <br>
+The last flicker of our souls give way,
+<br> <br>
+a passion soot remains,
+<br> <br>
+we drift softly into an embrace
+<br> <br>
+only to burn one another
+<br> <br>
+with our dying flame.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_five">
+		<h1 onclick='show_default("piece_five")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> The Death of Love </h3>		
+		<p>
+I often wonder how different my life would have been <br> <br>
+had my mother not died when I was twenty-seven.<br> <br>
+Would my series of life mistakes even exist beyond just a bad dream;<br> <br>
+each a testament to my inability to chose wisely free of an inebriated state.<br> <br>
+Several bad decisions away, one ending with a ring on my left hand<br> <br>
+leading to false accusations and label lies.<br> <br>
+Time does not heal, that is a bullshit lie.<br> <br>
+Time does not lessen the pain of life.<br> <br>
+Time is never on one’s side, least of all mine.<br> <br>
+Silence slices the deafness of uncaring ears<br> <br>
+as each is not what the other one thought<br> <br>
+lost to uncompromising pride<br> <br>
+as once loved expectations die.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_six">
+		<h1 onclick='show_default("piece_six")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> This Place </h3>		
+		<p>
+This Place
+<br> <br>
+All your life,
+<br> <br>
+you wanted to be
+<br> <br>
+someplace else.
+<br> <br>
+Now you are there
+<br> <br>
+and you don’t know
+<br> <br>
+what to do
+<br> <br>
+with yourself.
+<br> <br>
+So you sit and stare
+<br> <br>
+into the bottom of
+<br> <br>
+a half-empty glass,
+<br> <br>
+in hopes to catch a glance
+<br> <br>
+of a life to live for.
+		</p>
+	</div>
+
+
+	<div class="piece_of_work" id="piece_seven">
+		<h1 onclick='show_default("piece_seven")' class="go_back_btn">
+			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		</h1>
+		<h3 class="piece_header"> Birth </h3>		
+		<p>
+I was born two weeks overdue, <br>
+still early in life. <br>
+More time was needed in my mother’s womb, <br>
+more time to feel complete, <br>
+More time was needed in my mother’s womb, <br>
+and told to land on my feet. <br>
+Face forward <br>
+while the sting of the world whips me into its desired shape, <br>
+shift-changing, clock awakening <br>
+sunrise schedules my time to fit the workday <br>
+to type my day away for minimal pay <br>
+in a one percent society which does not represent me, <br>
+but likes to micro-manage me. <br>
+Time clock, punch-management <br>
+inaccurate directions impede my stride, <br> 
+retracting dreams from attainable echelon skies; <br>
+I rise not from sleep but from a deep understanding <br>
+as tides of fluid birth nourish my seed of growth. <br>
+I plant my feet firmly upon the soil of my soul, <br>
+fruition multiples as dreams become real <br>
+for the first time since birth,  <br>
+until I return to the knowledge-rich soil <br>
+to cultivate my soul’s rebirth.
+		</p>
+	</div>
+
+
+
+	<div id="get_page_like_this">
+		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
+			Back 
+		</h1>
+
+		<h3 class="piece_header" style="margin-top: 20px; text-decoration: underline;"> 
+			Generate your own site:
+			<!-- All you need to do. -->
+		 </h3>		
+
+		<!--
+		<h3> The literally-no-effort way to start representing yourself online 
+		& collect Emails from followers/fans. </h3>		
+		-->
+		<p>
+			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
+				<p> Email address <br>
+				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
+				</p>
+				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
+ 					</p>
+				<%= f.submit "done", style: "cursor: pointer;" %>
+			<% end %>
+			<br> <br>
+
+			<h3 style="text-decoration: underline;"> How it works </h3>
+			Submitting the form will use the info on your
+			 Medium profile to generate your own site in the same layout as the site that
+			I have made for myself. It's literally no effort. Submit and you're done.
+			<br> <br>
+			<!--
+			If you can afford it, I'd like to charge 2.99£ / month 
+			- mostly because maintenance requires work.
+			But if you can't afford it, no worries.
+ 			<br> <br>
+
+			Any questions or requests? Please get in touch! <br> 
+			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a> <br> <br>
+			Best, <br> <br>
+			Johannes
+			-->
+		</p>
+	</div>
+
+	<div class="my_page_footer">
+		<%= link_to "Find me on Twitter", "https://twitter.com/ValerieRVaughn", style: "color: black; font-weight: bold;" %> |
+		<%= link_to "Find me on Medium", "https://medium.com/@valerievaughn", style: "color: black; font-weight: bold;" %>
+	</div>
+</div>
+
+
+<style type="text/css">
+
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://scontent.fmla2-1.fna.fbcdn.net/v/t1.0-9/10995354_363792017162784_1197060663274678521_n.jpg?_nc_cat=0&oh=0253d02346f5cb5b099ad5a7b63df872&oe=5B30DF6F") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+
+	.container_of_page{
+	  width: 474px;
+	  margin: 66px auto;
+	  background-color: white;
+	  position: relative;
+	  padding: 0px 22px 8px 22px;
+	}
+
+	h1{
+		font-size: 26px;
+		font-weight: bold;
+		padding-bottom: 9px;
+		padding-top: 10px;
+		margin-top: 75px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #eee;}
+
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 16px;}
+
+	#my_email:hover{
+		text-decoration: underline;
+	}
+
+	.right_ctn{
+		position: absolute;
+    	right: -208px;
+    	top: 0px;
+    	width: 200px;
+	}
+	
+
+	.the_get_page_btn{
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		width: 180px;
+		height: 44px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid lightGrey;
+		background-color: #FFE9AF;
+		padding: 8px;
+	}
+
+	.get_page_btn{
+		width: 85%;
+		margin-left: 12px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		padding: 15px 15px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		background-color: white;
+		border: 1px solid lightGrey;
+	}
+
+	.mini_slogan{
+		margin-left: 11px;
+		font-size: 13px;
+	}
+
+	.left_ctn{
+		position: absolute;
+    	left: -222px;
+    	top: 0px;		
+	}
+
+	img{
+		margin: 15px 10% 15px 10%;
+		border: 1px solid #9F9F9F;
+		margin-bottom: 26px;
+		width: 202px;
+		height: auto;
+		margin: 0;}
+
+	h3{
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+
+	.email_ctn{
+		padding: 8px 25px 14px 12px;
+		background-color: #F1F1F1;
+		margin: 30px 0px 32px 0px;
+	}
+
+	.title_of_work{
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.title_of_work:hover{
+		text-decoration: underline;
+	}
+
+	.piece_of_work{
+		display: none;
+	}
+
+	.piece_header{
+		padding-top: 8px;
+	}
+
+	.go_back_btn{
+		cursor: pointer; 
+		font-size: 20px;
+		padding-top: 10px;
+	}
+
+	#get_page_like_this{
+		display: none;
+	}
+
+	.my_page_footer{
+		width: 100%;
+		text-align: center;
+		height: 40px;
+		line-height: 2.8;
+		margin-top: 40px;
+		background: #F1F1F1;		
+	}
+</style>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		// display piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "block";	
+	}
+
+	function show_default(piece_id){
+		// hide current piece
+		piece_of_writing = document.getElementById(piece_id);
+		piece_of_writing.style.display = "none";
+
+		// show main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "block";
+	}
+
+	function show_get_page(){
+		// hide main
+		default_page_body = document.getElementById("default_page_body");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_zero");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_one");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_two");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_three");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_four");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_five");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_six");
+		default_page_body.style.display = "none";
+		default_page_body = document.getElementById("piece_seven");
+		default_page_body.style.display = "none";
+		piece_of_writing = document.getElementById("get_page_like_this");
+		piece_of_writing.style.display = "block";		
+	}
+</script>
