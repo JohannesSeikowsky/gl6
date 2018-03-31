@@ -1,0 +1,26 @@
+	<div id="get_page_like_this">
+		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
+			Back 
+		</h1>
+
+		<h3 class="piece_header" style="margin-top: 20px; text-decoration: underline;"> 
+			Generate your own site:
+		 </h3>		
+		<p>
+			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
+				<p> Email address <br>
+				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
+				</p>
+				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
+ 					</p>
+				<%= f.submit "done", style: "cursor: pointer;" %>
+			<% end %>
+			<br> <br>
+
+			<h3 style="text-decoration: underline;"> How it works </h3>
+			Submitting the form will use the info on your
+			 Medium profile to generate your own site in the same layout as the site that
+			I have made for myself. It's literally no effort. Submit and you're done.
+			<br> <br>
+		</p>
+	</div>
