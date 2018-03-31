@@ -1,0 +1,269 @@
+/* line 1, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+body {
+  background-color: #F5EFE6;
+}
+
+/* reinstate at appropriate point
+.header{
+	width: 100%;
+	height: 60px;
+	background-color: #F5EFE6;
+	#dashboard_link{
+		float: right;
+		margin-top: 8px;
+		margin-right: 12px;
+		padding: 6px 30px;
+		color: black;
+		border: 1px solid black;
+	}
+}
+*/
+/* line 21, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#dashboard_link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 34, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.central_container {
+  width: 836px;
+  margin: 80px auto 75px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  overflow: auto;
+}
+
+/* line 45, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.left_side_container {
+  width: 220px;
+  float: left;
+}
+/* line 48, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.left_side_container img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 55, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.middle_container {
+  width: 370px;
+  padding-left: 6px;
+  float: left;
+}
+
+/* line 61, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.right_side_container {
+  width: 200px;
+  padding-left: 28px;
+  float: left;
+}
+
+/* line 70, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+#profile_image {
+  width: 202px;
+  height: auto;
+}
+
+/* line 75, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.post_title {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 80, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.post_title:hover {
+  text-decoration: underline;
+}
+
+/* line 84, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.post_excerpt {
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+/* line 89, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.name_title {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* line 94, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 99, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.functionality_title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* line 104, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.powered_by {
+  font-size: 15px;
+  color: grey;
+  text-align: center;
+  margin-top: 45px;
+}
+
+/* individual posts */
+/* line 115, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.post {
+  display: none;
+  width: 370px;
+  padding-left: 6px;
+  float: left;
+}
+
+/* line 122, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.piece_header {
+  padding-top: 20px;
+  margin-bottom: 24px;
+}
+
+/* line 127, /home/johannes/code/gl6/app/assets/stylesheets/application.css.scss */
+.go_back_btn {
+  cursor: pointer;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/*
+	.container_of_page{
+	  width: 474px;
+	  margin: 0px auto;
+	  background-color: white;
+	  position: relative;
+	  padding: 0px 22px 8px 22px;
+	}
+
+	h1{
+		font-size: 26px;
+		font-weight: bold;
+		padding-bottom: 9px;
+		padding-top: 10px;
+		margin-top: 75px;
+		margin-bottom: 14px;
+		border-bottom: 1px solid #eee;}
+
+	p{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 16px;}
+
+	#my_email:hover{
+		text-decoration: underline;
+	}
+
+	.right_ctn{
+		position: absolute;
+    	right: -200px;
+    	top: 0px;
+    	width: 200px;
+   	    background-color: white;
+	}
+	
+
+	.the_get_page_btn{
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		width: 138px;
+		height: 59px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid lightGrey;
+		background-color: #FFE9AF;
+		padding: 8px;
+	}
+
+	.get_page_btn{
+		width: 85%;
+		margin-left: 12px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		padding: 15px 15px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		background-color: white;
+	}
+
+	.mini_slogan{
+		margin-left: 11px;
+		font-size: 13px;
+	}
+
+	.left_ctn{
+		position: absolute;
+    	left: -202px;
+    	top: 0px;		
+	}
+
+	img{
+		margin: 15px 10% 15px 10%;
+		border: 1px solid #9F9F9F;
+		margin-bottom: 26px;
+		width: 202px;
+		height: auto;
+		margin: 0;}
+
+	h3{
+		margin: 0 0 8px 0;
+		padding: 0;
+	}
+
+	.email_ctn{
+		padding: 8px 25px 14px 12px;
+		background-color: #F1F1F1;
+		margin: 30px 0px 32px 0px;
+	}
+
+	.title_of_work{
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.title_of_work:hover{
+		text-decoration: underline;
+	}
+
+	.piece_of_work{
+		display: none;
+	}
+
+	.piece_header{
+		padding-top: 8px;
+	}
+
+
+
+	#get_page_like_this{
+		display: none;
+	}
+
+	.my_page_footer{
+		width: 100%;
+		text-align: center;
+		height: 40px;
+		line-height: 2.8;
+		margin-top: 40px;
+		background: #F1F1F1;		
+	}
+
+*/
