@@ -10,7 +10,7 @@
 
 	  	<div id="middle_container" class="middle_container">
 	  		<% if notice %>
-				<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
+				<h1 style=""> <%= notice %> </h1>
 			<% end %>
 
 			<h1 class="name_title"> Valerie Vaughn </h1>
@@ -334,6 +334,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: "your message",
 							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
