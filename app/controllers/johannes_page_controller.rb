@@ -15,6 +15,7 @@ def email_subscriber
 		redirect_to james_finn_path, notice: "It worked. Thank you!"
 	else
 		redirect_to root_path, notice: "It worked. Thank you!"
+	end
 end
 
 def new_page_user
