@@ -9,7 +9,11 @@
 	  	</div>
 
 	  	<div id="middle_container" class="middle_container">
-			<h1 class="name_title"> Valerie Vaughn </h2>
+	  		<% if notice %>
+				<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
+			<% end %>
+
+			<h1 class="name_title"> Valerie Vaughn </h1>
 			<h3 class="title"> Me in 10 seconds </h3>
 			<p>
 			“You must do the things you think you cannot do.” <br>
