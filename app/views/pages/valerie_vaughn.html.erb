@@ -314,6 +314,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: "you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>

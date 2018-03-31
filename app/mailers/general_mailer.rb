@@ -15,8 +15,10 @@ class GeneralMailer < ApplicationMailer
     mail(to: "joseikowsky@gmail.com", subject: 'New User at MYN')  	
   end
 
-  def new_email_subscriber(subscribers_email)
+  # Wordgates
+  def new_email_subscriber(subscribers_email, author_of_page)
     @subscribers_email = subscribers_email
+    @author_of_page = author_of_page
     mail(to: "joseikowsky@gmail.com", subject: 'New Email Subscriber')   
   end
 
