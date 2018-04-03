@@ -312,7 +312,7 @@
 				<p class="functionality_title"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-					<%= f.text_field :email, placeholder: "you@youmail.com",
+					<%= f.text_field :email, placeholder: "  you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
@@ -332,7 +332,7 @@
 			<div class="functionality_container" style="margin-top: 40px;">
 				<p class="functionality_title"> Contact Me </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-					<%= f.text_area :email, placeholder: "your message",
+					<%= f.text_area :email, placeholder: "  your message",
 							style: "width: 170px; height: 100px;" %> <br>
 				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
