@@ -45,4 +45,7 @@ class PagesController < ApplicationController
 
   def valerie_vaughn
   end
+
+  def vaughn_dashboard
+  end
 end
