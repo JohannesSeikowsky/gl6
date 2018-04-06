@@ -2,7 +2,7 @@ class JohannesPageController < ApplicationController
 
 def editing_vaughn_page
 	VaughnUser.find(1).update(profile_params)
-	redirect_to valerie_vaughn_path, notice: "It worked! The Changes have been applied."
+	redirect_to valerie_vaughn_path, notice: "Changes applied."
 end
 
 

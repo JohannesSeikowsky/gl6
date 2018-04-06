@@ -24,29 +24,51 @@
 			<% end %>
 
 			<h3 class="title"> Posts <h3>
+
+		    <% if @vaughns_settings.post_one %>
+			<p class="post_title" onclick='show_piece("piece_one");'> Flush </p>
+			<p class="post_excerpt"> Destructive gene pool ...</p>
+			<% end %>
+
+		    <% if @vaughns_settings.post_two %>
 			<p class="post_title" onclick='show_piece("piece_one");'> The Flight of Succubus </p>
 			<p class="post_excerpt"> Bound together, since torn apart. Once a proud smirk ... </p>
+			<% end %>
 
+		    <% if @vaughns_settings.post_three %>
 			<p class="post_title" onclick='show_piece("piece_two");'> Home </p>
 			<p class="post_excerpt"> A winding Virginia road. An old country back road ... </p>
-		
+			<% end %>
+
+		    <% if @vaughns_settings.post_four %>
 			<p class="post_title" onclick='show_piece("piece_three");'> The Quiet Survival of Loneliness </p>
 			<p class="post_excerpt"> Our empty flat, in which I sit ... </p>
+			<% end %>
 		
+		    <% if @vaughns_settings.post_five %>
 			<p class="post_title" onclick='show_piece("piece_four");'> Armchair Wallflower </p>
 			<p class="post_excerpt"> I sit up, against the chair back ... </p>
+			<% end %>
 
+		    <% if @vaughns_settings.post_six %>
 			<p class="post_title" onclick='show_piece("piece_five");'> Love Burns </p>
 			<p class="post_excerpt"> Your blistery words spoke only to gain ground ... </p>
+			<% end %>
 	
+		    <% if @vaughns_settings.post_seven %>
 			<p class="post_title" onclick='show_piece("piece_six");'> The Death of Love </p> 
 			<p class="post_excerpt"> I often wonder how different my life would ... </p>
+			<% end %>
 			
+		    <% if @vaughns_settings.post_eight %>
 			<p class="post_title" onclick='show_piece("piece_seven");'> This Place </p>
 			<p class="post_excerpt"> This Place. All your life, you wanted to be... </p>
+			<% end %>
 
+		    <% if @vaughns_settings.post_nine %>
 			<p class="post_title" onclick='show_piece("piece_eight");'> Birth </p>	
 			<p class="post_excerpt"> I was born two weeks overdue ... </p>
+			<% end %>
 
 			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 	  	</div>
