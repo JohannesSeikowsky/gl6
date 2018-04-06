@@ -1,5 +1,9 @@
 class JohannesPageController < ApplicationController
 
+def editing_vaughn
+end
+
+
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
 	@author_of_page = params[:email_subscriber][:author]
