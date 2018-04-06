@@ -19,8 +19,8 @@
 			<h1 class="name_title"> Valerie Vaughn </h1>
 
 			<% if @vaughns_settings.about_feature %>
-				<h3 class="title"> Me in 10 seconds </h3>
-				<p> “You must do the things you think you cannot do.” <br> ~Eleanor Roosevelt </p> <br>
+				<h3 class="title"> <%= @vaughns_settings.about_title %> </h3>
+				<p> <%= @vaughns_settings.about_content %> </p> <br>
 			<% end %>
 
 			<h3 class="title"> Posts <h3>
@@ -379,11 +379,14 @@
 			<% if @vaughns_settings.social_icons_features %>
 			<div class="functionality_container" style="margin-top: 60px;">
 				<p class="functionality_title"> My Social </p>
-				<a href="https://twitter.com/ValerieRVaughn">
+				<a href="https://twitter.com/ValerieRVaughn" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
-				<a href="https://medium.com/@valerievaughn">
-					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 14px; color: black;"></i>
+				<a href="https://medium.com/@valerievaughn" target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+				<a href="https://www.facebook.com/ValerieRVaughn" target="_blank">
+					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
 			</div>
 			<% end %>
