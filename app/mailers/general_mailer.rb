@@ -28,4 +28,7 @@ class GeneralMailer < ApplicationMailer
     mail(to: "joseikowsky@gmail.com", subject: 'New Page User')   
   end
 
+  def page_edited_vaughn
+    mail(to: "joseikowsky@gmail.com", subject: 'Vaughn has edited page...')   
+  end
 end

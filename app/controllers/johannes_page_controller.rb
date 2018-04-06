@@ -2,6 +2,7 @@ class JohannesPageController < ApplicationController
 
 def editing_vaughn_page
 	VaughnUser.find(1).update(profile_params)
+	GeneralMailer.page_edited_vaughn().deliver
 	redirect_to valerie_vaughn_path #, notice: "Changes applied."
 end
 
