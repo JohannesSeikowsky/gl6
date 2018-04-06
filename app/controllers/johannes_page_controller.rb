@@ -1,6 +1,8 @@
 class JohannesPageController < ApplicationController
 
-def editing_vaughn
+def editing_vaughn_page
+	VaughnUser.find(1).update(profile_params)
+	redirect_to valerie_vaughn_path, notice: "It worked! The Changes have been applied."
 end
 
 
@@ -22,6 +24,7 @@ def email_subscriber
 	end
 end
 
+
 def new_page_user
 	# create
 	PageUser.create(medium_link: params[:new_page_user][:medium_link],
@@ -30,6 +33,12 @@ def new_page_user
 	GeneralMailer.new_page_user(params[:new_page_user][:medium_link],
 		 params[:new_page_user][:email]).deliver
 	redirect_to root_path, notice: "It worked. I will be in touch!"
+end
+
+
+def profile_params
+	params.require(:user_settings).permit(:portrait_feature,:about_feature,:email_subscription_feature,
+		:social_icons_features,:contact_feature, :about_title, :about_content, :post_one,:post_two,:post_three,:post_four,:post_five,:post_six,:post_seven,:post_eight,:post_nine)
 end
 
 end

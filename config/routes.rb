@@ -7,15 +7,19 @@ Rails.application.routes.draw do
   get 'johannes', to: 'pages#johannes', as: 'johannes'
   get 'dave_garbutt', to: 'pages#dave_garbutt', as: 'dave_garbutt'
   get 'james_finn', to: 'pages#james_finn', as: 'james_finn'
+
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
   get 'vaughn_dashboard', to: 'pages#vaughn_dashboard', as: 'vaughn_dashboard'
 
+  post 'editing_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
+  
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
   get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
   get 'product_tour', to: 'pages#product_tour', as: 'product_tour'
   get 'do_now', to: 'pages#do_now', as: 'do_now'
+
 
   # signup/login
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'

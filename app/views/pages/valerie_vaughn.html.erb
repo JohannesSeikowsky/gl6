@@ -5,7 +5,9 @@
 	  <div class="central_container"> 		
 
 	  	<div class="left_side_container"> 		
-	  		<%= image_tag "valerie_vaughn.jpg", id: "profile_image" %>
+		    <% if @vaughns_settings.portrait_feature %>
+	  			<%= image_tag "valerie_vaughn.jpg", id: "profile_image" %>
+			<% end %>
 	  	</div>
 
 	  	<div id="middle_container" class="middle_container">
@@ -14,11 +16,14 @@
 			<% end %>
 
 			<h1 class="name_title"> Valerie Vaughn </h1>
-			<h3 class="title"> Me in 10 seconds </h3>
-			<p>
-			“You must do the things you think you cannot do.” <br>
-			 ~Eleanor Roosevelt
-			</p> <br>
+		
+			<% if @vaughns_settings.about_feature %>
+				<h3 class="title"> Me in 10 seconds </h3>
+				<p>
+				“You must do the things you think you cannot do.” <br>
+				 ~Eleanor Roosevelt
+				</p> 
+			<% end %> <br>
 
 			<h3 class="title"> Posts <h3>
 			<p class="post_title" onclick='show_piece("piece_one");'> The Flight of Succubus </p>

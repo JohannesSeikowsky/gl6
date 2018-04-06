@@ -3,7 +3,7 @@
 <div class="container-fluid">
   <div class="central_container"> 		
 
-  	<div class="left_side_container"> 		
+  	<div class="left_side_container">
   		<%= image_tag "valerie_vaughn.jpg", id: "profile_image" %>
   	</div>
 
@@ -16,22 +16,22 @@
 		<p style="background-color: #F5EFE6;"> The posts on your site sync with your Medium every 24 hours. </p>
 
 		<h3 class="title" style="margin-bottom: 8px; margin-top: 35px;"> Choose your Features </h3>
-		<%= form_for :features, url: email_subscriber_url do |f| %>
-            <%= f.check_box :this_month, checked: true %> Your Image on the Left <br>
-            <%= f.check_box :this_month, checked: true %> "About Me" Section <br>
+		<%= form_for :user_settings, url: editing_vaughn_page_path do |f| %>
+            <%= f.check_box :portrait_feature, checked: true %> Your Image on the Left <br>
+            <%= f.check_box :about_feature, checked: true %> "About Me" Section <br>
             <!-- <%= f.check_box :this_month, checked: true %> "Posts" Section <br> -->
-            <%= f.check_box :this_month, checked: true %> Subscribe to Email-Updates Box <br> 
-            <%= f.check_box :this_month, checked: true %> Social Icons - Twitter, Medium <br>
-            <%= f.check_box :this_month, checked: true %> Contact Me Box <br>
+            <%= f.check_box :email_subscription_feature, checked: true %> Subscribe to Email-Updates Box <br> 
+            <%= f.check_box :social_icons_features, checked: true %> Social Icons - Twitter, Medium <br>
+            <%= f.check_box :contact_feature, checked: true %> Contact Me Box <br>
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
 		<% end %> <br>
 
 		<h3 class="title" style="margin-bottom: 8px; margin-top: 15px;"> Your "About Me" Section </h3>
 		<%= form_for :features, url: email_subscriber_url do |f| %>
             Title: <br>
-            <%= f.text_field :this_month, placeholder: "Me in 10 seconds", style: "width: 215px;" %> <br>
+            <%= f.text_field :about_title, placeholder: "Me in 10 seconds", style: "width: 215px;" %> <br>
             Content: <br>
-            <%= f.text_area :this_month, placeholder: "...", style: "width: 215px; height: 105px;" %> <br>
+            <%= f.text_area :about_content, placeholder: "...", style: "width: 215px; height: 105px;" %> <br>
 
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
 		<% end %> <br>
@@ -44,14 +44,15 @@
 			An option to manually publish additional posts that <br> are not on your Medium is coming soon.
 		</p>
 		<%= form_for :features, url: email_subscriber_url do |f| %>
-            <%= f.check_box :this_month, checked: true %> Flight of Succubus <br>
-            <%= f.check_box :this_month, checked: true %> Home <br>
-            <%= f.check_box :this_month, checked: true %> The Quiet Survival of Loneliness <br> 
-            <%= f.check_box :this_month, checked: true %> Armchair Wallflower <br>
-            <%= f.check_box :this_month, checked: true %> Love Burns<br>
-            <%= f.check_box :this_month, checked: true %> The Death of Love <br>
-            <%= f.check_box :this_month, checked: true %> This Place<br>
-            <%= f.check_box :this_month, checked: true %> Birth<br> 
+            <%= f.check_box :post_one, checked: true %> Flight of Succubus <br>
+            <%= f.check_box :post_two, checked: true %> Flight of Succubus <br>
+            <%= f.check_box :post_three, checked: true %> Home <br>
+            <%= f.check_box :post_four, checked: true %> The Quiet Survival of Loneliness <br> 
+            <%= f.check_box :post_five, checked: true %> Armchair Wallflower <br>
+            <%= f.check_box :post_six, checked: true %> Love Burns<br>
+            <%= f.check_box :post_seven, checked: true %> The Death of Love <br>
+            <%= f.check_box :post_eight, checked: true %> This Place<br>
+            <%= f.check_box :post_nine, checked: true %> Birth<br> 
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
 		<% end %> <br>
 
