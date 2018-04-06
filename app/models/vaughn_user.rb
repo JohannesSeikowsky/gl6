@@ -1,0 +1,2 @@
+class VaughnUser < ApplicationRecord
+end

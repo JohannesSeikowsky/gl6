@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  portrait_feature: false
+  about_feature: false
+  email_subscription_feature: false
+  social_icons_features: false
+  contact_feature: false
+  about_title: MyString
+  about_content: MyString
+
+two:
+  portrait_feature: false
+  about_feature: false
+  email_subscription_feature: false
+  social_icons_features: false
+  contact_feature: false
+  about_title: MyString
+  about_content: MyString

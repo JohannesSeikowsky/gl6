@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301153725) do
+ActiveRecord::Schema.define(version: 20180406002930) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -70,6 +70,27 @@ ActiveRecord::Schema.define(version: 20180301153725) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["uid"], name: "index_users_on_uid"
+  end
+
+  create_table "vaughn_users", force: :cascade do |t|
+    t.boolean "portrait_feature"
+    t.boolean "about_feature"
+    t.boolean "email_subscription_feature"
+    t.boolean "social_icons_features"
+    t.boolean "contact_feature"
+    t.string "about_title"
+    t.string "about_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "post_one"
+    t.boolean "post_two"
+    t.boolean "post_three"
+    t.boolean "post_four"
+    t.boolean "post_five"
+    t.boolean "post_six"
+    t.boolean "post_seven"
+    t.boolean "post_eight"
+    t.boolean "post_nine"
   end
 
 end
