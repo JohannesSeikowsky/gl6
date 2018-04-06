@@ -16,13 +16,10 @@
 			<% end %>
 
 			<h1 class="name_title"> Valerie Vaughn </h1>
-		
+
 			<% if @vaughns_settings.about_feature %>
 				<h3 class="title"> Me in 10 seconds </h3>
-				<p>
-				“You must do the things you think you cannot do.” <br>
-				 ~Eleanor Roosevelt
-				</p> 
+				<p> “You must do the things you think you cannot do.” <br> ~Eleanor Roosevelt </p> 
 			<% end %> <br>
 
 			<h3 class="title"> Posts <h3>
@@ -313,6 +310,8 @@
 <!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
+	
+			<% if @vaughns_settings.email_subscription_feature %>
 			<div class="functionality_container">
 				<p class="functionality_title"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
@@ -323,7 +322,9 @@
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
+			<% end %>
 
+			<% if @vaughns_settings.social_icons_features %>
 			<div class="functionality_container" style="margin-top: 60px;">
 				<p class="functionality_title"> My Social </p>
 				<a href="https://twitter.com/ValerieRVaughn">
@@ -333,7 +334,9 @@
 					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 14px; color: black;"></i>
 				</a>
 			</div>
+			<% end %>
 
+			<% if @vaughns_settings.contact_feature %>
 			<div class="functionality_container" style="margin-top: 40px;">
 				<p class="functionality_title"> Contact Me </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
@@ -343,6 +346,7 @@
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
+	  		<% end %>
 	  	</div>
 	  </div>
 
