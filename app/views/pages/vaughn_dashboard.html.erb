@@ -24,27 +24,26 @@
             <%= f.check_box :social_icons_features, checked: true %> Social Icons - Twitter, Medium <br>
             <%= f.check_box :contact_feature, checked: true %> Contact Me Box <br>
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
-		<% end %> <br>
+		 	<br>
 
-		<h3 class="title" style="margin-bottom: 8px; margin-top: 15px;"> Your "About Me" Section </h3>
-		<%= form_for :features, url: email_subscriber_url do |f| %>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 40px;"> Your "About Me" Section </h3>
             Title: <br>
             <%= f.text_field :about_title, placeholder: "Me in 10 seconds", style: "width: 215px;" %> <br>
             Content: <br>
             <%= f.text_area :about_content, placeholder: "...", style: "width: 215px; height: 105px;" %> <br>
 
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
-		<% end %> <br>
+		 	<br>
 
-		<h3 class="title" style="margin-bottom: 8px; margin-top: 15px;">
-			Managing Your Posts 
-		</h3>
-		<p> 
-			Unckeck those posts you want to hide. <br>
-			An option to manually publish additional posts that <br> are not on your Medium is coming soon.
-		</p>
-		<%= form_for :features, url: email_subscriber_url do |f| %>
-            <%= f.check_box :post_one, checked: true %> Flight of Succubus <br>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 40px;">
+				Your Posts 
+			</h3>
+			<p> 
+				Unckeck those posts you want to hide. <br>
+				An option to manually publish additional posts that <br> are not on your Medium is coming soon.
+			</p>
+
+            <%= f.check_box :post_one, checked: true %> Flush <br>
             <%= f.check_box :post_two, checked: true %> Flight of Succubus <br>
             <%= f.check_box :post_three, checked: true %> Home <br>
             <%= f.check_box :post_four, checked: true %> The Quiet Survival of Loneliness <br> 
@@ -56,7 +55,7 @@
 			<%= f.submit "Apply Changes", style: "font-size: 13px; margin-top: 8px;" %>
 		<% end %> <br>
 
-		<h3 class="title" style="margin-bottom: 8px; margin-top: 15px;"> Your Images </h3>
+		<h3 class="title" style="margin-bottom: 8px; margin-top: 20px;"> Your Images </h3>
 		<p> 
 			The option to change your own image
 			and the site's large <br> background image
