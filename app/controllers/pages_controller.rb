@@ -48,5 +48,6 @@ class PagesController < ApplicationController
   end
 
   def vaughn_dashboard
+    @vaughns_settings = VaughnUser.find(1)
   end
 end
