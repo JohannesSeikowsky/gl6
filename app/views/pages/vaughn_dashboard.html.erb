@@ -45,15 +45,15 @@
 				An option to publish more posts here which <br> are not on your Medium is coming soon.
 			</p>
 
-            <%= f.check_box :post_one, checked: checked: @vaughns_settings.post_one %> Flush <br>
-            <%= f.check_box :post_two, checked: checked: @vaughns_settings.post_two %> Flight of Succubus <br>
-            <%= f.check_box :post_three, checked: checked: @vaughns_settings.post_three %> Home <br>
-            <%= f.check_box :post_four, checked: checked: @vaughns_settings.post_four %> The Quiet Survival of Loneliness <br> 
-            <%= f.check_box :post_five, checked: checked: @vaughns_settings.post_five %> Armchair Wallflower <br>
-            <%= f.check_box :post_six, checked: checked: @vaughns_settings.post_six %> Love Burns<br>
-            <%= f.check_box :post_seven, checked: checked: @vaughns_settings.post_seven %> The Death of Love <br>
-            <%= f.check_box :post_eight, checked: checked: @vaughns_settings.post_eight %> This Place<br>
-            <%= f.check_box :post_nine, checked: checked: @vaughns_settings.post_nine %> Birth<br> 
+            <%= f.check_box :post_one, checked: @vaughns_settings.post_one %> Flush <br>
+            <%= f.check_box :post_two, checked: @vaughns_settings.post_two %> Flight of Succubus <br>
+            <%= f.check_box :post_three, checked: @vaughns_settings.post_three %> Home <br>
+            <%= f.check_box :post_four, checked: @vaughns_settings.post_four %> The Quiet Survival of Loneliness <br> 
+            <%= f.check_box :post_five, checked: @vaughns_settings.post_five %> Armchair Wallflower <br>
+            <%= f.check_box :post_six, checked: @vaughns_settings.post_six %> Love Burns<br>
+            <%= f.check_box :post_seven, checked: @vaughns_settings.post_seven %> The Death of Love <br>
+            <%= f.check_box :post_eight, checked: @vaughns_settings.post_eight %> This Place<br>
+            <%= f.check_box :post_nine, checked: @vaughns_settings.post_nine %> Birth<br> 
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		<% end %> <br>
 
