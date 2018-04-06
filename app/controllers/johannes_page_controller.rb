@@ -3,13 +3,13 @@ class JohannesPageController < ApplicationController
 def editing_vaughn_page
 	VaughnUser.find(1).update(profile_params)
 	GeneralMailer.user_edited_page("vaughn").deliver
-	redirect_to valerie_vaughn_path #, notice: "Changes applied."
+	redirect_to valerie_vaughn_path
 end
 
 def editing_garbutt_page
 	VaughnUser.find(2).update(profile_params)
 	GeneralMailer.user_edited_page("garbutt").deliver
-	redirect_to dave_garbutt_path #, notice: "Changes applied."
+	redirect_to dave_garbutt_path
 end
 
 def email_subscriber

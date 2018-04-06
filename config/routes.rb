@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
   get 'vaughn_dashboard', to: 'pages#vaughn_dashboard', as: 'vaughn_dashboard'
 
-  post 'editing_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
-  post 'editing_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
+  post 'editing_vaughn_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
+  post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
   
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
