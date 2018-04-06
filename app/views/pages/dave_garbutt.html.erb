@@ -1,88 +1,79 @@
-<div class="container_of_page">
+<%= link_to "Author's Dashboard", garbutt_dashboard_path, id: "dashboard_link" %> 
+
+<div class="container-fluid">
 	
-	<!--
-	<div class="the_get_page_btn">
-		<p onclick="show_get_page();">
-			Get a page like this.	
-		</p>
-	</div> -->
+	  <div class="central_container"> 		
 
-	<div class="left_ctn">
-		<%= image_tag "dave_garbutt.png" %> <br> <br>
-	</div>
-
-
-	<div class="right_ctn">
-
-		<p class="get_page_btn">
-			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Notifier </span> <br> Notify me by Email <br> when a new post comes out: </span>
-			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-				<%= f.text_field :email, placeholder: "me@myemail.com",
-						style: "width: 170px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
-				<%= f.submit "done", style: "cursor: pointer; float: right;
-						margin-right: 17px" %>
+	  	<div class="left_side_container"> 		
+		    <% if @authors_settings.portrait_feature %>
+	  			<%= image_tag "dave_garbutt.png", id: "profile_image" %>
 			<% end %>
-		</p>
-		<br> <br>
+			<p>	</p>
+	  	</div>
 
-		<p class="get_page_btn">
-			<span style="font-size: 14px; text-decoration: underline;"> My Social </span>
-			<br>
-			<a href="https://medium.com/@DavGar51">
-				<i class="fab fa-medium-m" style="font-size: 39px; margin-right: 8px; padding-top: 14px;"></i>
-			</a>
-			<a href="https://twitter.com/DavGar51">
-				<i class="fab fa-twitter" style="font-size: 39px; padding-top: 14px"></i>
-			</a>
-		</p>
-		<br>
-
-		<p class="get_page_btn">
-			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Contact </span> <br>
-			Write me directly below: </span>
-			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-				<%= f.text_area :email, placeholder: "my message",
-						style: "width: 170px; height: 85px; margin: 0px 13px;" %> <br>
-				<%= f.submit "send", style: "cursor: pointer; float: right;
-						margin-right: 17px" %>
+	  	<div id="middle_container" class="middle_container">
+	  		<% if notice %>
+				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
-		</p>
-	</div>
+
+			<h1 class="name_title"> Dave Garbutt </h1>
+
+			<% if @authors_settings.about_feature %>
+				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
+				<p> <%= @authors_settings.about_content %> </p> <br>
+			<% end %>
+
+			<h3 class="title"> Posts <h3>
+
+		    <% if @authors_settings.post_one %>
+			<p class="post_title" onclick='show_piece("piece_zero");'> Lyric Festival </p>
+			<p class="post_excerpt"> This poem has been described as ...</p>
+			<% end %>
+
+		    <% if @authors_settings.post_two %>
+			<p class="post_title" onclick='show_piece("piece_one");'> For Marianne </p>
+			<p class="post_excerpt"> Your smile ... so tender-tive ... eyelashes down ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_three %>
+			<p class="post_title" onclick='show_piece("piece_two");'> Biopsy </p>
+			<p class="post_excerpt"> Someone, elsewhere, colours you ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_four %>
+			<p class="post_title" onclick='show_piece("piece_three");'> Our First Ambulance Journey </p>
+			<p class="post_excerpt"> Siren slices time and air ... </p>
+			<% end %>
+		
+		    <% if @authors_settings.post_five %>
+			<p class="post_title" onclick='show_piece("piece_four");'> A Chipped Tea Pot </p>
+			<p class="post_excerpt"> There was a man, it seems like a long time ago ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_six %>
+			<p class="post_title" onclick='show_piece("piece_five");'> Fiddle-head ferns </p>
+			<p class="post_excerpt"> Unfolding delib- ... -erately the leafy camera ... </p>
+			<% end %>
+	
+		    <% if @authors_settings.post_seven %>
+			<p class="post_title" onclick='show_piece("piece_six");'> Fiddle-head ferns </p> 
+			<p class="post_excerpt"> Many times I wanted ... to bring you something — something ... </p>
+			<% end %>
+			
+		    <% if @authors_settings.post_eight %>
+			<p class="post_title" onclick='show_piece("piece_seven");'> Passed Over </p>
+			<p class="post_excerpt"> Asa Benveniste ~ Foolish enough to have ... </p>
+			<% end %>
+
+			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+	  	</div>
 
 
-	<div id="default_page_body">
-		<% if notice %>
-			<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
-		<% end %>
-
-		<h1> Dave Garbutt </h2>
-		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
-		<p>
-			Retired. <br>
-			Former Senior Consultant at NNIT A/S. <br>
-		 	Former SAS computing environment designer and consultant at Novartis AG. <br>
-		 	Former Postdoc at University of Reading. <br>
-		 	Living in Basel. <br>
-		 	From London. <br>
-		</p> <br>
-
-		<h3 style="text-decoration: underline;"> Posts <h3>
-		<p class="title_of_work" onclick='show_piece("piece_zero");'> Lyric Festival </p>
-		<p class="title_of_work" onclick='show_piece("piece_one");'> For Marianne </p>
-		<p class="title_of_work" onclick='show_piece("piece_two");'> Biopsy </p>
-		<p class="title_of_work" onclick='show_piece("piece_three");'> Our First Ambulance Journey</p>
-		<p class="title_of_work" onclick='show_piece("piece_four");'> A Chipped Tea Pot </p>
-		<p class="title_of_work" onclick='show_piece("piece_five");'> Fiddle-head ferns </p>
-		<p class="title_of_work" onclick='show_piece("piece_six");'> No More Presents </p>
-		<p class="title_of_work" onclick='show_piece("piece_seven");'> Passed Over </p>
-	</div>
-
-
-	<div class="piece_of_work" id="piece_zero">
-		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<p>
+<!-- START OF POSTS -->
+<div class="post" id="piece_zero">
+	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 		<h3 class="piece_header"> Introduction </h3>		
 
 		This poem has been described as being about snowboarding, it is no more about snowboarding than ‘The Waste Land’ is about Reading. If you choose to declaim this poem — for thus must it be read — do not wear a black polo-neck, even ironically, unless you are also Steve Jobs. <br> <br>
@@ -97,13 +88,14 @@
 
 		Run out of the fire exit tonight: My ’84 535 is packed with spare t-shirts, second-hand jackets, balaclava hats and excessively large boots; and we’ll drive all night, sleep in a lay-by, and then we’ll go up, in a gondola, before the light, right to the top. We will bind our legs onto our boards, jump up, to turn around, and start over the lip, onto the piste, with groomed ice-ridges cracking under our edges, like a runaway train that’s left the track and suddenly, floating over powder, we’ll carve a sign down the mountain, a chain of commas, easily read, easily parsed. We’ll gasp at the speed, our mouths blown wide, our legs scared solid our pupils wide — our eyes shot glacier-blue and wild. At the bottom we’ll incongruously hop-jump together and hug and yell with one voice: Fuck depression! Let’s write about THAT!
 		</p>
-	</div>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
 
-	<div class="piece_of_work" id="piece_one">
-		<h1 onclick='show_default("piece_one")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
+<div class="post" id="piece_one">
+	<h1 onclick='show_default("piece_one")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 		<h3 class="piece_header"> for Marianne </h3>		
 		<p>
 			Your smile <br>
@@ -128,14 +120,14 @@
 			every evening’s <br>
 			first shone star.
 		</p>
-	</div>
+		<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
-
-	<div class="piece_of_work" id="piece_two">
-		<h1 onclick='show_default("piece_two")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> Biopsy </h3>		
+<div class="post" id="piece_two">
+	<h1 onclick='show_default("piece_two")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Biopsy </h3>		
 		<p>
 			Someone, elsewhere, colours you — <br>
 			applying haematoxylin <br>
@@ -162,34 +154,34 @@
 			- the future —  <br>
 			which way its going to be.
 		</p>
-	</div>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
+<div class="post" id="piece_three">
+	<h1 onclick='show_default("piece_three")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Our First Ambulance Journey </h3>		
+	<p>
+		Siren slices time and air, <br>
+		insulated by enormity, we hardly hear.<br><br>
+		I hold the empty bottle ‘childproof’ and your hand. <br>
+		We speed, We sway, We overtake <br>
+		ordinary days,<br><br>
+		but all breath is here- <br>
+		beating or stopped?<br><br>
+		Afterwards, Julia said “You should have cried, <br>
+		to let her know”.<br><br>
+		I only felt the hand you held <br>
+		growing cold. Then was I numbed. It will not go
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
-	<div class="piece_of_work" id="piece_three">
-		<h1 onclick='show_default("piece_three")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> Our First Ambulance Journey </h3>		
-		<p>
-			Siren slices time and air, <br>
-			insulated by enormity, we hardly hear.<br><br>
-			I hold the empty bottle ‘childproof’ and your hand. <br>
-			We speed, We sway, We overtake <br>
-			ordinary days,<br><br>
-			but all breath is here- <br>
-			beating or stopped?<br><br>
-			Afterwards, Julia said “You should have cried, <br>
-			to let her know”.<br><br>
-			I only felt the hand you held <br>
-			growing cold. Then was I numbed. It will not go
-		</p>
-	</div>
-
-
-	<div class="piece_of_work" id="piece_four">
-		<h1 onclick='show_default("piece_four")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
+<div class="post" id="piece_four">
+	<h1 onclick='show_default("piece_four")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 		<h3 class="piece_header"> A Chipped Tea Pot </h3>		
 		<p>
 			There was a man, it seems like a long time ago, who lived by himself. He was quiet, but particular; he worked for a printer cutting letters and making type. He liked to make paper on his spare Saturdays. He made many kinds, many exotic and beautiful sheets, speckled with gold, marbled with raspberry and lime leaves… <br> <br>
@@ -209,53 +201,53 @@
 			It could have been himself, yesterday, a week ago, even last spring.<br> <br>
 			He went to the cupboard by the door, found the hammer. Took the old tea pot and smacked the spout a glancing blow. There was a ringing noise and he felt a chip graze his forehead. He put the two tea pots together on the table and watched as if a huge tea chest had been taken off his back and its contents shot into the sky.
 		</p>
-	</div>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
+<div class="post" id="piece_five">
+	<h1 onclick='show_default("piece_five")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Fiddle-head ferns </h3>		
+	<p>
+	Unfolding delib-<br> <br>
+	-erately the leafy camera<br> <br>
+	fixing light into fronds
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
-	<div class="piece_of_work" id="piece_five">
-		<h1 onclick='show_default("piece_five")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> Fiddle-head ferns </h3>		
-		<p>
-		Unfolding delib-<br> <br>
-		-erately the leafy camera<br> <br>
-		fixing light into fronds
-		</p>
-	</div>
+<div class="post" id="piece_six">
+	<h1 onclick='show_default("piece_six")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> NO MORE PRESENTS </h3>		
+	<p>
+	Many times I wanted<br> <br>
+	to bring you something — something, in-expres-<br> <br>
+	sible<br> <br>
+	at once encapsulating and grand<br> <br>
+	small as a hazel nut or large as a life in a house<br> <br>
+	what did I find?<br> <br>
+	Chocolates, pears and apricots, almond blossoms,<br> <br>
+	dafalgan, flower bottles.<br> <br>
+	But this was years ago<br> <br>
+	when I was querulous with fear and longing<br> <br>
+	stuck on the rounded cusp of becoming with you.<br> <br>
+	No more presents, I have our memories<br> <br>
+	to bring you — and the autonomous wonder of she —<br> <br>
+	so breathe in, and breathe out and begin to select<br> <br>
+	for if we list all our pasts<br> <br>
+	we’ll never get to the next
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
 
-
-	<div class="piece_of_work" id="piece_six">
-		<h1 onclick='show_default("piece_six")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> NO MORE PRESENTS </h3>		
-		<p>
-		Many times I wanted<br> <br>
-		to bring you something — something, in-expres-<br> <br>
-		sible<br> <br>
-		at once encapsulating and grand<br> <br>
-		small as a hazel nut or large as a life in a house<br> <br>
-		what did I find?<br> <br>
-		Chocolates, pears and apricots, almond blossoms,<br> <br>
-		dafalgan, flower bottles.<br> <br>
-		But this was years ago<br> <br>
-		when I was querulous with fear and longing<br> <br>
-		stuck on the rounded cusp of becoming with you.<br> <br>
-		No more presents, I have our memories<br> <br>
-		to bring you — and the autonomous wonder of she —<br> <br>
-		so breathe in, and breathe out and begin to select<br> <br>
-		for if we list all our pasts<br> <br>
-		we’ll never get to the next
-		</p>
-	</div>
-
-
-	<div class="piece_of_work" id="piece_seven">
-		<h1 onclick='show_default("piece_seven")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> Passed Over </h3>		
+<div class="post" id="piece_seven">
+	<h1 onclick='show_default("piece_seven")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Passed Over </h3>		
 		<h3 class="piece_header"> I Heptonstall Churchyard </h3>		
 		<p>
 		"Asa Benveniste ~ Foolish enough to have been a poet" <br> <br>
@@ -307,63 +299,73 @@
 		Window sill — I am — small — as they are – <br>
 		and in my drawer bedecked — evanescent — bright.
 		</p>
-	</div>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+<!-- END OF POSTS -->
 
-
-
-	<div id="get_page_like_this">
-		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
-			Back 
-		</h1>
-
-		<h3 class="piece_header" style="margin-top: 20px; text-decoration: underline;"> 
-			Generate your own site:
-			<!-- All you need to do. -->
-		 </h3>		
-
-		<!--
-		<h3> The literally-no-effort way to start representing yourself online 
-		& collect Emails from followers/fans. </h3>		
-		-->
-		<p>
-			<%= form_for :new_page_user, url: new_page_user_url do |f| %>
-				<p> Email address <br>
-				<%= f.text_field :email, placeholder: "myemail@example.com" %> <br>
-				</p>
-				<p> Link to your Medium <br> <%= f.text_field :medium_link, placeholder: "medium.com/@myName" %> <br>
- 					</p>
-				<%= f.submit "done", style: "cursor: pointer;" %>
+	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
+	
+			<% if @authors_settings.email_subscription_feature %>
+			<div class="functionality_container">
+				<p class="functionality_title"> Email Notifier </p>
+				<p> Notify me when new <br> posts are published. </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_field :email, placeholder: " you@youmail.com",
+							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
+					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
 			<% end %>
-			<br> <br>
 
-			<h3 style="text-decoration: underline;"> How it works </h3>
-			Submitting the form will use the info on your
-			 Medium profile to generate your own site in the same layout as the site that
-			I have made for myself. It's literally no effort. Submit and you're done.
-			<br> <br>
-			<!--
-			If you can afford it, I'd like to charge 2.99£ / month 
-			- mostly because maintenance requires work.
-			But if you can't afford it, no worries.
- 			<br> <br>
+			<% if @authors_settings.social_icons_features %>
+			<div class="functionality_container" style="margin-top: 60px;">
+				<p class="functionality_title"> My Social </p>
+				<a href="https://twitter.com/DavGar51" target="_blank">
+					<i class="fab fa-twitter" style="font-size: 30px;"></i>
+				</a>
+				<a href="https://medium.com/@DavGar51" target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+				<a href="https://www.facebook.com/dave.garbutt" target="_blank">
+					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+			</div>
+			<% end %>
 
-			Any questions or requests? Please get in touch! <br> 
-			<a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a> <br> <br>
-			Best, <br> <br>
-			Johannes
-			-->
-		</p>
-	</div>
+			<% if @authors_settings.contact_feature %>
+			<div class="functionality_container" style="margin-top: 40px;">
+				<p class="functionality_title"> Contact Me </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: " your message",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "valerie_vaughn" %>
+					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+	  		<% end %>
+	  	</div>
+	  </div>
 
-	<div class="my_page_footer">
-		<%= link_to "Find me on Twitter", "https://twitter.com/DavGar51", style: "color: black; font-weight: bold;" %> |
-		<%= link_to "Find me on Medium", "https://medium.com/@DavGar51", style: "color: black; font-weight: bold;" %>
-	</div>
+	  </div>
+
 </div>
 
 
-<style type="text/css">
+<script type="text/javascript">
+	function show_piece(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}	
 
+	function show_default(piece_id){
+		document.getElementById(piece_id).style.display = "none";
+		document.getElementById("middle_container").style.display = "block";
+	}
+</script>
+
+
+<style type="text/css">
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
@@ -372,179 +374,7 @@
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	}
-
-	.container_of_page{
-	  width: 474px;
-	  margin: 66px auto;
-	  background-color: white;
-	  position: relative;
-	  padding: 0px 22px 8px 22px;
-	}
-
-	h1{
-		font-size: 26px;
-		font-weight: bold;
-		padding-bottom: 9px;
-		padding-top: 10px;
-		margin-top: 75px;
-		margin-bottom: 14px;
-		border-bottom: 1px solid #eee;}
-
-	p{
-		font-size: 16px;
-		line-height: 1.6;
-		margin-bottom: 16px;}
-
-	#my_email:hover{
-		text-decoration: underline;
-	}
-
-	.right_ctn{
-		position: absolute;
-    	right: -208px;
-    	top: 0px;
-    	width: 200px;
-	}
-	
-
-	.the_get_page_btn{
-		position: fixed;
-		top: 12px;
-		right: 12px;
-		width: 180px;
-		height: 44px;
-		cursor: pointer;
-		font-size: 14px;
-		font-weight: bold;
-		text-align: center;
-		border: 1px solid lightGrey;
-		background-color: #FFE9AF;
-		padding: 8px;
-	}
-
-	.get_page_btn{
-		width: 85%;
-		margin-left: 12px;
-		margin-bottom: 5px;
-		cursor: pointer;
-		padding: 15px 15px;
-		font-size: 14px;
-		font-weight: bold;
-		text-align: center;
-		background-color: white;
-		border: 1px solid lightGrey;
-	}
-
-	.mini_slogan{
-		margin-left: 11px;
-		font-size: 13px;
-	}
-
-	.left_ctn{
-		position: absolute;
-    	left: -222px;
-    	top: 0px;		
-	}
-
-	img{
-		margin: 15px 10% 15px 10%;
-		border: 1px solid #9F9F9F;
-		margin-bottom: 26px;
-		width: 202px;
-		height: auto;
-		margin: 0;}
-
-	h3{
-		margin: 0 0 8px 0;
-		padding: 0;
-	}
-
-	.email_ctn{
-		padding: 8px 25px 14px 12px;
-		background-color: #F1F1F1;
-		margin: 30px 0px 32px 0px;
-	}
-
-	.title_of_work{
-		cursor: pointer;
-		font-size: 14px;
-	}
-
-	.title_of_work:hover{
-		text-decoration: underline;
-	}
-
-	.piece_of_work{
-		display: none;
-	}
-
-	.piece_header{
-		padding-top: 8px;
-	}
-
-	.go_back_btn{
-		cursor: pointer; 
-		font-size: 20px;
-		padding-top: 10px;
-	}
-
-	#get_page_like_this{
-		display: none;
-	}
-
-	.my_page_footer{
-		width: 100%;
-		text-align: center;
-		height: 40px;
-		line-height: 2.8;
-		margin-top: 40px;
-		background: #F1F1F1;		
-	}
+	}	
 </style>
 
-
-<script type="text/javascript">
-	function show_piece(piece_id){
-		// hide main
-		default_page_body = document.getElementById("default_page_body");
-		default_page_body.style.display = "none";
-		// display piece
-		piece_of_writing = document.getElementById(piece_id);
-		piece_of_writing.style.display = "block";	
-	}
-
-	function show_default(piece_id){
-		// hide current piece
-		piece_of_writing = document.getElementById(piece_id);
-		piece_of_writing.style.display = "none";
-
-		// show main
-		default_page_body = document.getElementById("default_page_body");
-		default_page_body.style.display = "block";
-	}
-
-	function show_get_page(){
-		// hide main
-		default_page_body = document.getElementById("default_page_body");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_zero");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_one");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_two");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_three");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_four");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_five");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_six");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_seven");
-		default_page_body.style.display = "none";
-		piece_of_writing = document.getElementById("get_page_like_this");
-		piece_of_writing.style.display = "block";		
-	}
-</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

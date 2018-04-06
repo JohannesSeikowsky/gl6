@@ -38,6 +38,11 @@ class PagesController < ApplicationController
   end
 
   def dave_garbutt
+    @authors_settings = VaughnUser.find(2)
+  end
+
+  def garbutt_dashboard
+    @authors_settings = VaughnUser.find(2)
   end
 
   def james_finn

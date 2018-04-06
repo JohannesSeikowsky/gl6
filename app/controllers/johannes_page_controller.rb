@@ -2,10 +2,15 @@ class JohannesPageController < ApplicationController
 
 def editing_vaughn_page
 	VaughnUser.find(1).update(profile_params)
-	GeneralMailer.page_edited_vaughn().deliver
+	GeneralMailer.user_edited_page("vaughn").deliver
 	redirect_to valerie_vaughn_path #, notice: "Changes applied."
 end
 
+def editing_garbutt_page
+	VaughnUser.find(2).update(profile_params)
+	GeneralMailer.user_edited_page("garbutt").deliver
+	redirect_to dave_garbutt_path #, notice: "Changes applied."
+end
 
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
