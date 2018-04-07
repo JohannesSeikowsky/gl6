@@ -12,7 +12,7 @@ def editing_garbutt_page
 	redirect_to dave_garbutt_path
 end
 
-def editing_garbutt_page
+def editing_finn_page
 	VaughnUser.find(3).update(profile_params)
 	GeneralMailer.user_edited_page("finn").deliver
 	redirect_to james_finn_path
@@ -30,7 +30,7 @@ def email_subscriber
 	elsif @author_of_page == "dave_garbutt"
 		redirect_to dave_garbutt_path, notice: "It worked! Thank you."	
 	elsif @author_of_page == "james_finn"
-		redirect_to james_finn_path, notice: "It worked! Thank you,"
+		redirect_to james_finn_path, notice: "It worked! Thank you."
 	else
 		redirect_to root_path, notice: "It worked! Thank you."
 	end
