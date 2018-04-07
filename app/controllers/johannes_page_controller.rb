@@ -12,6 +12,12 @@ def editing_garbutt_page
 	redirect_to dave_garbutt_path
 end
 
+def editing_garbutt_page
+	VaughnUser.find(3).update(profile_params)
+	GeneralMailer.user_edited_page("finn").deliver
+	redirect_to james_finn_path
+end
+
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
 	@author_of_page = params[:email_subscriber][:author]

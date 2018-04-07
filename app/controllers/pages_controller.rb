@@ -36,6 +36,14 @@ class PagesController < ApplicationController
 
   def johannes
   end
+  
+  def valerie_vaughn
+    @vaughns_settings = VaughnUser.find(1)
+  end
+
+  def vaughn_dashboard
+    @vaughns_settings = VaughnUser.find(1)
+  end
 
   def dave_garbutt
     @authors_settings = VaughnUser.find(2)
@@ -46,13 +54,10 @@ class PagesController < ApplicationController
   end
 
   def james_finn
+    @authors_settings = VaughnUser.find(3)
   end
 
-  def valerie_vaughn
-    @vaughns_settings = VaughnUser.find(1)
-  end
-
-  def vaughn_dashboard
-    @vaughns_settings = VaughnUser.find(1)
+  def finn_dashboard
+    @authors_settings = VaughnUser.find(3)
   end
 end
