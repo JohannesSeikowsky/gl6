@@ -1,48 +1,47 @@
 <div class="container_of_page">
 	
-	<!--
 	<div class="the_get_page_btn">
 		<p onclick="show_get_page();">
 			Get a page like this.	
 		</p>
-	</div> -->
-
-	<div class="left_ctn">
-		<%= image_tag "dave_garbutt.png" %> <br> <br>
 	</div>
 
+	<div class="left_ctn">
+		<%= image_tag "johannes.jpg" %> <br> <br>
+	</div>
 
 	<div class="right_ctn">
 
 		<p class="get_page_btn">
-			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Notifier </span> <br> Notify me by Email <br> when a new post comes out: </span>
+			<span style="font-size: 14px; text-decoration: underline;"> Mailing List </span>
+		</p>
+		<p class="get_page_btn">
+			<span style="font-size: 13px;"> For when new <br> posts come out. </span>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 				<%= f.text_field :email, placeholder: "me@myemail.com",
-						style: "width: 170px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
-				<%= f.submit "done", style: "cursor: pointer; float: right;
+						style: "width: 160px; height: 28px; margin: 0px 13px 3px 13px;" %> <br>
+				<%= f.submit "send", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
 		</p>
-		<br> <br>
+		<br> <br> <br>
 
 		<p class="get_page_btn">
-			<span style="font-size: 14px; text-decoration: underline;"> My Social </span>
+			<span style="font-size: 14px; text-decoration: underline;"> Social Media </span>
 			<br>
-			<a href="https://medium.com/@">
-				<i class="fab fa-medium-m" style="font-size: 39px; margin-right: 8px; padding-top: 14px;"></i>
+			<a href="https://medium.com/@jseikowsky">
+				<i class="fab fa-medium-m" style="font-size: 28px; margin-right: 8px; padding-top: 10px;"></i>
 			</a>
-			<a href="https://twitter.com/">
-				<i class="fab fa-twitter" style="font-size: 39px; padding-top: 14px"></i>
+			<a href="https://twitter.com/Seikowsky">
+				<i class="fab fa-twitter" style="font-size: 28px; padding-top: 10px"></i>
 			</a>
 		</p>
-		<br>
 
 		<p class="get_page_btn">
-			<span style="font-size: 13px;"> <span style="text-decoration: underline;"> Contact </span> <br>
-			Write me directly below: </span>
+			<span style="font-size: 14px; text-decoration: underline;"> Contact me </span>
 			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-				<%= f.text_area :email, placeholder: "my message",
-						style: "width: 170px; height: 85px; margin: 0px 13px;" %> <br>
+				<%= f.text_area :email, placeholder: "your message ...",
+						style: "width: 160px; height: 85px; margin: 0px 13px;" %> <br>
 				<%= f.submit "send", style: "cursor: pointer; float: right;
 						margin-right: 17px" %>
 			<% end %>
@@ -55,48 +54,87 @@
 			<h1 style="margin-bottom: -48px;"> <%= notice %> </h1>
 		<% end %>
 
-		<h1> Dave Garbutt </h2>
+		<h1> Johannes Seikowsky </h2>
 		<h3 style="text-decoration: underline;"> Me in 10 seconds </h3>
 		<p>
-			Retired. <br>
-			Former Senior Consultant at NNIT A/S. <br>
-		 	Former SAS computing environment designer and consultant at Novartis AG. <br>
-		 	Former Postdoc at University of Reading. <br>
-		 	Living in Basel. <br>
-		 	From London. <br>
+		 	Interested in many things. <br>
+		 	Formal Education - Economics. <br>
+		 	Self-taught programmer. <br>
+		 	Writer by compulsion. <br>
+		 	Occasional Poet. <br>
+		 	Living in London and recommending it. <br>
+		 	Love reading too much.<br>
+		 	<!--
+		 	Write me - <a href="mailto:joseikowsky@gmail.com?Subject=Hi" id="my_email" target="_top"> joseikowsky@gmail.com </a>
+		 	-->
 		</p> <br>
 
+		<!--
+		<div class="email_ctn">
+			<h3 style="text-decoration: underline; font-size: 16px;
+				margin-bottom: 3px;"> Know when new works comes out: </h3>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<%= f.text_field :email, placeholder: "email@example.com" %>
+				<%= f.submit "submit", style: "cursor: pointer;" %>
+			<% end %>
+		</div>
+		-->
+
 		<h3 style="text-decoration: underline;"> Posts <h3>
-		<p class="title_of_work" onclick='show_piece("piece_zero");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_one");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_two");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_three");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_four");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_five");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_six");'> </p>
-		<p class="title_of_work" onclick='show_piece("piece_seven");'> </p>
+		<p class="title_of_work" onclick='show_piece("piece_one");'> A Primer on the Day </p>
+		<p class="title_of_work" onclick='show_piece("piece_two");'> In Canary Wharf </p>
+		<p class="title_of_work" onclick='show_piece("piece_three");'> Old Man on a Bench  </p>
+		<p class="title_of_work" onclick='show_piece("piece_four");'> Captain of the ship of you </p>
+		<p class="title_of_work" onclick='show_piece("piece_five");'> Feet, to Feet </p>
 	</div>
+
 
 
 	<div class="piece_of_work" id="piece_zero">
 		<h1 onclick='show_default("piece_zero")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1>
-		<h3 class="piece_header"> </h3>		
+		<h3 class="piece_header"> Collecting Quotes </h3>		
 		<p>
+			Some of my favorite Quotes - just for fun. <br> <br>
+
+		“I have always imagined that Paradise will be a kind of library.” <br>
+		- Jorge Borges <br> <br>
+		“Sometimes the old ways are the best ways.” <br> 
+		- Miss Moneypenny <br> <br>
+		“Good scientists go looking for trouble.” <br>
+		- Paul Graham, on the importance of breaking conventional wisdom in intellectual work <br> <br>
+		“You will eventually agree with me, because you are smart and I’m right.” <br>
+		- Charlie Munger <br> <br>
+		“For love of bustle is not industry.” <br>
+		- Seneca <br> <br>
+		“What they really fear is not that they won’t get their breakfast the next morning, but that they fail to outshine their neighbours.” <br>
+		- Bertrand Russell on the competitive mindset <br> <br>
+
+		“If someone wonders who are the Stoics, I’d say Buddhists with an attitude problem.” <br>
+		- Nassim Taleb <br> <br>
+		“So long as all you do is not all for you.” <br>
+		- Nassim Taleb <br> <br>
+		“7000 squaremetres built on my giving a fuck.” <br>
+		- Ari Gold of “Entourage” on his company <br> <br>
+		“Do I look like a guy with a plan?” <br>
+		- The Joker <br> <br>
+		“A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work.” <br>
+		- John Gall <br> <br>
+		“If I find too many people adopting a certain idea, I probably think it’s wrong. Don’t believe that something is good just because it’s trendy.” <br>
+		- Donald Knuth <br> <br>
 
 		</p>
+		<br>
 	</div>
+
 
 
 	<div class="piece_of_work" id="piece_one">
 		<h1 onclick='show_default("piece_one")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
 
-		</p>
+		<br>
 	</div>
 
 
@@ -104,68 +142,33 @@
 		<h1 onclick='show_default("piece_two")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
 
-		</p>
+		<br>
 	</div>
-
 
 	<div class="piece_of_work" id="piece_three">
 		<h1 onclick='show_default("piece_three")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
 
-		</p>
+		<br>
 	</div>
-
 
 	<div class="piece_of_work" id="piece_four">
 		<h1 onclick='show_default("piece_four")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
 
-		</p>
+		<br>
 	</div>
-
 
 	<div class="piece_of_work" id="piece_five">
 		<h1 onclick='show_default("piece_five")' class="go_back_btn">
 			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
 
-		</p>
+		<br>
 	</div>
-
-
-	<div class="piece_of_work" id="piece_six">
-		<h1 onclick='show_default("piece_six")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
-
-		</p>
-	</div>
-
-
-	<div class="piece_of_work" id="piece_seven">
-		<h1 onclick='show_default("piece_seven")' class="go_back_btn">
-			<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-		</h1>
-		<h3 class="piece_header"> </h3>		
-		<p>
-
-		</p>
-	</div>
-
-
 
 	<div id="get_page_like_this">
 		<h1 onclick='show_default("get_page_like_this")' class="go_back_btn">
@@ -212,28 +215,23 @@
 	</div>
 
 	<div class="my_page_footer">
-		<%= link_to "Find me on Twitter", "https://twitter.com/", style: "color: black; font-weight: bold;" %> |
-		<%= link_to "Find me on Medium", "https://medium.com/@", style: "color: black; font-weight: bold;" %>
+		<%= link_to "Find me on Twitter", "https://twitter.com/Seikowsky", style: "color: black; font-weight: bold;" %> |
+		<%= link_to "Find me on Medium", "https://medium.com/@jseikowsky", style: "color: black; font-weight: bold;" %>
 	</div>
 </div>
 
-
 <style type="text/css">
-	body {
-	  margin: 0;
-	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_banners/958729147408310272/1517922790/1500x500") no-repeat center center fixed; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
+	/*
+	body{
+	  background-color: #F7EEE5;
 	}
+	*/
 
 	.container_of_page{
 	  width: 474px;
-	  margin: 66px auto;
-	  background-color: white;
+	  margin: 96px auto;
 	  position: relative;
+	  background-color: white;
 	  padding: 0px 22px 8px 22px;
 	}
 
@@ -257,11 +255,16 @@
 
 	.right_ctn{
 		position: absolute;
-    	right: -208px;
-    	top: 0px;
-    	width: 200px;
+    	right: -196px;
+    	top: 0px;		
 	}
 	
+	.left_ctn{
+		position: absolute;
+    	left: -200px;
+    	top: 0px;		
+	}
+
 
 	.the_get_page_btn{
 		position: fixed;
@@ -296,17 +299,13 @@
 		font-size: 13px;
 	}
 
-	.left_ctn{
-		position: absolute;
-    	left: -222px;
-    	top: 0px;		
-	}
-
 	img{
+		width: 80%;
+		height: auto;
 		margin: 15px 10% 15px 10%;
 		border: 1px solid #9F9F9F;
 		margin-bottom: 26px;
-		width: 202px;
+		width: 180px;
 		height: auto;
 		margin: 0;}
 
@@ -323,7 +322,6 @@
 
 	.title_of_work{
 		cursor: pointer;
-		font-size: 14px;
 	}
 
 	.title_of_work:hover{
@@ -395,11 +393,14 @@
 		default_page_body.style.display = "none";
 		default_page_body = document.getElementById("piece_five");
 		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_six");
-		default_page_body.style.display = "none";
-		default_page_body = document.getElementById("piece_seven");
-		default_page_body.style.display = "none";
+		// display get page page
 		piece_of_writing = document.getElementById("get_page_like_this");
 		piece_of_writing.style.display = "block";		
 	}
 </script>
+
+<!--
+if you are on a page of a poem
+and click the get page button
+the current poem should disappear if there is one.
+-->
