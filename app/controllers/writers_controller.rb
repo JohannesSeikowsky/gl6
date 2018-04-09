@@ -26,10 +26,10 @@ class WritersController < ApplicationController
   def create
     @writer = Writer.new(writer_params)
       if @writer.save
-        GeneralMailer.new_writer_alert(params[:name], params[:email]).deliver
+        GeneralMailer.new_writer_alert(writer_params[:name], writer_params[:email]).deliver
         redirect_to root_path
       else
-        GeneralMailer.new_writer_alert(params[:name], params[:email]).deliver
+        GeneralMailer.new_writer_alert(writer_params[:name], writer_params[:email]).deliver
         redirect_to root_path
       end
   end
