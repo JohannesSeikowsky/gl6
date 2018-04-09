@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'pages#johannes'
 
   # peoples
-  get 'get_page', to: 'pages#get_page', as: 'get_page'
+  get 'get_your_page', to: 'pages#get_page', as: 'get_page'
 
   get 'johannes_seikowsky', to: 'pages#johannes', as: 'johannes'
 
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
   post 'editing_finn_page', to: 'johannes_page#editing_finn_page', as: 'editing_finn_page'
   
+  resources :writers
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'

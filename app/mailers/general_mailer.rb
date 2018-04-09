@@ -22,6 +22,12 @@ class GeneralMailer < ApplicationMailer
     mail(to: "joseikowsky@gmail.com", subject: 'New Email Subscriber')   
   end
 
+  def new_writer_alert(writer_name, writer_email)
+    @writer_name = writer_name
+    @writer_email = writer_email
+    mail(to: "joseikowsky@gmail.com", subject: 'New Writer')   
+  end
+
   def new_page_user(users_medium, users_email)
     @users_medium = users_medium
     @users_email = users_email

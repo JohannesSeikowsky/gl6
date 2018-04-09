@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406005049) do
+ActiveRecord::Schema.define(version: 20180409003631) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -74,5 +74,12 @@ ActiveRecord::Schema.define(version: 20180406005049) do
 
 # Could not dump table "vaughn_users" because of following StandardError
 #   Unknown type '' for column 'portrait_feature'
+
+  create_table "writers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
