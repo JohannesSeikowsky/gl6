@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root
-  root 'pages#johannes'
+  root 'pages#get_page'
 
   # peoples
   get 'get_your_page', to: 'pages#get_page', as: 'get_page'
