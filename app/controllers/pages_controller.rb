@@ -63,4 +63,7 @@ class PagesController < ApplicationController
 
   def get_page
   end
+
+  def thank_you
+  end
 end

@@ -20,8 +20,11 @@ Rails.application.routes.draw do
   post 'editing_vaughn_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
   post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
   post 'editing_finn_page', to: 'johannes_page#editing_finn_page', as: 'editing_finn_page'
+
+  get 'thanks', to: 'pages#thank_you', as: 'thank_you'
   
   resources :writers
+
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
