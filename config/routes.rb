@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'pages#johannes'
 
   # peoples
+  get 'get_page', to: 'pages#get_page', as: 'get_page'
+
   get 'johannes_seikowsky', to: 'pages#johannes', as: 'johannes'
 
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
   post 'editing_finn_page', to: 'johannes_page#editing_finn_page', as: 'editing_finn_page'
   
+
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'

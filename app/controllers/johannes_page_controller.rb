@@ -36,7 +36,6 @@ def email_subscriber
 	end
 end
 
-
 def new_page_user
 	# create
 	PageUser.create(medium_link: params[:new_page_user][:medium_link],

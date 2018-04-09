@@ -60,4 +60,7 @@ class PagesController < ApplicationController
   def finn_dashboard
     @authors_settings = VaughnUser.find(3)
   end
+
+  def get_page
+  end
 end

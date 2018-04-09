@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	
+	  <div class="central_container"> 		
+
+
+
+	  	<div id="middle_container" class="middle_container" style="text-align: center; width: 800px;">
+	
+			<br>
+			<h1 class="name_title"> Your Website for your <br> Writing in Five Seconds. </h1>
+			<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+				<p style="margin-bottom: 0px;"> Name </p>
+				<%= f.text_field :email, placeholder: "Joe Bloggs",
+						style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				<p style="margin-bottom: 0px;"> Email </p>
+				<%= f.text_field :email, placeholder: "you@yourmail.com",
+						style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				<%= f.submit "done", style: "cursor: pointer; font-size: 14px; margin-top: 16px;
+					padding: 3px 24px; background-color: #F5EFE6; border: 1px solid grey;" %>
+			<% end %> <br>
+
+
+			<div class="powered_by"> WordGates | The Home of Writers </div>
+	  	</div>
+
+
+	  </div>
+
+</div>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/29541105_835895776619070_3405668396287489204_n.jpg?_nc_cat=0&oh=66cdc4ffad4a5be35f9ccb9633201c8b&oe=5B3BE014") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}	
+</style>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
