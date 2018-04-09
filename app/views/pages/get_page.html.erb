@@ -2,13 +2,13 @@
   <div class="central_container"> 		
   	<div id="middle_container" class="middle_container" style="text-align: center; width: 800px;">
 		<br>
-		<h1 class="name_title"> Your Website for your <br> Writing in Five Seconds. </h1>
+		<h1 class="name_title" style="margin-bottom: 32px;"> Your Website for your <br> Writing in Five Seconds. </h1>
 		<%= form_for :writer, url: writers_url do |f| %>
 			<p style="margin-bottom: 0px;"> Name </p>
-			<%= f.text_field :name, placeholder: "Joe Bloggs",
+			<%= f.text_field :name, placeholder: " Joe Bloggs",
 					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 			<p style="margin-bottom: 0px;"> Email </p>
-			<%= f.text_field :email, placeholder: "you@yourmail.com",
+			<%= f.text_field :email, placeholder: " you@yourmail.com",
 					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 			<%= f.submit "done", style: "cursor: pointer; font-size: 14px; margin-top: 16px;
 				padding: 3px 24px; background-color: #F5EFE6; border: 1px solid grey;" %>
