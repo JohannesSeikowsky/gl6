@@ -5,10 +5,10 @@
 		<h1 class="name_title" style="margin-bottom: 32px; font-size: 35px;"> Get your Author's <br> Website in 
 		under 10 Seconds. </h1>
 		<%= form_for :writer, url: writers_url do |f| %>
-			<p style="margin-bottom: 0px;"> Name </p>
+			<p style="margin-bottom: 0px;"> Your Name </p>
 			<%= f.text_field :name, placeholder: " Joe Bloggs",
 					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-			<p style="margin-bottom: 0px;"> Email </p>
+			<p style="margin-bottom: 0px;"> Your Email </p>
 			<%= f.text_field :email, placeholder: " you@yourmail.com",
 					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 			<%= f.submit "done.", style: "cursor: pointer; font-size: 14px; margin-top: 16px;
