@@ -1,0 +1,265 @@
+<%= link_to "Author's Dashboard", chalk_dashboard_path, id: "dashboard_link" %> 
+
+<div class="container-fluid">
+	
+	  <div class="central_container" style="border: 1px solid lightgrey;"> 		
+
+	  	<div class="left_side_container"> 		
+		    <% if @authors_settings.portrait_feature %>
+	  			<%= image_tag "https://pbs.twimg.com/profile_images/954337522057957377/2T5Ts--b_400x400.jpg", id: "profile_image" %>
+			<% end %>
+			<p>	</p>
+	  	</div>
+
+	  	<div id="middle_container" class="middle_container">
+	  		<% if notice %>
+				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
+			<% end %>
+
+			<h1 class="name_title"> Oliver Chalk </h1>
+
+			<% if @authors_settings.about_feature %>
+				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
+				<p> <%= @authors_settings.about_content %> </p> <br>
+			<% end %>
+
+			<h3 class="title"> Posts <h3>
+
+		    <% if @authors_settings.post_one %>
+			<p class="post_title" onclick='show_piece("piece_zero");'> Crypto20 ICO Opportunity </p>
+			<p class="post_excerpt"> As it stands, there are 19 hours left ...</p>
+			<% end %>
+
+		    <% if @authors_settings.post_two %>
+			<p class="post_title" onclick='show_piece("piece_one");'> The Holy Trinity of Fat Gains </p>
+			<p class="post_excerpt">Here I will go over three tokens that I believe will ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_three %>
+			<p class="post_title" onclick='show_piece("piece_two");'> Kucoin: Where are they now? </p>
+			<p class="post_excerpt"> I published an article on Kucoin little ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_four %>
+			<p class="post_title" onclick='show_piece("piece_three");'> Kucoin Exchange — Kucoin Token Value Breakdown </p>
+			<p class="post_excerpt"> The Kucoin Exchange is an Asian exchange ... </p>
+			<% end %>
+		
+		    <% if @authors_settings.post_five %>
+			<p class="post_title" onclick='show_piece("piece_four");'> Quantstamp & AirSwap — An economic review of two token sales </p>
+			<p class="post_excerpt"> Quantstamp is a fantastic upcoming ICO ... </p>
+			<% end %>
+
+			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+	  	</div>
+
+
+<!-- START OF POSTS -->
+<div class="post" id="piece_zero">
+	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+		<h3 class="piece_header"> Introduction </h3>		
+
+		This poem has been described as being about snowboarding, it is no more about snowboarding than ‘The Waste Land’ is about Reading. If you choose to declaim this poem — for thus must it be read — do not wear a black polo-neck, even ironically, unless you are also Steve Jobs. <br> <br>
+
+		If you prefer to attend a true Lyric festival instead check out their web site here. <br> <br>
+
+		<h3 class="piece_header"> LYRIK FESTIVAL </h3>		
+
+		Poets that have never seen the snow sit in the dark, in concentrated rows, wear black in spring, sniffle, cough, blow noses but listen intently to the mobile muse — she bids them notice ironies, life’s little hurts and smaller surprises. The poets make notes and struggle for strangeness, subtle devices. <br> <br>
+
+		For this she lends them her eyes? Dream on, poets that wear black and move words on stage slower than Death moves pawns when losing at chess, for you come here, in black, to the black room, to bury Life not to praise Her. Oh poets, that have never seen the snow, follow me! <br> <br>
+
+		Run out of the fire exit tonight: My ’84 535 is packed with spare t-shirts, second-hand jackets, balaclava hats and excessively large boots; and we’ll drive all night, sleep in a lay-by, and then we’ll go up, in a gondola, before the light, right to the top. We will bind our legs onto our boards, jump up, to turn around, and start over the lip, onto the piste, with groomed ice-ridges cracking under our edges, like a runaway train that’s left the track and suddenly, floating over powder, we’ll carve a sign down the mountain, a chain of commas, easily read, easily parsed. We’ll gasp at the speed, our mouths blown wide, our legs scared solid our pupils wide — our eyes shot glacier-blue and wild. At the bottom we’ll incongruously hop-jump together and hug and yell with one voice: Fuck depression! Let’s write about THAT!
+		</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+
+<div class="post" id="piece_one">
+	<h1 onclick='show_default("piece_one")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+		<h3 class="piece_header"> for Marianne </h3>		
+		<p>
+			Your smile <br>
+			so tender-tive <br> <br>
+			eyelashes down <br> <br>
+			“I never expect <br>
+			I don’t hope — <br>
+			I’m never <br>
+			disappointed.” <br> <br>
+			Your voice <br>
+			gets quicker <br>
+			“I’m happy” <br>
+			walks away.<br> <br>
+			Listening —<br>
+			I become: <br>
+			road — rising,<br> <br>
+			fire glow for <br>
+			returning to,<br> <br>
+			the tickle <br>
+			that defuses <br>
+			disillusion,<br> <br>
+			every evening’s <br>
+			first shone star.
+		</p>
+		<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+<div class="post" id="piece_two">
+	<h1 onclick='show_default("piece_two")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Biopsy </h3>		
+		<p>
+			Someone, elsewhere, colours you — <br>
+			applying haematoxylin <br>
+			and Milner’s violet. <br> <br>
+			Someone else, examines you — <br> 
+			bright-field, 120 power, <br>
+			cell by violet cell <br>
+			searching for <br>
+			unnameable. <br> <br>
+			Here the skewed <br>
+			nuclei <br>
+			Here the growth <br> 
+			unchecked  <br>
+			Here the lump  <br>
+			trisected  <br>
+			scrutinised. <br> <br>
+			Someone, perhaps  <br>
+			less than a mile away, <br> <br>
+			fixes: <br>
+			 -their piece of you  <br>
+			 -their morning tea <br> <br>
+			and is staining  <br>
+			- cells <br>
+			- the future —  <br>
+			which way its going to be.
+		</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+<div class="post" id="piece_three">
+	<h1 onclick='show_default("piece_three")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> Our First Ambulance Journey </h3>		
+	<p>
+		Siren slices time and air, <br>
+		insulated by enormity, we hardly hear.<br><br>
+		I hold the empty bottle ‘childproof’ and your hand. <br>
+		We speed, We sway, We overtake <br>
+		ordinary days,<br><br>
+		but all breath is here- <br>
+		beating or stopped?<br><br>
+		Afterwards, Julia said “You should have cried, <br>
+		to let her know”.<br><br>
+		I only felt the hand you held <br>
+		growing cold. Then was I numbed. It will not go
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+<div class="post" id="piece_four">
+	<h1 onclick='show_default("piece_four")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+		<h3 class="piece_header"> A Chipped Tea Pot </h3>		
+		<p>
+			There was a man, it seems like a long time ago, who lived by himself. He was quiet, but particular; he worked for a printer cutting letters and making type. He liked to make paper on his spare Saturdays. He made many kinds, many exotic and beautiful sheets, speckled with gold, marbled with raspberry and lime leaves… <br> <br>
+			He never wrote or drew on them. He filed them away in a mahogany chest that had once belonged to a ship’s doctor. He only wanted to make a perfect one. Why? So it would be his. His own. He wanted something beautiful. Something perfect.<br> <br>
+			The favourite of his things was his tea pot. It was cast iron, black, when he looked at it his heart would melt just following its lines with his eyes, to swallow its squat bulbous fruitful shape. He would have thought the spout like a nipple if he could have remembered his mother’s. But that image stayed where he could hardly feel it, like unboiled tea leaves sealed in a dark jar. After making paper one Saturday he was brewing the Lapsang Souchong with his tea pot as he always did. Watching a little steam wind up out of the spout, when he became afraid. What if someone took his tea pot, what if he dropped it on the hard stone floor? It was perfect — it was the only perfect and beautiful thing he had. If it went what could be left behind him?<br> <br>
+			He poured the tea as soon as it might be ready. He drank quickly, wiped the usual drips from the table. Wiped the next drip from the spout, with a gentle flourishing upward movement, got up and left without his coat.<br> <br>
+			Today though, it was not cold, the magnolias in the square were almost finished, the stones underneath marbled with white and red, and blackbirds were practising for the evening chorus. He walked directly and quickly to the market. he looked on all the stalls of china. He found an almost perfect marble and pocketed it for a small coin. But no tea pots.<br> <br>
+			That was the first of many visits, he widened his search to other towns, he started going on other days than Saturday, he changed his job so he could travel more.<br> <br>
+			As the beeches were losing their fire that year he came back with another matching tea pot. It was also perfect and beautiful, he couldn’t be sure it was identical, but it looked perfect, certainly the same style, almost the same size. They could be brothers — if not twins, and as he walked up his steps he wondered if his tea pot had been stolen and now he had found it again. But he still had one, No, he had used it for tea this morning it was definitely there.<br> <br>
+			It was. He put them together on the table in the light from the window. They were both perfect and beautiful.
+			<br> <br>
+			No. The new one, was different! The spout was chipped underneath, where it should be gently wiped. He felt he was being swept up like the old beech leaves outside, like warm tea leaves being scooped up by a hand. He had wasted all that money. Wasted all that time. He was no nearer to safety after all. After a long time gazing through the window, then sitting in the corner while the light drained from the sky, his thirst roused him. He would make tea. With the new tea pot. At least the other would be safe if he dropped it.<br> <br>
+			He poured the tea, not concentrating, silk handkerchief at the ready.<br> <br>
+			No drips.<br> <br>
+			No drips. He looked again. No puddle on the table, just a chipped tea pot and a cup and a satsuma in a black bowl.<br> <br>
+			He saw how precious this new tea pot was. He wondered who could have been so stupid as to sell it to a decrepit market trader more used to selling trashy dog-eared romantic novels and third-hand socks than perfect crockery.<br> <br>
+			It could have been himself, yesterday, a week ago, even last spring.<br> <br>
+			He went to the cupboard by the door, found the hammer. Took the old tea pot and smacked the spout a glancing blow. There was a ringing noise and he felt a chip graze his forehead. He put the two tea pots together on the table and watched as if a huge tea chest had been taken off his back and its contents shot into the sky.
+		</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+<!-- END OF POSTS -->
+
+
+	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
+	
+			<% if @authors_settings.email_subscription_feature %>
+			<div class="functionality_container">
+				<p class="functionality_title"> Email Notifier </p>
+				<p> Notify me when new <br> posts are published. </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_field :email, placeholder: " you@youmail.com",
+							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				    <%= f.hidden_field :author, value: "oliver_chalk" %>
+					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+			<% end %>
+
+			<% if @authors_settings.social_icons_features %>
+			<div class="functionality_container" style="margin-top: 60px;">
+				<p class="functionality_title"> My Social </p>
+				<a href="https://twitter.com/ProficieNtOCE" target="_blank">
+					<i class="fab fa-twitter" style="font-size: 30px;"></i>
+				</a>
+				<a href="https://medium.com/@oliverchalk245" target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+			</div>
+			<% end %>
+
+			<% if @authors_settings.contact_feature %>
+			<div class="functionality_container" style="margin-top: 40px;">
+				<p class="functionality_title"> Contact Me </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: " your message",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "oliver_chalk" %>
+					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+	  		<% end %>
+	  	</div>
+	  </div>
+
+	  </div>
+
+</div>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}	
+
+	function show_default(piece_id){
+		document.getElementById(piece_id).style.display = "none";
+		document.getElementById("middle_container").style.display = "block";
+	}
+</script>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://pbs.twimg.com/profile_banners/744037478592552961/1516366929/1500x500") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}	
+</style>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

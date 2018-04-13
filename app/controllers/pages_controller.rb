@@ -74,4 +74,20 @@ class PagesController < ApplicationController
   def serifovic_dashboard
     @authors_settings = VaughnUser.find(4)
   end
+
+  def oliver_chalk
+    @authors_settings = VaughnUser.find(5)
+  end
+
+  def chalk_dashboard
+    @authors_settings = VaughnUser.find(5)
+  end
+
+  def harry_ven
+    @authors_settings = VaughnUser.find(6)
+  end
+
+  def ven_dashboard
+    @authors_settings = VaughnUser.find(6)
+  end
 end

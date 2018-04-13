@@ -24,6 +24,18 @@ def editing_serifovic_page
 	redirect_to muriz_serifovic_path
 end
 
+def editing_chalk_page
+	VaughnUser.find(5).update(profile_params)
+	GeneralMailer.user_edited_page("chalk").deliver
+	redirect_to oliver_chalk_path
+end
+
+def editing_ven_page
+	VaughnUser.find(6).update(profile_params)
+	GeneralMailer.user_edited_page("ven").deliver
+	redirect_to harry_ven_path
+end
+
 
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
@@ -40,11 +52,14 @@ def email_subscriber
 		redirect_to james_finn_path, notice: "It worked! Thank you."
 	elsif @author_of_page == "muriz_serifovic"
 		redirect_to muriz_serifovic_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "oliver_chalk"
+		redirect_to oliver_chalk_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "harry_ven"
+		redirect_to harry_ven_path, notice: "It worked! Thank you."
 	else
 		redirect_to root_path, notice: "It worked! Thank you."
 	end
 end
-
 
 
 

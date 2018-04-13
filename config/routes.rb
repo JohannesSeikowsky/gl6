@@ -22,9 +22,17 @@ Rails.application.routes.draw do
   get 'finn_dashboard', to: 'pages#finn_dashboard', as: 'finn_dashboard'
   post 'editing_finn_page', to: 'johannes_page#editing_finn_page', as: 'editing_finn_page'
 
-  get 'muriz_serifovic', to: 'pages#muriz_serifovic', as: 'muriz_serifovic'
+  get 'muriz_serifovic', to: 'pages#muriz_serifovic', as: 'muriz_serifovicn'
   get 'serifovic_dashboard', to: 'pages#serifovic_dashboard', as: 'serifovic_dashboard'
   post 'editing_serifovic_page', to: 'johannes_page#editing_serifovic_page', as: 'editing_serifovic_page'
+
+  get 'oliver_chalk', to: 'pages#oliver_chalk', as: 'oliver_chalk'
+  get 'chalk_dashboard', to: 'pages#chalk_dashboard', as: 'chalk_dashboard'
+  post 'editing_chalk_page', to: 'johannes_page#editing_chalk_page', as: 'editing_chalk_page'
+
+  get 'harry_ven', to: 'pages#harry_ven', as: 'harry_ven'
+  get 'ven_dashboard', to: 'pages#ven_dashboard', as: 'ven_dashboard'
+  post 'editing_ven_page', to: 'johannes_page#editing_ven_page', as: 'editing_ven_page'
 
 
   # statics
