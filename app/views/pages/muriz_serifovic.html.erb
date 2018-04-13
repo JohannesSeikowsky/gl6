@@ -1,0 +1,123 @@
+<%= link_to "Author's Dashboard", serifovic_dashboard_path, id: "dashboard_link" %> 
+
+<div class="container-fluid">
+	
+	  <div class="central_container"> 		
+
+	  	<div class="left_side_container"> 		
+		    <% if @authors_settings.portrait_feature %>
+	  			<%= image_tag "https://pbs.twimg.com/profile_images/984525518036000768/HCaSXD36_400x400.jpg", id: "profile_image" %>
+			<% end %>
+			<p>	</p>
+	  	</div>
+
+	  	<div id="middle_container" class="middle_container">
+	  		<% if notice %>
+				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
+			<% end %>
+
+			<h1 class="name_title"> Muriz Serifovic </h1>
+
+			<% if @authors_settings.about_feature %>
+				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
+				<p> <%= @authors_settings.about_content %> </p> <br>
+			<% end %>
+
+			<h3 class="title"> Posts <h3>
+
+		    <% if @authors_settings.post_one %>
+			<p class="post_title" onclick='show_piece("piece_zero");'> 
+				How To Write Your Very First Powerful Artificial Intelligence /s
+			 </p>
+			<p class="post_excerpt"> Such clever, many intelligent, very human ...</p>
+			<% end %>
+
+			<br> <br> <br> <br> <br> <br> <br> <br>
+			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+	  	</div>
+
+
+<!-- START OF POSTS -->
+<div class="post" id="piece_zero">
+	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+
+	
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+<!-- END OF POSTS -->
+
+	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
+	
+			<% if @authors_settings.email_subscription_feature %>
+			<div class="functionality_container">
+				<p class="functionality_title"> Email Notifier </p>
+				<p> Notify me when new <br> posts are published. </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_field :email, placeholder: " you@youmail.com",
+							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				    <%= f.hidden_field :author, value: "muriz_serifovic" %>
+					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+			<% end %>
+
+			<% if @authors_settings.social_icons_features %>
+			<div class="functionality_container" style="margin-top: 60px;">
+				<p class="functionality_title"> My Social </p>
+				<a href="https://twitter.com/MurgioMurmani" target="_blank">
+					<i class="fab fa-twitter" style="font-size: 30px;"></i>
+				</a>
+				<a href="https://hackernoon.com/@Muriz.Serifovic" target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+			</div>
+			<% end %>
+
+			<% if @authors_settings.contact_feature %>
+			<div class="functionality_container" style="margin-top: 40px;">
+				<p class="functionality_title"> Contact Me </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: " your message",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "muriz_serifovic" %>
+					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+	  		<% end %>
+	  	</div>
+	  </div>
+
+	  </div>
+
+</div>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}	
+
+	function show_default(piece_id){
+		document.getElementById(piece_id).style.display = "none";
+		document.getElementById("middle_container").style.display = "block";
+	}
+</script>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://pbs.twimg.com/profile_banners/2941969984/1523566337/1500x500") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}	
+</style>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

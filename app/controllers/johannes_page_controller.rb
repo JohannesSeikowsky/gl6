@@ -18,6 +18,13 @@ def editing_finn_page
 	redirect_to james_finn_path
 end
 
+def editing_serifovic_page
+	VaughnUser.find(4).update(profile_params)
+	GeneralMailer.user_edited_page("serifovic").deliver
+	redirect_to muriz_serifovic_path
+end
+
+
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
 	@author_of_page = params[:email_subscriber][:author]

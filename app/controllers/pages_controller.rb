@@ -34,6 +34,12 @@ class PagesController < ApplicationController
   def do_now
   end
 
+  def get_page
+  end
+
+  def thank_you
+  end
+
   def johannes
   end
   
@@ -61,9 +67,11 @@ class PagesController < ApplicationController
     @authors_settings = VaughnUser.find(3)
   end
 
-  def get_page
+  def muriz_serifovic
+    @authors_settings = VaughnUser.find(4)
   end
 
-  def thank_you
+  def serifovic_dashboard
+    @authors_settings = VaughnUser.find(4)
   end
 end

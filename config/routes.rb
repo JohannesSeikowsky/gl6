@@ -3,27 +3,28 @@ Rails.application.routes.draw do
   # root
   root 'pages#get_page'
 
-  # peoples
   get 'get_your_page', to: 'pages#get_page', as: 'get_page'
+  get 'thanks', to: 'pages#thank_you', as: 'thank_you'
+  resources :writers
+
 
   get 'johannes_seikowsky', to: 'pages#johannes', as: 'johannes'
 
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
   get 'vaughn_dashboard', to: 'pages#vaughn_dashboard', as: 'vaughn_dashboard'
+  post 'editing_vaughn_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
 
   get 'dave_garbutt', to: 'pages#dave_garbutt', as: 'dave_garbutt'
   get 'garbutt_dashboard', to: 'pages#garbutt_dashboard', as: 'garbutt_dashboard'
+  post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
 
   get 'james_finn', to: 'pages#james_finn', as: 'james_finn'
   get 'finn_dashboard', to: 'pages#finn_dashboard', as: 'finn_dashboard'
-
-  post 'editing_vaughn_page', to: 'johannes_page#editing_vaughn_page', as: 'editing_vaughn_page'
-  post 'editing_garbutt_page', to: 'johannes_page#editing_garbutt_page', as: 'editing_garbutt_page'
   post 'editing_finn_page', to: 'johannes_page#editing_finn_page', as: 'editing_finn_page'
 
-  get 'thanks', to: 'pages#thank_you', as: 'thank_you'
-  
-  resources :writers
+  get 'muriz_serifovic', to: 'pages#muriz_serifovic', as: 'muriz_serifovic'
+  get 'serifovic_dashboard', to: 'pages#serifovic_dashboard', as: 'serifovic_dashboard'
+  post 'editing_serifovic_page', to: 'johannes_page#editing_serifovic_page', as: 'editing_serifovic_page'
 
 
   # statics
