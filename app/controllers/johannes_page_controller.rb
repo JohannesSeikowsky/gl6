@@ -38,10 +38,15 @@ def email_subscriber
 		redirect_to dave_garbutt_path, notice: "It worked! Thank you."	
 	elsif @author_of_page == "james_finn"
 		redirect_to james_finn_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "muriz_serifovic"
+		redirect_to muriz_serifovic_path, notice: "It worked! Thank you."
 	else
 		redirect_to root_path, notice: "It worked! Thank you."
 	end
 end
+
+
+
 
 def new_page_user
 	# create
