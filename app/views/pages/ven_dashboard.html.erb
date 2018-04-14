@@ -1,10 +1,10 @@
-<%= link_to "Back to Site", dave_garbutt_path, id: "dashboard_link" %> 
+<%= link_to "Back to Site", harry_ven_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
   <div class="central_container"> 		
 
   	<div class="left_side_container">
-  		<%= image_tag "dave_garbutt.png", id: "profile_image" %>
+	  	<%= image_tag "https://pbs.twimg.com/profile_images/906083142896779264/zhVELKOu_400x400.jpg", id: "profile_image" %>
   	</div>
 
   	<div id="middle_container" class="middle_container" style="width: 570px;">  	
@@ -17,7 +17,7 @@
 		<!-- <p> Unckeck any features you do not want. </p> -->
 
 
-		<%= form_for :user_settings, url: editing_garbutt_page_path do |f| %>
+		<%= form_for :user_settings, url: editing_ven_page_path do |f| %>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
             <!-- <%= f.check_box :this_month, checked: true %> "Posts" Section <br> -->
@@ -43,14 +43,11 @@
 				An option to publish more posts here which <br> are not on your Medium is coming soon.
 			</p>
 
-            <%= f.check_box :post_one, checked: @authors_settings.post_one %> Lyric Festival <br>
-            <%= f.check_box :post_two, checked: @authors_settings.post_two %> For Marianne <br>
-            <%= f.check_box :post_three, checked: @authors_settings.post_three %> Biopsy <br>
-            <%= f.check_box :post_four, checked: @authors_settings.post_four %> Our First Ambulance Journey <br> 
-            <%= f.check_box :post_five, checked: @authors_settings.post_five %> A Chipped Tea Pot <br>
-            <%= f.check_box :post_six, checked: @authors_settings.post_six %> Fiddle-head ferns <br>
-            <%= f.check_box :post_seven, checked: @authors_settings.post_seven %> No More Presents <br>
-            <%= f.check_box :post_eight, checked: @authors_settings.post_eight %> Passed Over <br>
+            <%= f.check_box :post_one, checked: @authors_settings.post_one %> How to change your life in 30 days? <br>
+            <%= f.check_box :post_two, checked: @authors_settings.post_two %> Product storytelling — how to craft an amazing story? <br>
+            <%= f.check_box :post_three, checked: @authors_settings.post_three %> Two photographers went to a bar <br>
+            <%= f.check_box :post_four, checked: @authors_settings.post_four %> Thank you Facebook, for screwing it up for everyone else <br> 
+            <%= f.check_box :post_five, checked: @authors_settings.post_five %> Corporates vs Startups <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		<% end %> <br>
 
@@ -71,7 +68,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_banners/877545840/1502805806/1500x500") no-repeat center center fixed; 
+	  background: url("https://pbs.twimg.com/profile_banners/27406229/1476198241/1500x500") no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;

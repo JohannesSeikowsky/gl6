@@ -1,4 +1,4 @@
-<%= link_to "Author's Dashboard", garbutt_dashboard_path, id: "dashboard_link" %> 
+<%= link_to "Author's Dashboard", ven_dashboard_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
 	
@@ -6,7 +6,7 @@
 
 	  	<div class="left_side_container"> 		
 		    <% if @authors_settings.portrait_feature %>
-	  			<%= image_tag "dave_garbutt.png", id: "profile_image" %>
+	  			<%= image_tag "https://pbs.twimg.com/profile_images/906083142896779264/zhVELKOu_400x400.jpg", id: "profile_image" %>
 			<% end %>
 			<p>	</p>
 	  	</div>
@@ -16,7 +16,7 @@
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h1 class="name_title"> Dave Garbutt </h1>
+			<h1 class="name_title"> <HEAD> Harry Ven</HEAD> </h1>
 
 			<% if @authors_settings.about_feature %>
 				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
@@ -26,43 +26,28 @@
 			<h3 class="title"> Posts <h3>
 
 		    <% if @authors_settings.post_one %>
-			<p class="post_title" onclick='show_piece("piece_zero");'> Lyric Festival </p>
-			<p class="post_excerpt"> This poem has been described as ...</p>
+			<p class="post_title" onclick='show_piece("piece_zero");'> How to change your life in 30 days? </p>
+			<p class="post_excerpt"> An immersion technique to start new ...</p>
 			<% end %>
 
 		    <% if @authors_settings.post_two %>
-			<p class="post_title" onclick='show_piece("piece_one");'> For Marianne </p>
-			<p class="post_excerpt"> Your smile ... so tender-tive ... eyelashes down ... </p>
+			<p class="post_title" onclick='show_piece("piece_one");'> Product storytelling — how to craft an amazing story? </p>
+			<p class="post_excerpt"> The untold parts of storytelling that ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_three %>
-			<p class="post_title" onclick='show_piece("piece_two");'> Biopsy </p>
-			<p class="post_excerpt"> Someone, elsewhere, colours you ... </p>
+			<p class="post_title" onclick='show_piece("piece_two");'> Two photographers went to a bar </p>
+			<p class="post_excerpt"> They were comparing their pictures ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_four %>
-			<p class="post_title" onclick='show_piece("piece_three");'> Our First Ambulance Journey </p>
-			<p class="post_excerpt"> Siren slices time and air ... </p>
+			<p class="post_title" onclick='show_piece("piece_three");'> Thank you Facebook, for screwing it up for everyone else </p>
+			<p class="post_excerpt"> Dear Facebook ... </p>
 			<% end %>
 		
 		    <% if @authors_settings.post_five %>
-			<p class="post_title" onclick='show_piece("piece_four");'> A Chipped Tea Pot </p>
-			<p class="post_excerpt"> There was a man, it seems like a long time ago ... </p>
-			<% end %>
-
-		    <% if @authors_settings.post_six %>
-			<p class="post_title" onclick='show_piece("piece_five");'> Fiddle-head ferns </p>
-			<p class="post_excerpt"> Unfolding delib- ... -erately the leafy camera ... </p>
-			<% end %>
-	
-		    <% if @authors_settings.post_seven %>
-			<p class="post_title" onclick='show_piece("piece_six");'> No More Presents </p> 
-			<p class="post_excerpt"> Many times I wanted ... to bring you something — something ... </p>
-			<% end %>
-			
-		    <% if @authors_settings.post_eight %>
-			<p class="post_title" onclick='show_piece("piece_seven");'> Passed Over </p>
-			<p class="post_excerpt"> Asa Benveniste ~ Foolish enough to have ... </p>
+			<p class="post_title" onclick='show_piece("piece_four");'> Corporates vs Startups </p>
+			<p class="post_excerpt"> Corporates are about resources, connections and ... </p>
 			<% end %>
 
 			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
@@ -204,103 +189,6 @@
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
-<div class="post" id="piece_five">
-	<h1 onclick='show_default("piece_five")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-	</h1>
-	<h3 class="piece_header"> Fiddle-head ferns </h3>		
-	<p>
-	Unfolding delib-<br> <br>
-	-erately the leafy camera<br> <br>
-	fixing light into fronds
-	</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
-</div>
-
-<div class="post" id="piece_six">
-	<h1 onclick='show_default("piece_six")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-	</h1>
-	<h3 class="piece_header"> NO MORE PRESENTS </h3>		
-	<p>
-	Many times I wanted<br> <br>
-	to bring you something — something, in-expres-<br> <br>
-	sible<br> <br>
-	at once encapsulating and grand<br> <br>
-	small as a hazel nut or large as a life in a house<br> <br>
-	what did I find?<br> <br>
-	Chocolates, pears and apricots, almond blossoms,<br> <br>
-	dafalgan, flower bottles.<br> <br>
-	But this was years ago<br> <br>
-	when I was querulous with fear and longing<br> <br>
-	stuck on the rounded cusp of becoming with you.<br> <br>
-	No more presents, I have our memories<br> <br>
-	to bring you — and the autonomous wonder of she —<br> <br>
-	so breathe in, and breathe out and begin to select<br> <br>
-	for if we list all our pasts<br> <br>
-	we’ll never get to the next
-	</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
-</div>
-
-<div class="post" id="piece_seven">
-	<h1 onclick='show_default("piece_seven")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
-	</h1>
-	<h3 class="piece_header"> Passed Over </h3>		
-		<h3 class="piece_header"> I Heptonstall Churchyard </h3>		
-		<p>
-		"Asa Benveniste ~ Foolish enough to have been a poet" <br> <br>
-		I booked my plot here before I knew about her. <br>
-		I’d heard she wrote, heard she moved down south to Devon, <br>
-		then to London. Poor thing. I never met her. But, today, <br>
-		as everyday, it isn’t me the visitors travel to see. <br> <br>
-		Those PhD pilgrims, the striking teens, <br>
-		stand by her and are lost in the wind, <br>
-		thinking, one day every year the moon  <br>
-		will rise over that Yew. <br> <br>
-		This leafless afternoon Starlings sing, all jumbled <br>
-		as usual, Now, they are imitating Curlews <br>
-		curdling, from behind the corner  <br>
-		of the roofless church. <br> <br>
-
-		<h3 class="piece_header"> II Pére Lachaise </h3>		
-		"Security guard at the grave: ‘N’est-ce pas une poubelle" <br> <br>
-
-		We buy an offering from the minibar <br>
-		a libation for peace  <br>
-		dropped off at The Last Whiskey Bar. <br> <br>
-		‘James James Morrison Morrison,  <br>
-		wanted to be a poet’  <br>
-		When is ever what we have good enough? <br> <br>
-		From the bare planes a Blackcap <br>
-		is singing, singing, singing a well of songs <br>
-		that would wash us all away <br>
-		even if no-one was listening. <br> <br>
-
-		<h3 class="piece_header"> West Cemetery, Amherst. </h3>		
-		"Called Back" <br> <br>
-		I had the ruby-throated <br>
-		humming like a wheel – <br>
-		my quill — distilled it in my drawer <br>
-		written with safe white ink. <br><br>
-		and wrapped in twine. <br>
-		It was the white on white <br>
-		that let it pale, <br><br>
-		–every letter — every space — every rail – <br>
-		the tracks will take you — Prisoner —  <br>
-		with no report of Bail.  <br>
-		The letters of black-inked rejection – <br><br>
-		Six letters — a thousand words – <br>
-		No secret garden is there, but had a Wall. <br>
-		White written on White — the right <br>
-		of de-selection. <br><br>
-		Firmament of maples lawns and birches <br>
-		Window sill — I am — small — as they are – <br>
-		and in my drawer bedecked — evanescent — bright.
-		</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
-</div>
 <!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
@@ -312,7 +200,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-				    <%= f.hidden_field :author, value: "dave_garbutt" %>
+				    <%= f.hidden_field :author, value: "harry_ven" %>
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -321,13 +209,13 @@
 			<% if @authors_settings.social_icons_features %>
 			<div class="functionality_container" style="margin-top: 60px;">
 				<p class="functionality_title"> My Social </p>
-				<a href="https://twitter.com/DavGar51" target="_blank">
+				<a href="https://twitter.com/mailharishv" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
-				<a href="https://medium.com/@DavGar51" target="_blank">
+				<a href="https://medium.com/@mailharishv" target="_blank">
 					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
-				<a href="https://www.facebook.com/dave.garbutt" target="_blank">
+				<a href="https://www.facebook.com/harish.venn" target="_blank">
 					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
 			</div>
@@ -339,7 +227,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: " your message",
 							style: "width: 170px; height: 100px;" %> <br>
-				    <%= f.hidden_field :author, value: "dave_garbutt" %>
+				    <%= f.hidden_field :author, value: "harry_ven" %>
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -369,7 +257,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_banners/877545840/1502805806/1500x500") no-repeat center center fixed; 
+	  background: url("https://pbs.twimg.com/profile_banners/27406229/1476198241/1500x500") no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
