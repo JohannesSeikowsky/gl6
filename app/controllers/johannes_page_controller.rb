@@ -42,9 +42,9 @@ def editing_clare_page
 	redirect_to sylvia_clare_path
 end
 
-def editing_tanuzzo_page
+def editing_tannuzzo_page
 	VaughnUser.find(8).update(profile_params)
-	GeneralMailer.user_edited_page("tanuzzo").deliver
+	GeneralMailer.user_edited_page("tannuzzo").deliver
 	redirect_to steve_tannuzzo_path
 end
 
@@ -100,6 +100,18 @@ def email_subscriber
 		redirect_to harry_ven_path, notice: "It worked! Thank you."
 	elsif @author_of_page == "sylvia_clare"
 		redirect_to sylvia_clare_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "steve_tannuzzo"
+		redirect_to steve_tannuzzo_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "don_karp"
+		redirect_to don_karp_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "smita_vyas_kumar"
+		redirect_to smita_vyas_kumar_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "terijo"
+		redirect_to terijo_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "artemis_jones"
+		redirect_to artemis_jones_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "daniel_teall"
+		redirect_to daniel_teall_path, notice: "It worked! Thank you."
 	else
 		redirect_to root_path, notice: "It worked! Thank you."
 	end

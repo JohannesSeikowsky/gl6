@@ -39,8 +39,8 @@ Rails.application.routes.draw do
   post 'editing_clare_page', to: 'johannes_page#editing_clare_page', as: 'editing_clare_page'
 
   get 'steve_tannuzzo', to: 'pages#steve_tannuzzo', as: 'steve_tannuzzo'
-  get 'tanuzzo_dashboard', to: 'pages#tanuzzo_dashboard', as: 'tanuzzo_dashboard'
-  post 'editing_tanuzzo_page', to: 'johannes_page#editing_tanuzzo_page', as: 'editing_tanuzzo_page'
+  get 'tannuzzo_dashboard', to: 'pages#tannuzzo_dashboard', as: 'tannuzzo_dashboard'
+  post 'editing_tannuzzo_page', to: 'johannes_page#editing_tannuzzo_page', as: 'editing_tannuzzo_page'
 
   get 'don_karp', to: 'pages#don_karp', as: 'don_karp'
   get 'karp_dashboard', to: 'pages#karp_dashboard', as: 'karp_dashboard'

@@ -103,7 +103,7 @@ class PagesController < ApplicationController
     @authors_settings = VaughnUser.find(8)
   end
 
-  def tanuzzo_dashboard
+  def tannuzzo_dashboard
     @authors_settings = VaughnUser.find(8)
   end
 
