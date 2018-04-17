@@ -1,4 +1,4 @@
-<%= link_to "Author's Dashboard", chalk_dashboard_path, id: "dashboard_link" %> 
+<%= link_to "Author's Dashboard", clare_dashboard_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
 	
@@ -6,7 +6,7 @@
 
 	  	<div class="left_side_container"> 		
 		    <% if @authors_settings.portrait_feature %>
-	  			<%= image_tag "https://pbs.twimg.com/profile_images/954337522057957377/2T5Ts--b_400x400.jpg", id: "profile_image" %>
+	  			<%= image_tag "https://cdn-images-1.medium.com/fit/c/100/100/1*fK176WLzCPb96o8AMKdmCw.jpeg", id: "profile_image" %>
 			<% end %>
 			<p>	</p>
 	  	</div>
@@ -16,7 +16,7 @@
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h1 class="name_title"> Oliver Chalk </h1>
+			<h1 class="name_title"> Sylvia Clare </h1>
 
 			<% if @authors_settings.about_feature %>
 				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
@@ -26,28 +26,28 @@
 			<h3 class="title"> Posts <h3>
 
 		    <% if @authors_settings.post_one %>
-			<p class="post_title" onclick='show_piece("piece_zero");'> Crypto20 ICO Opportunity </p>
-			<p class="post_excerpt"> As it stands, there are 19 hours left ...</p>
+			<p class="post_title" onclick='show_piece("piece_zero");'> What is a Writer? </p>
+			<p class="post_excerpt"> Have you ever made a list or written  ...</p>
 			<% end %>
 
 		    <% if @authors_settings.post_two %>
-			<p class="post_title" onclick='show_piece("piece_one");'> The Holy Trinity of Fat Gains </p>
-			<p class="post_excerpt">Here I will go over three tokens that I believe will ... </p>
+			<p class="post_title" onclick='show_piece("piece_one");'> Instant Karma’s going to get you </p>
+			<p class="post_excerpt">So sang the Beatles famously ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_three %>
-			<p class="post_title" onclick='show_piece("piece_two");'> Kucoin: Where are they now? </p>
-			<p class="post_excerpt"> I published an article on Kucoin little ... </p>
+			<p class="post_title" onclick='show_piece("piece_two");'> Writing to Find Your Best </p>
+			<p class="post_excerpt"> I am a gardener of plants and ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_four %>
-			<p class="post_title" onclick='show_piece("piece_three");'> Kucoin Exchange — Kucoin Token Value Breakdown </p>
-			<p class="post_excerpt"> The Kucoin Exchange is an Asian exchange ... </p>
+			<p class="post_title" onclick='show_piece("piece_three");'> Writing my way back to love </p>
+			<p class="post_excerpt"> A few years ago I had a total ... </p>
 			<% end %>
 		
 		    <% if @authors_settings.post_five %>
-			<p class="post_title" onclick='show_piece("piece_four");'> Quantstamp & AirSwap — An economic review of two token sales </p>
-			<p class="post_excerpt"> Quantstamp is a fantastic upcoming ICO ... </p>
+			<p class="post_title" onclick='show_piece("piece_four");'> Brief Encounter </p>
+			<p class="post_excerpt"> Just now ... </p>
 			<% end %>
 
 			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
@@ -346,7 +346,7 @@ https://medium.com/quantstamp/announcing-proof-of-caring-9fa3209854ff
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-				    <%= f.hidden_field :author, value: "oliver_chalk" %>
+				    <%= f.hidden_field :author, value: "sylvia_clare" %>
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -355,11 +355,14 @@ https://medium.com/quantstamp/announcing-proof-of-caring-9fa3209854ff
 			<% if @authors_settings.social_icons_features %>
 			<div class="functionality_container" style="margin-top: 60px;">
 				<p class="functionality_title"> My Social </p>
-				<a href="https://twitter.com/ProficieNtOCE" target="_blank">
+				<a href="https://twitter.com/sylviaclare" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
-				<a href="https://medium.com/@oliverchalk245" target="_blank">
+				<a href="https://medium.com/@sylviaclare" target="_blank">
 					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+				<a href="https://www.facebook.com/sylvia.clare" target="_blank">
+					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
 			</div>
 			<% end %>
@@ -370,7 +373,7 @@ https://medium.com/quantstamp/announcing-proof-of-caring-9fa3209854ff
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: " your message",
 							style: "width: 170px; height: 100px;" %> <br>
-				    <%= f.hidden_field :author, value: "oliver_chalk" %>
+				    <%= f.hidden_field :author, value: "sylvia_clare" %>
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -400,7 +403,7 @@ https://medium.com/quantstamp/announcing-proof-of-caring-9fa3209854ff
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_banners/744037478592552961/1516366929/1500x500") no-repeat center center fixed; 
+	  background: url("https://pbs.twimg.com/profile_images/874184738210275328/lqpLD-zW_400x400.jpg") no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;

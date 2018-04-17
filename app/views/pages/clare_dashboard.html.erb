@@ -1,10 +1,10 @@
-<%= link_to "Back to Site", oliver_chalk_path, id: "dashboard_link" %> 
+<%= link_to "Back to Site", sylvia_clare_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
   <div class="central_container"> 		
 
   	<div class="left_side_container">
-	  	<%= image_tag "https://pbs.twimg.com/profile_images/954337522057957377/2T5Ts--b_400x400.jpg", id: "profile_image" %>
+	  	<%= image_tag "https://cdn-images-1.medium.com/fit/c/100/100/1*fK176WLzCPb96o8AMKdmCw.jpeg", id: "profile_image" %>
 	</div>
 
   	<div id="middle_container" class="middle_container" style="width: 570px;">  	
@@ -17,7 +17,7 @@
 		<!-- <p> Unckeck any features you do not want. </p> -->
 
 
-		<%= form_for :user_settings, url: editing_chalk_page_path do |f| %>
+		<%= form_for :user_settings, url: editing_clare_page_path do |f| %>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
             <!-- <%= f.check_box :this_month, checked: true %> "Posts" Section <br> -->
@@ -43,11 +43,11 @@
 				An option to publish more posts here which <br> are not on your Medium is coming soon.
 			</p>
 
-            <%= f.check_box :post_one, checked: @authors_settings.post_one %> Crypto20 ICO Opportunity <br>
-            <%= f.check_box :post_two, checked: @authors_settings.post_two %> The Holy Trinity of Fat Gains <br>
-            <%= f.check_box :post_three, checked: @authors_settings.post_three %> Kucoin: Where are they now? <br>
-            <%= f.check_box :post_four, checked: @authors_settings.post_four %> Kucoin Exchange — Kucoin Token Value Breakdown <br> 
-            <%= f.check_box :post_five, checked: @authors_settings.post_five %> Quantstamp & AirSwap — An economic review of two token sales <br>
+            <%= f.check_box :post_one, checked: @authors_settings.post_one %> What is a Writer?  <br>
+            <%= f.check_box :post_two, checked: @authors_settings.post_two %> Instant Karma’s going to get you <br>
+            <%= f.check_box :post_three, checked: @authors_settings.post_three %> Writing to Find Your Best <br>
+            <%= f.check_box :post_four, checked: @authors_settings.post_four %> Writing my way back to love <br> 
+            <%= f.check_box :post_five, checked: @authors_settings.post_five %> Brief Encounter <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		<% end %> <br>
 
@@ -68,7 +68,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_banners/744037478592552961/1516366929/1500x500") no-repeat center center fixed; 
+	  background: url("https://pbs.twimg.com/profile_images/874184738210275328/lqpLD-zW_400x400.jpg") no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
