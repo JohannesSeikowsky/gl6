@@ -34,6 +34,10 @@ Rails.application.routes.draw do
   get 'ven_dashboard', to: 'pages#ven_dashboard', as: 'ven_dashboard'
   post 'editing_ven_page', to: 'johannes_page#editing_ven_page', as: 'editing_ven_page'
 
+  get 'sylvia_clare', to: 'pages#sylvia_clare', as: 'sylvia_clare'
+  get 'clare_dashboard', to: 'pages#clare_dashboard', as: 'clare_dashboard'
+  post 'editing_clare_page', to: 'johannes_page#editing_clare_page', as: 'editing_clare_page'
+
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'

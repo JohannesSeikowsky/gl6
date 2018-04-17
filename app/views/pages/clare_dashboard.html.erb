@@ -1,0 +1,78 @@
+<%= link_to "Back to Site", oliver_chalk_path, id: "dashboard_link" %> 
+
+<div class="container-fluid">
+  <div class="central_container"> 		
+
+  	<div class="left_side_container">
+	  	<%= image_tag "https://pbs.twimg.com/profile_images/954337522057957377/2T5Ts--b_400x400.jpg", id: "profile_image" %>
+	</div>
+
+  	<div id="middle_container" class="middle_container" style="width: 570px;">  	
+  		<% if notice %> <h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1> <% end %>
+
+		<h1 class="name_title"> Dashboard </h1>		
+		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note: The posts on your site sync with your Medium every 24 hours. </p>
+
+		<h3 class="title" style="margin-bottom: 8px; margin-top: 35px;"> Choose your Features </h3>
+		<!-- <p> Unckeck any features you do not want. </p> -->
+
+
+		<%= form_for :user_settings, url: editing_chalk_page_path do |f| %>
+            <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
+            <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
+            <!-- <%= f.check_box :this_month, checked: true %> "Posts" Section <br> -->
+            <%= f.check_box :email_subscription_feature, checked: @authors_settings.email_subscription_feature %> Subscribe to Email-Updates Box <br> 
+            <%= f.check_box :social_icons_features, checked: @authors_settings.social_icons_features %> Social Icons - Twitter, Medium <br>
+            <%= f.check_box :contact_feature, checked: @authors_settings.contact_feature %> Contact Me Box <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		 	<br>
+
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 40px;"> Your "About Me" Section </h3>
+            Title: <br>
+            <%= f.text_field :about_title, value: @authors_settings.about_title, style: "width: 215px;" %> <br>
+            Content: <br>
+            <%= f.text_area :about_content, value: @authors_settings.about_content, style: "width: 215px; height: 105px;" %> <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		 	<br>
+
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 40px;">
+				Your Posts 
+			</h3>
+			<p> 
+				Unckeck those posts you want to hide. <br>
+				An option to publish more posts here which <br> are not on your Medium is coming soon.
+			</p>
+
+            <%= f.check_box :post_one, checked: @authors_settings.post_one %> Crypto20 ICO Opportunity <br>
+            <%= f.check_box :post_two, checked: @authors_settings.post_two %> The Holy Trinity of Fat Gains <br>
+            <%= f.check_box :post_three, checked: @authors_settings.post_three %> Kucoin: Where are they now? <br>
+            <%= f.check_box :post_four, checked: @authors_settings.post_four %> Kucoin Exchange — Kucoin Token Value Breakdown <br> 
+            <%= f.check_box :post_five, checked: @authors_settings.post_five %> Quantstamp & AirSwap — An economic review of two token sales <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		<% end %> <br>
+
+		<h3 class="title" style="margin-bottom: 8px; margin-top: 20px;"> Your Images </h3>
+		<p> 
+			An option to change your image
+			and the site's <br> background image
+			is coming within the next few days.
+		</p>
+
+		<div class="powered_by_dashboard"> Powered by WordGates | The Home of Writers. </div>
+  	</div>
+  </div>
+</div>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url("https://pbs.twimg.com/profile_banners/744037478592552961/1516366929/1500x500") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}	
+</style>
+

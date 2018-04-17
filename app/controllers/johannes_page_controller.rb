@@ -36,6 +36,12 @@ def editing_ven_page
 	redirect_to harry_ven_path
 end
 
+def editing_clare_page
+	VaughnUser.find(7).update(profile_params)
+	GeneralMailer.user_edited_page("clare").deliver
+	redirect_to sylvia_clare_path
+end
+
 
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
