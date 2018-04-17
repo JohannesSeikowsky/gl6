@@ -62,6 +62,9 @@ Rails.application.routes.draw do
   get 'teall_dashboard', to: 'pages#teall_dashboard', as: 'teall_dashboard'
   post 'editing_teall_page', to: 'johannes_page#editing_teall_page', as: 'editing_teall_page'
 
+  get 'amy_chai', to: 'pages#amy_chai', as: 'amy_chai'
+  get 'chai_dashboard', to: 'pages#chai_dashboard', as: 'chai_dashboard'
+  post 'editing_chai_page', to: 'johannes_page#editing_chai_page', as: 'editing_chai_page'
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'

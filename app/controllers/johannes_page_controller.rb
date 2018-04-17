@@ -78,6 +78,11 @@ def editing_teall_page
 	redirect_to daniel_teall_path
 end
 
+def editing_chai_page
+	VaughnUser.find(14).update(profile_params)
+	GeneralMailer.user_edited_page("amy_chai").deliver
+	redirect_to amy_chai_path
+end
 
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
@@ -112,6 +117,8 @@ def email_subscriber
 		redirect_to artemis_jones_path, notice: "It worked! Thank you."
 	elsif @author_of_page == "daniel_teall"
 		redirect_to daniel_teall_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "amy_chai"
+		redirect_to amy_chai_path, notice: "It worked! Thank you."
 	else
 		redirect_to root_path, notice: "It worked! Thank you."
 	end
