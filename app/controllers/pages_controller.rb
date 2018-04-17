@@ -98,4 +98,52 @@ class PagesController < ApplicationController
   def clare_dashboard
     @authors_settings = VaughnUser.find(7)
   end
+
+  def steve_tannuzzo
+    @authors_settings = VaughnUser.find(8)
+  end
+
+  def tanuzzo_dashboard
+    @authors_settings = VaughnUser.find(8)
+  end
+
+  def don_karp
+    @authors_settings = VaughnUser.find(9)
+  end
+
+  def karp_dashboard
+    @authors_settings = VaughnUser.find(9)
+  end
+
+  def smita_vyas_kumar
+    @authors_settings = VaughnUser.find(10)
+  end
+
+  def vyas_kumar_dashboard
+    @authors_settings = VaughnUser.find(10)
+  end
+
+  def terijo
+    @authors_settings = VaughnUser.find(11)
+  end
+
+  def terijo_dashboard
+    @authors_settings = VaughnUser.find(11)
+  end
+
+  def artemis_jones
+    @authors_settings = VaughnUser.find(12)
+  end
+
+  def jones_dashboard
+    @authors_settings = VaughnUser.find(12)
+  end
+
+  def daniel_teall
+    @authors_settings = VaughnUser.find(13)
+  end
+
+  def teall_dashboard
+    @authors_settings = VaughnUser.find(13)
+  end
 end

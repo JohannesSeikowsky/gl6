@@ -42,6 +42,42 @@ def editing_clare_page
 	redirect_to sylvia_clare_path
 end
 
+def editing_tanuzzo_page
+	VaughnUser.find(8).update(profile_params)
+	GeneralMailer.user_edited_page("tanuzzo").deliver
+	redirect_to steve_tannuzzo_path
+end
+
+def editing_karp_page
+	VaughnUser.find(9).update(profile_params)
+	GeneralMailer.user_edited_page("karp").deliver
+	redirect_to don_karp_path
+end
+
+def editing_vyas_kumar_page
+	VaughnUser.find(10).update(profile_params)
+	GeneralMailer.user_edited_page("smita_vyas_kumar").deliver
+	redirect_to smita_vyas_kumar_path
+end
+
+def editing_terijo_page
+	VaughnUser.find(11).update(profile_params)
+	GeneralMailer.user_edited_page("terijo").deliver
+	redirect_to terijo_path
+end
+
+def editing_jones_page
+	VaughnUser.find(12).update(profile_params)
+	GeneralMailer.user_edited_page("artemis_jones").deliver
+	redirect_to artemis_jones_path
+end
+
+def editing_teall_page
+	VaughnUser.find(13).update(profile_params)
+	GeneralMailer.user_edited_page("daniel_teall").deliver
+	redirect_to daniel_teall_path
+end
+
 
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]

@@ -38,6 +38,30 @@ Rails.application.routes.draw do
   get 'clare_dashboard', to: 'pages#clare_dashboard', as: 'clare_dashboard'
   post 'editing_clare_page', to: 'johannes_page#editing_clare_page', as: 'editing_clare_page'
 
+  get 'steve_tannuzzo', to: 'pages#steve_tannuzzo', as: 'steve_tannuzzo'
+  get 'tanuzzo_dashboard', to: 'pages#tanuzzo_dashboard', as: 'tanuzzo_dashboard'
+  post 'editing_tanuzzo_page', to: 'johannes_page#editing_tanuzzo_page', as: 'editing_tanuzzo_page'
+
+  get 'don_karp', to: 'pages#don_karp', as: 'don_karp'
+  get 'karp_dashboard', to: 'pages#karp_dashboard', as: 'karp_dashboard'
+  post 'editing_karp_page', to: 'johannes_page#editing_karp_page', as: 'editing_karp_page'
+
+  get 'smita_vyas_kumar', to: 'pages#smita_vyas_kumar', as: 'smita_vyas_kumar'
+  get 'vyas_kumar_dashboard', to: 'pages#vyas_kumar_dashboard', as: 'vyas_kumar_dashboard'
+  post 'editing_vyas_kumar_page', to: 'johannes_page#editing_vyas_kumar_page', as: 'editing_vyas_kumar_page'
+
+  get 'terijo', to: 'pages#terijo', as: 'terijo'
+  get 'terijo_dashboard', to: 'pages#terijo_dashboard', as: 'terijo_dashboard'
+  post 'editing_terijo_page', to: 'johannes_page#editing_terijo_page', as: 'editing_terijo_page'
+
+  get 'artemis_jones', to: 'pages#artemis_jones', as: 'artemis_jones'
+  get 'jones_dashboard', to: 'pages#jones_dashboard', as: 'jones_dashboard'
+  post 'editing_jones_page', to: 'johannes_page#editing_jones_page', as: 'editing_jones_page'
+
+  get 'daniel_teall', to: 'pages#daniel_teall', as: 'daniel_teall'
+  get 'teall_dashboard', to: 'pages#teall_dashboard', as: 'teall_dashboard'
+  post 'editing_teall_page', to: 'johannes_page#editing_teall_page', as: 'editing_teall_page'
+
 
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
