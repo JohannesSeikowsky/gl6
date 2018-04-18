@@ -1,4 +1,4 @@
-<%= link_to "Author's Dashboard", clare_dashboard_path, id: "dashboard_link" %> 
+<%= link_to "Author's Dashboard", vyas_kumar_dashboard_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
 	
@@ -6,7 +6,7 @@
 
 	  	<div class="left_side_container"> 		
 		    <% if @authors_settings.portrait_feature %>
-	  			<%= image_tag "https://cdn-images-1.medium.com/fit/c/100/100/1*fK176WLzCPb96o8AMKdmCw.jpeg", id: "profile_image" %>
+	  			<%= image_tag "#{@image_of_author}", id: "profile_image" %>
 			<% end %>
 			<p>	</p>
 	  	</div>
@@ -16,7 +16,7 @@
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h1 class="name_title"> Sylvia Clare </h1>
+			<h1 class="name_title"> <%= @name %> </h1>
 
 			<% if @authors_settings.about_feature %>
 				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
@@ -26,28 +26,28 @@
 			<h3 class="title"> Posts <h3>
 
 		    <% if @authors_settings.post_one %>
-			<p class="post_title" onclick='show_piece("piece_zero");'> What is a Writer? </p>
-			<p class="post_excerpt"> Have you ever made a list or written  ...</p>
+			<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
+			<p class="post_excerpt"> Let us not kill each other  ...</p>
 			<% end %>
 
 		    <% if @authors_settings.post_two %>
-			<p class="post_title" onclick='show_piece("piece_one");'> Instant Karma’s going to get you </p>
-			<p class="post_excerpt">So sang the Beatles famously ... </p>
+			<p class="post_title" onclick='show_piece("piece_one");'> <%= @title2 %> </p>
+			<p class="post_excerpt">I will not hold ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_three %>
-			<p class="post_title" onclick='show_piece("piece_two");'> Writing to Find Your Best </p>
-			<p class="post_excerpt"> I am a gardener of plants and ... </p>
+			<p class="post_title" onclick='show_piece("piece_two");'> <%= @title3 %> </p>
+			<p class="post_excerpt"> Act overnight  ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_four %>
-			<p class="post_title" onclick='show_piece("piece_three");'> Writing my way back to love </p>
-			<p class="post_excerpt"> A few years ago I had a total ... </p>
+			<p class="post_title" onclick='show_piece("piece_three");'> <%= @title4 %> </p>
+			<p class="post_excerpt"> The sky, a turquoise blue ... </p>
 			<% end %>
 		
 		    <% if @authors_settings.post_five %>
-			<p class="post_title" onclick='show_piece("piece_four");'> Brief Encounter </p>
-			<p class="post_excerpt"> Just now ... </p>
+			<p class="post_title" onclick='show_piece("piece_four");'> <%= @title5 %> </p>
+			<p class="post_excerpt"> I am transparent like water ... </p>
 			<% end %>
 
 			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
@@ -58,7 +58,7 @@
 	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
 		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 	</h1>
-	<h3 class="piece_header"> </h3>
+	<h3 class="piece_header"> <%= @title1 %> </h3>
 	<p>
 
 	</p>
@@ -70,7 +70,7 @@
 	<h1 onclick='show_default("piece_one")' class="go_back_btn">
 		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 	</h1>
-	<h3 class="piece_header"> </h3>
+	<h3 class="piece_header"> <%= @title2 %> </h3>
 	<p>
 
 	</p>
@@ -82,7 +82,7 @@
 	<h1 onclick='show_default("piece_two")' class="go_back_btn">
 		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 	</h1>
-	<h3 class="piece_header"> </h3>
+	<h3 class="piece_header"> <%= @title3 %> </h3>
 	<p>
 
 	</p>
@@ -94,7 +94,7 @@
 	<h1 onclick='show_default("piece_three")' class="go_back_btn">
 		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 	</h1>
-	<h3 class="piece_header"> </h3>
+	<h3 class="piece_header"> <%= @title4 %> </h3>
 	<p>
 
 	</p>
@@ -106,7 +106,7 @@
 	<h1 onclick='show_default("piece_four")' class="go_back_btn">
 		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
 	</h1>
-	<h3 class="piece_header"> </h3>
+	<h3 class="piece_header"> <%= @title5 %></h3>
 	<p>
 
 	</p>
@@ -124,7 +124,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-				    <%= f.hidden_field :author, value: "sylvia_clare" %>
+				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
 					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -133,15 +133,25 @@
 			<% if @authors_settings.social_icons_features %>
 			<div class="functionality_container" style="margin-top: 60px;">
 				<p class="functionality_title"> My Social </p>
-				<a href="https://twitter.com/sylviaclare" target="_blank">
+				
+				<% unless @twitter_link.empty? %>
+				<a href= <%= @twitter_link %> target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
-				<a href="https://medium.com/@sylviaclare" target="_blank">
-					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				<% end %>
+
+				<% unless @medium_link.empty? %>
+				<a href= <%= @medium_link %> target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; color: black;"></i>
 				</a>
-				<a href="https://www.facebook.com/sylvia.clare" target="_blank">
+				<% end %>
+
+				<% unless @fb_link.empty? %>
+				<a href= <%= @fb_link %> target="_blank">
 					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
+				<% end %>
+			
 			</div>
 			<% end %>
 
@@ -151,7 +161,7 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: " your message",
 							style: "width: 170px; height: 100px;" %> <br>
-				    <%= f.hidden_field :author, value: "sylvia_clare" %>
+				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
 					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
@@ -181,7 +191,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://pbs.twimg.com/profile_images/874184738210275328/lqpLD-zW_400x400.jpg") no-repeat center center fixed; 
+	  background: url(<%= @background_image %>) no-repeat center center fixed;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
