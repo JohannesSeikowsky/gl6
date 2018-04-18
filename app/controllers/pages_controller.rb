@@ -258,29 +258,29 @@ class PagesController < ApplicationController
 
   def amy_chai
     @authors_settings = VaughnUser.find(14)
-    @name = "Smita Vyas Kumar"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @underscore_name = "smita_vyas_kumar"
-    @medium_link = "https://medium.com/@smitavyaskumar"
+    @name = "Amy Chai"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/0*vfn6yXWqoQ16AVU6."
+    @title1 = "Choose Your Own Adventure"
+    @title2 = "The Prestidigitator"
+    @title3 = "Lakes on Titan"
+    @title4 = "The End of the Light"
+    @title5 = "The Infinite Play of the Signifier"
+    @underscore_name = "amy_chai"
+    @medium_link = "https://medium.com/@amychai"
     @twitter_link = ""
-    @fb_link = "https://www.facebook.com/SmitaVyas"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @fb_link = "https://www.facebook.com/amy.chai.90"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*2MQdZBTSh4ydKQz75AMjrg.jpeg"
   end
 
   def chai_dashboard
     @authors_settings = VaughnUser.find(14)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/0*vfn6yXWqoQ16AVU6."
+    @title1 = "Choose Your Own Adventure"
+    @title2 = "The Prestidigitator"
+    @title3 = "Lakes on Titan"
+    @title4 = "The End of the Light"
+    @title5 = "The Infinite Play of the Signifier"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*2MQdZBTSh4ydKQz75AMjrg.jpeg"
   end
 
   def kristin_leonard
