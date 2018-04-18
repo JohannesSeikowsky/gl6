@@ -286,28 +286,33 @@ class PagesController < ApplicationController
 
   def kristin_leonard
     @authors_settings = VaughnUser.find(15)
-    @name = "Smita Vyas Kumar"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @underscore_name = "smita_vyas_kumar"
-    @medium_link = "https://medium.com/@smitavyaskumar"
-    @twitter_link = ""
-    @fb_link = "https://www.facebook.com/SmitaVyas"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @name = "Kristin Leonard"
+    @image_of_author = "https://pbs.twimg.com/profile_images/965027457039417345/UEqyQEsh_400x400.jpg"
+    @title1 = "Words"
+    @title2 = "The Wrong Direction."
+    @title3 = "The Return"
+    @title4 = "The Power"
+    @title5 = "Through the Fire"
+    @underscore_name = "kristin_leonard"
+    @medium_link = "https://medium.com/@kristin.leonard"
+    @twitter_link = "https://twitter.com/KrisJleonard"
+    @fb_link = ""
+    @background_image = "https://pbs.twimg.com/profile_banners/906569043477356544/1518915388/1500x500"
   end
 
   def leonard_dashboard
     @authors_settings = VaughnUser.find(15)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @name = "Kristin Leonard"
+    @image_of_author = "https://pbs.twimg.com/profile_images/965027457039417345/UEqyQEsh_400x400.jpg"
+    @title1 = "Words"
+    @title2 = "The Wrong Direction."
+    @title3 = "The Return"
+    @title4 = "The Power"
+    @title5 = "Through the Fire"
+    @underscore_name = "kristin_leonard"
+    @medium_link = "https://medium.com/@kristin.leonard"
+    @twitter_link = "https://twitter.com/KrisJleonard"
+    @fb_link = ""
+    @background_image = "https://pbs.twimg.com/profile_banners/906569043477356544/1518915388/1500x500"
   end
 end
