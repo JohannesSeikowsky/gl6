@@ -177,29 +177,30 @@ class PagesController < ApplicationController
 
   def terijo
     @authors_settings = VaughnUser.find(11)
-    @name = "Smita Vyas Kumar"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @underscore_name = "smita_vyas_kumar"
-    @medium_link = "https://medium.com/@smitavyaskumar"
-    @twitter_link = ""
-    @fb_link = "https://www.facebook.com/SmitaVyas"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @name = "Terijo"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*3L5HB953qhEKdcO7WiashQ.jpegj"
+    @title1 = "Ocean Whispers"
+    @title2 = "Blue Kisses"
+    @title3 = "From the beginning"
+    @title4 = "It’s A New Day"
+    @title5 = "Light Tricks"
+    @underscore_name = "terijo"
+    @medium_link = "https://medium.com/@TeriJo"
+    @twitter_link = "https://twitter.com/Darrieb"
+    @fb_link = "https://www.facebook.com/teri.jo.3785"
+    @background_image = "https://pbs.twimg.com/profile_banners/23210119/1482981865/1500x500"
   end
 
   def terijo_dashboard
     @authors_settings = VaughnUser.find(11)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*3L5HB953qhEKdcO7WiashQ.jpegj"
+    @title1 = "Ocean Whispers"
+    @title2 = "Blue Kisses"
+    @title3 = "From the beginning"
+    @title4 = "It’s A New Day"
+    @title5 = "Light Tricks"
+    @underscore_name = "terijo"
+    @background_image = "https://pbs.twimg.com/profile_banners/23210119/1482981865/1500x500"
   end
 
   def artemis_jones
