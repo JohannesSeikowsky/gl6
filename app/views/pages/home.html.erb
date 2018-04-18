@@ -2,9 +2,8 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>MindYourNetwork</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=devicbbe-width,initial-scale=1,user-scalable=no" />
 		<meta name="description" content="MindYourNetwork helps you to stay on top of your networking game" />
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400italic,300,300italic,500,500italic,700,700italic" rel="stylesheet" type="text/css" />
 		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
@@ -22,36 +21,26 @@
 					<% if notice %>
 						<h1 id="text02"><strong> <%= notice %> </strong></h1>
 					<% else %>			
-							<h1 id="text02">
-						<!--
-						<strong>Your Personal Networking CRM. <br> <br> Made for Entrepreneurs and Freelancers.</strong></h1>
-
-						- fb groups
-						- write the msgs..
-
-						<!--
-						<strong>The simple CRM for your personal Networking!</strong>
-						
-						<strong> Helping you stay in touch with your most important contacts - personal and business </strong> 
-						-->
-						
-						<strong> A Personal CRM to stay in touch with your important contacts
-						and wider Network. </strong>
+						<h1 id="text02">
+			
+						<strong> Your Author's 
+						Website done in 10 Seconds <br> 
+						+ our support Marketing It
+						</strong>
 
 					</h1> 
 					<% end %>
 									
-					<p id="text03">
-						MindYourNetwork is a simple CRM system
-						to help you manage and keep in touch with your most
-						important contacts - personal and business.
+					<p id="text03" style="margin-bottom: 55px;">
+						Worgates is a small venture dedicated to
+						helping online writers during their journey. <br>
+						Why? Because you're the future and we care.
 					</p>
 
 
+		<%= link_to 'Try Us Out', get_your_page_path, class: "button-linkedin" %>
 
-	<%= link_to 'Login with LinkedIn', '/auth/linkedin', class: "button-linkedin" %>
-
-
+				<!--
 					<hr id="divider02" />
 					<div class="container" id="container02">
 						<div class="inner">
@@ -64,9 +53,10 @@
 							</div>
 						</div>
 					</div>  
+				-->
 
 					<hr id="divider01" />
-					<h2 id="text06"><strong>How It Works</strong></h2>
+					<h2 id="text06" style="text-decoration: underline;"><strong>How It Works</strong></h2>
 					<ul class="icons" id="icons01">
 						<li>
 							<a class="n01" href="http://domain.tld/path">
@@ -74,7 +64,10 @@
 							</a>
 						</li>
 					</ul>
-					<p id="text01"><strong>1) Add your important contacts <br> to MindYourNetwork</strong></p>
+					<p id="text01"><strong>
+						1) We generate your own Website based on your Medium profile -
+						importing your posts etc.
+					</strong></p>
 					<ul class="icons" id="icons02">
 						<li>
 							<a class="n01" href="http://domain.tld/path">
@@ -83,8 +76,9 @@
 						</li>
 					</ul>
 					<p id="text04"><strong>2) 
-					Set Contact Intervals like "Peter - Every 3 months" and
-					schedule Follow-up reminders with ease.
+					In your Dashboard
+					you have control over different aspects of your site to make it your home.
+
 				</strong></p>
 					
 
@@ -98,30 +92,42 @@
 					<p id="text05">
 					<strong>
 
-					3) Use simple "Tags & Notes" to stay organized. 
-					Use "Done" for gratification and to see when you've been in touch last.
-
-
+					3) We have a few select tools for you that are designed to help you
+					market your site over time as to actually benefit from it.
 					</strong></p> <br>
 
-
-
-
-
-		<%= link_to 'Login with LinkedIn', '/auth/linkedin', class: "button-linkedin" %>
+		<%= link_to 'Try Us Out', get_your_page_path, class: "button-linkedin" %>
 
 		<br> <br>
 					<hr id="divider02" />
-					<h2 id="text07"><strong>Pricing: $4.99 / Month <br> <br> First 6 Weeks - Free Trial </strong></h2>
+					<h2 id="text07"><strong>
+						<span style="text-decoration: underline;"> Our Pricing </span> <br> <br>
+					</h2>
+
+						<span style="color: #33343C;">
+						The First 4 Weeks are a Free Trial <br> <br>
+
+						which does not prolong automatically <br> <br>
+
+						(so you can just let it run out). <br> <br>
+
+						After that, if you still like us, <br> <br>
+
+						we charge $8.99 per month. Simple. <br> <br>
+						</span>
+
+					 </strong>
 
 
 					<hr id="divider02" />
 
+					<h2 id="text07"> <strong>
+					<span style="text-decoration: underline;"> Please be in touch </span> 
+					</strong> </h2>
 
+					<p id="text09" style="margin-top: 32px;">Any questions? Please write a message: </p>
 
-					<p id="text09" style="margin-top: 62px;">Any questions? Get in touch: </p>
-
-					<p id="text09"> reminder@mindyournetwork.com </p>
+					<p id="text09"> joseikowsky@googlemail.com </p>
 
 					<ul class="icons" id="icons04">
 					<!--
@@ -132,7 +138,7 @@
 						</li>
 					-->
 					</ul>
-					<p id="text08"><em>MindYourNetwork © 2017. All rights reserved.</em></p>
+					<p id="text08">WordGates © 2017. All rights reserved.</p>
 				</div>
 			</div>
 		</div>
@@ -367,7 +373,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 	color: #33343C;
 	font-family: 'Montserrat';
 	width: calc(100% + 0.675rem);
-	font-size: 1.65em;
+	font-size: 32px;
 	line-height: 1.375;
 	font-weight: 400;
 }
@@ -953,7 +959,7 @@ hr:before {
 
 #divider01:before {
 	width: 100%;
-	background-color: #5DDACB;
+	background-color: #EEEEEE;
 	height: 2px;
 }
 
@@ -964,7 +970,7 @@ hr:before {
 
 #divider02:before {
 	width: 100%;
-	background-color: #5DDACB;
+	background-color: #EEEEEE;
 	height: 2px;
 }
 
@@ -1481,27 +1487,19 @@ body:after {
 a.button-linkedin {
 	border-radius: 3px;
 	box-shadow: 0 1px 1px #999;
-	color: #fff;
-	padding: 8px 28px; margin: 30px 0px;
+	color: black;
+	padding: 12px 50px; margin: 30px 0px;
 	text-align: center;
 	width: 255px;
 	text-decoration: none;
 	font-size: 19px;
-
-	background-color: #0073b2; /* fallback color */
-	background: -moz-linear-gradient(top, #009cda, #0073b2);
-	background: -webkit-linear-gradient(top, #009cda, #0073b2);
-	border: 1px solid #0073b2;
-	text-shadow: 0 -1px -1px #005486;
+	background-color: #F8F8F8; /* fallback color */
+	border: 1px black solid;
 }
 
 a.button-linkedin:hover {
-	background-color: #009cda; /* fallback color */
-	background: -moz-linear-gradient(top, #0073b2, #009cda);
-	background: -ms-linear-gradient(top, #0073b2, #009cda);
-	background: -webkit-linear-gradient(top, #0073b2, #009cda);
+	background-color: #EEEEEE; /* fallback color */
 }
-
 
 </style>
 

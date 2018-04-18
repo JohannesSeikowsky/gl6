@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
   # root
-  root 'pages#get_page'
+  root 'pages#home'
 
-  get 'get_your_page', to: 'pages#get_page', as: 'get_page'
+  get 'get_page', to: 'pages#get_page', as: 'get_page'
+  get 'get_your_page', to: 'pages#get_your_page', as: 'get_your_page'
   get 'thanks', to: 'pages#thank_you', as: 'thank_you'
   resources :writers
 
