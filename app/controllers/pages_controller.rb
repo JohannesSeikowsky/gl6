@@ -178,7 +178,7 @@ class PagesController < ApplicationController
   def terijo
     @authors_settings = VaughnUser.find(11)
     @name = "Terijo"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*3L5HB953qhEKdcO7WiashQ.jpegj"
+    @image_of_author = "https://pbs.twimg.com/profile_images/852970399990206464/NHcL5v1A_400x400.jpg"
     @title1 = "Ocean Whispers"
     @title2 = "Blue Kisses"
     @title3 = "From the beginning"
@@ -193,7 +193,7 @@ class PagesController < ApplicationController
 
   def terijo_dashboard
     @authors_settings = VaughnUser.find(11)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*3L5HB953qhEKdcO7WiashQ.jpegj"
+    @image_of_author = "https://pbs.twimg.com/profile_images/852970399990206464/NHcL5v1A_400x400.jpg"
     @title1 = "Ocean Whispers"
     @title2 = "Blue Kisses"
     @title3 = "From the beginning"
