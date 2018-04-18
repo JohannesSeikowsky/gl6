@@ -67,6 +67,10 @@ Rails.application.routes.draw do
   get 'chai_dashboard', to: 'pages#chai_dashboard', as: 'chai_dashboard'
   post 'editing_chai_page', to: 'johannes_page#editing_chai_page', as: 'editing_chai_page'
 
+  get 'kristin_leonard', to: 'pages#kristin_leonard', as: 'kristin_leonard'
+  get 'leonard_dashboard', to: 'pages#leonard_dashboard', as: 'leonard_dashboard'
+  post 'editing_leonard_page', to: 'johannes_page#editing_leonard_page', as: 'editing_leonard_page'
+
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'

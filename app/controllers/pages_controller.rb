@@ -149,4 +149,12 @@ class PagesController < ApplicationController
   def chai_dashboard
     @authors_settings = VaughnUser.find(14)
   end
+
+  def kristin_leonard
+    @authors_settings = VaughnUser.find(15)
+  end
+
+  def leonard_dashboard
+    @authors_settings = VaughnUser.find(15)
+  end
 end
