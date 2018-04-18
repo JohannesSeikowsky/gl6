@@ -110,16 +110,52 @@ class PagesController < ApplicationController
     @authors_settings = VaughnUser.find(9)
   end
 
+
+
   def smita_vyas_kumar
     @authors_settings = VaughnUser.find(10)
+    @name = "Smita Vyas Kumar"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
+    @title1 = "A Promise"
+    @title2 = "The Freedom Pantoum"
+    @title3 = "The Gift"
+    @title4 = "Urban Rhapsody"
+    @title5 = "I am water"
+    @underscore_name = "smita_vyas_kumar"
+    @medium_link = "https://medium.com/@smitavyaskumar"
+    @twitter_link = ""
+    @fb_link = "https://www.facebook.com/SmitaVyas"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
   end
 
   def vyas_kumar_dashboard
     @authors_settings = VaughnUser.find(10)
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
+    @title1 = "A Promise"
+    @title2 = "The Freedom Pantoum"
+    @title3 = "The Gift"
+    @title4 = "Urban Rhapsody"
+    @title5 = "I am water"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
   end
+
+
 
   def terijo
     @authors_settings = VaughnUser.find(11)
+    @authors_settings = VaughnUser.find(10)
+    @name = "Smita Vyas Kumar"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*fK176WLzCPb96o8AMKdmCw.jpeg"
+    @title1 = "A Promise"
+    @title2 = "The Freedom Pantoum"
+    @title3 = "The Gift"
+    @title4 = "Urban Rhapsody"
+    @title5 = "I am water"
+    @underscore_name = "smita_vyas_kumar"
+    @medium_link = "https://medium.com/@smitavyaskumar"
+    @twitter_link = ""
+    @fb_link = "https://www.facebook.com/SmitaVyas"
+    @background_image = ""
   end
 
   def terijo_dashboard
