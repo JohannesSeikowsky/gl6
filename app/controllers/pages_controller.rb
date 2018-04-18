@@ -231,29 +231,29 @@ class PagesController < ApplicationController
 
   def daniel_teall
     @authors_settings = VaughnUser.find(13)
-    @name = "Smita Vyas Kumar"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @underscore_name = "smita_vyas_kumar"
-    @medium_link = "https://medium.com/@smitavyaskumar"
+    @name = "Daniel Teall"
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gey56sDzjH4rG-D4O-2luw.jpeg"
+    @title1 = "Final Pagers"
+    @title2 = "First Encounter"
+    @title3 = "Goddess"
+    @title4 = "Correct to Love"
+    @title5 = "The Gentrification of Dreams"
+    @underscore_name = "daniel_teall"
+    @medium_link = "https://medium.com/@tealld20"
     @twitter_link = ""
-    @fb_link = "https://www.facebook.com/SmitaVyas"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @fb_link = "https://www.facebook.com/daniel.teall.7"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*1iPeIYCdfApnHTRazycw0A.jpeg"
   end
 
   def teall_dashboard
     @authors_settings = VaughnUser.find(13)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"  
+    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gey56sDzjH4rG-D4O-2luw.jpeg"
+    @title1 = "Final Pagers"
+    @title2 = "First Encounter"
+    @title3 = "Goddess"
+    @title4 = "Correct to Love"
+    @title5 = "The Gentrification of Dreams"
+    @background_image = "https://cdn-images-1.medium.com/max/800/1*1iPeIYCdfApnHTRazycw0A.jpeg"
   end
 
   def amy_chai
