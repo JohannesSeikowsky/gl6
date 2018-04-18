@@ -204,29 +204,29 @@ class PagesController < ApplicationController
 
   def artemis_jones
     @authors_settings = VaughnUser.find(12)
-    @name = "Smita Vyas Kumar"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @underscore_name = "smita_vyas_kumar"
-    @medium_link = "https://medium.com/@smitavyaskumar"
-    @twitter_link = ""
-    @fb_link = "https://www.facebook.com/SmitaVyas"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @name = "Artemis J Jones"
+    @image_of_author = "https://pbs.twimg.com/profile_images/959416572321419265/dPWeVZtD_400x400.jpg"
+    @title1 = "The Meaning Of Lost"
+    @title2 = "When Will The Adults Enter The Room?"
+    @title3 = "Wild"
+    @title4 = "The Death of Denny James Franklin"
+    @title5 = "Michelle"
+    @underscore_name = "artemis_jones"
+    @medium_link = "https://medium.com/@Artemis_J_Jones"
+    @twitter_link = "https://twitter.com/Artemis_J_Jones"
+    @fb_link = ""
+    @background_image = "https://pbs.twimg.com/profile_banners/2342042976/1518401055/1500x500"
   end
 
   def jones_dashboard
     @authors_settings = VaughnUser.find(12)
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/1*Gz_ZlYgkv0uG8Jz6IDmTiQ.jpeg"
-    @title1 = "A Promise"
-    @title2 = "The Freedom Pantoum"
-    @title3 = "The Gift"
-    @title4 = "Urban Rhapsody"
-    @title5 = "I am water"
-    @background_image = "https://cdn-images-1.medium.com/max/800/1*SFFSCcANXGg0JAbH_zf10Q.png"
+    @image_of_author = "https://pbs.twimg.com/profile_images/959416572321419265/dPWeVZtD_400x400.jpg"
+    @title1 = "The Meaning Of Lost"
+    @title2 = "When Will The Adults Enter The Room?"
+    @title3 = "Wild"
+    @title4 = "The Death of Denny James Franklin"
+    @title5 = "Michelle"
+    @background_image = "https://pbs.twimg.com/profile_banners/2342042976/1518401055/1500x500"
   end
 
   def daniel_teall
