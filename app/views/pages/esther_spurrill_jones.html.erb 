@@ -1,0 +1,202 @@
+<%= link_to "Author's Dashboard", vyas_kumar_dashboard_path, id: "dashboard_link" %> 
+
+<div class="container-fluid">
+	
+	  <div class="central_container" style="border: 1px solid lightgrey;"> 		
+
+	  	<div class="left_side_container"> 		
+		    <% if @authors_settings.portrait_feature %>
+	  			<%= image_tag "#{@image_of_author}", id: "profile_image" %>
+			<% end %>
+			<p>	</p>
+	  	</div>
+
+	  	<div id="middle_container" class="middle_container">
+	  		<% if notice %>
+				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
+			<% end %>
+
+			<h1 class="name_title"> <%= @name %> </h1>
+
+			<% if @authors_settings.about_feature %>
+				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
+				<p> <%= @authors_settings.about_content %> </p> <br>
+			<% end %>
+
+			<h3 class="title"> Posts <h3>
+
+		    <% if @authors_settings.post_one %>
+			<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
+			<p class="post_excerpt"> Let us not kill each other  ...</p>
+			<% end %>
+
+		    <% if @authors_settings.post_two %>
+			<p class="post_title" onclick='show_piece("piece_one");'> <%= @title2 %> </p>
+			<p class="post_excerpt">I will not hold ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_three %>
+			<p class="post_title" onclick='show_piece("piece_two");'> <%= @title3 %> </p>
+			<p class="post_excerpt"> Act overnight  ... </p>
+			<% end %>
+
+		    <% if @authors_settings.post_four %>
+			<p class="post_title" onclick='show_piece("piece_three");'> <%= @title4 %> </p>
+			<p class="post_excerpt"> The sky, a turquoise blue ... </p>
+			<% end %>
+		
+		    <% if @authors_settings.post_five %>
+			<p class="post_title" onclick='show_piece("piece_four");'> <%= @title5 %> </p>
+			<p class="post_excerpt"> I am transparent like water ... </p>
+			<% end %>
+
+			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+	  	</div>
+
+<!-- START OF POSTS -->
+<div class="post" id="piece_zero">
+	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> <%= @title1 %> </h3>
+	<p>
+
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+
+<div class="post" id="piece_one">
+	<h1 onclick='show_default("piece_one")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> <%= @title2 %> </h3>
+	<p>
+
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+
+<div class="post" id="piece_two">
+	<h1 onclick='show_default("piece_two")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> <%= @title3 %> </h3>
+	<p>
+
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+
+<div class="post" id="piece_three">
+	<h1 onclick='show_default("piece_three")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> <%= @title4 %> </h3>
+	<p>
+
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+
+
+<div class="post" id="piece_four">
+	<h1 onclick='show_default("piece_four")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
+	<h3 class="piece_header"> <%= @title5 %></h3>
+	<p>
+
+	</p>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+</div>
+<!-- END OF POSTS -->
+
+
+	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
+	
+			<% if @authors_settings.email_subscription_feature %>
+			<div class="functionality_container">
+				<p class="functionality_title"> Email Notifier </p>
+				<p> Notify me when new <br> posts are published. </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_field :email, placeholder: " you@youmail.com",
+							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
+					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+			<% end %>
+
+			<% if @authors_settings.social_icons_features %>
+			<div class="functionality_container" style="margin-top: 60px;">
+				<p class="functionality_title"> My Social </p>
+				
+				<% unless @twitter_link.empty? %>
+				<a href= <%= @twitter_link %> target="_blank">
+					<i class="fab fa-twitter" style="font-size: 30px;"></i>
+				</a>
+				<% end %>
+
+				<% unless @medium_link.empty? %>
+				<a href= <%= @medium_link %> target="_blank">
+					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+				<% end %>
+
+				<% unless @fb_link.empty? %>
+				<a href= <%= @fb_link %> target="_blank">
+					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
+				</a>
+				<% end %>
+			
+			</div>
+			<% end %>
+
+			<% if @authors_settings.contact_feature %>
+			<div class="functionality_container" style="margin-top: 40px;">
+				<p class="functionality_title"> Contact Me </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: " your message",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
+					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
+			</div>
+	  		<% end %>
+	  	</div>
+	  </div>
+
+	  </div>
+
+</div>
+
+
+<script type="text/javascript">
+	function show_piece(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}	
+
+	function show_default(piece_id){
+		document.getElementById(piece_id).style.display = "none";
+		document.getElementById("middle_container").style.display = "block";
+	}
+</script>
+
+
+<style type="text/css">
+	body {
+	  margin: 0;
+	  padding-bottom: 20px;
+	  background: url(<%= @background_image %>) no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}	
+</style>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

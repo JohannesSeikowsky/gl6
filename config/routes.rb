@@ -71,6 +71,11 @@ Rails.application.routes.draw do
   get 'leonard_dashboard', to: 'pages#leonard_dashboard', as: 'leonard_dashboard'
   post 'editing_leonard_page', to: 'johannes_page#editing_leonard_page', as: 'editing_leonard_page'
 
+  get 'esther_spurrill_jones', to: 'pages#esther_spurrill_jones', as: 'esther_spurrill_jones'
+  get 'spurrill_jones_dashboard', to: 'pages#spurrill_jones_dashboard', as: 'spurrill_jones_dashboard'
+  post 'editing_spurrill_jones_page', to: 'johannes_page#editing_spurrill_jones_page', as: 'editing_spurrill_jones_page'
+  
+
   # statics
   get 'about_us', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'

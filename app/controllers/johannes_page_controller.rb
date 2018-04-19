@@ -90,6 +90,13 @@ def editing_leonard_page
 	redirect_to kristin_leonard_path
 end
 
+def editing_spurrill_jones_page
+	VaughnUser.find(16).update(profile_params)
+	GeneralMailer.user_edited_page("esther_spurrill_jones").deliver
+	redirect_to esther_spurrill_jones_path
+end
+
+
 def email_subscriber
 	@submitted_email = params[:email_subscriber][:email]
 	@author_of_page = params[:email_subscriber][:author]
