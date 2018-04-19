@@ -339,17 +339,17 @@ class PagesController < ApplicationController
 
   def spurrill_jones_dashboard
     @authors_settings = VaughnUser.find(16)
-    @name = "Kristin Leonard"
-    @image_of_author = "https://pbs.twimg.com/profile_images/965027457039417345/UEqyQEsh_400x400.jpg"
-    @title1 = "Words"
-    @title2 = "The Wrong Direction."
-    @title3 = "The Return"
-    @title4 = "The Power"
-    @title5 = "Through the Fire"
-    @underscore_name = "kristin_leonard"
-    @medium_link = "https://medium.com/@kristin.leonard"
-    @twitter_link = "https://twitter.com/KrisJleonard"
-    @fb_link = ""
-    @background_image = "https://pbs.twimg.com/profile_banners/906569043477356544/1518915388/1500x500"
+    @name = "Esther Spurrill-Jones"
+    @image_of_author = "https://pbs.twimg.com/profile_images/885577520279506944/T9dDFA-H_400x400.jpg"
+    @title1 = "Dear Christians, Things Need to Change"
+    @title2 = "How to Write a Poem: Alliteration, Consonance, and Assonance"
+    @title3 = "Cocoon"
+    @title4 = "Original"
+    @title5 = "Beside Me"
+    @underscore_name = "esther_spurrill_jones"
+    @medium_link = "https://medium.com/@estherspurrilljones"
+    @twitter_link = "https://twitter.com/EstherSJones"
+    @fb_link = "https://www.facebook.com/ALightThatBurns/"
+    @background_image = "https://pbs.twimg.com/profile_banners/534515797/1501082047/1500x500"
   end
 end
