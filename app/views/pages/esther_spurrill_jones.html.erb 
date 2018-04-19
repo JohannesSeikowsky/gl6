@@ -1,4 +1,4 @@
-<%= link_to "Author's Dashboard", vyas_kumar_dashboard_path, id: "dashboard_link" %> 
+<%= link_to "Author's Dashboard", spurrill_jones_dashboard_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
 	
@@ -27,27 +27,27 @@
 
 		    <% if @authors_settings.post_one %>
 			<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
-			<p class="post_excerpt"> Let us not kill each other  ...</p>
+			<p class="post_excerpt"> He said to them  ...</p>
 			<% end %>
 
 		    <% if @authors_settings.post_two %>
 			<p class="post_title" onclick='show_piece("piece_one");'> <%= @title2 %> </p>
-			<p class="post_excerpt">I will not hold ... </p>
+			<p class="post_excerpt"> Once you know the basics ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_three %>
 			<p class="post_title" onclick='show_piece("piece_two");'> <%= @title3 %> </p>
-			<p class="post_excerpt"> Act overnight  ... </p>
+			<p class="post_excerpt"> I am a caterpillar ... </p>
 			<% end %>
 
 		    <% if @authors_settings.post_four %>
 			<p class="post_title" onclick='show_piece("piece_three");'> <%= @title4 %> </p>
-			<p class="post_excerpt"> The sky, a turquoise blue ... </p>
+			<p class="post_excerpt"> I made myself a copy ... </p>
 			<% end %>
 		
 		    <% if @authors_settings.post_five %>
 			<p class="post_title" onclick='show_piece("piece_four");'> <%= @title5 %> </p>
-			<p class="post_excerpt"> I am transparent like water ... </p>
+			<p class="post_excerpt"> When I fall to my knees ... </p>
 			<% end %>
 
 			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
@@ -60,7 +60,21 @@
 	</h1>
 	<h3 class="piece_header"> <%= @title1 %> </h3>
 	<p>
-
+I heard a preacher once say that too many churches aren’t going out into the world to preach the gospel. He said that as “fishers of men” we sit idle and expect the fish to jump into the boat instead of tossing our nets into the water. But we are doing something else lately. We are pouring gasoline into the water around the boat and lighting it on fire. We are taking the fish we’ve already caught and throwing them back. We are actively chasing people away, is what I’m saying.
+<br> <br>
+It seems every other week there’s another story in the news about Christians behaving badly, especially when it comes to how we treat the LGBTQ+ population. Christian organizations are suspending pastors for performing same sex marriages. Christian bakers are refusing service to gay customers. And don’t even get me started on the Nashville Statement.
+<br> <br>
+And yes, I know #NotAllChristians. I grew up in the church, and I still attend, and still consider myself a Christian. I know that a lot of Christians honestly believe that they are only doing what God expects of them. They sincerely believe that they are doing what’s right. The problem lies in how this is perceived by those outside of the church.
+<br> <br>
+    The road to Hell is paved with good intentions.
+<br> <br>
+When people outside of the church see us voting for an admitted sexual assaulter and an accused child molester, they don’t want anything to do with us. When they see us fighting for the right to treat LGBTQ+ people as second-class citizens, they see only hate in our eyes. When they see us arguing that “biblical marriage” is between one man and one woman while the Bible has multiple examples of polygamy, they see us for the hypocrites we are.
+<br> <br>
+    You must love the Lord your God with all your heart, with all your being, and with all your mind. This is the first and greatest commandment. And the second is like it: You must love your neighbor as you love yourself. All the Law and the Prophets depend on these two commands. Matthew 22:36–40
+<br> <br>
+Rather than knowing we are Christians by our love, the world knows us by our hatred and bigotry. This must change if we are to “go and make disciples of all nations”(Matthew 19). As things are right now, why would anyone want to be our disciples?
+<br> <br>
+Dear brothers and sisters in Christ, please hear my heart. We are not showing the love of Christ to the lost. We are not being Christ-like. This must change.
 	</p>
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
@@ -72,7 +86,21 @@
 	</h1>
 	<h3 class="piece_header"> <%= @title2 %> </h3>
 	<p>
-
+Once you know the basics of crafting a poem, you’re ready to start adding “poetic devices” like alliteration, consonance, and assonance. You’ve probably heard of alliteration before, but the other two might be new to you.
+<br> <br>
+Let’s start with alliteration. Most people have heard this word before. It is simply beginning two or more words, usually in the same line, with the same letter or sound. This can include different letters that sound the same; eg: c can go with s or k depending on if it is a hard c or a soft c: “kitty cats” or “silly civets.”
+<br> <br>
+This is a pretty easy device to include in your writing, though sometimes it can be a little overdone. Even the Bard is guilty of this (though he likely overdid it on purpose):
+<br> <br>
+    “With bloody blameful blade he bravely broached his bloody boiling breast.” -William Shakespeare, A Midsummer Night’s Dream
+<br> <br>
+J.R.R. Tolkien especially liked alliteration, often using it in a poetic form based on Old English Metre. Treebeard recites a verse in this style to Merry and Pippin, beginning with the lines, “Learn now the lore of living creatures! First name the four, the free peoples.” You can see how each line has the repeated l’s and f’s, creating alliteration.
+<br> <br>
+Consonance and assonance are closely related to alliteration (and could even be called subsets of alliteration), though the repeated sounds no longer must be at the beginning of the words. Consonance is a repetition of consonant sounds, while assonance is a repetition of vowel sounds. (No, assonance has nothing to do with asses.)
+<br> <br>
+Tongue twisters often use consonance and assonance. In “She sells seashells by the seashore,” we find three s sounds at the beginning, middle, and end of the words, and two e sounds at the middle and end. We also have the l’s near the end of “sells” and “seashells” for further consonance. “Peter Piper picked a peck of pickled peppers” has alliteration with the p’s; consonance with c’s/k’s, p’s, and r’s; and assonance with various pronunciations of e’s and i’s.
+<br> <br>
+Using these poetic devices in your own poetry can be a lot of fun. Most of the time, you want to avoid tongue twisters, but they can be fun too. Play with pretty, sexy sounds. Make something amazing. There are so many ways you can create cunning craft and awesome art.
 	</p>
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
@@ -84,7 +112,18 @@
 	</h1>
 	<h3 class="piece_header"> <%= @title3 %> </h3>
 	<p>
-
+I am a caterpillar;<br>
+This flesh is my cocoon.<br>
+Someday I’ll spread my wings;<br>
+I do not know how soon.<br>
+I’ll leave this all behind:<br>
+All sadness, aches, and pains,<br>
+To fly away unfettered<br>
+By earthly bonds and chains.<br>
+Transforming, making new,<br>
+My self will liquefy,<br>
+Becoming what I’m meant to be:<br>
+A wondrous butterfly.
 	</p>
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
@@ -96,7 +135,30 @@
 	</h1>
 	<h3 class="piece_header"> <%= @title4 %> </h3>
 	<p>
-
+I made myself a copy of what I should have been, <br>
+And buried who I am so deep I couldn’t see —  <br>
+Underneath my pious rags and cries of “Unclean!” —  <br>
+That what I hated was a part of me. <br>
+<br>
+When I began to find my way out from the dark,<br>
+I was transformed as You renewed my mind,<br>
+Deep within my soul ignited a spark<br>
+And I began to see what You’ve designed.<br>
+<br>
+Your Fire swept away all the dross and chaff,<br>
+Religious boxes I kept You inside.<br>
+Now, I know I know not even the half<br>
+How high, how deep, how measureless and wide.<br>
+<br>
+I stepped into the sun, accepted who I am,<br>
+And who I am is no mistake, just queer.<br>
+You made me and You love me, and You do not condemn;<br>
+I am Your child; to You I am so dear.<br>
+<br>
+The copy of a copy that I made of myself<br>
+Has faded into nothing over time,<br>
+Leaving the original that looks like no one else,<br>
+The me that I’ll no longer undermine.
 	</p>
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
@@ -108,7 +170,11 @@
 	</h1>
 	<h3 class="piece_header"> <%= @title5 %></h3>
 	<p>
-
+When I fall to my knees<br>
+Before the throne,<br>
+He comes to kneel beside me,<br>
+Wraps His arms around me,<br>
+And loves me.
 	</p>
 	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
