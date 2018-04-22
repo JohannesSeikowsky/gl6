@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :writers
 
 
-  get 'johannes_seikowsky', to: 'pages#johannes', as: 'johannes'
+  get 'johannes', to: 'pages#johannes', as: 'johannes'
 
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
   get 'vaughn_dashboard', to: 'pages#vaughn_dashboard', as: 'vaughn_dashboard'
