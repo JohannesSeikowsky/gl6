@@ -1,11 +1,16 @@
-<%= link_to "Get your own Wordgates Page", root_path, id: "dashboard_link" %>
+<%= link_to "Get your own Wordgates Page", get_page_path, id: "dashboard_link", style: "background-color: white;			text-decoration: none; border: 1px solid grey;" %>
 
 <div class="container-fluid">
 	
-	  <div class="central_container"> 		
+	  <div class="central_container" style="border: 1px solid #F5F5F5; padding-bottom: 65px;"> 		
 
 	  	<div class="left_side_container"> 		
-		    <%= image_tag "johannes.jpg", id: "profile_image" %>
+		    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 12px;" %>
+		    <!--
+		    <%= link_to "Bio / About", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
+		    <%= link_to "Books", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
+		    <%= link_to "Quotes", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
+			-->
 		<p>	</p>
 	  	</div>
 
@@ -14,44 +19,46 @@
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h3 class="name_title"> Johannes Seikowsky </h3>
+			<h3 class="name_title"> Me in 10 seconds </h3>
 			
-			<h3 class="title"> Me in 10 seconds </h3>
+			
 			<p> 		
-			 	Interested in many things. <br>
+			 	Name - Johannes Seikowsky. <br>
 			 	Formal Education - Economics. <br>
 			 	Self-taught programmer. <br>
 			 	Writer/Poet by compulsion. <br>
-			 	Living in London and enjoying it. <br> <br>
+			 	Interested in many things. <br>
+			 	Living in London and enjoying it. <br>
 
+			 	<!--
 			 	In charge of WordGates.com. <br>
-			 	Any complaints --> please message <br> me using the contact box on the right.
+			 	Any complaints please message <br> me using the contact box on the right. 
+			 	-->
 			</p> <br>
 
-			<h3 class="title"> Top Articles <h3>
+			<h3 class="name_title"> Posts </h3>
+
+			<h3 class="title">  <h3>
 			<p class="post_title" onclick='show_piece("piece_zero");'> A Primer on the Day </p>
-			<p class="post_excerpt"> In Washington, a clown makes people frown ... </p>
+			<p class="post_excerpt"> In Washington, a clown makes people frown </p>
 
 			<p class="post_title" onclick='show_piece("piece_one");'> In Canary Wharf </p>
-			<p class="post_excerpt"> In Canary Wharf they have all  ... </p>
+			<p class="post_excerpt"> In Canary Wharf they have all </p>
 
 			<p class="post_title" onclick='show_piece("piece_two");'> Old Man on a Bench </p>
-			<p class="post_excerpt"> Walking in the park ... </p>
+			<p class="post_excerpt"> Walking in the park </p>
 	
 			<p class="post_title" onclick='show_piece("piece_three");'> Captain of the Ship of You </p> 
-			<p class="post_excerpt"> It’s in your heart, it’s in your spine ... </p>
+			<p class="post_excerpt"> It’s in your heart, it’s in your spine </p>
 			
 			<p class="post_title" onclick='show_piece("piece_four");'>  Feet, to Feet </p>
-			<p class="post_excerpt"> Most ignore you, some abhor you, some adore you ... </p>
-			
-			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
-	  	</div>
-
+			<p class="post_excerpt"> Most ignore you, some abhor you, some adore you </p>
+		</div>
 
 <!-- START OF POSTS -->
 <div class="post" id="piece_zero">
 	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		Go Back 
 	</h1>
 	<h3 class="piece_header"> A Primer on the Day </h3>		
 	<p>
@@ -68,12 +75,11 @@
 		a quick poetic account of the day, <br>
 		a primer on what in conversation one may say.
 	</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 <div class="post" id="piece_one">
 	<h1 onclick='show_default("piece_one")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		Go Back 
 	</h1>
 		<h3 class="piece_header"> In Canary Wharf </h3>		
 		<p>
@@ -97,12 +103,11 @@
 			Go have a trip — To Canary Wharf. <br>
 			You’ll be very glad. Once you’re back.
 		</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 <div class="post" id="piece_two">
 	<h1 onclick='show_default("piece_two")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		Go Back 
 	</h1>
 		<h3 class="piece_header"> Old Man on a Bench </h3>		
 		<p>
@@ -118,12 +123,11 @@
 			no deeds performed, <br>
 			All difference made.
 		</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 <div class="post" id="piece_three">
 	<h1 onclick='show_default("piece_three")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		Go Back 
 	</h1>
 		<h3 class="piece_header"> Captain of the Ship of you </h3>		
 		<p>
@@ -140,12 +144,11 @@
 			You — Captain of the ship of you. <br>
 			Now let me ask: what will you do?
 		</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 <div class="post" id="piece_four">
 	<h1 onclick='show_default("piece_four")' class="go_back_btn">
-		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+		Go Back 
 	</h1>
 		<h3 class="piece_header"> Feet, to Feet </h3>		
 		<p>
@@ -160,25 +163,24 @@
 			This is to you my feet,  <br>
 			I adore you, never abhor you, trying not to ignore you.
 		</p>
-	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 <!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
 	
-			<div class="functionality_container">
+			<div class="functionality_container" style="background-color: #F9F9F9;">
 				<p class="functionality_title" style="margin-top: 3px;"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 				    <%= f.hidden_field :author, value: "dave_garbutt" %>
-					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
+					<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
 				<% end %>
 			</div>
 
 			<div class="functionality_container" style="margin-top: 60px;">
-				<p class="functionality_title"> My Social </p>
+				<p class="functionality_title"> More Social </p>
 				<a href="https://twitter.com/Seikowsky" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
@@ -191,17 +193,19 @@
 			</div>
 
 			<div class="functionality_container" style="margin-top: 40px;">
-				<p class="functionality_title"> Contact Me </p>
+				<p class="functionality_title"> Get in Touch </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: " your message",
 							style: "width: 170px; height: 100px;" %> <br>
 				    <%= f.hidden_field :author, value: "dave_garbutt" %>
-					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
+
 				<% end %>
 			</div>
 	  	</div>
 	  </div>
-
+	<div class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
+	
 	  </div>
 
 </div>
@@ -210,6 +214,8 @@
 <script type="text/javascript">
 	function show_piece(piece_id){
 		document.getElementById("middle_container").style.display = "none";
+		document.getElementById("right_side_container").style.display = "none";
+
 		document.getElementById(piece_id).style.display = "block";	
 	}	
 
@@ -224,12 +230,29 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("https://cdn-images-1.medium.com/max/800/1*0BqnQDbsQPlzBaJ2nYzdHg.jpeg") no-repeat center center fixed; 
+	  
+	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed; 
+	  
+	  font-family: "Times New Roman";
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
 	}	
+
+	.post_title{
+		font-size: 18px;
+	}
+
+	.right_side_links{
+		color: black;
+		padding: 0 20px;
+	}
+
+	.right_side_links:hover{
+		color: black;
+		text-decoration: underline;
+	}
 </style>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
