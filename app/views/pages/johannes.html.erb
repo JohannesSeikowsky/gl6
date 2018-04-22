@@ -2,28 +2,30 @@
 
 <div class="container-fluid">
 	
-	  <div class="central_container" style="border: 1px solid #F5F5F5; padding-bottom: 65px;"> 		
+	  <div class="central_container" style="border: 1px solid #F5F5F5; padding-bottom: 75px;"> 		
 
-	  	<div class="left_side_container"> 		
-		    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 12px;" %>
-		    <!--
-		    <%= link_to "Bio / About", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
-		    <%= link_to "Books", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
-		    <%= link_to "Quotes", root_path, class: "right_side_links", style: "background-color: #ECECEC" %> <br>
-			-->
+	  	<div id="left_side_container" class="left_side_container"> 		
+		    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
+		    
+		    <p class="functionality_title"> More </p>
+
+		    <%= link_to "Bio / About", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
+		    <%= link_to "Books I like", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
+		    <%= link_to "Quote Collection", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
+			
 		<p>	</p>
 	  	</div>
 
-	  	<div id="middle_container" class="middle_container">
+	  	<div id="middle_container" class="middle_container" style="background-color: #F9F9F9;">
 	  		<% if notice %>
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h3 class="name_title"> Me in 10 seconds </h3>
-			
-			
-			<p> 		
-			 	Name - Johannes Seikowsky. <br>
+			<h3 class="name_title"> Johannes Seikowsky </h3>
+
+			<h3 class="title"> Me in 10 seconds </h3>
+
+			<p>
 			 	Formal Education - Economics. <br>
 			 	Self-taught programmer. <br>
 			 	Writer/Poet by compulsion. <br>
@@ -36,7 +38,7 @@
 			 	-->
 			</p> <br>
 
-			<h3 class="name_title"> Posts </h3>
+			<h3 class="title"> Posts </h3>
 
 			<h3 class="title">  <h3>
 			<p class="post_title" onclick='show_piece("piece_zero");'> A Primer on the Day </p>
@@ -61,7 +63,7 @@
 		Go Back 
 	</h1>
 	<h3 class="piece_header"> A Primer on the Day </h3>		
-	<p>
+	<p style="font-size: 16px;">
 		In Washington, a clown makes people frown. <br>
 		In Beijing, men in suits do as it suits — probably them. <br>
 		In Sydney — well, nobody cares. <br>
@@ -69,11 +71,11 @@
 		In Moscow, Pater Putin just won’t go.<br>
 		In Paris however, a youngster is not laying low. <br>
 		In London, they want to exit — why? <br>
-		In Rome, well nothing happens in the Rome of the day — <br>
+		In Rome, <br> well nothing much happens in the Rome of the day -<br>
 		Eternal city mostly looking pretty. <br>
 		And so it goes, <br>
-		a quick poetic account of the day, <br>
-		a primer on what in conversation one may say.
+		a poetic account of the day, <br>
+		a rather incomplete primer on what in conversation one may say.
 	</p>
 </div>
 
@@ -168,8 +170,8 @@
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
 	
-			<div class="functionality_container" style="background-color: #F9F9F9;">
-				<p class="functionality_title" style="margin-top: 3px;"> Email Notifier </p>
+			<div class="functionality_container" style="">
+				<p class="functionality_title" style="margin-top: -50px;"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
@@ -179,10 +181,20 @@
 				<% end %>
 			</div>
 
-			<div class="functionality_container" style="margin-top: 60px;">
-				<p class="functionality_title"> More Social </p>
+			<div class="functionality_container" style="margin-top: 62px;">
+				<p class="functionality_title"> Message Box </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: "message me here ...",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "dave_garbutt" %>
+					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
+
+				<% end %>
+			</div>
+
+			<div class="functionality_container" style="margin-top: 62px; color: black;">
 				<a href="https://twitter.com/Seikowsky" target="_blank">
-					<i class="fab fa-twitter" style="font-size: 30px;"></i>
+					<i class="fab fa-twitter" style="font-size: 30px; color: black;"></i>
 				</a>
 				<a href="https://medium.com/@jseikowsky" target="_blank">
 					<i class="fab fa-medium-m" style="font-size: 30px; margin-left: 15px; color: black;"></i>
@@ -192,19 +204,10 @@
 				</a>
 			</div>
 
-			<div class="functionality_container" style="margin-top: 40px;">
-				<p class="functionality_title"> Get in Touch </p>
-				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-					<%= f.text_area :email, placeholder: " your message",
-							style: "width: 170px; height: 100px;" %> <br>
-				    <%= f.hidden_field :author, value: "dave_garbutt" %>
-					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
 
-				<% end %>
-			</div>
 	  	</div>
 	  </div>
-	<div class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
+	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates -  Every Writer's Home </div>
 	
 	  </div>
 
@@ -214,12 +217,18 @@
 <script type="text/javascript">
 	function show_piece(piece_id){
 		document.getElementById("middle_container").style.display = "none";
+		document.getElementById("right_side_container").style.visibility = "hidden";
+		document.getElementById("left_side_container").style.visibility = "hidden";
+		document.getElementById("powered_by").style.visibility = "hidden";
+
 		document.getElementById(piece_id).style.display = "block";	
 	}	
 
 	function show_default(piece_id){
 		document.getElementById(piece_id).style.display = "none";
 		document.getElementById("middle_container").style.display = "block";
+		document.getElementById("right_side_container").style.visibility = "visible";
+		document.getElementById("left_side_container").style.visibility = "visible";
 	}
 </script>
 
@@ -249,6 +258,10 @@
 
 	.right_side_links:hover{
 		color: black;
+		text-decoration: underline;
+	}
+
+	.go_back_btn{
 		text-decoration: underline;
 	}
 </style>
