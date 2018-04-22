@@ -9,10 +9,13 @@
 		    
 		    <p class="functionality_title"> More </p>
 
-		    <%= link_to "Bio / About", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
-		    <%= link_to "Books I like", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
-		    <%= link_to "Quote Collection", root_path, class: "right_side_links", style: "background-color: #F5F5F5" %> <br>
-			
+		    <%= link_to "Biography / About", root_path, class: "right_side_links", 
+		    				onclick: 'show_piece("bio"); return false', style: "background-color: #F5F5F5" %> <br>
+		    <!--
+		    <%= link_to "Books I like", root_path, class: "right_side_links", onclick: 'show_piece("books"); return false', style: "background-color: #F5F5F5" %> <br>
+		    
+		    <%= link_to "Quote Collection", root_path, class: "right_side_links", onclick: 'show_piece("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
+			-->
 		<p>	</p>
 	  	</div>
 
@@ -215,6 +218,40 @@
 			This is to you my feet,  <br>
 			I adore you, never abhor you, trying not to ignore you.
 		</p>
+</div>
+
+<div class="post" id="bio">
+	<h1 onclick='show_default("bio")' class="go_back_btn">
+		Go Back 
+	</h1>
+	<h3 class="piece_header"> Bio / About Me </h3>		
+	<p>
+		Formal Education - Economics. <br>
+	 	Self-taught programmer. <br>
+	 	Writer/Poet by compulsion. <br>
+	 	Interested in many things. <br>
+	 	Living in London and enjoying it. <br>
+	</p>
+</div>
+
+<div class="post" id="books">
+	<h1 onclick='show_default("books")' class="go_back_btn">
+		Go Back 
+	</h1>
+	<h3 class="piece_header"> Books I like </h3>		
+	<p>
+		...
+	</p>
+</div>
+
+<div class="post" id="quotes">
+	<h1 onclick='show_default("quotes")' class="go_back_btn">
+		Go Back 
+	</h1>
+	<h3 class="piece_header"> Quote Collection </h3>		
+	<p>
+		...
+	</p>
 </div>
 <!-- END OF POSTS -->
 
