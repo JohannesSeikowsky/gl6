@@ -11,11 +11,10 @@
 
 		    <%= link_to "Biography / About", root_path, class: "right_side_links", 
 		    				onclick: 'show_piece("bio"); return false', style: "background-color: #F5F5F5" %> <br>
-		    <!--
-		    <%= link_to "Books I like", root_path, class: "right_side_links", onclick: 'show_piece("books"); return false', style: "background-color: #F5F5F5" %> <br>
 		    
-		    <%= link_to "Quote Collection", root_path, class: "right_side_links", onclick: 'show_piece("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
-			-->
+		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_piece("books"); return false', style: "background-color: #F5F5F5" %> <br>
+		    
+		    <%= link_to "Quotes I like", root_path, class: "right_side_links", onclick: 'show_piece("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
 		<p>	</p>
 	  	</div>
 
@@ -87,7 +86,7 @@
 		sometimes just to impress her.<br><br>
 		Hasn’t he come far, the Modern Man? So, so far!? <br>
 		He thinks so. Mostly and most of the time anyway.<br><br>
-		What do you think? Do you agree? <br> Do you want to be a Modern Man?
+		What do you think? Do you agree? <br> Do you want to be a Modern Man?<br>
 		Do you think it’s worth your while? <br>
 		One can disagree.
 	</p>
@@ -226,11 +225,29 @@
 	</h1>
 	<h3 class="piece_header"> Biography / About </h3>		
 	<p>
-		Formal Education - Economics. <br>
-	 	Self-taught programmer. <br>
-	 	Writer/Poet by compulsion. <br>
-	 	Interested in many things. <br>
-	 	Living in London and enjoying it. <br>
+		My formal education is in Economics in which I hold a <br>
+		BA from the University of Oxford, UK.
+		<br> <br>
+		I enjoy intellectual things - reading, writing, programming and thinking.
+		<br> <br>
+		In priciple I can't decide whether I'm a literary or a technical person,
+		so I've decided to be a little bit of both.
+		<br> <br>
+		Programming-wise I mostly write Web-applications using Ruby-on-Rails (currently)
+		and other systems using Python or Ruby (currently).
+		<br> <br>
+		Wordgates itself is one of the applications I wrote. I hope you like it.
+		<%= link_to "Try it out", get_page_path, style: "text-decoration: underline;" %> if you haven't yet.		 		
+		<br> <br>
+		On the literature front I write poems and short essays. I've published the poems that I don't consider failures here on this site.
+		<br> <br>
+		Currently I live in London, UK, which I enjoy and recommend. Although originially 
+		I am from the very North of Germany - almost Denmark.
+		<br> <br> <br>
+		All the Best <br> and feel free to get in touch via the Message Box <br>
+		or write to joseikowsky@gmail.com.
+		<br> <br>
+		Johannes
 	</p>
 </div>
 
@@ -238,9 +255,40 @@
 	<h1 onclick='show_default("books")' class="go_back_btn">
 		Go Back 
 	</h1>
-	<h3 class="piece_header"> Books I like </h3>		
+	<h3 class="piece_header"> Books I like and recommend </h3>		
 	<p>
-		...
+		"The World of Yesterday" - by Stefan Zweig <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/World-Yesterday-Stefan-Zweig/dp/0803226616/ref=sr_1_1?ie=UTF8&qid=1524493897&sr=8-1&keywords=stefan+zweig", style: "text-decoration: underline;" %> <br> <br>
+
+		"Chess Story" - by Stefan Zweig <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Chess-Story-Review-Books-Classics/dp/1590171691/ref=sr_1_1?s=books&ie=UTF8&qid=1524493997&sr=1-1&keywords=stefan+zweig+chess", style: "text-decoration: underline;" %><br> <br>
+
+		"De Bello Gallico" - by Julius Caesar <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Gallic-War-Commentaries-Commentary-Classics/dp/0199540268/ref=sr_1_2?s=books&ie=UTF8&qid=1524494100&sr=1-2&keywords=De+Bello+Gallico", style: "text-decoration: underline;" %><br> <br>
+
+		"Antifragile" - by Nassim N. Taleb <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680/ref=sr_1_1?s=books&ie=UTF8&qid=1524494334&sr=1-1&keywords=Antifragile", style: "text-decoration: underline;" %><br> <br>
+
+		"Sapiens" - by Yuval Harari <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316117/ref=sr_1_1?s=books&ie=UTF8&qid=1524495531&sr=1-1&keywords=sapiens", style: "text-decoration: underline;" %><br> <br>
+
+		"The Quarry" - by Friedrich Dürrenmatt <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Quarry-Friedrich-D%C3%BCrrenmatt/dp/B000NWVNHE/ref=sr_1_10?s=books&ie=UTF8&qid=1524494211&sr=1-10&keywords=Friedrich+D%C3%BCrrenmatt", style: "text-decoration: underline;" %><br> <br>
+
+		All books of the Maigret Series - by Georges Simenon <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=Maigret", style: "text-decoration: underline;" %> <br> <br>
+
+
+		"The Meaning of Hitler" - by Sebastian Haffner <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Meaning-Hitler-Sebastian-Haffner-ebook/dp/B008HLQFJE/ref=la_B000APE7TA_1_2?s=books&ie=UTF8&qid=1524495031&sr=1-2", style: "text-decoration: underline;" %> <br> <br>
+		"Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher" - by Richard Feynman <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/Six-Easy-Pieces-Essentials-Explained/dp/0465025277/ref=sr_1_1?s=books&ie=UTF8&qid=1524495310&sr=1-1&keywords=feynman+six+easy+pieces", style: "text-decoration: underline;" %> <br> <br>
+
+		"But How Do It Know?" - by J Clark Scott <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/But-How-Know-Principles-Computers/dp/0615303765/ref=sr_1_1?s=books&ie=UTF8&qid=1524495371&sr=1-1&keywords=but+how+do+it+know", style: "text-decoration: underline;" %><br> <br>
+
+		"UNIX and Linux System Administration Handbook" - by Evi Nemeth and others <br>
+		<%= link_to "Link to Amazon", "https://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0134277554/ref=sr_1_8?s=books&ie=UTF8&qid=1524495441&sr=1-8&keywords=linux+textbook", style: "text-decoration: underline;" %>
 	</p>
 </div>
 
@@ -248,9 +296,55 @@
 	<h1 onclick='show_default("quotes")' class="go_back_btn">
 		Go Back 
 	</h1>
-	<h3 class="piece_header"> Quote Collection </h3>		
+	<h3 class="piece_header"> Quotes I like </h3>		
 	<p>
-		...
+“I have always imagined that Paradise will be a kind of library.”<br>
+- Jorge Borges<br>
+<br>
+“Sometimes the old ways are the best ways.” <br>
+- Miss Moneypenny<br>
+<br>
+“Good scientists go looking for trouble.”<br>
+- Paul Graham, on the importance of breaking conventional wisdom in intellectual work<br>
+<br>
+“You will eventually agree with me, because you are smart and I’m right.”<br>
+- Charlie Munger<br>
+<br>
+“For love of bustle is not industry.”<br>
+- Seneca<br>
+<br>
+“What they really fear is not that they won’t get their breakfast the next morning, but that they fail to outshine their neighbours.”<br>
+- Bertrand Russell on the competitive mindset<br>
+<br>
+“If someone wonders who are the Stoics, I’d say Buddhists with an attitude problem.”<br>
+- Nassim Taleb<br>
+<br>
+“So long as all you do is not all for you.”<br>
+- Nassim Taleb<br>
+<br>
+“7000 squaremetres built on my giving a fuck.”<br>
+- Ari Gold of “Entourage” on his company<br>
+<br>
+“Do I look like a guy with a plan?”<br>
+- The Joker<br>
+<br>
+“The qualities that made for success in a fighter-pilot seemed to be just those sturdy qualities that made for success in other professions; observation, initiative, determination, courage, including the courage to run away.”<br>
+- Jim Bailey, The Sky Suspended<br>
+<br>
+“A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work.”<br>
+- John Gall<br>
+<br>
+“If I find too many people adopting a certain idea, I probably think it’s wrong. Don’t believe that something is good just because it’s trendy.”<br>
+- Donald Knuth<br>
+<br>
+“I am not sure that I exist, actually. I am all the writers that I have read, all the people that I have met, all the women that I have loved; all the cities I have visited.”<br>
+- Jorge Borges<br>
+<br>
+“When a writer dies, he becomes his books.”<br>
+- Jorge Borges<br>
+<br>
+“I beseech you, in the bowels of Christ, think it possible you may be mistaken.”<br>
+- Oliver Cromwell
 	</p>
 </div>
 <!-- END OF POSTS -->
