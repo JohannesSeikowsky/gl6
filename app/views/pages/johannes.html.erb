@@ -357,23 +357,23 @@
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-				    <%= f.hidden_field :author, value: "dave_garbutt" %>
+				    <%= f.hidden_field :author, value: "johannes" %>
 					<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
 				<% end %>
 			</div>
 
-			<div class="functionality_container" style="margin-top: 62px;">
+			<div id="message_box" class="functionality_container" style="margin-top: 62px;">
 				<p class="functionality_title"> Message Box </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_area :email, placeholder: "message me here ...",
 							style: "width: 170px; height: 100px;" %> <br>
-				    <%= f.hidden_field :author, value: "dave_garbutt" %>
+				    <%= f.hidden_field :author, value: "johannes" %>
 					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
 
 				<% end %>
 			</div>
 
-			<div class="functionality_container" style="margin-top: 62px; color: black;">
+			<div id="my_social" class="functionality_container" style="margin-top: 62px; color: black;">
 				<a href="https://twitter.com/Seikowsky" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px; color: black;"></i>
 				</a>
@@ -399,6 +399,11 @@
 	function show_piece(piece_id){
 		document.getElementById("middle_container").style.display = "none";
 		document.getElementById("right_side_container").style.visibility = "hidden";
+		/*
+		should email signup be displayed on page of post? not sure - debate with j...
+		document.getElementById("message_box").style.visibility = "hidden";
+		document.getElementById("my_social").style.visibility = "hidden";
+		*/
 		document.getElementById("left_side_container").style.visibility = "hidden";
 		document.getElementById("powered_by").style.visibility = "hidden";
 

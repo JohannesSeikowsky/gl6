@@ -136,8 +136,10 @@ def email_subscriber
 		redirect_to kristin_leonard_path, notice: "It worked! Thank you."
 	elsif @author_of_page == "esther_spurrill_jones"
 		redirect_to esther_spurrill_jones_path, notice: "It worked! Thank you."
+	elsif @author_of_page == "johannes"
+		redirect_to johannes_path, notice: "Thank you! It worked."
 	else
-		redirect_to root_path, notice: "It worked! Thank you."
+		redirect_to root_path, notice: "Thank you! It worked."
 	end
 end
 
