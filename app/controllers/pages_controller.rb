@@ -132,8 +132,8 @@ class PagesController < ApplicationController
     @title5 = "Mexico’s Click and Clack Culture"
     @underscore_name = "don_karp"
     @medium_link = "https://medium.com/@donsbumpyroad"
-    @twitter_link = "https://twitter.com/donsbumpyroad"
-    @fb_link = "https://www.facebook.com/don.karp.39"
+    @twitter_link = "https://twitter.com/donkarp_author"
+    @fb_link = "https://www.facebook.com/DonKarpauthor/"
     @background_image = "https://pbs.twimg.com/profile_banners/1149079512/1458272061/1500x500"
   end
 
@@ -148,7 +148,7 @@ class PagesController < ApplicationController
     @title5 = "Mexico’s Click and Clack Culture"
     @underscore_name = "don_karp"
     @medium_link = "https://medium.com/@donsbumpyroad"
-    @twitter_link = "https://twitter.com/donsbumpyroad"
+    @twitter_link = "https://twitter.com/donkarp_author"
     @fb_link = "https://www.facebook.com/don.karp.39"
     @background_image = "https://pbs.twimg.com/profile_banners/1149079512/1458272061/1500x500"
   end
