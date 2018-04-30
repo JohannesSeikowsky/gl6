@@ -34,14 +34,30 @@ body{
 
 .central_container{
 	width: 836px;
-	margin: 80px auto 75px auto;
+	margin: 64px auto 75px auto;
 	-webkit-border-radius: 5px; 
   	-moz-border-radius: 5px; 
     border-radius: 5px; 
 	background-color: white;
 	padding: 20px;
-	overflow: auto; 
+	overflow: auto;	
 }
+
+.page-header-johannes{
+	background-color: white;
+	width: 836px;
+	margin: 0 auto;
+	height: 45px;
+	-webkit-border-radius: 0 0 5px 5px; 
+  	-moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+	text-align: center;
+	line-height: 2.32;
+	a{
+		font-size: 19px;
+	}
+}
+
 
 .left_side_container{
 	width: 220px;

@@ -1,4 +1,18 @@
+<div class="page-header-johannes">
+    <%= link_to "Biography / About", root_path, class: "right_side_links", 
+    				onclick: 'show_page("bio"); return false' %>
+    
+    <%= link_to "All Posts", root_path, class: "right_side_links", onclick: 'show_page("posts"); return false' %>
+    
+    <%= link_to "Email List", root_path, class: "right_side_links", onclick: 'show_page("email"); return false' %>
+
+    <%= link_to "Author's Dashboard", "#", class: "right_side_links" %>
+</div>
+
+
+<!--
 <%= link_to "Get your own Wordgates Page", get_page_path, id: "dashboard_link", style: "background-color: white;			text-decoration: none; border: 1px solid grey;" %>
+-->
 
 <div class="container-fluid">
 	
@@ -9,12 +23,18 @@
 		    
 		    <p class="functionality_title"> More </p>
 
+		    <!--
 		    <%= link_to "Biography / About", root_path, class: "right_side_links", 
-		    				onclick: 'show_piece("bio"); return false', style: "background-color: #F5F5F5" %> <br>
+		    				onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5" %> <br>
+			-->
+
+		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5" %> <br>
 		    
-		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_piece("books"); return false', style: "background-color: #F5F5F5" %> <br>
-		    
-		    <%= link_to "Quotes I like", root_path, class: "right_side_links", onclick: 'show_piece("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
+		    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
+
+		    <!--
+		    <%= link_to "Private Email List", root_path, class: "right_side_links", onclick: 'show_page("email"); return false', style: "background-color: #F5F5F5" %> <br>
+			-->
 		<p>	</p>
 	  	</div>
 
@@ -34,10 +54,6 @@
 			 	Interested in many things. <br>
 			 	Living in London and enjoying it. <br>
 
-			 	<!--
-			 	In charge of WordGates.com. <br>
-			 	Any complaints please message <br> me using the contact box on the right. 
-			 	-->
 			</p> <br> <br>
 
 			<!-- <h3 class="title"> Posts </h3> -->
@@ -219,6 +235,35 @@
 		</p>
 </div>
 
+<div class="post" id="posts">
+	<h1 onclick='show_default("posts")' class="go_back_btn">
+		Go Back 
+	</h1>
+		<h3 class="piece_header"> All Posts </h3>		
+		<p>
+			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
+			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
+
+			<p class="post_title" onclick='show_piece("piece_minus_one");'> In the Mood for Walking </p>
+			<p class="post_excerpt"> It's itchy down there </p>
+
+			<p class="post_title" onclick='show_piece("piece_zero");'> A Primer on the Day </p>
+			<p class="post_excerpt"> In Washington, a clown makes people frown </p>
+
+			<p class="post_title" onclick='show_piece("piece_one");'> In Canary Wharf </p>
+			<p class="post_excerpt"> In Canary Wharf they have all </p>
+
+			<p class="post_title" onclick='show_piece("piece_two");'> Old Man on a Bench </p>
+			<p class="post_excerpt"> Walking in the park </p>
+	
+			<p class="post_title" onclick='show_piece("piece_three");'> Captain of the Ship of You </p> 
+			<p class="post_excerpt"> It’s in your heart, it’s in your spine </p>
+			
+			<p class="post_title" onclick='show_piece("piece_four");'>  Feet, to Feet </p>
+			<p class="post_excerpt"> Most ignore you, some abhor you, some adore you </p>
+		</p>
+</div>
+
 <div class="post" id="bio">
 	<h1 onclick='show_default("bio")' class="go_back_btn">
 		Go Back 
@@ -243,9 +288,11 @@
 		<br> <br>
 		Currently I live in London, UK, which I enjoy and recommend. Originially however 
 		I am from the very North of Germany - almost Denmark.
-		<br> <br> <br>
-		All the Best <br> and feel free to get in touch via the Message Box <br>
-		or write to joseikowsky@gmail.com.
+		<br> <br>
+		Please feel free to get in touch via the Message Box <br>
+		or just write me at joseikowsky@gmail.com.
+		<br> <br>
+		All the Best,
 		<br> <br>
 		Johannes
 	</p>
@@ -255,7 +302,7 @@
 	<h1 onclick='show_default("books")' class="go_back_btn">
 		Go Back 
 	</h1>
-	<h3 class="piece_header"> Books I like and recommend </h3>		
+	<h3 class="piece_header"> Book Recommendations </h3>		
 	<p>
 		"The World of Yesterday" - by Stefan Zweig <br>
 		<%= link_to "Link to Amazon", "https://www.amazon.com/World-Yesterday-Stefan-Zweig/dp/0803226616/ref=sr_1_1?ie=UTF8&qid=1524493897&sr=8-1&keywords=stefan+zweig", style: "text-decoration: underline;" %> <br> <br>
@@ -299,7 +346,7 @@
 	<h1 onclick='show_default("quotes")' class="go_back_btn">
 		Go Back 
 	</h1>
-	<h3 class="piece_header"> Quotes I like </h3>		
+	<h3 class="piece_header"> Favorite Quotes </h3>		
 	<p>
 “I have always imagined that Paradise will be a kind of library.”<br>
 - Jorge Borges<br>
@@ -350,6 +397,21 @@
 - Oliver Cromwell
 	</p>
 </div>
+
+
+<div class="post" id="email">
+	<h1 onclick='show_default("email")' class="go_back_btn">
+		Go Back 
+	</h1>
+		<h3 class="piece_header"> Email List / Notifier </h3>		
+		<p> Notify me with a simple Email <br> when new posts are published. </p>
+		<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+			<%= f.text_field :email, placeholder: " you@youmail.com",
+					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+		    <%= f.hidden_field :author, value: "johannes" %>
+			<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
+		<% end %>
+</div>
 <!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
@@ -372,7 +434,6 @@
 							style: "width: 170px; height: 100px;" %> <br>
 				    <%= f.hidden_field :author, value: "johannes" %>
 					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
-
 				<% end %>
 			</div>
 
@@ -388,10 +449,13 @@
 				</a>
 			</div>
 
+			<div id="twitter_feed" class="functionality_container" style="margin-top: 48px; color: black;">
+				<a class="twitter-timeline" data-width="200" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/Seikowsky?ref_src=twsrc%5Etfw">Tweets by Seikowsky</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
 
 	  	</div>
 	  </div>
-	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates -  Every Writer's Home </div>
+	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
 	
 	  </div>
 
@@ -399,17 +463,25 @@
 
 
 <script type="text/javascript">
+	function show_page(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById("right_side_container").style.visibility = "hidden";
+		document.getElementById("twitter_feed").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}
+
 	function show_piece(piece_id){
 		document.getElementById("middle_container").style.display = "none";
 		document.getElementById("right_side_container").style.visibility = "hidden";
 		/*
-		should email signup be displayed on page of post? not sure - debate with j...
+		display email signup or not
 		document.getElementById("message_box").style.visibility = "hidden";
 		document.getElementById("my_social").style.visibility = "hidden";
 		*/
 		document.getElementById("left_side_container").style.visibility = "hidden";
-		document.getElementById("powered_by").style.visibility = "hidden";
-
+		document.getElementById("posts").style.visibility = "hidden";
+		document.getElementById("twitter_feed").style.display = "none";
+		// document.getElementById("powered_by").style.visibility = "hidden";
 		document.getElementById(piece_id).style.display = "block";	
 	}	
 
@@ -418,6 +490,7 @@
 		document.getElementById("middle_container").style.display = "block";
 		document.getElementById("right_side_container").style.visibility = "visible";
 		document.getElementById("left_side_container").style.visibility = "visible";
+		document.getElementById("twitter_feed").style.display = "block";
 	}
 </script>
 
@@ -426,9 +499,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  
-	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed; 
-	  
+	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed;
 	  font-family: "Times New Roman";
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -453,6 +524,18 @@
 	.go_back_btn{
 		text-decoration: underline;
 	}
+
+	.central_container{
+		width: 836px;
+		margin: 54px auto 75px auto;
+		-webkit-border-radius: 5px; 
+	  	-moz-border-radius: 5px; 
+	    border-radius: 5px; 
+		background-color: white;
+		padding: 20px;
+		overflow: auto;	
+	}
+
 </style>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
