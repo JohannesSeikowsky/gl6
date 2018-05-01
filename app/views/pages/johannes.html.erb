@@ -1,12 +1,12 @@
 <div class="page-header-johannes">
-    <%= link_to "Biography / About", root_path, class: "right_side_links", 
+    <%= link_to "Bio / About Me", root_path, class: "header_links", 
     				onclick: 'show_page("bio"); return false' %>
     
-    <%= link_to "All Posts", root_path, class: "right_side_links", onclick: 'show_page("posts"); return false' %>
+    <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
     
-    <%= link_to "Email List", root_path, class: "right_side_links", onclick: 'show_page("email"); return false' %>
+    <%= link_to "Message Me", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
 
-    <%= link_to "Author's Dashboard", "#", class: "right_side_links" %>
+    <%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
 </div>
 
 
@@ -21,20 +21,11 @@
 	  	<div id="left_side_container" class="left_side_container"> 		
 		    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
 		    
-		    <p class="functionality_title"> More </p>
+		    <p class="functionality_title"> More Stuff </p>
 
-		    <!--
-		    <%= link_to "Biography / About", root_path, class: "right_side_links", 
-		    				onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5" %> <br>
-			-->
-
-		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5" %> <br>
+		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
 		    
-		    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5" %> <br>
-
-		    <!--
-		    <%= link_to "Private Email List", root_path, class: "right_side_links", onclick: 'show_page("email"); return false', style: "background-color: #F5F5F5" %> <br>
-			-->
+		    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
 		<p>	</p>
 	  	</div>
 
@@ -406,12 +397,26 @@
 		<h3 class="piece_header"> Email List / Notifier </h3>		
 		<p> Notify me with a simple Email <br> when new posts are published. </p>
 		<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-			<%= f.text_field :email, placeholder: " you@youmail.com",
+			<%= f.text_field :email, placeholder: " you@yourmail.com",
 					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 		    <%= f.hidden_field :author, value: "johannes" %>
 			<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
 		<% end %>
 </div>
+
+<div class="post" id="contact">
+	<h1 onclick='show_default("email")' class="go_back_btn">
+		Go Back 
+	</h1>
+	<h3 class="piece_header"> Message Box </h3>		
+	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+		<%= f.text_area :email, placeholder: "message me here ...",
+				style: "width: 170px; height: 100px;" %> <br>
+	    <%= f.hidden_field :author, value: "johannes" %>
+		<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
+	<% end %>
+</div>
+
 <!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
@@ -427,6 +432,7 @@
 				<% end %>
 			</div>
 
+			<!--
 			<div id="message_box" class="functionality_container" style="margin-top: 62px;">
 				<p class="functionality_title"> Message Box </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
@@ -436,8 +442,9 @@
 					<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
 				<% end %>
 			</div>
+			-->
 
-			<div id="my_social" class="functionality_container" style="margin-top: 62px; color: black;">
+			<div id="my_social" class="functionality_container" style="margin-top: 60px; color: black;">
 				<a href="https://twitter.com/Seikowsky" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px; color: black;"></i>
 				</a>
@@ -449,7 +456,7 @@
 				</a>
 			</div>
 
-			<div id="twitter_feed" class="functionality_container" style="margin-top: 48px; color: black;">
+			<div id="twitter_feed" class="functionality_container" style="margin-top: 46px; color: black;">
 				<a class="twitter-timeline" data-width="200" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/Seikowsky?ref_src=twsrc%5Etfw">Tweets by Seikowsky</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 
@@ -515,9 +522,21 @@
 		font-size: 19px;
 	}
 
-	.right_side_links{
+	.header_links{
 		color: black;
 		padding: 0 20px;
+	}
+
+	.header_links:hover{
+		color: black;
+		text-decoration: underline;
+	}
+
+	.right_side_links{
+		color: black;
+		display: block;
+		margin-bottom: 6px;
+		padding-left: 8px;
 	}
 
 	.right_side_links:hover{
