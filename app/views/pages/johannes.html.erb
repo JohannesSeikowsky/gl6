@@ -11,6 +11,12 @@
 
 
 <!--
+fix link display behavour
+page of a post
+- subscribe link
+-->
+
+<!--
 <%= link_to "Get your own Wordgates Page", get_page_path, id: "dashboard_link", style: "background-color: white;			text-decoration: none; border: 1px solid grey;" %>
 -->
 
@@ -39,15 +45,14 @@
 			<h3 class="title"> Me in 10 seconds </h3>
 
 			<p>
-			 	Formal Education - Economics. <br>
 			 	Self-taught programmer. <br>
 			 	Writer/Poet by compulsion. <br>
 			 	Interested in many things. <br>
-			 	Living in London and enjoying it. <br>
+			 	Living in London. <br>
+			</p> <br>
 
-			</p> <br> <br>
 
-			<!-- <h3 class="title"> Posts </h3> -->
+			<h3 class="title" style="margin-top: -4px;"> Top Posts </h3>
 
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
 			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
@@ -96,6 +101,13 @@
 		What do you think? Do you agree? <br> Do you want to be a Modern Man?<br>
 		Do you think it’s worth your while? <br>
 		One can disagree.
+		<br> <br>
+		<hr>
+   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<!--
+   		<%= link_to "Share on Twitter", root_path, onclick: 'show_page("email"); return false' %> <br>
+   		<%= link_to "Share on Facebook", root_path, onclick: 'show_page("email"); return false' %>
+   		-->
 	</p>
 </div>
 
@@ -114,6 +126,9 @@
 		Therapy has been ordered<br>
 		and the patient shall oblige.<br><br>
 		Will the patient oblige?
+		<br> <br>
+		<hr>
+   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
@@ -135,6 +150,9 @@
 		And so it goes, <br>
 		a poetic account of the day, <br>
 		a rather incomplete primer on what in conversation one may say.
+		<br> <br>
+		<hr>
+   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
@@ -163,6 +181,9 @@
 			And then some. <br> <br>
 			Go have a trip — To Canary Wharf. <br>
 			You’ll be very glad. Once you’re back.
+			<br> <br>
+			<hr>
+	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
@@ -183,6 +204,9 @@
 			No words spoken, <br>
 			no deeds performed, <br>
 			All difference made.
+			<br> <br>
+			<hr>
+	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
@@ -204,6 +228,9 @@
 			And that, dear friend, that is on you. <br>
 			You — Captain of the ship of you. <br>
 			Now let me ask: what will you do?
+			<br> <br>
+			<hr>
+	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
@@ -223,6 +250,9 @@
 			We rely on you, yet celebrate you? Rarely. <br>
 			This is to you my feet,  <br>
 			I adore you, never abhor you, trying not to ignore you.
+			<br> <br>
+			<hr>
+	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
@@ -493,7 +523,7 @@
 		document.getElementById("left_side_container").style.visibility = "hidden";
 		document.getElementById("posts").style.visibility = "hidden";
 		document.getElementById("twitter_feed").style.display = "none";
-		// document.getElementById("powered_by").style.visibility = "hidden";
+		document.getElementById("powered_by").style.visibility = "hidden";
 		document.getElementById(piece_id).style.display = "block";	
 	}	
 

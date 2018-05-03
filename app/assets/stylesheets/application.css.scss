@@ -52,9 +52,9 @@ body{
   	-moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
 	text-align: center;
-	line-height: 2.32;
+	line-height: 2.44;
 	a{
-		font-size: 19px;
+		font-size: 18px;
 	}
 }
 
@@ -140,17 +140,23 @@ body{
 	width: 370px;
 	padding-left: 6px;
 	float: left;
+	color:black;
 }
 
 .piece_header{
 	padding-top: 20px;
 	margin-bottom: 24px;
+	font-size: 22px;
 }
 
 .go_back_btn{
 	cursor: pointer; 
 	font-size: 20px;
 	padding-top: 10px;
+}
+
+.bottom_of_post_link{
+	color: grey;
 }
 
 
