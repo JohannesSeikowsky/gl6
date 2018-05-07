@@ -9,13 +9,6 @@
     <%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
 </div>
 
-
-<!--
-fix link display behavour
-page of a post
-- subscribe link
--->
-
 <!--
 <%= link_to "Get your own Wordgates Page", get_page_path, id: "dashboard_link", style: "background-color: white;			text-decoration: none; border: 1px solid grey;" %>
 -->
@@ -24,14 +17,19 @@ page of a post
 	
 	  <div class="central_container" style="border: 1px solid #F5F5F5; padding-bottom: 75px;"> 		
 
-	  	<div id="left_side_container" class="left_side_container"> 		
-		    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
-		    
-		    <p class="functionality_title"> More Stuff </p>
+	  	<div id="left_side_container" class="left_side_container">
+	  		<div id="profile_image_container">	
+			    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
+			</div>
+		  	
+		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
+			    <p class="functionality_title"> More Stuff </p>
 
-		    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
-		    
-		    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
+			    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
+			    
+			    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
+			</div>
+		
 		<p>	</p>
 	  	</div>
 
@@ -424,14 +422,14 @@ page of a post
 	<h1 onclick='show_default("email")' class="go_back_btn">
 		Go Back 
 	</h1>
-		<h3 class="piece_header"> Email List / Notifier </h3>		
-		<p> Notify me with a simple Email <br> when new posts are published. </p>
-		<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-			<%= f.text_field :email, placeholder: " you@yourmail.com",
-					style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-		    <%= f.hidden_field :author, value: "johannes" %>
-			<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
-		<% end %>
+	<h3 class="piece_header"> Email List / Notifier </h3>		
+	<p> Notify me with a simple Email <br> when new posts are published. </p>
+	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+		<%= f.text_field :email, placeholder: " you@yourmail.com",
+				style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
+	    <%= f.hidden_field :author, value: "johannes" %>
+		<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
+	<% end %>
 </div>
 
 <div class="post" id="contact">
@@ -489,7 +487,6 @@ page of a post
 			<div id="twitter_feed" class="functionality_container" style="margin-top: 46px; color: black;">
 				<a class="twitter-timeline" data-width="200" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/Seikowsky?ref_src=twsrc%5Etfw">Tweets by Seikowsky</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
-
 	  	</div>
 	  </div>
 	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
@@ -500,39 +497,46 @@ page of a post
 
 
 <script type="text/javascript">
-	function show_page(piece_id){
+	function show_page(page_id){
+		// hide the main containers
 		document.getElementById("middle_container").style.display = "none";
-		document.getElementById("right_side_container").style.visibility = "hidden";
-		document.getElementById("twitter_feed").style.display = "none";
-		document.getElementById(piece_id).style.display = "block";
-		document.getElementById("bio").style.display = "none";
-		document.getElementById("posts").style.display = "none";
-		document.getElementById("email").style.display = "none";
-		document.getElementById("contact").style.display = "none";
-		document.getElementById(piece_id).style.display = "block";
-	}
+		document.getElementById("right_side_container").style.display = "none";
+		document.getElementById("left_side_container_inside_bottom").style.display = "none";		
+		// hide all posts & pages
+	    var divsToHide = document.getElementsByClassName("post");
+   		for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";}
+		// show img & relevant page     
+		document.getElementById("powered_by").style.display = "block";
+		document.getElementById("profile_image_container").style.display = "block";        
+		document.getElementById(page_id).style.display = "block";        
+    }
 
 	function show_piece(piece_id){
+		// hide the main containers
 		document.getElementById("middle_container").style.display = "none";
-		document.getElementById("right_side_container").style.visibility = "hidden";
-		/*
-		display email signup or not
-		document.getElementById("message_box").style.visibility = "hidden";
-		document.getElementById("my_social").style.visibility = "hidden";
-		*/
-		document.getElementById("left_side_container").style.visibility = "hidden";
-		document.getElementById("posts").style.visibility = "hidden";
-		document.getElementById("twitter_feed").style.display = "none";
-		document.getElementById("powered_by").style.visibility = "hidden";
+		document.getElementById("right_side_container").style.display = "none";
+		document.getElementById("profile_image_container").style.display = "none";
+		document.getElementById("left_side_container_inside_bottom").style.display = "none";		
+		document.getElementById("powered_by").style.display = "none";
+		// hide all posts & pages
+	    var divsToHide = document.getElementsByClassName("post");
+   		for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";}
+		// show relevant page    
 		document.getElementById(piece_id).style.display = "block";	
 	}	
 
 	function show_default(piece_id){
+		// hide current piece
 		document.getElementById(piece_id).style.display = "none";
+		// show middle and right side
 		document.getElementById("middle_container").style.display = "block";
-		document.getElementById("right_side_container").style.visibility = "visible";
-		document.getElementById("left_side_container").style.visibility = "visible";
-		document.getElementById("twitter_feed").style.display = "block";
+		document.getElementById("right_side_container").style.display = "block";
+		// show other
+		document.getElementById("powered_by").style.display = "block";
+		document.getElementById("profile_image_container").style.display = "block";
+		document.getElementById("left_side_container_inside_bottom").style.display = "block";
 	}
 </script>
 
