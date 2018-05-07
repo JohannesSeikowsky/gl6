@@ -1,5 +1,5 @@
 <div class="page-header-johannes">
-    <%= link_to "Bio / About Me", root_path, class: "header_links", 
+    <%= link_to "About Me", root_path, class: "header_links", 
     				onclick: 'show_page("bio"); return false' %>
     
     <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
@@ -23,7 +23,7 @@
 			</div>
 		  	
 		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
-			    <p class="functionality_title"> More Stuff </p>
+			    <p class="functionality_title"> Read More </p>
 
 			    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
 			    
@@ -258,7 +258,6 @@
 	<h1 onclick='show_default("posts")' class="go_back_btn">
 		Go Back 
 	</h1>
-		<h3 class="piece_header"> All Posts </h3>		
 		<p>
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
 			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
