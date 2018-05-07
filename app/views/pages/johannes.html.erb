@@ -1,8 +1,8 @@
 <div class="page-header-johannes">
-    <%= link_to "About Me", root_path, class: "header_links", 
-    				onclick: 'show_page("bio"); return false' %>
+    <%= link_to "Home", root_path, class: "header_links", 
+    				onclick: 'home_button(); return false' %>
     
-    <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
+    <%= link_to "All Articles", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
     
     <%= link_to "Message Me", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
 
@@ -20,17 +20,16 @@
 	  	<div id="left_side_container" class="left_side_container">
 	  		<div id="profile_image_container">	
 			    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
+			    
+			    <%= link_to "Bio / About Me", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
+			    		border: 1px solid lightgrey;" %>
 			</div>
 		  	
 		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
-			    <p class="functionality_title"> Read More </p>
-
-			    <%= link_to "Book Recommendations", root_path, class: "right_side_links", onclick: 'show_page("books"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
-			    
-			    <%= link_to "Favorite Quotes", root_path, class: "right_side_links", onclick: 'show_page("quotes"); return false', style: "background-color: #F5F5F5; width: 200px;" %>
+		  		<!-- personal links on side - book recommends -->
 			</div>
 		
-		<p>	</p>
+			<p>	</p>
 	  	</div>
 
 	  	<div id="middle_container" class="middle_container" style="background-color: #F9F9F9;">
@@ -50,7 +49,7 @@
 			</p> <br>
 
 
-			<h3 class="title" style="margin-top: -4px;"> Top Posts </h3>
+			<h3 class="title" style="margin-top: -4px;"> Top Articles </h3>
 
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
 			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
@@ -77,7 +76,7 @@
 <!-- START OF POSTS -->
 <div class="post" id="piece_minus_two">
 	<h1 onclick='show_default("piece_minus_two")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 	<h3 class="piece_header"> The Modern Man </h3>		
 	<p style="font-size: 16px;">
@@ -101,7 +100,7 @@
 		One can disagree.
 		<br> <br>
 		<hr>
-   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
    		<!--
    		<%= link_to "Share on Twitter", root_path, onclick: 'show_page("email"); return false' %> <br>
    		<%= link_to "Share on Facebook", root_path, onclick: 'show_page("email"); return false' %>
@@ -111,7 +110,7 @@
 
 <div class="post" id="piece_minus_one">
 	<h1 onclick='show_default("piece_minus_one")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 	<h3 class="piece_header"> In the Mood for Walking </h3>		
 	<p style="font-size: 16px;">
@@ -126,13 +125,13 @@
 		Will the patient oblige?
 		<br> <br>
 		<hr>
-   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
 <div class="post" id="piece_zero">
 	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 	<h3 class="piece_header"> A Primer on the Day </h3>		
 	<p style="font-size: 16px;">
@@ -150,13 +149,13 @@
 		a rather incomplete primer on what in conversation one may say.
 		<br> <br>
 		<hr>
-   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
 <div class="post" id="piece_one">
 	<h1 onclick='show_default("piece_one")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 		<h3 class="piece_header"> In Canary Wharf </h3>		
 		<p>
@@ -181,13 +180,13 @@
 			You’ll be very glad. Once you’re back.
 			<br> <br>
 			<hr>
-	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_two">
 	<h1 onclick='show_default("piece_two")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 		<h3 class="piece_header"> Old Man on a Bench </h3>		
 		<p>
@@ -204,13 +203,13 @@
 			All difference made.
 			<br> <br>
 			<hr>
-	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_three">
 	<h1 onclick='show_default("piece_three")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 		<h3 class="piece_header"> Captain of the Ship of you </h3>		
 		<p>
@@ -228,13 +227,13 @@
 			Now let me ask: what will you do?
 			<br> <br>
 			<hr>
-	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_four">
 	<h1 onclick='show_default("piece_four")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 		<h3 class="piece_header"> Feet, to Feet </h3>		
 		<p>
@@ -250,13 +249,13 @@
 			I adore you, never abhor you, trying not to ignore you.
 			<br> <br>
 			<hr>
-	   		<%= link_to "Email Notifier - Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="posts">
 	<h1 onclick='show_default("posts")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 		<p>
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
@@ -284,9 +283,9 @@
 
 <div class="post" id="bio">
 	<h1 onclick='show_default("bio")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
-	<h3 class="piece_header"> Biography / About </h3>		
+	<h3 class="piece_header"> Bio / About Me </h3>		
 	<p>
 		My formal education is in Economics in which I hold a <br>
 		BA from the University of Oxford, UK.
@@ -318,7 +317,7 @@
 
 <div class="post" id="books">
 	<h1 onclick='show_default("books")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 	<h3 class="piece_header"> Book Recommendations </h3>		
 	<p>
@@ -362,7 +361,7 @@
 
 <div class="post" id="quotes">
 	<h1 onclick='show_default("quotes")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
 	<h3 class="piece_header"> Favorite Quotes </h3>		
 	<p>
@@ -419,12 +418,12 @@
 
 <div class="post" id="email">
 	<h1 onclick='show_default("email")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
-	<h3 class="piece_header"> Email List / Notifier </h3>		
-	<p> Notify me with a simple Email <br> when new posts are published. </p>
+	<!-- <h3 class="piece_header"> Email Notifier </h3> -->
+	<p> Notify me with a simple Email <br> when new posts are published: </p>
 	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-		<%= f.text_field :email, placeholder: " you@yourmail.com",
+		<%= f.text_field :email, placeholder: " me@memail.com",
 				style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 	    <%= f.hidden_field :author, value: "johannes" %>
 		<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
@@ -433,9 +432,9 @@
 
 <div class="post" id="contact">
 	<h1 onclick='show_default("contact")' class="go_back_btn">
-		Go Back 
+		Back 
 	</h1>
-	<h3 class="piece_header"> Message Box </h3>		
+	<!-- <h3 class="piece_header"> Message Box </h3> -->
 	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 		<%= f.text_area :email, placeholder: "message me here ...",
 				style: "width: 170px; height: 100px;" %> <br>
@@ -537,6 +536,21 @@
 		document.getElementById("profile_image_container").style.display = "block";
 		document.getElementById("left_side_container_inside_bottom").style.display = "block";
 	}
+
+	function home_button(){
+		// hide all posts & pages
+	    var divsToHide = document.getElementsByClassName("post");
+   		for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";}
+		// show middle and right side
+		document.getElementById("middle_container").style.display = "block";
+		document.getElementById("right_side_container").style.display = "block";
+		// show other
+		document.getElementById("powered_by").style.display = "block";
+		document.getElementById("profile_image_container").style.display = "block";
+		document.getElementById("left_side_container_inside_bottom").style.display = "block";
+	}
+
 </script>
 
 
@@ -570,7 +584,6 @@
 		color: black;
 		display: block;
 		margin-bottom: 6px;
-		padding-left: 8px;
 	}
 
 	.right_side_links:hover{
