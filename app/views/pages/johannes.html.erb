@@ -1,17 +1,15 @@
 <div class="page-header-johannes">
     <%= link_to "Home", root_path, class: "header_links", 
-    				onclick: 'home_button(); return false' %>
-    
+    				onclick: 'home_button(); return false' %>    
     <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
     
-    <%= link_to "Message Me", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
+    <%= link_to "About", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
+
+    <%= link_to "Contact", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
 
     <%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
 </div>
 
-<!--
-<%= link_to "Get your own Wordgates Page", get_page_path, id: "dashboard_link", style: "background-color: white;			text-decoration: none; border: 1px solid grey;" %>
--->
 
 <div class="container-fluid">
 	
@@ -77,11 +75,11 @@
 
 <!-- START OF POSTS -->
 <div class="post" id="piece_minus_two">
-	<h1 onclick='show_default("piece_minus_two")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_minus_two")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 	<h3 class="piece_header"> The Modern Man </h3>		
-	<p style="font-size: 16px;">
+	<p>
 		The Modern Man rarely looks at paintings <br>
 		and rarely reads the classics.<br>
 		For neither seems very productive.<br>
@@ -102,7 +100,7 @@
 		One can disagree.
 		<br> <br>
 		<hr>
-   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
    		<!--
    		<%= link_to "Share on Twitter", root_path, onclick: 'show_page("email"); return false' %> <br>
    		<%= link_to "Share on Facebook", root_path, onclick: 'show_page("email"); return false' %>
@@ -111,11 +109,11 @@
 </div>
 
 <div class="post" id="piece_minus_one">
-	<h1 onclick='show_default("piece_minus_one")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_minus_one")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 	<h3 class="piece_header"> In the Mood for Walking </h3>		
-	<p style="font-size: 16px;">
+	<p>
 		It’s itchy down there,<br>
 		toes are twitching,<br>
 		calling in demands, demanding action -<br>
@@ -127,16 +125,16 @@
 		Will the patient oblige?
 		<br> <br>
 		<hr>
-   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
 <div class="post" id="piece_zero">
-	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_zero")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 	<h3 class="piece_header"> A Primer on the Day </h3>		
-	<p style="font-size: 16px;">
+	<p>
 		In Washington, a clown makes people frown. <br>
 		In Beijing, men in suits do as it suits — probably them. <br>
 		In Sydney — well, nobody cares. <br>
@@ -151,14 +149,14 @@
 		a rather incomplete primer on what in conversation one may say.
 		<br> <br>
 		<hr>
-   		<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   		<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 	</p>
 </div>
 
 <div class="post" id="piece_one">
-	<h1 onclick='show_default("piece_one")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_one")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 		<h3 class="piece_header"> In Canary Wharf </h3>		
 		<p>
 			In Canary Wharf they have all - <br>
@@ -182,14 +180,14 @@
 			You’ll be very glad. Once you’re back.
 			<br> <br>
 			<hr>
-   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_two">
-	<h1 onclick='show_default("piece_two")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_two")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 		<h3 class="piece_header"> Old Man on a Bench </h3>		
 		<p>
 			Walking in the park, <br>
@@ -205,14 +203,14 @@
 			All difference made.
 			<br> <br>
 			<hr>
-   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_three">
-	<h1 onclick='show_default("piece_three")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_three")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 		<h3 class="piece_header"> Captain of the Ship of you </h3>		
 		<p>
 			It’s in your heart, it’s in your spine, <br>
@@ -229,14 +227,14 @@
 			Now let me ask: what will you do?
 			<br> <br>
 			<hr>
-   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="piece_four">
-	<h1 onclick='show_default("piece_four")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("piece_four")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
 		<h3 class="piece_header"> Feet, to Feet </h3>		
 		<p>
 			Most ignore you, some abhor you, some adore you. <br>
@@ -251,14 +249,15 @@
 			I adore you, never abhor you, trying not to ignore you.
 			<br> <br>
 			<hr>
-   			<%= link_to "Subscribe / Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+   			<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
 		</p>
 </div>
 
 <div class="post" id="posts">
-	<h1 onclick='show_default("posts")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("posts")' class="go_back_btn">
 		Back 
-	</h1>
+	</h1> -->
+		<h3 class="page_header"> All Posts </h3>		
 		<p>
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
 			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
@@ -284,12 +283,12 @@
 </div>
 
 <div class="post" id="bio">
-	<h1 onclick='show_default("bio")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("bio")' class="go_back_btn">
 		Back 
-	</h1>
-	<h3 class="piece_header"> Bio / About Me </h3>		
+	</h1> -->
+	<h3 class="page_header"> Bio / About Me </h3>		
 	<p>
-		My formal education is in Economics in which I hold a <br>
+		My formal education is in Economics in which I hold a
 		BA from the University of Oxford, UK.
 		<br> <br>
 		I enjoy intellectual things - reading, writing, programming and thinking.
@@ -308,7 +307,7 @@
 		Currently I live in London, UK, which I enjoy and recommend. Originially however 
 		I am from the very North of Germany - almost Denmark.
 		<br> <br>
-		Please feel free to get in touch via the Message Box <br>
+		Please feel free to get in touch via this site <br>
 		or just write me at joseikowsky@gmail.com.
 		<br> <br>
 		All the Best,
@@ -318,10 +317,10 @@
 </div>
 
 <div class="post" id="books">
-	<h1 onclick='show_default("books")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("books")' class="go_back_btn">
 		Back 
-	</h1>
-	<h3 class="piece_header"> Book Recommendations </h3>		
+	</h1> -->
+	<h3 class="page_header"> Book Recommendations </h3>		
 	<p>
 		"The World of Yesterday" - by Stefan Zweig <br>
 		<%= link_to "Link to Amazon", "https://www.amazon.com/World-Yesterday-Stefan-Zweig/dp/0803226616/ref=sr_1_1?ie=UTF8&qid=1524493897&sr=8-1&keywords=stefan+zweig", style: "text-decoration: underline;" %> <br> <br>
@@ -347,7 +346,6 @@
 		All books of the Maigret Series - by Georges Simenon <br>
 		<%= link_to "Link to Amazon", "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=Maigret", style: "text-decoration: underline;" %> <br> <br>
 
-
 		"The Meaning of Hitler" - by Sebastian Haffner <br>
 		<%= link_to "Link to Amazon", "https://www.amazon.com/Meaning-Hitler-Sebastian-Haffner-ebook/dp/B008HLQFJE/ref=la_B000APE7TA_1_2?s=books&ie=UTF8&qid=1524495031&sr=1-2", style: "text-decoration: underline;" %> <br> <br>
 		"Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher" - by Richard Feynman <br>
@@ -362,10 +360,10 @@
 </div>
 
 <div class="post" id="quotes">
-	<h1 onclick='show_default("quotes")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("quotes")' class="go_back_btn">
 		Back 
-	</h1>
-	<h3 class="piece_header"> Favorite Quotes </h3>		
+	</h1> -->
+	<h3 class="page_header"> Favorite Quotes </h3>		
 	<p>
 “I have always imagined that Paradise will be a kind of library.”<br>
 - Jorge Borges<br>
@@ -419,10 +417,10 @@
 
 
 <div class="post" id="email">
-	<h1 onclick='show_default("email")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("email")' class="go_back_btn">
 		Back 
-	</h1>
-	<!-- <h3 class="piece_header"> Email Notifier </h3> -->
+	</h1> -->
+	<h3 class="page_header"> Notifier </h3>
 	<p> Notify me with a simple Email <br> when new posts are published: </p>
 	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 		<%= f.text_field :email, placeholder: " me@memail.com",
@@ -433,10 +431,10 @@
 </div>
 
 <div class="post" id="contact">
-	<h1 onclick='show_default("contact")' class="go_back_btn">
+	<!-- <h1 onclick='show_default("contact")' class="go_back_btn">
 		Back 
-	</h1>
-	<!-- <h3 class="piece_header"> Message Box </h3> -->
+	</h1> -->
+	<h3 class="page_header"> Message Box </h3>
 	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 		<%= f.text_area :email, placeholder: "message me here ...",
 				style: "width: 170px; height: 100px;" %> <br>
@@ -497,7 +495,7 @@
 
 
 <style type="text/css">
-	body {
+	body{
 	  margin: 0;
 	  padding-bottom: 20px;
 	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed;
@@ -510,6 +508,7 @@
 
 	.post_title{
 		font-size: 19px;
+		margin-bottom: 3px;
 	}
 
 	.header_links{
@@ -539,7 +538,7 @@
 
 	.central_container{
 		width: 836px;
-		margin: 54px auto 75px auto;
+		margin: 22px auto 75px auto;
 		-webkit-border-radius: 5px; 
 	  	-moz-border-radius: 5px; 
 	    border-radius: 5px; 
@@ -548,6 +547,33 @@
 		overflow: auto;	
 	}
 
+	.page_header{
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+
+	.piece_header{
+		font-size: 26px;
+	}
+
+	.post_excerpt{
+		margin-bottom: 22px;
+	}
+
+	div.post > p{
+		font-size: 17px;
+	}
+
+	div.post > .post_title{
+		font-size: 19px;
+		margin-bottom: 3px;
+	}
+
+	div.post > .post_excerpt{
+		font-size: 12px;
+		margin-bottom: 22px;
+	}
 </style>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
