@@ -4,7 +4,7 @@
   <div class="central_container"> 		
 
   	<div class="left_side_container">
-	  	<%= image_tag "#{@image_of_author}", id: "profile_image" %>
+	  	<%= image_tag "https://miro.medium.com/fit/c/240/240/1*Y9QQ4IMipzdd1o35xsDgTQ.png", id: "profile_image" %>
 	</div>
 
   	<div id="middle_container" class="middle_container" style="width: 570px;">  	
@@ -12,44 +12,48 @@
 
 		<h1 class="name_title"> Dashboard </h1>
 		
-		<h3 class="title" style="font-size: 26px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3>
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3>
 		<hr>
 		<%= link_to "Publish a new Post (only here - not on Medium)", "#", class:"btn btn-secondary",
-					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %> <br>
+					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %>
+		<!--
+		<p style="display: inline; padding-left: 4px;"> only here - not on Medium. </p>
+		-->
 		<%= link_to "Manage your Email Subscribers", "#", class:"btn btn-secondary",
 					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %> <br>
+
 		<%= link_to "Set your Bio / About Page", "#", class:"btn btn-secondary", style: "border: 1px solid lightgrey;" %>
 
 		<br> <br>
-		<p style=""> Note: Any new writing you post on Medium will be imported automatically within 24 hours. </p>
+		<p style="text-decoration: underline;"> Any new writing that you post on Medium will be imported automatically to your Wordgates site within 24 hours. </p>
 
 		<!--
 		<p style="text-decoration: underline;"> Note: The posts on your site sync with your Medium every 24 hours. </p>
 		-->
 		<!-- background-color: #F5EFE6; -->
 
-		<h3 class="title" style="font-size: 26px; margin-bottom: 8px; margin-top: 60px;"> Settings </h3>
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 60px;"> Your Page Settings </h3>
 		<hr>
 
 		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>			<!--
 			<h2 style="font-size: 32px; margin-bottom: 22px;"> Settings </h2>
 			--> 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> About Me </h3>
-			<p> The text below your name on the homepage. </p>
+			<p> Text below your name on the homepage. </p>
             
-            <!--            Title: <br>
+            <!-- Title: <br>
             <%= f.text_field :about_title, value: @authors_settings.about_title, style: "width: 215px;" %> <br>
             Content: <br> -->
             <%= f.text_area :about_content, value: @authors_settings.about_content, style: "width: 215px; height: 65px;" %> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br> <hr>
 
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 40px;"> Small Profile Image on the left </h3>			
+			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Small Profile Image on the Left </h3>			
 		    <%= f.file_field :image, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
 
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 40px;"> Large Site-Background Image </h3>
+			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Large Site-Background Image </h3>
 		    <%= f.file_field :image, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
@@ -60,12 +64,11 @@
 				and the site's <br> background image
 				is coming within the next few days.
 			</p> -->
-
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 40px;">
-			 Posts 
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;">
+			 Your Posts 
 			</h3>
 			<p> 
-				Unckeck those posts that you'd to hide (if any).
+				Unckeck those posts that you'd like to hide (if any).
 				<!--
 				An option to publish more posts here which <br> are not on your Medium is coming soon.
 				-->
@@ -78,8 +81,7 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 			<br> <hr>
 
-	
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 35px;"> Features </h3>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;"> Your Features </h3>
 			<p> Uncheck those features that you'd like to discard (if any). </p>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
@@ -103,7 +105,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url(<%= @background_image %>) no-repeat center center fixed;
+	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
