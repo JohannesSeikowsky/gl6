@@ -292,7 +292,7 @@ class PagesController < ApplicationController
   def kristin_leonard
     @authors_settings = VaughnUser.find(15)
     @name = "Kristin Leonard"
-    @image_of_author = "https://pbs.twimg.com/profile_images/965027457039417345/UEqyQEsh_400x400.jpg"
+    @image_of_author = "https://miro.medium.com/fit/c/240/240/1*Y9QQ4IMipzdd1o35xsDgTQ.png"
     @title1 = "Words"
     @title2 = "The Wrong Direction."
     @title3 = "The Return"
@@ -302,7 +302,7 @@ class PagesController < ApplicationController
     @medium_link = "https://medium.com/@kristin.leonard"
     @twitter_link = "https://twitter.com/KrisJleonard"
     @fb_link = ""
-    @background_image = "https://pbs.twimg.com/profile_banners/906569043477356544/1518915388/1500x500"
+    @background_image = "http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg"
   end
 
   def leonard_dashboard

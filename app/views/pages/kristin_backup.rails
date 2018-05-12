@@ -1,57 +1,28 @@
-<div class="page-header-johannes">
-    <%= link_to "Home", root_path, class: "header_links", 
-    				onclick: 'home_button(); return false' %>    
-    <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
-    
-	<% if @authors_settings.about_feature %>
-    	<%= link_to "About", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
-    <% end %>
-
-	<% if @authors_settings.contact_feature %>
-    	<%= link_to "Contact", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
-    <% end %>
-
-	<% if @authors_settings.email_subscription_feature %>
-    	<%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
-    <% end %>
-</div>
-
+<%= link_to "Author's Dashboard", leonard_dashboard_path, id: "dashboard_link" %> 
 
 <div class="container-fluid">
 	
-	  <div class="central_container" style="border: 1px solid #F5F5F5; padding-bottom: 75px;"> 		
+	  <div class="central_container" style="border: 1px solid lightgrey;"> 		
 
-	  	<div id="left_side_container" class="left_side_container">
-	  		<div id="profile_image_container">	
-			    <% if @authors_settings.portrait_feature %>
-		  			<%= image_tag "#{@image_of_author}", id: "profile_image", style: "margin-bottom: 6px" %>
-				<% end %>
+	  	<div class="left_side_container"> 		
 
-			    <%= link_to "Bio / About", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
-			    		border: 1px solid lightgrey;" %>
-			</div>
-		  	
-		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
-		  		<!-- personal links on side - book recommends -->
-			</div>
-		
 			<p>	</p>
 	  	</div>
 
-	  	<div id="middle_container" class="middle_container" style="background-color: #F9F9F9;">
+	  	<div id="middle_container" class="middle_container">
 	  		<% if notice %>
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
 
-			<h3 class="name_title"> <%= @name %> </h3>
+			<h1 class="name_title"> <%= @name %> </h1>
 
 			<% if @authors_settings.about_feature %>
-				<p style="margin-top: -10px;">
-					<%= @authors_settings.about_content %>
-				</p> <br>
+				<h3 class="title"> <%= @authors_settings.about_title %> </h3>
+				<p> <%= @authors_settings.about_content %> </p> <br>
 			<% end %>
 
-			<h3 class="title" style="margin-top: -4px;"> Top Posts </h3>
+			<h3 class="title"> Posts <h3>
+
 		    <% if @authors_settings.post_one %>
 			<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
 			<p class="post_excerpt"> Nestled... between ...</p>
@@ -76,68 +47,42 @@
 			<p class="post_title" onclick='show_piece("piece_four");'> <%= @title5 %> </p>
 			<p class="post_excerpt"> Somebody died last night ...</p>
 			<% end %>
-		</div>
 
-
-<!-- START OF POSTS -->
-<div class="post" id="piece_minus_two">
-
-	<h3 class="piece_header"> The Modern Man </h3>		
-	<p>
-		The Modern Man rarely looks at paintings <br>
-		and rarely reads the classics.<br>
-		For neither seems very productive.<br>
-		So he thinks anyway.<br>
-		One can disagree.<br><br>
-		The Modern Man is an expert -<br>
-		an expert pain-withstander.<br>
-		Because after all — No pain, No gain.<br>
-		And No gain — What a No No!<br><br>
-		Success that seems to be his new religion,<br>
-		the only name of his only game.<br>
-		Pursued with clenched fervor, <br>
-		sometimes just to impress her.<br><br>
-		Hasn’t he come far, the Modern Man? So, so far!? <br>
-		He thinks so. Mostly and most of the time anyway.<br><br>
-		What do you think? Do you agree? <br> Do you want to be a Modern Man?<br>
-		Do you think it’s worth your while? <br>
-		One can disagree.
-		<br> <br>
-		<hr>
-   		<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-   		<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
-	</p>
-</div>
-
-
+			<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
+	  	</div>
 
 <!-- START OF POSTS -->
 <div class="post" id="piece_zero">
+	<h1 onclick='show_default("piece_zero")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 	<h3 class="piece_header"> <%= @title1 %> </h3>
 	<p>
-	Nestled <br>
-	 <br>
-	between <br>
-	 <br>
-	breath and sound, <br>
-	 <br>
-	like old lovers and childhood, <br>
-	 <br>
-	words <br>
-	 <br>
-	eventually <br>
-	 <br>
-	die.
+Nestled <br>
+ <br>
+between <br>
+ <br>
+breath and sound, <br>
+ <br>
+like old lovers and childhood, <br>
+ <br>
+words <br>
+ <br>
+eventually <br>
+ <br>
+die.
 	</p>
-	<hr>
-	<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-	<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
+
 <div class="post" id="piece_one">
+	<h1 onclick='show_default("piece_one")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 	<h3 class="piece_header"> <%= @title2 %> </h3>
 	<p>
-there she was, staring at me<br>
+— there she was, staring at me<br>
 <br>
 I heard her voice first.<br>
 <br>
@@ -225,13 +170,14 @@ This time her eyes were steady and unflinching. Unavoidable.
 <br> <br>
 “It’s time to go.”
 	</p>
-	<hr>
-	<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-	<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 
 <div class="post" id="piece_two">
+	<h1 onclick='show_default("piece_two")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 	<h3 class="piece_header"> <%= @title3 %> </h3>
 	<p>
 I had spent most of my life trying to protect my little girl from so many things: cars, sharp edges, boogie-men —
@@ -346,13 +292,14 @@ I could feel her eyes sear through me, as light might pierce the darkness, accus
 <br> <br> 
 Alex’s voice brought me back to reality, asking aloud that one question that I really still couldn’t answer “What happened?”
 	</p>
-	<hr>
-	<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-	<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 
 <div class="post" id="piece_three">
+	<h1 onclick='show_default("piece_three")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 	<h3 class="piece_header"> <%= @title4 %> </h3>
 	<p>
 Emma knew that when he arrived she wouldn’t tell him that she had left forty-five minutes early just to make sure she could still find the place. It was a restaurant on the north side of town and it had been ages since she made the journey. And, after all, she reminded herself, he was the one that always did the driving, especially when, well — it’d been a while.
@@ -407,13 +354,14 @@ It was twenty-five minutes past the hour when she glanced at the lacquered oak d
 <br> <br> 
 But she knew she wouldn’t.
 	</p>
-	<hr>
-	<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-	<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 
 
 <div class="post" id="piece_four">
+	<h1 onclick='show_default("piece_four")' class="go_back_btn">
+		<i class="fas fa-arrow-left" style="margin-right: 3px;"></i> Go Back 
+	</h1>
 	<h3 class="piece_header"> <%= @title5 %></h3>
 	<p>
 Somebody died last night — 
@@ -480,92 +428,33 @@ with blood, sinew, cilia and sparks of nerve, remember
 those who walked through the fire when
 Somebody died last night.
 	</p>
-	<hr>
-	<%= link_to "Read more", root_path, onclick: 'show_page("posts"); return false', class: "bottom_of_post_link" %> <br>
-	<%= link_to "Get notified of new posts", root_path, onclick: 'show_page("email"); return false', class: "bottom_of_post_link" %> <br>
+	<div class="powered_by"> Powered by WordGates | The Home of Writers. </div>
 </div>
 <!-- END OF POSTS -->
 
-
-
-<div class="post" id="posts">
-	<h3 class="page_header"> All Posts </h3>		
-	<p>
-	    <% if @authors_settings.post_one %>
-		<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
-		<p class="post_excerpt"> Nestled... between ...</p>
-		<% end %>
-
-	    <% if @authors_settings.post_two %>
-		<p class="post_title" onclick='show_piece("piece_one");'> <%= @title2 %> </p>
-		<p class="post_excerpt"> there she was, staring at me ...</p>
-		<% end %>
-
-	    <% if @authors_settings.post_three %>
-		<p class="post_title" onclick='show_piece("piece_two");'> <%= @title3 %> </p>
-		<p class="post_excerpt"> I had spent most of my life ...</p>
-		<% end %>
-
-	    <% if @authors_settings.post_four %>
-		<p class="post_title" onclick='show_piece("piece_three");'> <%= @title4 %> </p>
-		<p class="post_excerpt"> Emma knew that when ...</p>
-		<% end %>
-	
-	    <% if @authors_settings.post_five %>
-		<p class="post_title" onclick='show_piece("piece_four");'> <%= @title5 %> </p>
-		<p class="post_excerpt"> Somebody died last night ...</p>
-		<% end %>
-	</p>
-</div>
-
-<div class="post" id="bio">
-	<h3 class="page_header"> Bio / About Me </h3>		
-	<p> <!-- placeholder --> </p>
-</div>
-
-<div class="post" id="email">
-	<h3 class="page_header"> Notifier </h3>
-	<p> Notify me with a simple Email <br> when new posts are published: </p>
-	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-		<%= f.text_field :email, placeholder: " me@memail.com",
-				style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
-	    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
-		<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
-	<% end %>
-</div>
-
-<div class="post" id="contact">
-	<h3 class="page_header"> Message Box </h3>
-	<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
-		<%= f.text_area :email, placeholder: "message me here ...",
-				style: "width: 170px; height: 100px;" %> <br>
-	    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
-		<%= f.submit "send", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: left; border: 1px solid grey;" %>
-	<% end %>
-</div>
-
-<!-- END OF POSTS -->
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
 	
 			<% if @authors_settings.email_subscription_feature %>
-			<div class="functionality_container" style="">
-				<p class="functionality_title" style="margin-top: -50px;"> Email Notifier </p>
+			<div class="functionality_container">
+				<p class="functionality_title"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
 							style: "width: 170px; height: 28px; margin-bottom: 6px;" %> <br>
 				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
-					<%= f.submit "done", class: "btn btn-light", style: "padding: 0 5px; font-size: 14px; float: right; border: 1px solid grey;" %>
+					<%= f.submit "done", style: "cursor: pointer; float: right; font-size: 13px;" %>
 				<% end %>
 			</div>
 			<% end %>
 
 			<% if @authors_settings.social_icons_features %>
-			<div id="my_social" class="functionality_container" style="margin-top: 60px; color: black;">
+			<div class="functionality_container" style="margin-top: 60px;">
+				<p class="functionality_title"> My Social </p>
+				
 				<% unless @twitter_link.empty? %>
 				<a href= <%= @twitter_link %> target="_blank">
-					<i class="fab fa-twitter" style="font-size: 30px; color: black;"></i>
+					<i class="fab fa-twitter" style="font-size: 30px;"></i>
 				</a>
 				<% end %>
 
@@ -580,104 +469,52 @@ Somebody died last night.
 					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
 				<% end %>
+			
 			</div>
 			<% end %>
 
-
-			<div id="twitter_feed" class="functionality_container" style="margin-top: 46px; color: black;">
-			
-			<a class="twitter-timeline" data-width="200" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/KrisJleonard?ref_src=twsrc%5Etfw">Tweets by KrisJleonard</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+			<% if @authors_settings.contact_feature %>
+			<div class="functionality_container" style="margin-top: 40px;">
+				<p class="functionality_title"> Contact Me </p>
+				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
+					<%= f.text_area :email, placeholder: " your message",
+							style: "width: 170px; height: 100px;" %> <br>
+				    <%= f.hidden_field :author, value: "#{@underscore_name}" %>
+					<%= f.submit "send", style: "cursor: pointer; float: right; font-size: 13px;" %>
+				<% end %>
 			</div>
+	  		<% end %>
 	  	</div>
 	  </div>
-	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
 
-	</div>
+	  </div>
+
 </div>
 
 
+<script type="text/javascript">
+	function show_piece(piece_id){
+		document.getElementById("middle_container").style.display = "none";
+		document.getElementById(piece_id).style.display = "block";	
+	}	
+
+	function show_default(piece_id){
+		document.getElementById(piece_id).style.display = "none";
+		document.getElementById("middle_container").style.display = "block";
+	}
+</script>
+
 
 <style type="text/css">
-	body{
+	body {
 	  margin: 0;
 	  padding-bottom: 20px;
 	  background: url(<%= @background_image %>) no-repeat center center fixed;
-	  font-family: "Times New Roman";
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
 	}	
-
-	.post_title{
-		font-size: 19px;
-		margin-bottom: 3px;
-	}
-
-	.header_links{
-		color: black;
-		padding: 0 20px;
-	}
-
-	.header_links:hover{
-		color: black;
-		text-decoration: underline;
-	}
-
-	.right_side_links{
-		color: black;
-		display: block;
-		margin-bottom: 6px;
-	}
-
-	.right_side_links:hover{
-		color: black;
-		text-decoration: underline;
-	}
-
-	.go_back_btn{
-		text-decoration: underline;
-	}
-
-	.central_container{
-		width: 836px;
-		margin: 22px auto 75px auto;
-		-webkit-border-radius: 5px; 
-	  	-moz-border-radius: 5px; 
-	    border-radius: 5px; 
-		background-color: white;
-		padding: 20px;
-		overflow: auto;	
-	}
-
-	.page_header{
-		font-size: 26px;
-		margin-bottom: 20px;
-	}
-
-	.piece_header{
-		font-size: 26px;
-	}
-
-	.post_excerpt{
-		margin-bottom: 22px;
-	}
-
-	div.post > p{
-		font-size: 17px;
-	}
-
-	div.post > .post_title{
-		font-size: 19px;
-		margin-bottom: 3px;
-	}
-
-	div.post > .post_excerpt{
-		font-size: 12px;
-		margin-bottom: 22px;
-	}
 </style>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
