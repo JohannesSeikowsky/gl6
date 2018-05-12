@@ -11,28 +11,25 @@
   		<% if notice %> <h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1> <% end %>
 
 		<h1 class="name_title"> Dashboard </h1>
-		
-		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3>
+		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note - Any new writing that you post on Medium will be imported automatically to your Wordgates site within 24 hours. </p>
+
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Your Actions </h3>
 		<hr>
-		<%= link_to "Publish a new Post (only here - not on Medium)", "#", class:"btn btn-secondary",
+		<%= link_to "Manage Email Subscribers", "#", class:"btn btn-secondary",
+					style: "margin-bottom: 4px; border: 1px solid lightgrey;" %>
+
+		<%= link_to "Set your Bio / About Page", "#", class:"btn btn-secondary", style: "margin-bottom: 4px; border: 1px solid lightgrey;" %>
+
+		<%= link_to "Publish new Post (only here - not on Medium)", "#", class:"btn btn-secondary",
 					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %>
-		<!--
-		<p style="display: inline; padding-left: 4px;"> only here - not on Medium. </p>
-		-->
-		<%= link_to "Manage your Email Subscribers", "#", class:"btn btn-secondary",
-					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %> <br>
 
-		<%= link_to "Set your Bio / About Page", "#", class:"btn btn-secondary", style: "border: 1px solid lightgrey;" %>
-
-		<br> <br>
-		<p style="text-decoration: underline;"> Any new writing that you post on Medium will be imported automatically to your Wordgates site within 24 hours. </p>
 
 		<!--
 		<p style="text-decoration: underline;"> Note: The posts on your site sync with your Medium every 24 hours. </p>
 		-->
 		<!-- background-color: #F5EFE6; -->
 
-		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 60px;"> Page Settings </h3>
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 30px;"> Your Settings </h3>
 		<hr>
 
 		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>			<!--
@@ -114,6 +111,20 @@
 
 	.title{
 		font-size: 23px;
+	}
+
+	#dashboard_link{
+	position: fixed;
+	top: 2px;
+	right: 6px;
+	padding: 3px 12px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border: 1px solid black;
+	-webkit-border-radius: 3px; 
+  	-moz-border-radius: 3px; 
+    border-radius: 3px;
 	}
 </style>
 

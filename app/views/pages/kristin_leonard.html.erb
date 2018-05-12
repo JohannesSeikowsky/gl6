@@ -1,3 +1,5 @@
+<%= link_to "Author Login", leonard_dashboard_path, id: "dashboard_link" %> 
+
 <div class="page-header-johannes">
     <%= link_to "Home", root_path, class: "header_links", 
     				onclick: 'home_button(); return false' %>    
@@ -677,6 +679,22 @@ Somebody died last night.
 		font-size: 12px;
 		margin-bottom: 22px;
 	}
+
+	#dashboard_link{
+	position: fixed;
+	top: 2px;
+	right: 6px;
+	padding: 3px 12px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border: 1px solid black;
+	-webkit-border-radius: 3px; 
+  	-moz-border-radius: 3px; 
+    border-radius: 3px;
+	}
+
+
 </style>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
