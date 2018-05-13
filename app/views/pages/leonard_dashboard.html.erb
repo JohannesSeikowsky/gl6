@@ -85,6 +85,7 @@
 			<p> Uncheck those features that you'd like to discard (if any). </p>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
+            <%= f.check_box :bio_feature, checked: @authors_settings.about_feature %> Bio Page <br>
             <!-- <%= f.check_box :this_month, checked: true %> "Posts" Section <br> -->
             <%= f.check_box :email_subscription_feature, checked: @authors_settings.email_subscription_feature %> Subscribe to Email-Updates Box <br> 
             <%= f.check_box :social_icons_features, checked: @authors_settings.social_icons_features %> Social Icons - Twitter, Medium <br>

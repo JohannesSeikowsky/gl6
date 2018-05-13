@@ -5,7 +5,7 @@
     				onclick: 'home_button(); return false' %>    
     <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
     
-	<% if @authors_settings.about_feature %>
+	<% if @authors_settings.bio_feature %>
     	<%= link_to "About", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
     <% end %>
 
@@ -29,8 +29,10 @@
 		  			<%= image_tag "#{@image_of_author}", id: "profile_image", style: "margin-bottom: 6px" %>
 				<% end %>
 
+			<% if @authors_settings.bio_feature %>
 			    <%= link_to @authors_settings.bio_title, root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
 			    		border: 1px solid lightgrey;" %>
+			<% end %>
 			</div>
 		  	
 		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
