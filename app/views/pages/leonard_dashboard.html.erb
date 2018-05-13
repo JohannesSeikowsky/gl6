@@ -29,7 +29,6 @@
 			--> 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> About Me </h3>
 			<p> Text below your name on the homepage. </p>
-            
             <!-- Title: <br>
             <%= f.text_field :about_title, value: @authors_settings.about_title, style: "width: 215px;" %> <br>
             Content: <br> -->
@@ -37,8 +36,19 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br> <hr>
 
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Small Profile Image on the Left </h3>			
-		    <%= f.file_field :image, style: "font-size: 12px;" %> <br> <br>
+
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;"> Bio </h3>
+			<!-- <p> Your Bio Page </p> -->
+            <p> Title </p>
+            <%= f.text_field :bio_title, value: @authors_settings.bio_title, style: "width: 215px;" %> <br>
+            <p> Content </p>
+            <%= f.text_area :bio_content, value: @authors_settings.bio_content, style: "width: 215px; height: 65px;" %> <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		 	<br> <hr>
+
+
+			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Small Profile Image on the Left </h3>
+			<%= f.file_field :image, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
 
@@ -46,7 +56,6 @@
 		    <%= f.file_field :image, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
-
 
 			<!-- <p> 
 				An option to change your image
