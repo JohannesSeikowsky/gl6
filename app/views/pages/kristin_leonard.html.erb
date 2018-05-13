@@ -29,7 +29,7 @@
 		  			<%= image_tag "#{@image_of_author}", id: "profile_image", style: "margin-bottom: 6px" %>
 				<% end %>
 
-			    <%= link_to "Bio / About", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
+			    <%= link_to @authors_settings.bio_title, root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
 			    		border: 1px solid lightgrey;" %>
 			</div>
 		  	
@@ -674,8 +674,10 @@ Somebody died last night.
 </div>
 
 <div class="post" id="bio">
-	<h3 class="page_header"> Bio / About Me </h3>		
-	<p> <!-- placeholder --> </p>
+	<h3 class="page_header"> <%= @authors_settings.bio_title %> </h3>		
+	<p>  
+		<%= @authors_settings.bio_content %>
+	</p>
 </div>
 
 <div class="post" id="email">

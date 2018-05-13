@@ -158,7 +158,7 @@ end
 
 def profile_params
 	params.require(:user_settings).permit(:twitter_life_feed, :portrait_feature,:about_feature,:email_subscription_feature,
-		:social_icons_features,:contact_feature, :about_title, :about_content, :post_one,:post_two,:post_three,:post_four,:post_five,:post_six,:post_seven,:post_eight,:post_nine)
+		:social_icons_features,:contact_feature, :bio_title, :bio_content, :about_title, :about_content, :post_one,:post_two,:post_three,:post_four,:post_five,:post_six,:post_seven,:post_eight,:post_nine)
 end
 
 end
