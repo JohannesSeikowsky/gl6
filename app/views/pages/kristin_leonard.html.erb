@@ -633,10 +633,19 @@ Somebody died last night.
 <!-- END OF POSTS -->
 
 
-
 <div class="post" id="posts">
 	<h3 class="page_header"> All Posts </h3>		
 	<p>
+	   <% if @authors_settings.post_six %>
+		<p class="post_title" onclick='show_piece("piece_minus_two");'> One Drop </p>
+		<p class="post_excerpt"> There was only one drop ... </p>		   
+	   <% end %>
+
+	   <% if @authors_settings.post_seven %>
+		<p class="post_title" onclick='show_piece("piece_minus_one");'> Seven Days Till the First </p>
+		<p class="post_excerpt"> Yes, Edna hated her. ... </p>
+	   <% end %>
+
 	    <% if @authors_settings.post_one %>
 		<p class="post_title" onclick='show_piece("piece_zero");'> <%= @title1 %> </p>
 		<p class="post_excerpt"> Nestled... between ...</p>
