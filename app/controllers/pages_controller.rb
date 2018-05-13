@@ -265,7 +265,7 @@ class PagesController < ApplicationController
   def amy_chai
     @authors_settings = VaughnUser.find(14)
     @name = "Amy Chai"
-    @image_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/0*vfn6yXWqoQ16AVU6."
+    @ibmage_of_author = "https://cdn-images-1.medium.com/fit/c/100/100/0*vfn6yXWqoQ16AVU6."
     @title1 = "Choose Your Own Adventure"
     @title2 = "The Prestidigitator"
     @title3 = "Lakes on Titan"
