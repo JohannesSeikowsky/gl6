@@ -1,5 +1,6 @@
 <%= link_to "Back to Site", kristin_leonard_path, id: "dashboard_link" %> 
 
+
 <div class="container-fluid">
   <div class="central_container"> 		
 
@@ -12,23 +13,35 @@
 
 
 		<h1 class="name_title"> Dashboard </h1>
-		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note - Any new writing that you post on Medium will be imported automatically to your Wordgates site within 24 hours. </p>
+		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note - Any new writing you post on Medium will be imported automatically <br> to your Wordgates site within 24 hours of posting. </p>
 
-
+		<!--
 		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Your Actions </h3> <hr>
 		<%= link_to "Manage Email Subscribers", "#", class:"btn btn-secondary",
 					style: "margin-bottom: 4px; border: 1px solid lightgrey;" %>
 		<%= link_to "Manage your Bio / About Page", "#", class:"btn btn-secondary", style: "margin-bottom: 4px; border: 1px solid lightgrey;" %>
 		<%= link_to "Publish a new Post (only here - not on Medium)", "#", class:"btn btn-secondary",
 					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %>
+		-->
+
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3> <hr>
+		<%= link_to "Publish a new Post", "#", class: "dashboard_nav_link" %>
+
+		<%= link_to "Manage Email Subscribers", "#", class: "dashboard_nav_link" %>
+		
+		<%= link_to "Manage Bio / About Page", "#", class: "dashboard_nav_link" %>
+
+		<%= link_to "Choose Images", "#", class: "dashboard_nav_link" %>
 
 
-		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 30px;"> Your Settings </h3> <hr>
+
+
+		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> Settings </h3> <hr>
 		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>			<!--
 			<h2 style="font-size: 32px; margin-bottom: 22px;"> Settings </h2>
 			--> 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> About Me </h3>
-			<p> Text below your name on the homepage. </p>
+			<p> Short self-description below your Name on the Homepage. </p>
             <!-- Title: <br>
             <%= f.text_field :about_title, value: @authors_settings.about_title, style: "width: 215px;" %> <br>
             Content: <br> -->
@@ -36,9 +49,8 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br> <hr>
 
-
+		 	<!--
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;"> Bio </h3>
-			<!-- <p> Your Bio Page </p> -->
             <p> Title </p>
             <%= f.text_field :bio_title, value: @authors_settings.bio_title, style: "width: 215px;" %> <br>
             <p> Content </p>
@@ -56,13 +68,9 @@
 		    <%= f.file_field :background_img, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
+			-->
 
-			<!-- <p> 
-				An option to change your image
-				and the site's <br> background image
-				is coming within the next few days.
-			</p> -->
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;">
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 25px;">
 			 Your Posts 
 			</h3>
 			<p> 
@@ -81,7 +89,7 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 			<br> <hr>
 
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;"> Your Features </h3>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 25px;"> Your Features </h3>
 			<p> Uncheck those features that you'd like to discard (if any). </p>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
@@ -112,6 +120,7 @@
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
+	  font-family: "Times New Roman";
 	}	
 
 	.title{
@@ -131,5 +140,6 @@
   	-moz-border-radius: 3px; 
     border-radius: 3px;
 	}
+
 </style>
 
