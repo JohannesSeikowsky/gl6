@@ -26,7 +26,7 @@
 	  	<div id="left_side_container" class="left_side_container">
 	  		<div id="profile_image_container">	
 			    <% if @authors_settings.portrait_feature %>
-		  			<%= image_tag "#{@image_of_author}", id: "profile_image", style: "margin-bottom: 6px" %>
+			  	    <%= image_tag @authors_settings.picture.url, id: "profile_image", style: "margin-bottom: 6px" %>
 				<% end %>
 
 			<% if @authors_settings.bio_feature %>
