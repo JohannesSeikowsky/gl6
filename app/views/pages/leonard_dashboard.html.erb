@@ -11,7 +11,6 @@
   	<div id="middle_container" class="middle_container" style="width: 570px;">  	
   		<% if notice %> <h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1> <% end %>
 
-
 		<h1 class="name_title"> Dashboard </h1>
 		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note - Any new writing you post on Medium will be imported automatically <br> to your Wordgates site within 24 hours of posting. </p>
 
@@ -25,21 +24,25 @@
 		-->
 
 		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3> <hr>
-		<%= link_to "Publish a new Post", "#", class: "dashboard_nav_link" %>
+		<%= link_to "Publish a new Post", root_path, class: "dashboard_nav_link", 
+				onclick: 'display_section("new_post"); return false' %>
 
-		<%= link_to "Manage Email Subscribers", "#", class: "dashboard_nav_link" %>
+		<%= link_to "Manage Email Subscribers", root_path, class: "dashboard_nav_link", 
+				onclick: 'display_section("email_subscribers"); return false' %>
 		
-		<%= link_to "Manage Bio / About Page", "#", class: "dashboard_nav_link" %>
+		<%= link_to "Manage Bio / About Page", root_path, class: "dashboard_nav_link", 
+				onclick: 'display_section("bio"); return false' %>
 
-		<%= link_to "Choose Images", "#", class: "dashboard_nav_link" %>
+		<%= link_to "Choose Images", root_path, class: "dashboard_nav_link", 
+				onclick: 'display_section("images"); return false' %>
+
+		<%= link_to "Base Settings", root_path, class: "dashboard_nav_link", id: "settings_link", onclick: 'display_section("settings"); return false' %>
 
 
+		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>
+		<div id="settings">
+			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Settings </h3> <hr>
 
-
-		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> Settings </h3> <hr>
-		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>			<!--
-			<h2 style="font-size: 32px; margin-bottom: 22px;"> Settings </h2>
-			--> 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> About Me </h3>
 			<p> Short self-description below your Name on the Homepage. </p>
             <!-- Title: <br>
@@ -49,36 +52,8 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br> <hr>
 
-		 	<!--
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 55px;"> Bio </h3>
-            <p> Title </p>
-            <%= f.text_field :bio_title, value: @authors_settings.bio_title, style: "width: 215px;" %> <br>
-            <p> Content </p>
-            <%= f.text_area :bio_content, value: @authors_settings.bio_content, style: "width: 215px; height: 65px;" %> <br>
-			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-		 	<br> <hr>
-
-
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Small Profile Image on the Left </h3>
-			<%= f.file_field :picture, style: "font-size: 12px;" %> <br> <br>
-			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-		    <br> <hr>
-
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Large Site-Background Image </h3>
-		    <%= f.file_field :background_img, style: "font-size: 12px;" %> <br> <br>
-			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-		    <br> <hr>
-			-->
-
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 25px;">
-			 Your Posts 
-			</h3>
-			<p> 
-				Unckeck those posts that you'd like to hide (if any).
-				<!--
-				An option to publish more posts here which <br> are not on your Medium is coming soon.
-				-->
-			</p>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 25px;"> Your Posts </h3>
+			<p> Unckeck those posts that you'd like to hide (if any). </p>
             <%= f.check_box :post_six, checked: @authors_settings.post_six %>  One Drop <br>
             <%= f.check_box :post_seven, checked: @authors_settings.post_seven %> Seven Days Till the First <br>
             <%= f.check_box :post_one, checked: @authors_settings.post_one %>  <%= @title1 %> <br>
@@ -99,16 +74,48 @@
             <%= f.check_box :social_icons_features, checked: @authors_settings.social_icons_features %> Social Icons - Twitter, Medium <br>
             <%= f.check_box :twitter_life_feed, checked: @authors_settings.twitter_life_feed %> Twitter Life Feed <br>
             <%= f.check_box :contact_feature, checked: @authors_settings.contact_feature %> Contact Me Box <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %> <br>
+		</div>
+
+		<div id="bio">
+			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> Bio / About Page </h3> <hr>
+            <p> Title </p>
+            <%= f.text_field :bio_title, value: @authors_settings.bio_title, style: "width: 215px;" %> <br>
+            <p> Content </p>
+            <%= f.text_area :bio_content, value: @authors_settings.bio_content, style: "width: 215px; height: 65px;" %> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br>
+		 </div>
+
+		 <div id="images">
+			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> Your Images </h3> <hr>
+			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Small Profile Image on the Left </h3>
+			<%= f.file_field :picture, style: "font-size: 12px;" %> <br> <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		    <br> <hr>
+
+			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Large Site-Background Image </h3>
+		    <%= f.file_field :background_img, style: "font-size: 12px;" %> <br> <br>
+			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
+		    <br>
+		 </div>
+
+		 <div id="email_subscribers">
+			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> Email Subscribers </h3> <hr>
+		 	<p> No subscribers yet it seems. </p>
+		 </div>
+
+		 <div id="new_post">
+			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 24px;"> New Post </h3> <hr>
+		 	<p> coming soon. </p>
+		 </div>
 		<% end %>
-
-
 
 		<div class="powered_by_dashboard"> Powered by WordGates | The Home of Writers. </div>
   	</div>
   </div>
 </div>
+
 
 
 <style type="text/css">
@@ -142,4 +149,6 @@
 	}
 
 </style>
+
+
 
