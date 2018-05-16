@@ -50,7 +50,7 @@
 
 			<% if @authors_settings.about_feature %>
 				<p style="margin-top: -10px;">
-					<%= @authors_settings.about_content %>
+					<%= simple_format(@authors_settings.about_content) %>
 				</p> <br>
 			<% end %>
 
@@ -676,8 +676,8 @@ Somebody died last night.
 
 <div class="post" id="bio">
 	<h3 class="page_header"> <%= @authors_settings.bio_title %> </h3>		
-	<p>  
-		<%= @authors_settings.bio_content %>
+	<p>
+		<%= simple_format(@authors_settings.bio_content) %>
 	</p>
 </div>
 
