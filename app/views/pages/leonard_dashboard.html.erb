@@ -5,15 +5,14 @@
   <div class="central_container"> 		
 
   	<div class="left_side_container">
-	  	<%= image_tag "https://miro.medium.com/fit/c/240/240/1*Y9QQ4IMipzdd1o35xsDgTQ.png", id: "profile_image" %>
+		<%= image_tag @authors_settings.picture.url, id: "profile_image", style: "margin-bottom: 6px" %>
 	</div>
 
   	<div id="middle_container" class="middle_container" style="width: 570px;">  	
   		<% if notice %> <h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1> <% end %>
 
 		<h1 class="name_title"> Dashboard </h1>
-		<p style="background-color: #F5EFE6; padding-left: 8px;"> Note - Any new writing you post on Medium will be imported automatically <br> to your Wordgates site within 24 hours of posting. </p>
-
+		<hr>
 		<!--
 		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Your Actions </h3> <hr>
 		<%= link_to "Manage Email Subscribers", "#", class:"btn btn-secondary",
@@ -22,49 +21,42 @@
 		<%= link_to "Publish a new Post (only here - not on Medium)", "#", class:"btn btn-secondary",
 					style: "margin-bottom: 12px; border: 1px solid lightgrey;" %>
 		-->
-
+		<!--
 		<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 35px;"> Actions </h3> <hr>
-		<%= link_to "Publish new Post", root_path, class: "dashboard_nav_link", 
+		-->
+		<%= link_to "Publish new Post", root_path, class: "btn btn-light", 
 				onclick: 'display_section("new_post"); return false' %>
 
-		<%= link_to "Manage Email Subscribers", root_path, class: "dashboard_nav_link", 
+		<%= link_to "Manage Email Subscribers", root_path, class: "btn btn-light", 
 				onclick: 'display_section("email_subscribers"); return false' %>
 		
-		<%= link_to "Manage Bio / About Page", root_path, class: "dashboard_nav_link", 
+		<%= link_to "Manage About Page", root_path, class: "btn btn-light", 
 				onclick: 'display_section("bio"); return false' %>
 
-		<%= link_to "Images and Settings", root_path, class: "dashboard_nav_link", 
+		<%= link_to "Choose Images", root_path, class: "btn btn-light", 
+				onclick: 'display_section("images"); return false' %>
+
+		<%= link_to "Base Settings", root_path, class: "btn btn-light", 
 				onclick: 'display_section("settings"); return false' %>
 
-		<!--
-		<%= link_to "Base Settings", root_path, class: "dashboard_nav_link", id: "settings_link", onclick: 'display_section("settings"); return false' %>
-		-->
+
+		<br> <br>
+		<p style="font-size: 14px; background-color: white; padding-left: 4px;"> Any new writing you post on Medium will be imported automatically <br> to your Wordgates site within 24 hours. </p>
 
 		<%= form_for :user_settings, url: editing_leonard_page_path do |f| %>
+		
 		<div id="settings">
-			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Images and Settings </h3> <hr>
+			<h3 class="title" style="font-size: 14px; margin-bottom: 8px; margin-top: 60px;"> Base Settings </h3> <hr>
 
-			<h3 class="title" style="margin-bottom: 22px; margin-top: 25px;"> Small Profile Image on the Left </h3>
-			<%= f.file_field :picture, style: "font-size: 12px;" %> <br> <br>
-			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-		    <br> <hr>
+			<h3 class="title" style="margin-bottom: 8px; margin-top: 42bpx;"> Intro </h3>
+			<p> Self-description below your Name on Homepage. </p>
 
-			<h3 class="title" style="margin-bottom: 22px; margin-top: 42px;"> Large Site-Background Image </h3>
-		    <%= f.file_field :background_img, style: "font-size: 12px;" %> <br> <br>
-			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-		    <br> <hr>
-
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 42px;"> About Me </h3>
-			<p> Short self-description below your Name on Homepage. </p>
-            <!-- Title: <br>
-            <%= f.text_field :about_title, value: @authors_settings.about_title, style: "width: 215px;" %> <br>
-            Content: <br> -->
             <%= f.text_area :about_content, value: @authors_settings.about_content, style: "width: 215px; height: 65px;" %> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		 	<br> <hr>
 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 42px;"> Your Posts </h3>
-			<p> Unckeck those posts that you'd like to hide (if any). </p>
+			<p> Unckeck those posts that you'd like to hide, if any. </p>
             <%= f.check_box :post_six, checked: @authors_settings.post_six %>  One Drop <br>
             <%= f.check_box :post_seven, checked: @authors_settings.post_seven %> Seven Days Till the First <br>
             <%= f.check_box :post_one, checked: @authors_settings.post_one %>  <%= @title1 %> <br>
@@ -76,7 +68,7 @@
 			<br> <hr>
 
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 42px;"> Your Features </h3>
-			<p> Uncheck those features that you'd like to discard (if any). </p>
+			<p> Uncheck those features that you'd like to discard, if any. </p>
             <%= f.check_box :portrait_feature, checked: @authors_settings.portrait_feature %> Your Image on the Left <br>
             <%= f.check_box :about_feature, checked: @authors_settings.about_feature %> "About Me" Section <br>
             <%= f.check_box :bio_feature, checked: @authors_settings.bio_feature %> Bio Page <br>
@@ -88,8 +80,9 @@
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %> <br>
 		</div>
 
+
 		<div id="bio">
-			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Manage Bio / About Page </h3> <hr>
+			<h3 class="title" style="font-size: 14px; margin-bottom: 8px; margin-top: 60px;"> Manage About Page </h3> <hr>
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> Title </h3>
             <%= f.text_field :bio_title, value: @authors_settings.bio_title, style: "width: 215px;" %> <br>
 			<h3 class="title" style="margin-bottom: 8px; margin-top: 28px;"> Page Content </h3>
@@ -99,32 +92,33 @@
 		 	<br>
 		 </div>
 
+
 		 <div id="images">
-		 	<!--
-			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Choose Images </h3> <hr>
-			<h3 class="title" style="margin-bottom: 8px; margin-top: 10px;"> Small Profile Image on the Left </h3>
+			<h3 class="title" style="font-size: 14px; margin-bottom: 8px; margin-top: 60px;"> Choose Images </h3> <hr>
+
+			<h3 class="title" style="margin-bottom: 22px; margin-top: 25px;"> Small Profile Image on the Left </h3>
 			<%= f.file_field :picture, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
 		    <br> <hr>
 
-			<h3 class="title" style="margin-bottom: 16px; margin-top: 55px;"> Large Site-Background Image </h3>
+			<h3 class="title" style="margin-bottom: 22px; margin-top: 42px;"> Large Site-Background Image </h3>
 		    <%= f.file_field :background_img, style: "font-size: 12px;" %> <br> <br>
 			<%= f.submit "Apply Changes", style: "font-size: 14px; margin-top: 8px;" %>
-			-->
-		    <br>
 		 </div>
 
+
 		 <div id="email_subscribers">
-			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Manage Email Subscribers </h3> <hr>
+			<h3 class="title" style="font-size: 14px; margin-bottom: 8px; margin-top: 60px;"> Manage Email Subscribers </h3> <hr>
 			<p style="background-color: #F5EFE6; padding-left: 8px;"> 
 		 		No subscribers yet.
 		 	</p>
 		 </div>
 
+
 		 <div id="new_post">
-			<h3 class="title" style="font-size: 16px; margin-bottom: 8px; margin-top: 34px;"> Publish new Post </h3> <hr>
+			<h3 class="title" style="font-size: 14px; margin-bottom: 8px; margin-top: 60px;"> Publish new Post </h3> <hr>
 		 	<p style="background-color: #F5EFE6; padding-left: 8px;"> 
-				Functionality coming soon. 
+				coming soon. 
 			</p>
 		 </div>
 		<% end %>
@@ -140,7 +134,7 @@
 	body {
 	  margin: 0;
 	  padding-bottom: 20px;
-	  background: url("http://s3.otherpeoplespixels.com/sites/30468/assets/5OHQ_CDTOHDBFsQl.jpg") no-repeat center center fixed;
+	  background: url(<%= @authors_settings.background_img %>) no-repeat center center fixed;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
@@ -153,17 +147,27 @@
 	}
 
 	#dashboard_link{
-	position: fixed;
-	top: 2px;
-	right: 6px;
-	padding: 3px 12px;
-	background-color: white;
-	color: black;
-	text-decoration: none;
-	border: 1px solid black;
-	-webkit-border-radius: 3px; 
-  	-moz-border-radius: 3px; 
-    border-radius: 3px;
+		position: fixed;
+		top: 2px;
+		right: 6px;
+		padding: 3px 12px;
+		background-color: white;
+		color: black;
+		text-decoration: none;
+		border: 1px solid black;
+		-webkit-border-radius: 3px; 
+	  	-moz-border-radius: 3px; 
+	    border-radius: 3px;
+	}
+
+	#settings, #bio, #email_subscribers, #new_post{
+		display: none;
+	}
+
+	.btn-light{
+		border: 1px solid lightgrey;
+		margin-bottom: 5px;
+		padding: 5px 18px;
 	}
 
 </style>
