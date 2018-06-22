@@ -1,11 +1,11 @@
 <div class="page-header-johannes">
     <%= link_to "Home", root_path, class: "header_links", 
     				onclick: 'home_button(); return false' %>    
+    <!--
     <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
-    
-    <%= link_to "About", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
-
-    <%= link_to "Contact", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
+   	-->
+    <%= link_to "About / Bio", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
+	    <%= link_to "Contact Me", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
 
     <%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
 </div>
@@ -17,40 +17,59 @@
 
 	  	<div id="left_side_container" class="left_side_container">
 	  		<div id="profile_image_container">	
-			    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>
-			    
-			    <%= link_to "Bio / About", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
-			    		border: 1px solid lightgrey;" %>
+			    <%= image_tag "johannes.jpg", id: "profile_image", style: "margin-bottom: 6px;" %>   
 			</div>
 		  	
 		  	<div id="left_side_container_inside_bottom" class="left_side_container_inside_bottom">
-		  		<!-- personal links on side - book recommends -->
+
+		  		<h5> Johannes Seikowsky </h5>
+		  		<p style="margin-top: 10px;">
+			 	Self-taught programmer. <br>
+			 	Writer/Poet by compulsion. <br>
+			 	Interested in many things. <br>
+			 	Living in London.
+			</p>
+
+			<!--
+			    <%= link_to "Bio / About", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "background-color: #F5F5F5; width: 200px; text-align: center;
+			    		border: 1px solid lightgrey;" %> -->
+			
+			<!--
+			    <%= link_to "About / Bio", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "text-decoration: underline;" %> -->
+			    Online you can find me on
+			    <%= link_to "Twitter", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "text-decoration: underline; display: inline;" %>, on
+			    <%= link_to "Medium", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "text-decoration: underline; display: inline;" %>, or on
+			    <%= link_to "Facebook", root_path, class: "right_side_links", onclick: 'show_page("bio"); return false', style: "text-decoration: underline; display: inline;" %>.
+
 			</div>
 		
 			<p>	</p>
 	  	</div>
 
-	  	<div id="middle_container" class="middle_container" style="background-color: #F9F9F9;">
+	  	<div id="middle_container" class="middle_container" 
+	  				style="background-color: #F9F9F9; padding-left: 30px;">
 	  		<% if notice %>
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
-
-			<h3 class="name_title"> Johannes Seikowsky </h3>
-
+			<!--
+			<h3 class="name_title" style="margin-left: -20px;"> Johannes Seikowsky </h3>
+			-->
 			<!--
 			<h3 class="title"> Me in 10 seconds </h3>
 			-->
-
+			<!--
 			<p style="margin-top: -10px;">
 			 	Self-taught programmer. <br>
 			 	Writer/Poet by compulsion. <br>
 			 	Interested in many things. <br>
 			 	Living in London. <br>
 			</p> <br>
+			-->
 
-
+			<!--
 			<h3 class="title" style="margin-top: -4px;"> Top Posts </h3>
-
+			-->
+			<br>
 			<p class="post_title" onclick='show_piece("piece_minus_two");'> The Modern Man </p>
 			<p class="post_excerpt"> The Modern Man rarely looks at paintings </p>
 
@@ -477,6 +496,7 @@
 			</div>
 			-->
 
+			<!--
 			<div id="my_social" class="functionality_container" style="margin-top: 60px; color: black;">
 				<a href="https://twitter.com/Seikowsky" target="_blank">
 					<i class="fab fa-twitter" style="font-size: 30px; color: black;"></i>
@@ -488,10 +508,13 @@
 					<i class="fab fa-facebook" style="font-size: 30px; margin-left: 15px; color: black;"></i>
 				</a>
 			</div>
+		-->
 
+			<!--
 			<div id="twitter_feed" class="functionality_container" style="margin-top: 46px; color: black;">
 				<a class="twitter-timeline" data-width="200" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/Seikowsky?ref_src=twsrc%5Etfw">Tweets by Seikowsky</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
+			-->
 	  	</div>
 	  </div>
 	<div id="powered_by" class="powered_by" style="margin-top: -108px;"> Powered by WordGates | The Home of Writers </div>
@@ -514,7 +537,7 @@
 	}	
 
 	.post_title{
-		font-size: 19px;
+		font-size: 21px;
 		margin-bottom: 3px;
 	}
 
