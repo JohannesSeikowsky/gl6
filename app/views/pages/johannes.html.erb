@@ -4,7 +4,7 @@
     <!--
     <%= link_to "All Posts", root_path, class: "header_links", onclick: 'show_page("posts"); return false' %>
    	-->
-    <%= link_to "About / Bio", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
+    <%= link_to "About Me", root_path, class: "header_links", onclick: 'show_page("bio"); return false' %>
 	    <%= link_to "Contact Me", root_path, class: "header_links", onclick: 'show_page("contact"); return false' %>
 
     <%= link_to "Subscribe", root_path, class: "header_links", onclick: 'show_page("email"); return false' %>
@@ -47,7 +47,7 @@
 	  	</div>
 
 	  	<div id="middle_container" class="middle_container" 
-	  				style="background-color: #F9F9F9; padding-left: 30px;">
+	  				style="background-color: #F9F9F9; padding-left: 33px;">
 	  		<% if notice %>
 				<h1 class="name_title" style="margin-bottom: 28px"> <%= notice %> </h1>
 			<% end %>
@@ -473,8 +473,8 @@
 
 	  	<div id="right_side_container" class="right_side_container" style="margin-top: 62px;">
 	
-			<div class="functionality_container" style="">
-				<p class="functionality_title" style="margin-top: -50px;"> Email Notifier </p>
+			<div class="functionality_container" style="background-color: #F9F9F9;">
+				<p class="functionality_title" style="margin-top: -62px;"> Email Notifier </p>
 				<p> Notify me when new <br> posts are published. </p>
 				<%= form_for :email_subscriber, url: email_subscriber_url do |f| %>
 					<%= f.text_field :email, placeholder: " you@youmail.com",
@@ -537,7 +537,7 @@
 	}	
 
 	.post_title{
-		font-size: 21px;
+		font-size: 22px;
 		margin-bottom: 3px;
 	}
 
