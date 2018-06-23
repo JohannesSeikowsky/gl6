@@ -7,25 +7,43 @@
 		<meta name="description" content="Wordgates" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700,700italic,500,500italic%7COpen+Sans:400,400italic%7CSource+Sans+Pro:700,700italic" rel="stylesheet" type="text/css" />
 	</head>
-	<body class="is-loading">
+
+	<body class="is-loading"">
+
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
 					<section id="home-section">
-						<div id="container01" class="container">
+						<div id="container01" class="container" style="position: relative;">
+							<div id="new_logo" style="position:absolute; top:-54px; left:-48px;">
+		  						<%= image_tag "cutmypic.png", style: "width: 240px; height: auto;" %>
+		  					</div>
+
 							<div class="inner">
 								<div>
 									<h1 id="text04">Your Medium-based Author Website Done in 10 Secs.</h1>
 									<p id="text03">No Setup. No Hassle. All Important Features.</p>
-									<p id="text05">We use your Medium posts and profile to generate your own dedicated Author Website with those features that are most important for Writers online:</p>
+									<p id="text05">We use your Medium profile and posts to generate your own dedicated Author Website with those features that are most important for Writers online:</p>
 									<p id="text09"><span class="li">Your Own URL - www.amy-johnson.com</span></p>
 									<p id="text10"><span class="li">Email Subscriber List &amp; Management</span></p>
+									<!--
 									<p id="text14"><span class="li">Full Import From Medium - No Setup</span></p>
-									<p id="text13"><span class="li">Autonomy - add posts that are not on your Medium</span></p>
+									-->
+									<p id="text13"><span class="li"> Subpages - add subpages like "About" etc.</span></p>
+									<p id="text13"><span class="li">Autonomy - add posts that are not on Medium</span></p>
+
+									<div id="start_trial_btn">
+									<ul id="buttons02" class="buttons">
+										<li>
+											<a href="http://domain.tld/path" class="button n01">Start Trial</a>
+										</li>
+									</ul>
+									</div>
+
 								</div>
 								<div>
 									<h2 id="text06">Trial</h2>
-									<p id="text02" style="padding: 0;"><span>First 4 Weeks <br> are Free. </span><span>After - <br> 3.99$ / Month. Simple.</span></p>
+									<p id="text02" style="padding: 0;"><span>First 4 Weeks <br> are Free. </span><span>After: <br> 3.99$ / Month. Simple.</span></p>
 									<p id="text07">The Trial does <br> not prolong automatically. <br> No worries :)</p>
 									<ul id="buttons02" class="buttons">
 										<li>
@@ -78,6 +96,19 @@
 
 <!--  --------------------------------------------------------------------------------------------  -->
 <style type="text/css">
+
+@media screen and (max-width: 740px) {
+	#new_logo{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 740px) {
+	#start_trial_btn{
+		display: none;
+	}
+}
+
 
 body {
 	overflow: auto !important;
