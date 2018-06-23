@@ -17,6 +17,9 @@ class PagesController < ApplicationController
   	@reminders = Reminder.all
   end
 
+  def get_started
+  end
+
   def about
   end
 
