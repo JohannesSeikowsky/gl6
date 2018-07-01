@@ -549,20 +549,25 @@ h1 .li, h2 .li, h3 .li, p .li {
 	background-color: #2FD6AF;
 }
 
-
-
 #next_btn {
 	background-color: #1FBF99;
 	color: #FFFFFF;
 	text-decoration: none;
-	padding: 12px 122px;
+	padding: 12px 120px;
 	font-size: 20px;
 	font-weight: bold;
 	margin: 0px auto;
+	border-radius: 8px;
 }
 
 #next_btn:hover {
 	background-color: #2FD6AF;
+}
+
+@media (max-width: 400px) {
+	#next_btn {
+		padding: 12px 42px;
+	}
 }
 
 
@@ -1260,7 +1265,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 						
 						<!--
 						<div id="new_logo" style="position:absolute; top:-54px; left:-48px;">
-	  						<%= image_tag "cutmypic.png", style: "width: 240px; height: auto;" %>
+	  						<%= image_tag "logo.png", style: "width: 240px; height: auto;" %>
 	  					</div>
 	  					-->
 						
@@ -1268,30 +1273,26 @@ h1 .li, h2 .li, h3 .li, p .li {
 			<!--
 			<h2 id="text11">1/3 - Get started</h2>
 			-->
-			<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 
-				1/3 - Getting started 
-			</p>
+			<div style="height: 275px;">
 
-			<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-				Do you want to use your Medium profile picture on your Wordgates site?
-			</p>
+				<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 
+					1/3 - Getting started 
+				</p>
 
-			<%= form_for :author, url: root_url, style: "text-align: left;" do |f| %>
-				<div style="text-align: left; color: #737373;">
-					 <%= f.check_box :gender, checked: true, style: "float: left;" %> 
-					 <span style="padding-left: 6px;"> Yes </span> <br>
-					 <%= f.check_box :gender, style: "float: left;" %>
-					 <span style="padding-left: 6px;"> No </span>
-				</div>
-			<% end %>
-bb
-			<!--
-			cosmetics
-			- tab
-			- writing /
-			- logo
-			- width of next btn on iphone screen
-			-->
+				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+					Do you want to use your Medium profile picture on your Wordgates site?
+				</p> <br>
+
+				<%= form_for :author, url: root_url, style: "text-align: left;" do |f| %>
+					<div style="text-align: left; color: #737373;">
+						 <%= f.check_box :gender, checked: true, style: "float: left;" %> 
+						 <span style="padding-left: 6px;"> Yes </span> <br>
+						 <%= f.check_box :gender, style: "float: left;" %>
+						 <span style="padding-left: 6px;"> No </span>
+					</div>
+				<% end %>
+
+			</div>
 
 			<!--
 			- use your medium profile photo?
@@ -1305,19 +1306,8 @@ bb
 			- and hello Email...
 			-->
 
-			<br>
-			<div style="position: absolute; bottom: 20px; text-align: center;">
-				<div style="width: 300px; margin: 20px auto;">
-				<a href="#home" id="next_btn">
-					Next
-					>>
-				</a>
-
-
-				</div>
-				<p style="color: #737373; padding-top: 8px;"> For Writers by Writers </p>
-			</div>
-
+			<a href="#home" id="next_btn"> Next >> </a>
+			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers </p>
 		</div>
 
 		<p style="color: #ADADAD; font-size: 24px; padding-top: 22px;"> 
