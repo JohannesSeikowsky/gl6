@@ -1285,16 +1285,16 @@ h1 .li, h2 .li, h3 .li, p .li {
 					1/3 - Getting started 
 				</p>
 
-				<p id="text12" style="color: #j37373; text-align: left; margin-top: 0;"> 
+				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
 					Do you want to use your Medium profile picture on your Wordgates site?
 				</p> <br>
 
 				<%= form_for :author, url: root_url, style: "text-align: left;" do |f| %>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.check_box :gender, checked: true, style: "float: left;" %> 
-						 <span style="padding-left: 6px;"> Yes </span> <br>
+						 <span style="padding-left: 6px; color: #737373;"> Yes </span> <br>
 						 <%= f.check_box :gender, style: "float: left;" %>
-						 <span style="padding-left: 6px;"> No </span>
+						 <span style="padding-left: 6px; color: #737373;"> No </span>
 					</div>
 				<% end %>
 
