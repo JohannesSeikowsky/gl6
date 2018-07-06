@@ -18,6 +18,7 @@ class PagesController < ApplicationController
   end
 
   def get_started
+    @author = Author.new
   end
 
   def about

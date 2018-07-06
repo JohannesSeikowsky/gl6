@@ -10,12 +10,12 @@ class AuthorsController < ApplicationController
   end
 
   def authors_params
-    params.require(:author).permit(:use_medium_img, :posts_to_import, :demanded_features, :full_name, :email, :password, :import_permission, :url_investigation_requested)
+    params.require(:author).permit(:use_medium_img, :posts_to_import, :demanded_features, :full_name, :email, :password, :import_permission, :url_investigation_requested, :url_feature, :email_list_feature, :contact_me_feature, :add_pages_feature, :about_me_feature)
   end
 
 end
 
-
+ 
 
 """
 @writer = Writer.new(writer_params)
