@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180514022610) do
+ActiveRecord::Schema.define(version: 20180706165231) do
+
+  create_table "authors", force: :cascade do |t|
+    t.boolean "use_medium_img"
+    t.string "posts_to_import"
+    t.string "demanded_features"
+    t.string "full_name"
+    t.string "email"
+    t.string "password"
+    t.boolean "import_permission"
+    t.boolean "url_investigation_requested"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"

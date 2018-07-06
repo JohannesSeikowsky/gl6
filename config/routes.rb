@@ -2,12 +2,16 @@ Rails.application.routes.draw do
 
   # root
   root 'pages#home'
-  get 'getting_started', to: 'pages#get_started', as: 'get_started'
+  get 'get_started', to: 'pages#get_started', as: 'get_started'
 
   get 'get_page', to: 'pages#get_page', as: 'get_page'
   get 'get_your_page', to: 'pages#get_your_page', as: 'get_your_page'
   get 'thanks', to: 'pages#thank_you', as: 'thank_you'
   resources :writers
+
+  post 'get_started', to: 'authors#create', as: 'create_author'
+
+
 
 
   get 'johannes', to: 'pages#johannes', as: 'johannes'
