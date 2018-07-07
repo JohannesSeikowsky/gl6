@@ -38,4 +38,9 @@ class GeneralMailer < ApplicationMailer
     @user_name = user_name    
     mail(to: "joseikowsky@gmail.com", subject: 'A user has edited page...')   
   end
+
+  def author_sign_up(user_email)
+      @user_email = user_email    
+      mail(to: @user_email, subject: 'Welcome to Wordgates.') 
+  end
 end

@@ -1281,42 +1281,41 @@ h1 .li, h2 .li, h3 .li, p .li {
 			<div style="">
 			<!-- height: 275 -->
 
-				<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 
-					1/3 - Getting started 
-				</p>
+				<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 1/3 - Getting started </p>
 
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					Do you want to use your Medium profile picture on your Wordgates site?
-				</p> <br>
 
-			
 				<%= form_for @author, url: create_author_url do |f| %>
 
-
-				<div style="text-align: left; color: #737373;">
-					 <%= f.radio_button :use_medium_img, true, checked: true, style: "float: left;" %>
-					 <span style="padding-left: 6px; color: #737373;"> Yes </span> <br>
-					 <%= f.radio_button :use_medium_img, false, style: "float: left;" %>
-					 <span style="padding-left: 6px; color: #737373;"> No </span>
+				<div id="use_medium_pic">
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+						Do you want to use your Medium profile picture on your Wordgates site?
+					</p> <br>
+					<div style="text-align: left; color: #737373;">
+						 <%= f.radio_button :use_medium_img, true, checked: true, style: "float: left;" %>
+						 <span style="padding-left: 6px; color: #737373;"> Yes </span> <br>
+						 <%= f.radio_button :use_medium_img, false, style: "float: left;" %>
+						 <span style="padding-left: 6px; color: #737373;"> No </span>
+					</div> <br><br>
+					 <%= link_to "Next >>", root_path, onclick: 'show_page("posts"); return false' %>
 				</div>
-				<br><br>
 
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					Do you want to import all posts on your Medium or the Top 10?
-				</p> <br>
+				<div id="posts_to_import">
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+						Do you want to import all posts on your Medium or the Top 10?
+					</p> <br>
 					<div style="text-align: left; color: #737373;">
 					 	<%= f.radio_button :posts_to_import, "top10", checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> Import Top 10 </span> <br>
 					 	<%= f.radio_button :posts_to_import, "all", style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> Import All </span>
 					</div> <br><br>
+				</div>
 
-
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					Do you want to have all the default Features on your Wordgates site?
-					Uncheck the ones you dont.
-				</p> <br>
-
+				<div id="demanded_features">
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+						Do you want to have all the default Features on your Wordgates site?
+						Uncheck the ones you dont.
+					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.check_box :url_feature, checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> Personal URL </span>
@@ -1332,41 +1331,40 @@ h1 .li, h2 .li, h3 .li, p .li {
 						 <br>
 						 <%= f.check_box :about_me_feature, checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> About Me </span>
-					</div>
-				<br><br>
+					</div> <br><br>
+				</div>
 
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					Done - Start Trial 
-				</p> <br>
-
+				<div id="start_trial">
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+						Start Trial 
+					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.text_field :full_name, style: "float: left;", placeholder: "Full Name" %> <br> <br>
 						 <%= f.text_field :email, style: "float: left;", placeholder: "Email" %> <br> <br>
 						 <%= f.text_field :password, style: "float: left;", placeholder: "Password" %> <br>
-					</div>
-				<br><br>
+					</div> <br><br>
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px;"> 
+						We need this to create your URL (name). To get in touch with you when relevant (email). Find your Medium account.
+						And ensure that only you can access to your account (PW).
+					</p> <br>
+				</div>
 
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					We need this to create your URL (name). To get in touch with you when relevant (email). Find your Medium account.
-					And ensure that only you can access to your account (PW).
-				</p> <br>
-
-				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-					Your Permission 
-				</p> <br>
+				<div id="user_permission">
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
+						Your Permission 
+					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.check_box :import_permission, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> I
 						 	agree that Wordgates may use the information openly available on my Medium profile, including my posts there, to construct a Website on my behalf.
 						 </span>
-					</div>
+					</div> <br> <br>
+				</div>
+				
 
-					<br> <br>
-					<%= f.submit "Next >>", id: "next_btn", style: "border: none;" %>
-
-
+				<%= f.submit "Next >>", id: "next_btn", style: "border: none;" %>
 				<% end %>
-				<br> <br> <br>
+
 
 				<!--
 				<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
@@ -1386,36 +1384,16 @@ h1 .li, h2 .li, h3 .li, p .li {
 				-->
 
 			</div>
-			<!--
-				- welcome email (maybe eventually extend with intro vid)
-			-->
-
-			<!-- <a href="#home" id="next_btn"> Next >> </a> -->
 			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers </p>
 		</div>
 
 		<p style="color: #ADADAD; font-size: 24px; padding-top: 22px;"> 
-			Made with 
-			<i class="fas fa-heart" style="color: #1FBF99"></i> in London
+			Made with <i class="fas fa-heart" style="color: #1FBF99"></i> in London
 		</p>
 
-						<!--
-						<div id="container04" class="container">
-							<div class="inner" style="text-align: center">
-								<div style="text-align: center;">
-									<p id="text08">Wordgates - For Writers by Writers.</p>
-								</div>
-							</div>
-						</div>
-						-->
+		</div>
+		</section>
 
-						</div>
-
-
-
-					</section>
-
-					<!-- ability to style this section appropriately -->
 
 
 				</div>
@@ -1424,3 +1402,4 @@ h1 .li, h2 .li, h3 .li, p .li {
 		<script src="assets/main.js"></script>
 	</body>
 </html>
+
