@@ -558,6 +558,24 @@ h1 .li, h2 .li, h3 .li, p .li {
 	font-weight: bold;
 	margin: 0px auto;
 	border-radius: 8px;
+	position: absolute;
+	bottom: 60px;
+	left: 50px;
+}
+
+#finish_btn {
+	background-color: #1FBF99;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 12px 122px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0px auto;
+	border-radius: 8px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 60px;
+	left: 50px;
 }
 
 #next_btn:hover {
@@ -1255,6 +1273,16 @@ h1 .li, h2 .li, h3 .li, p .li {
 		margin-bottom: -2.625rem !important;
 	}
 }
+
+#posts_to_import, #demanded_features, #start_trial, #user_permission{
+	display: none;
+}
+
+#use_medium_pic, #posts_to_import, #demanded_features, #start_trial, #user_permission{
+	height: 300px;
+}
+
+
 </style>
 
 <!-- JAVASCRIPT -->
@@ -1286,7 +1314,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<%= form_for @author, url: create_author_url do |f| %>
 
-				<div id="use_medium_pic">
+				<div id="use_medium_pic" style="">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
 						Do you want to use your Medium profile picture on your Wordgates site?
 					</p> <br>
@@ -1296,7 +1324,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 						 <%= f.radio_button :use_medium_img, false, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> No </span>
 					</div> <br><br>
-					 <%= link_to "Next >>", root_path, onclick: 'show_page("posts"); return false' %>
+					 <%= link_to "Next >>", root_path, onclick: 'next_slide("use_medium_pic", "posts_to_import"); return false', id: "next_btn", style: "border: none;" %>
 				</div>
 
 				<div id="posts_to_import">
@@ -1309,6 +1337,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 					 	<%= f.radio_button :posts_to_import, "all", style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> Import All </span>
 					</div> <br><br>
+					 <%= link_to "Next >>", root_path, onclick: 'next_slide("posts_to_import", "demanded_features"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="demanded_features">
@@ -1332,6 +1361,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 						 <%= f.check_box :about_me_feature, checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> About Me </span>
 					</div> <br><br>
+					<%= link_to "Next >>", root_path, onclick: 'next_slide("demanded_features", "start_trial"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="start_trial">
@@ -1346,7 +1376,8 @@ h1 .li, h2 .li, h3 .li, p .li {
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px;"> 
 						We need this to create your URL (name). To get in touch with you when relevant (email). Find your Medium account.
 						And ensure that only you can access to your account (PW).
-					</p> <br>
+					</p> <br> <br>
+					<%= link_to "Next >>", root_path, onclick: 'next_slide("start_trial", "user_permission"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="user_permission">
@@ -1354,15 +1385,15 @@ h1 .li, h2 .li, h3 .li, p .li {
 						Your Permission 
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
-						 <%= f.check_box :import_permission, style: "float: left;" %>
+						 <%= f.check_box :import_permission, checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> I
 						 	agree that Wordgates may use the information openly available on my Medium profile, including my posts there, to construct a Website on my behalf.
 						 </span>
 					</div> <br> <br>
+					<%= f.submit "Finish!", id: "finish_btn", style: "border: none;" %>
 				</div>
 				
 
-				<%= f.submit "Next >>", id: "next_btn", style: "border: none;" %>
 				<% end %>
 
 
@@ -1384,7 +1415,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 				-->
 
 			</div>
-			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers </p>
+			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers. </p>
 		</div>
 
 		<p style="color: #ADADAD; font-size: 24px; padding-top: 22px;"> 
@@ -1403,3 +1434,9 @@ h1 .li, h2 .li, h3 .li, p .li {
 	</body>
 </html>
 
+<script type="text/javascript">
+	function next_slide(current, next){
+		document.getElementById(current).style.display = "none";
+		document.getElementById(next).style.display = "block";
+	}
+</script>
