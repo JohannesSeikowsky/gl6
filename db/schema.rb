@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180706203807) do
+ActiveRecord::Schema.define(version: 20180708203503) do
 
   create_table "authors", force: :cascade do |t|
     t.boolean "use_medium_img"
     t.string "posts_to_import"
     t.string "full_name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.boolean "import_permission"
     t.boolean "url_investigation_requested"
     t.datetime "created_at", null: false

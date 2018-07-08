@@ -1,5 +1,7 @@
 class AuthorsController < ApplicationController
 
+  has_secure_password
+
   def create
     @author = Author.new(authors_params)
     GeneralMailer.author_sign_up(params[:author][:email]).deliver
