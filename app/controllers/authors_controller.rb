@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
       begin
         GeneralMailer.author_sign_up(params[:author][:email]).deliver
       rescue
-        # error handling
+        # pass
       end
     else
       redirect_to thank_you_path

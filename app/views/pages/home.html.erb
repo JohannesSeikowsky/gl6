@@ -1813,7 +1813,7 @@ var	on = addEventListener,
 
 							<div class="inner" style="border: 1px solid #E9E9E9;">
 								<div>
-									<h1 id="text04" style="font-size: 40px;">Your Medium-based <br> Author Website Done in 30 Seconds.</h1>
+									<h1 id="text04" style="font-size: 43px;">Your own Medium-based <br> Author Website Done in 30 Seconds.</h1>
 									<p id="text03">No Setup. No Hassle. All Important Features.</p>
 									<p id="text05">We use your Medium profile and posts to generate your own dedicated Author Website with those features that are most important for Writers online:</p>
 									<p id="text09"><span class="li">Your Own URL - www.amy-johnson.com</span></p>
@@ -1827,17 +1827,14 @@ var	on = addEventListener,
  									-->
 									<p id="text13"><span class="li"> About Page, Contact Me & Social Media Links </span></p>
 
-									<p id="text13"><span class="li"> Ability to add additional Posts and Pages </span></p>
+									<p id="text13"><span class="li"> Ability to easily add additional Posts and Pages </span></p>
 
 									<div id="start_trial_btn">
 									<ul id="buttons02" class="buttons">
 										<li>
-											<a href="http://domain.tld/path" class="button n01">Start Trial</a>
+											<%= link_to "Start Trial", get_started_path, class: "button n01" %>
 										</li>
 									</ul>
-
-									<i class="fas fa-angle-double-up"></i>
-
 
 									</div>
 
@@ -1848,29 +1845,43 @@ var	on = addEventListener,
 									<p id="text07">This Trial does <br> <strong> not </strong> prolong automatically. <br> No worries :)</p>
 									<ul id="buttons02" class="buttons">
 										<li>
-											<%= link_to "Start Trial", get_started_path, class: "button n01" %>
+											<%= link_to "Start Trial", get_started_path, class: "button n01", 
+														style: "font-size: 20px;" %>
 											<br>
-											<!--
-											<i class="fas fa-angle-double-up" style="color: #737373;"></i>
-											<i class="fas fa-angle-double-up" style="color: #737373;"></i>
-											<i class="fas fa-angle-double-up" style="color: #737373;"></i>
-											-->
 										</li>
 									</ul>
+									<%= image_tag "arrow.png", style: "height: 85px; margin-top: -25px; margin-left: -50px;" %>
 								</div>
 
 
 
 							</div>
 						</div>
+							
+						<p id="text08" style="font-size: 25px; margin-top: 0;">
+							Made with <i class="fas fa-heart" style="color: #1FBF99;"></i> in London <br>
+						</p>	
+
+						<p id="text08" style="font-size: 16px; margin-top: 0;">
+							@Wordgates
+						</p>	
+
+
+
 						<div id="container04" class="container">
 							<div class="inner">
+
+														
+										
+							<!--
 								<div>
-									<p id="text08">Wordgates - For Writers by Writers.</p>
+
 								</div>
+
 								<div>
-									<p id="text01">© Wordgates</p>
+									<p id="text08">© Wordgates</p>
 								</div>
+							-->
 							</div>
 						</div>
 					</section>
