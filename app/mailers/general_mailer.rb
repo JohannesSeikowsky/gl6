@@ -1,5 +1,5 @@
 class GeneralMailer < ApplicationMailer
-  default from: "mindyournetwork@gmail.com"
+  default from: "joseikowsky@gmail.com"
 
   def welcome_email(users_first_name, users_email)
     @first_name = users_first_name
