@@ -2,11 +2,13 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(authors_params)
-    begin
-      GeneralMailer.author_sign_up(params[:author][:email]).deliver
-    end
     if @author.save
       redirect_to thank_you_path
+      begin
+        GeneralMailer.author_sign_up(params[:author][:email]).deliver
+      rescue
+        # error handling
+      end
     else
       redirect_to thank_you_path
     end
