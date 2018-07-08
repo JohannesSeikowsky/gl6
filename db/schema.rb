@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180708203503) do
+ActiveRecord::Schema.define(version: 20180708210652) do
 
   create_table "authors", force: :cascade do |t|
     t.boolean "use_medium_img"
     t.string "posts_to_import"
     t.string "full_name"
     t.string "email"
-    t.string "password_digest"
     t.boolean "import_permission"
     t.boolean "url_investigation_requested"
     t.datetime "created_at", null: false
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180708203503) do
     t.boolean "contact_me_feature"
     t.boolean "add_pages_feature"
     t.boolean "about_me_feature"
+    t.string "password_digest"
   end
 
   create_table "contacts", force: :cascade do |t|
