@@ -559,7 +559,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 	margin: 0px auto;
 	border-radius: 8px;
 	position: absolute;
-	bottom: 60px;
+	bottom: 15px;
 	left: 50px;
 }
 
@@ -574,7 +574,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 	border-radius: 8px;
 	cursor: pointer;
 	position: absolute;
-	bottom: 60px;
+	bottom: 15px;
 	left: 50px;
 }
 
@@ -1279,7 +1279,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 }
 
 #use_medium_pic, #posts_to_import, #demanded_features, #start_trial, #user_permission{
-	height: 300px;
+	height: 260px;
 }
 
 
@@ -1309,18 +1309,21 @@ h1 .li, h2 .li, h3 .li, p .li {
 			<div style="">
 			<!-- height: 275 -->
 
-				<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 1/3 - Getting started </p>
+				<p id="text12" style="color: rgba(0,0,0,0.671); font-weight: bold; text-align: left; position: absolute; top: -36px; left: 0px;"> 3 Quick Steps </p>
+
 
 
 				<%= form_for @author, url: create_author_url do |f| %>
 
 				<div id="use_medium_pic" style="">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Do you want to use your Medium profile picture on your Wordgates site?
+						Would you like to use your Medium profile picture on your Wordgates site as well? You can change later.
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
-						 <%= f.radio_button :use_medium_img, true, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Yes </span> <br>
+						 <div style="margin-bottom: 4px;">
+							 <%= f.radio_button :use_medium_img, true, checked: true, style: "float: left;" %>
+							 <span style="padding-left: 6px; color: #737373;"> Yes </span> <br>
+						 </div>
 						 <%= f.radio_button :use_medium_img, false, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> No </span>
 					</div> <br><br>
@@ -1329,44 +1332,56 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<div id="posts_to_import">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Do you want to import all posts on your Medium or the Top 10?
+						Do you want to import all your posts from Medium or start with the Top 10?
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
+					<div style="margin-bottom: 8px;">
 					 	<%= f.radio_button :posts_to_import, "top10", checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Import Top 10 </span> <br>
+						 <span style="padding-left: 6px; color: #737373;"> Top 10 </span> <br>
+					</div>
 					 	<%= f.radio_button :posts_to_import, "all", style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Import All </span>
+						 <span style="padding-left: 6px; color: #737373;"> All </span>
 					</div> <br><br>
 					 <%= link_to "Next >>", root_path, onclick: 'next_slide("posts_to_import", "demanded_features"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="demanded_features">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Do you want to have all the default Features on your Wordgates site?
-						Uncheck the ones you dont.
+						Please uncheck those of our default Features that you do not want:
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
-						 <%= f.check_box :url_feature, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Personal URL </span>
-						 <br>
+						 <div style="margin-bottom: 6px;">
+						 <%= f.check_box :contact_me_feature, checked: true, style: "float: left;" %>
+						 <span style="padding-left: 6px; color: #737373;"> Contact Me Function </span>
+						 </div>	 
+						 
+						 <div style="margin-bottom: 6px;">
+						 <%= f.check_box :about_me_feature, checked: true, style: "float: left;" %>
+						 <span style="padding-left: 6px; color: #737373;"> About Me Page </span>
+						 </div>
+
+						 <div style="margin-bottom: 6px;">
 						 <%= f.check_box :email_list_feature, checked: true, style: "float: left;" %> 
 						 <span style="padding-left: 6px; color: #737373;"> Email List & Management </span> 
-						 <br>
-						 <%= f.check_box :contact_me_feature, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Contact Me </span>
-						 <br>
+						</div>
+
+						 <div style="margin-bottom: 6px;">
 						 <%= f.check_box :add_pages_feature, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> Ability to add addional Pages</span>
-						 <br>
-						 <%= f.check_box :about_me_feature, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> About Me </span>
+						 <span style="padding-left: 6px; color: #737373;"> Links to your Social Media</span>
+						 </div>
+
+						 <div style="margin-bottom: 6px;">
+						 <%= f.check_box :url_feature, checked: true, style: "float: left;" %>
+						 <span style="padding-left: 6px; color: #737373;"> Option for own URL </span>			
+						</div>
+
 					</div> <br><br>
 					<%= link_to "Next >>", root_path, onclick: 'next_slide("demanded_features", "start_trial"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="start_trial">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Start Trial 
+						Almost Done 
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.text_field :full_name, style: "float: left;", placeholder: "Full Name" %> <br> <br>
@@ -1374,23 +1389,23 @@ h1 .li, h2 .li, h3 .li, p .li {
 						 <%= f.text_field :password, style: "float: left;", placeholder: "Password" %> <br>
 					</div> <br><br>
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px;"> 
-						We need this to create your URL (name). To get in touch with you when relevant (email). Find your Medium account.
-						And ensure that only you can access to your account (PW).
+						This is necessary so we can
+						find your Medium and create an account for you.
 					</p> <br> <br>
 					<%= link_to "Next >>", root_path, onclick: 'next_slide("start_trial", "user_permission"); return false', id: "next_btn" %>
 				</div>
 
 				<div id="user_permission">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Your Permission 
+						Permission 
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.check_box :import_permission, checked: true, style: "float: left;" %>
 						 <span style="padding-left: 6px; color: #737373;"> I
-						 	agree that Wordgates may use the information openly available on my Medium profile, including my posts there, to construct a Website on my behalf.
+						 	agree that Wordgates may use the information on my Medium profile, including my posts, to construct a Website on my behalf.
 						 </span>
 					</div> <br> <br>
-					<%= f.submit "Finish!", id: "finish_btn", style: "border: none;" %>
+					<%= f.submit "Finish !!", id: "finish_btn", style: "border: none;" %>
 				</div>
 				
 
@@ -1415,12 +1430,22 @@ h1 .li, h2 .li, h3 .li, p .li {
 				-->
 
 			</div>
-			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers. </p>
+			<!--
+			<p style="color: #737373; padding-top: 6px;"> For Writers by Writers </p>
+			-->
 		</div>
 
-		<p style="color: #ADADAD; font-size: 24px; padding-top: 22px;"> 
+		<p id="text08" style="font-size: 24px; padding-top: 22px;"> 
 			Made with <i class="fas fa-heart" style="color: #1FBF99"></i> in London
+
 		</p>
+
+		<!--
+		<p id="text08" style="font-size: 15px; margin-top: 25px; color: #737373;">
+			@Wordgates - For Writers by Writers.
+		</p>
+		-->	
+
 
 		</div>
 		</section>
