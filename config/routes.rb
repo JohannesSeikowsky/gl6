@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'get_page', to: 'pages#get_page', as: 'get_page'
   get 'get_your_page', to: 'pages#get_your_page', as: 'get_your_page'
-  get 'thanks', to: 'pages#thank_you', as: 'thank_you'
+  get 'thank_you', to: 'pages#thank_you', as: 'thank_you'
   resources :writers
 
   post 'get_started', to: 'authors#create', as: 'create_author'
