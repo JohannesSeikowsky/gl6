@@ -1226,6 +1226,31 @@ h1 .li, h2 .li, h3 .li, p .li {
 		margin-bottom: -2.625rem !important;
 	}
 }
+
+
+#wgates_header{
+	position:absolute; 
+	right: 26px;
+	top: -25px;
+}
+
+.header_link{
+	margin-left: 12px;
+	font-size: 19px;
+	color: rgba(0,0,0,0.671);
+	font-weight: bold;
+}
+
+.header_link:hover{
+	color: rgba(0,0,0,0.472);
+}
+
+@media screen and (max-width: 740px) {
+	#wgates_header{
+		display: none;
+	}
+}
+
 </style>
 
 <!-- JAVASCRIPT -->
@@ -1807,8 +1832,19 @@ var	on = addEventListener,
 				<div class="inner">
 					<section id="home-section">
 						<div id="container01" class="container" style="position: relative;">
+
+							<div id="wgates_header">
+								<%= link_to "How it works", how_it_works_path, class: "header_link" %>
+								<%= link_to "Features", features_path, class: "header_link" %>
+								<%= link_to "About Us", about_us_path, class: "header_link" %>
+								<%= link_to "Pricing", our_pricing_path, class: "header_link" %>
+								<%= link_to "Start Trial", get_started_path, class: "header_link" %>
+		  					</div>
+
 							<div id="new_logo" style="position:absolute; top:-54px; left:-48px;">
-		  						<%= image_tag "logo.png", style: "width: 240px; height: auto;" %>
+								<%= link_to root_path do %>
+			  						<%= image_tag "logo.png", style: "width: 240px; height: auto;" %>
+			  					<% end %>
 		  					</div>
 
 							<div class="inner" style="border: 1px solid #E9E9E9;">

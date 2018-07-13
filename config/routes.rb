@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get 'done', to: 'pages#thank_you', as: 'thank_you'
   resources :writers
 
+  get 'how_it_works', to: 'pages#how_it_works', as: 'how_it_works'
+  get 'features', to: 'pages#features', as: 'features'
+  get 'about_us', to: 'pages#about_us', as: 'about_us'
+  get 'our_pricing', to: 'pages#our_pricing', as: 'our_pricing'
+
   post 'get_started', to: 'authors#create', as: 'create_author'
 
 
@@ -81,7 +86,7 @@ Rails.application.routes.draw do
   
 
   # statics
-  get 'about_us', to: 'pages#about', as: 'about'
+  get 'about', to: 'pages#about', as: 'about'
   get 'pricing', to: 'pages#pricing', as: 'pricing'
   get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
   get 'product_tour', to: 'pages#product_tour', as: 'product_tour'

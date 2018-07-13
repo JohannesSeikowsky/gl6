@@ -2,6 +2,30 @@ body{
 	background-color: #F5EFE6;
 }
 
+#wgates_header{
+	position:absolute; 
+	right: 26px;
+	top: -25px;
+}
+
+.header_link{
+	margin-left: 12px;
+	font-size: 19px;
+	color: rgba(0,0,0,0.671);
+	font-weight: bold;
+}
+
+.header_link:hover{
+	color: rgba(0,0,0,0.472);
+}
+
+@media screen and (max-width: 740px) {
+	#wgates_header{
+		display: none;
+	}
+}
+
+
 /* reinstate at appropriate point
 .header{
 	width: 100%;

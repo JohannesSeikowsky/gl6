@@ -1,5 +1,17 @@
 class PagesController < ApplicationController
   
+  def how_it_works
+  end
+
+  def features
+  end
+
+  def about_us
+  end
+
+  def our_pricing
+  end
+
   # authentication for backend page
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
