@@ -121,32 +121,38 @@ html {
 	font-size: 18pt;
 }
 
-
-#wrapper {
-/*
-	-webkit-overflow-scrolling: touch;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-moz-align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
-	-moz-justify-content: center;
-	-webkit-justify-content: center;
-	-ms-justify-content: center;
-	justify-content: center;
-	min-height: 100vh;
-	position: relative;
-	z-index: 2;
-	overflow: hidden;
-*/
+@media (max-width: 980px) {
+	#wrapper {
+		-webkit-overflow-scrolling: touch;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		min-height: 100vh;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+	}
 }
+
+@media (min-width: 800px) {
+	#wrapper {
+		margin-top: 32px;
+	}
+}
+
 
 #main {
 	display: -moz-flex;
