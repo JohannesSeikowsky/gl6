@@ -6,6 +6,7 @@ class AuthorsController < ApplicationController
       redirect_to thank_you_path
       begin
         GeneralMailer.author_sign_up(params[:author][:email]).deliver
+        GeneralMailer.new_user_notifier().deliver
       rescue
         # pass
       end

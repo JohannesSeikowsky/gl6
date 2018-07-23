@@ -12,7 +12,7 @@ class GeneralMailer < ApplicationMailer
   end
 
   def new_user_notifier
-    mail(to: "joseikowsky@gmail.com", subject: 'New User at MYN')  	
+    mail(to: "joseikowsky@gmail.com", subject: 'New User')  	
   end
 
   # Wordgates
