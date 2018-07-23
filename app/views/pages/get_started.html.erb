@@ -1307,7 +1307,8 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<div id="use_medium_pic" style="">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Would you like to use your Medium profile picture on your Wordgates site as well? You can change later ...
+						Would you like to use your Medium profile picture on your Wordgates site? <br>
+						(can be changed later)
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <div style="margin-bottom: 4px;">
@@ -1337,7 +1338,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<div id="demanded_features">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Uncheck those default Features that you do not want:
+						Uncheck those default Features that you do <strong> not </strong> want:
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <div style="margin-bottom: 6px;">
@@ -1371,7 +1372,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<div id="start_trial">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Start Trial 
+						Start Trial
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <%= f.text_field :full_name, style: "float: left;", placeholder: "Full Name" %> <br> <br>
@@ -1380,7 +1381,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 					</div> <br><br>
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px;"> 
 						This is necessary so we can
-						find your Medium and create an account for you.
+						find your Medium and create your account.
 					</p> <br> <br>
 					<%= link_to "Next >>", root_path, onclick: 'next_slide("start_trial", "user_permission"); return false', id: "next_btn" %>
 				</div>
@@ -1390,10 +1391,12 @@ h1 .li, h2 .li, h3 .li, p .li {
 						Your Permission 
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
-						 <%= f.check_box :import_permission, checked: true, style: "float: left;" %>
-						 <span style="padding-left: 6px; color: #737373;"> I
-						 	agree that Wordgates may use the information on my Medium profile, including my posts, to construct a Website on my behalf.
-						 </span>
+						<div style="float: left; width: 26px; height: 160px;">
+						 <%= f.check_box :import_permission, checked: true, style: "" %>
+						 </div>
+						 <div style="color: #737373;"> I
+						 	agree that Wordgates may use the public information on my Medium profile, including my posts, to construct a Website on my behalf.
+						 </div>
 					</div> <br> <br>
 					<%= f.submit "Finish !!", id: "next_btn", style: "border: none;" %>
 				</div>
