@@ -1308,7 +1308,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 				<div id="use_medium_pic" style="">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
 						Would you like to use your Medium profile picture on your Wordgates site? <br>
-						(can be changed later)
+						<!-- (can be changed later) -->
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <div style="margin-bottom: 4px;">
@@ -1338,7 +1338,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 
 				<div id="demanded_features">
 					<p id="text12" style="color: #737373; text-align: left; margin-top: 0;"> 
-						Uncheck any default Features that you do <strong> not </strong> want:
+						Uncheck those Features that you do <strong> not </strong> want:
 					</p> <br>
 					<div style="text-align: left; color: #737373;">
 						 <div style="margin-bottom: 6px;">
@@ -1379,9 +1379,9 @@ h1 .li, h2 .li, h3 .li, p .li {
 						 <%= f.text_field :email, style: "float: left;", placeholder: "Email" %> <br> <br>
 						 <%= f.text_field :password, style: "float: left;", placeholder: "Password" %> <br>
 					</div> <br><br>
-					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px;"> 
-						This is necessary so we can
-						find your Medium and create your account.
+					<p id="text12" style="color: #737373; text-align: left; margin-top: 0; font-size: 14px; text-decoration: underline;"> 
+						This is so we can
+						find your Medium profile and create your account.
 					</p> <br> <br>
 					<%= link_to "Next >>", root_path, onclick: 'next_slide("start_trial", "user_permission"); return false', id: "next_btn" %>
 				</div>
