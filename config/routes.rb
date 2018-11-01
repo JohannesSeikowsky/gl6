@@ -17,6 +17,16 @@ Rails.application.routes.draw do
   post 'get_started', to: 'authors#create', as: 'create_author'
 
 
+  # course
+  get "course", to: "course#first", "course_first"
+  get "second", to: "course#second", "course_second"
+  get "third", to: "course#third", "course_third"
+  get "fourth", to: "course#fourth", "course_fourth"
+  get "fifth", to: "course#fifth", "course_fifth"
+  get "sixth", to: "course#sixth", "course_sixth"
+  get "seventh", to: "course#seventh", "course_seventh"
+  get "eighth", to: "course#eighth", "course_eighth"
+
 
   get 'johannes', to: 'pages#johannes', as: 'johannes'
 
@@ -141,14 +151,6 @@ Rails.application.routes.draw do
   post 'get_page', to: 'johannes_page#new_page_user', as: 'new_page_user'
 
 
-  # teching - online course
-  get "course", to: "course#first", "course_first"
-  get "second", to: "course#second", "course_second"
-  get "third", to: "course#third", "course_third"
-  get "fourth", to: "course#fourth", "course_fourth"
-  get "fifth", to: "course#fifth", "course_fifth"
-  get "sixth", to: "course#sixth", "course_sixth"
-  get "seventh", to: "course#seventh", "course_seventh"
-  get "eighth", to: "course#eighth", "course_eighth"
+
 
 end
