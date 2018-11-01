@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root
-  root 'course#first'
+  root 'pages#home'
   get 'get_started', to: 'pages#get_started', as: 'get_started'
 
   get 'get_page', to: 'pages#get_page', as: 'get_page'
@@ -19,13 +19,13 @@ Rails.application.routes.draw do
 
   # course
   get "course", to: "course#first", "course_first"
-  get "second", to: "course#second", "course_second"
-  get "third", to: "course#third", "course_third"
-  get "fourth", to: "course#fourth", "course_fourth"
-  get "fifth", to: "course#fifth", "course_fifth"
-  get "sixth", to: "course#sixth", "course_sixth"
-  get "seventh", to: "course#seventh", "course_seventh"
-  get "eighth", to: "course#eighth", "course_eighth"
+  #get "second", to: "course#second", "course_second"
+  #get "third", to: "course#third", "course_third"
+  #get "fourth", to: "course#fourth", "course_fourth"
+  #get "fifth", to: "course#fifth", "course_fifth"
+  #get "sixth", to: "course#sixth", "course_sixth"
+  #get "seventh", to: "course#seventh", "course_seventh"
+  #get "eighth", to: "course#eighth", "course_eighth"
 
 
   get 'johannes', to: 'pages#johannes', as: 'johannes'
