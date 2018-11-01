@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root
-  root 'pages#home'
+  root 'course#first'
   get 'get_started', to: 'pages#get_started', as: 'get_started'
 
   get 'get_page', to: 'pages#get_page', as: 'get_page'
