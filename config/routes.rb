@@ -139,4 +139,16 @@ Rails.application.routes.draw do
   # pgae_builder_related
   post 'email_sub', to: 'johannes_page#email_subscriber', as: 'email_subscriber'
   post 'get_page', to: 'johannes_page#new_page_user', as: 'new_page_user'
+
+
+  # teching - online course
+  get "course", to: "course#first", "course_first"
+  get "second", to: "course#second", "course_second"
+  get "third", to: "course#third", "course_third"
+  get "fourth", to: "course#fourth", "course_fourth"
+  get "fifth", to: "course#fifth", "course_fifth"
+  get "sixth", to: "course#sixth", "course_sixth"
+  get "seventh", to: "course#seventh", "course_seventh"
+  get "eighth", to: "course#eighth", "course_eighth"
+
 end
