@@ -1,5 +1,7 @@
 class CourseController < ApplicationController
 
+layout 'course'
+
 def lesson_intro
 end
 

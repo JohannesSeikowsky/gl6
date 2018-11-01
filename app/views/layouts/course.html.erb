@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title> Course - Basic Programming with Python </title>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--
+    <%= favicon_link_tag 'favicon_logo.png' %>    
+    -->
+
+    <!--    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    -->
+  </head>
+
+  <style type="text/css">
+    #container{
+      width: 750px;
+      margin-top: 85px;
+      margin-left: 100px;
+      margin-bottom: 85px;
+    }
+
+    #side_bar{
+      width: 270px;
+      float: left;
+      a{
+        text-decoration: none;
+      }
+    }
+
+    #lesson_content{
+      width: 400px;
+      float: left;      
+    }
+  </style>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
