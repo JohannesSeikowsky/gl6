@@ -2,12 +2,10 @@
 <html>
   <head>
 
-    <title> Course - Basic Programming with Python </title>
+    <title> Basic Programming with Python </title>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--
-    <%= favicon_link_tag 'favicon_logo.png' %>    
-    -->
+    <%= favicon_link_tag 'python_favicon.png' %>
 
     <!--    
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -16,24 +14,41 @@
   </head>
 
   <style type="text/css">
+    html{
+      margin-top: 66px;
+      margin-bottom: 125px;
+      font-size: 15px;
+
+      /* font-family: "DejaVu Sans"; */
+    }
+
     #container{
-      width: 750px;
-      margin-top: 85px;
+      width: 890px;
       margin-left: 100px;
-      margin-bottom: 85px;
+    }
+
+    #course_title{
+      text-decoration: none; 
+      margin-bottom: 42px;
     }
 
     #side_bar{
       width: 270px;
       float: left;
-      a{
-        text-decoration: none;
-      }
+    }
+
+    .side_bar_links{
+      display: block;
+      margin-top: 3px;
     }
 
     #lesson_content{
-      width: 400px;
-      float: left;      
+      width: 420px;
+      float: left;     
+    }
+
+    #lesson_title{
+      margin-top: 0px;
     }
   </style>
 
