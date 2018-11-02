@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   # root
   root 'pages#home'
-  get 'get_started', to: 'pages#get_started', as: 'get_started'
 
+  # wordgates
+  get 'get_started', to: 'pages#get_started', as: 'get_started'
   get 'get_page', to: 'pages#get_page', as: 'get_page'
   get 'get_your_page', to: 'pages#get_your_page', as: 'get_your_page'
   get 'done', to: 'pages#thank_you', as: 'thank_you'
@@ -13,10 +14,6 @@ Rails.application.routes.draw do
   get 'features', to: 'pages#features', as: 'features'
   get 'about_us', to: 'pages#about_us', as: 'about_us'
   get 'our_pricing', to: 'pages#our_pricing', as: 'our_pricing'
-
-  post 'get_started', to: 'authors#create', as: 'create_author'
-
-  get 'johannes', to: 'pages#johannes', as: 'johannes'
 
 
   # course
@@ -31,6 +28,8 @@ Rails.application.routes.draw do
   get 'lesson_eight', to: 'course#lesson_eight', as: 'lesson_eight'
 
 
+  post 'get_started', to: 'authors#create', as: 'create_author'
+  get 'johannes', to: 'pages#johannes', as: 'johannes'
 
   get 'valerie_vaughn', to: 'pages#valerie_vaughn', as: 'valerie_vaughn'
   get 'vaughn_dashboard', to: 'pages#vaughn_dashboard', as: 'vaughn_dashboard'
@@ -103,7 +102,6 @@ Rails.application.routes.draw do
   get 'security_and_privacy', to: 'pages#security_and_privacy', as: 'privacy'
   get 'product_tour', to: 'pages#product_tour', as: 'product_tour'
   get 'do_now', to: 'pages#do_now', as: 'do_now'
-
 
   # signup/login
   get '/auth/:provider/callback', to: 'sessions#create', as: 'create_session'

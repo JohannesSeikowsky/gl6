@@ -2,10 +2,14 @@ class CourseController < ApplicationController
 
 layout 'course'
 
+@@lesson_links = { "intro" => "/course", "one" => "/lesson_one", "two"=> "/lesson_two" }
+
 def lesson_intro
 end
 
 def lesson_one
+	@previous_link = @@lesson_links["intro"]
+	@next_link = @@lesson_links["two"]
 end
 
 def lesson_two
