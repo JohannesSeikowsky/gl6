@@ -32,8 +32,6 @@
 </p>
 
 <div id="lesson_footer">
-	<%= @previous_link %>
-	<%= @next_link %>
-	<%= link_to "Prev", lesson_intro_path, id: "previous_link" %>
-	<%= link_to "Next", lesson_two_path, id: "next_link" %>
+	<%= link_to "Prev", @previous_link, id: "previous_link" %>
+	<%= link_to "Next", @next_link, id: "next_link" %>
 </div>

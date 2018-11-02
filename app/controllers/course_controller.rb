@@ -3,13 +3,14 @@ class CourseController < ApplicationController
 layout 'course'
 
 @@lesson_links = { "intro" => "/course", "one" => "/lesson_one", "two"=> "/lesson_two" }
+@@base_url = "https://www.wordgates.com"
 
 def lesson_intro
 end
 
 def lesson_one
-	@previous_link = @@lesson_links["intro"]
-	@next_link = @@lesson_links["two"]
+	@previous_link = @@base_url + @@lesson_links["intro"]
+	@next_link = @@base_url + @@lesson_links["two"]
 end
 
 def lesson_two
