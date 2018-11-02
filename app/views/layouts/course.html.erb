@@ -78,6 +78,16 @@
 
       <div id="lesson_content">
          <%= yield %>
+
+         <div id="lesson_footer">
+            <% if @previous_link %>
+              <%= link_to "Prev", @previous_link, id: "previous_link" %>
+            <% end %>
+
+            <% if @next_link %>
+              <%= link_to "Next", @next_link, id: "next_link" %>
+            <% end %>
+        </div>
       </div>
     </div>
 
