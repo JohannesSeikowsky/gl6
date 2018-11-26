@@ -49,12 +49,17 @@ def lesson_five
 end
 
 def lesson_six
+	@previous_link = @@lesson_links[5]
+	@next_link = @@lesson_links[7]
 end
 
 def lesson_seven
+	@previous_link = @@lesson_links[6]
+	@next_link = @@lesson_links[8]
 end
 
 def lesson_eight
+	@previous_link = @@lesson_links[7]
 end
 
 end
