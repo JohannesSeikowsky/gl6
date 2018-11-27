@@ -65,5 +65,9 @@ end
 def student_question
 	GeneralMailer.student_question("questionTEST", "studentTEST").deliver
 end
-
+	
+	private
+	def question_params
+	  params.require(:student_question).permit(:question, :student)
+	end
 end
