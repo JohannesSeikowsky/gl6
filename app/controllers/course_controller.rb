@@ -63,11 +63,14 @@ def lesson_eight
 end
 
 def student_question
-	GeneralMailer.student_question("questionTEST", "studentTEST").deliver
+	GeneralMailer.student_question(question_params[:question], question_params[:student]).deliver
+	redirect_to root_path
 end
 	
-	private
+
+private
 	def question_params
 	  params.require(:student_question).permit(:question, :student)
 	end
+
 end
