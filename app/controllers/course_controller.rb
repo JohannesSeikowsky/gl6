@@ -62,4 +62,8 @@ def lesson_eight
 	@previous_link = @@lesson_links[7]
 end
 
+def student_question
+	GeneralMailer.student_question("questionTEST", "studentTEST").deliver
+end
+
 end

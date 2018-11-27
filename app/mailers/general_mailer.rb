@@ -43,4 +43,12 @@ class GeneralMailer < ApplicationMailer
       @user_email = user_email    
       mail(to: @user_email, subject: 'Greetings from Wordgates') 
   end
+
+  # Course
+  def student_question(question, student)
+    @question = question
+    @student = student
+    mail(to: "joseikowsky@gmail.com", subject: 'New Student Question')   
+  end
+
 end

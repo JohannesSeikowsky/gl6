@@ -33,6 +33,7 @@
     .side_bar_links{
       display: block;
       margin-top: 3px;
+      text-decoration: none;
     }
 
     #lesson_content{
@@ -65,22 +66,33 @@
       <h3 id="course_title"> Programming with Python </h3>
 
       <div id="side_bar">
-        <%= link_to "Intro", lesson_intro_path, class: "side_bar_links" %>
-        <%= link_to "Setup", lesson_one_path, class: "side_bar_links" %>
-        <%= link_to "Numbers & Variables", lesson_two_path, class: "side_bar_links" %>
-        <%= link_to "Strings", lesson_three_path, class: "side_bar_links" %>
-        <%= link_to "Lists", lesson_four_path, class: "side_bar_links" %>
-        <%= link_to "If Statements", lesson_five_path, class: "side_bar_links" %>
-        <%= link_to "For Loops", lesson_six_path, class: "side_bar_links" %>
-        <%= link_to "Modules", lesson_seven_path, class: "side_bar_links" %>
-        <%= link_to "Project Start", lesson_eight_path, class: "side_bar_links" %>
+        <%= link_to "1. Intro", lesson_intro_path, class: "side_bar_links" %>
+        <%= link_to "2. Setup", lesson_one_path, class: "side_bar_links" %>
+        <%= link_to "3. Numbers & Variables", lesson_two_path, class: "side_bar_links" %>
+        <%= link_to "4. Strings", lesson_three_path, class: "side_bar_links" %>
+        <%= link_to "5. Lists", lesson_four_path, class: "side_bar_links" %>
+        <%= link_to "6. If Statements", lesson_five_path, class: "side_bar_links" %>
+        <%= link_to "7. For Loops", lesson_six_path, class: "side_bar_links" %>
+        <%= link_to "8. Modules", lesson_seven_path, class: "side_bar_links" %>
+        <%= link_to "9. Project Start", lesson_eight_path, class: "side_bar_links" %>
 
         <!--
         <%= link_to "Creating Logic", lesson_eight_path, class: "side_bar_links" %>
         <%= link_to "Built-In Functions", lesson_eight_path, class: "side_bar_links" %>
         <%= link_to "A note of how to hack", lesson_eight_path, class: "side_bar_links" %>
         -->
+
+        <br>
+        <p> <strong> Ask Johannes </strong> </p>
+        <%= form_for :student_question, url: student_question_url do |f| %>
+            <%= f.text_field :question, placeholder: "Your Question",
+                style: "width: 130px; height: 26px; margin-bottom: 6px;" %> <br>
+            <%= f.text_field :student, placeholder: "Your Name",
+                style: "width: 130px; height: 26px; margin-bottom: 12px;" %> <br>
+            <%= f.submit "ask.", style: "cursor: pointer; left: right; font-size: 13px;" %>
+        <% end %>
       </div>
+
 
       <div id="lesson_content">
          <%= yield %>
