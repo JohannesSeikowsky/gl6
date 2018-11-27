@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get 'lesson_eight', to: 'course#lesson_eight', as: 'lesson_eight'
 
   post 'student_question', to: 'course#student_question', as: 'student_question'
+  get 'message_sent', to: 'course#message_sent', as: 'message_sent'
 
 
   post 'get_started', to: 'authors#create', as: 'create_author'

@@ -48,7 +48,7 @@ class GeneralMailer < ApplicationMailer
   def student_question(question, student)
     @question = question
     @student = student
-    mail(to: "joseikowsky@gmail.com", subject: 'New Student Question')   
+    mail(to: "joseikowsky@gmail.com", subject: 'Student Question')   
   end
 
 end

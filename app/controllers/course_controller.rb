@@ -62,9 +62,13 @@ def lesson_eight
 	@previous_link = @@lesson_links[7]
 end
 
+
 def student_question
 	GeneralMailer.student_question(question_params[:question], question_params[:student]).deliver
-	redirect_to root_path
+	redirect_to message_sent_path
+end
+
+def message_sent
 end
 	
 
