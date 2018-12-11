@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
 
   # course
-  get 'course', to: 'course#lesson_intro', as: 'lesson_intro'
+  get 'course', to: 'course#lesson_two', as: 'course'
   get 'lesson_one', to: 'course#lesson_one', as: 'lesson_one'
   get 'lesson_two', to: 'course#lesson_two', as: 'lesson_two'
   get 'lesson_three', to: 'course#lesson_three', as: 'lesson_three'
