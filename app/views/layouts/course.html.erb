@@ -22,7 +22,7 @@
 
     #course_title{
       text-decoration: underline; 
-      margin-bottom: 42px;
+      margin-bottom: 32px;
     }
 
     #side_bar{
@@ -63,12 +63,18 @@
   <body>
 
     <div id="container">
+      <!--
       <h3 id="course_title"> Programming with Python </h3>
+      -->
+
+      <h3 id="course_title"> The Minimum to be Dangerous <br> Python </h3>
 
       <div id="side_bar">
+        <!--
         <%= link_to "1. Intro", lesson_intro_path, class: "side_bar_links" %>
         <%= link_to "2. Setup", lesson_one_path, class: "side_bar_links" %>
-        <%= link_to "3. Repl.it", lesson_two_path, class: "side_bar_links" %>
+      -->
+        <%= link_to "Repl.it", lesson_two_path, class: "side_bar_links" %>
       <!--
         <%= link_to "4.", lesson_three_path, class: "side_bar_links" %>
         <%= link_to "5.", lesson_four_path, class: "side_bar_links" %>
@@ -86,7 +92,7 @@
                 style: "width: 130px; height: 26px; margin-bottom: 6px;" %> <br>
             <%= f.text_field :student, placeholder: "Your Name",
                 style: "width: 130px; height: 26px; margin-bottom: 12px;" %> <br>
-            <%= f.submit "ask.", style: "cursor: pointer; left: right; font-size: 13px;" %>
+            <%= f.submit "ask", style: "cursor: pointer; left: right; font-size: 13px;" %>
         <% end %>
       </div>
 
